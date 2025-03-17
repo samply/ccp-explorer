@@ -1,10 +1,5 @@
 <script lang="ts">
-	import './app.css';
-	// import { browser } from '$app/environment';
-
-	// conditional import for SSR
-	// if (browser) import('@samply/lens');
-    import "@samply/lens";
+	import "./app.css";
 
     import type {
         MeasureGroup,
