@@ -1,0 +1,10 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "catalogue*.json"
+            ],
+            "url": "./node_modules/@samply/lens/schema/catalogue.schema.json",
+        }
+    ]
+}
