@@ -64,6 +64,21 @@
         );
     };
 
+	const saveAndOpenLink = () => {
+		const url = window.location.href;
+		const query = btoa(JSON.stringify(dataPasser.getQueryAPI()));
+		const htmlContent = `<html><head><meta http-equiv="refresh" content="0;url=${url}?query=${query}"></head><body></body></html>`;
+
+		const blob = new Blob([htmlContent], { type: 'text/html' });
+		const a = document.createElement('a');
+		a.href = URL.createObjectURL(blob);
+		a.download = `ccp-explorer-query-${new Date()}.html`;
+
+		document.body.appendChild(a);
+		a.click();
+		document.body.removeChild(a);
+	};
+
     const jsonPromises: Promise<{
         catalogueJSON: string;
         optionsJSON: string;
@@ -136,6 +151,9 @@
 <main>
     <div class="search">
         <div class="search-wrapper">
+            <button class="bookmark" on:click="{saveAndOpenLink}"
+                ><img src="bookmark.png" alt="save query" class="bookmark-icon" /></button
+            >
             <lens-search-bar noMatchesFoundMessage="keine Ergebnisse gefunden"
             ></lens-search-bar>
             <lens-info-button

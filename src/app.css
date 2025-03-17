@@ -121,10 +121,20 @@ footer {
 
 .search-wrapper {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
   grid-gap: var(--gap-s);
   /* padding: var(--gap-xxs) 0; */
   background-color: var(--ghost-white);
+}
+
+.bookmark {
+  height: 100%;
+  width: 30 px;
+  padding: 0;
+}
+
+.bookmark-icon {
+  width: 21px;
 }
 
 .grid {
