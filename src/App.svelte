@@ -4,8 +4,10 @@
     import type {
         MeasureGroup,
         MeasureItem,
-        LensDataPasser
+        LensDataPasser,
+        Catalogue,
     } from "@samply/lens";
+    import { setOptions, setCatalogue, setMeasures } from "@samply/lens";
 
     import {
         dktkDiagnosisMeasure,
@@ -15,49 +17,46 @@
         dktkSpecificSpecimenMeasure,
         dktkHistologyMeasure,
     } from "./measures";
+    import { env } from '$env/dynamic/public';
+	import { onMount } from "svelte";
 
-    /**
-     * VITE_TARGET_ENVIRONMENT is set by the ci pipeline
-     */
-
-    let catalogueUrl: string = "";
-    let optionsFilePath: string = "";
-
-    let environment = import.meta.env.VITE_TARGET_ENVIRONMENT;
-
-    if (environment === "production") {
-        catalogueUrl = "catalogues/catalogue-dktk.json";
-        optionsFilePath = "options-ccp-prod.json";
-    } else {
-        catalogueUrl = "catalogues/catalogue-dktk.json";
-        optionsFilePath = "options-ccp-demo.json";
+    async function fetchOptions() {
+        const optionsUrl = env.PUBLIC_ENVIRONMENT === "staging" ? "options-ccp-demo.json" : "options-ccp-prod.json";
+        // TODO: add type here once Lens exports it
+        const options = await fetch(optionsUrl).then((response) => response.json());
+        
+        if (env.PUBLIC_BACKEND_URL) {
+            options.backends.spots[0].url = env.PUBLIC_BACKEND_URL;
+        }
+        
+        setOptions(options);
     }
 
-    /**
-     * fetch both catalogue data and options
-     * response needs to be converted to text so that it can be passed to the options component for proper schema validation
-     * @param catalogueUrl the url where to fetch the catalogue.json
-     * @param optionsFilePath the url where to fetch the options.json
-     * @returns a promise that resolves to an object containing the catalogueJSON and optionsJSON
-     */
-    const fetchData = async (
-        catalogueUrl: string,
-        optionsFilePath: string,
-    ): Promise<{ catalogueJSON: string; optionsJSON: string }> => {
-        const cataloguePromise: string = await fetch(catalogueUrl).then(
-            (response) => response.text(),
-        );
+    async function fetchCatalogue() {
+        const catalogueUrl = "catalogues/catalogue-dktk.json";
+        const catalogue: Catalogue = await fetch(catalogueUrl).then((response) => response.json());
+        setCatalogue(catalogue);
+    }
 
-        const optionsPromise: string = await fetch(optionsFilePath).then(
-            (response) => response.text(),
-        );
+    const measures: MeasureGroup[] = [
+        {
+            name: "DKTK",
+            measures: [
+                dktkPatientsMeasure as MeasureItem,
+                dktkDiagnosisMeasure as MeasureItem,
+                dktkSpecificSpecimenMeasure as MeasureItem,
+                dktkProceduresMeasure as MeasureItem,
+                dktkMedicationStatementsMeasure as MeasureItem,
+                dktkHistologyMeasure as MeasureItem,
+            ],
+        },
+    ];
 
-        return Promise.all([cataloguePromise, optionsPromise]).then(
-            ([catalogueJSON, optionsJSON]) => {
-                return { catalogueJSON, optionsJSON };
-            },
-        );
-    };
+    onMount(() => {
+        fetchOptions();
+        fetchCatalogue();
+        setMeasures(measures);
+    });
 
 	const saveAndOpenLink = () => {
 		const url = window.location.href;
@@ -73,25 +72,6 @@
 		a.click();
 		document.body.removeChild(a);
 	};
-
-    const jsonPromises: Promise<{
-        catalogueJSON: string;
-        optionsJSON: string;
-    }> = fetchData(catalogueUrl, optionsFilePath);
-
-    const measures: MeasureGroup[] = [
-        {
-            name: "DKTK",
-            measures: [
-                dktkPatientsMeasure as MeasureItem,
-                dktkDiagnosisMeasure as MeasureItem,
-                dktkSpecificSpecimenMeasure as MeasureItem,
-                dktkProceduresMeasure as MeasureItem,
-                dktkMedicationStatementsMeasure as MeasureItem,
-                dktkHistologyMeasure as MeasureItem,
-            ],
-        },
-    ];
 
     /**
      * TODO: add catalogueText option to config file
@@ -179,7 +159,7 @@
         <div class="charts">
             <div class="chart-wrapper result-summary">
                 <lens-result-summary></lens-result-summary>
-                {#if environment !== "production"}
+                {#if env.PUBLIC_ENVIRONMENT !== "production"}
                     <lens-negotiate-button
                         type="ProjectManager"
                         title="Daten und Proben Anfragen"
@@ -326,13 +306,5 @@
 
 <!-- Toasts use `position: fixed` and thus are removed from the normal document flow -->
 <error-toasts></error-toasts>
-
-{#await jsonPromises}
-    Loading data...
-{:then { optionsJSON, catalogueJSON }}
-    <lens-options {catalogueJSON} {optionsJSON} {measures}></lens-options>
-{:catch someError}
-    System error: {someError.message}
-{/await}
 
 <lens-data-passer bind:this={dataPasser}></lens-data-passer>
