@@ -149,10 +149,8 @@
                     ]}
                 ></lens-info-button>
                 <lens-catalogue
-                    toggleIconUrl="right-arrow-svgrepo-com.svg"
                     texts={catalogueText}
                     toggle={{ collapsable: false, open: catalogueopen }}
-                    addIconUrl="long-right-arrow-svgrepo-com.svg"
                 ></lens-catalogue>
             </div>
         </div>

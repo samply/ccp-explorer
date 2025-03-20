@@ -2,9 +2,8 @@
     "iconOptions": {
         "deleteUrl": "delete_icon.svg",
         "infoUrl": "info-circle-svgrepo-com.svg",
-        "selectAll": {
-            "text": "Alle Hinzufügen"
-        }
+        "toggleIconUrl": "right-arrow-svgrepo-com.svg",
+        "addIconUrl": "long-right-arrow-svgrepo-com.svg"
     },
     "siteMappings": {
         "berlin": "Berlin (OBDS)",
