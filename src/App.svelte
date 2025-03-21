@@ -157,7 +157,7 @@
         <div class="charts">
             <div class="chart-wrapper result-summary">
                 <lens-result-summary></lens-result-summary>
-                {#if env.PUBLIC_ENVIRONMENT !== "production"}
+                {#if env.PUBLIC_ENVIRONMENT === "staging"}
                     <lens-negotiate-button
                         type="ProjectManager"
                         title="Daten und Proben Anfragen"
