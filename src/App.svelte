@@ -310,7 +310,6 @@
   >
 </footer>
 
-<!-- Toasts use `position: fixed` and thus are removed from the normal document flow -->
 <error-toasts></error-toasts>
 
 <lens-data-passer bind:this={dataPasser}></lens-data-passer>
