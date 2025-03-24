@@ -1,57 +1,58 @@
 /* This defines a measure 'patients' for creating a population of all patients with additional stratifier Gender, Age and Deceased */
 export const patientsMeasure = {
-    key: "patients",
-    measure: {
-        code: {
-            text: "patients",
-        },
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "InInitialPopulation",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "Gender",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "Gender",
-                },
-            },
-            {
-                code: {
-                    text: "75186-7",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "Deceased",
-                },
-            },
-            {
-                code: {
-                    text: "Age",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "AgeClass",
-                },
-            },
-        ],
+  key: "patients",
+  measure: {
+    code: {
+      text: "patients",
     },
-    cql: `
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "InInitialPopulation",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "Gender",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "Gender",
+        },
+      },
+      {
+        code: {
+          text: "75186-7",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "Deceased",
+        },
+      },
+      {
+        code: {
+          text: "Age",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "AgeClass",
+        },
+      },
+    ],
+  },
+  cql: `
 define Gender:
 if (Patient.gender is null) then 'unknown' else Patient.gender
 
@@ -73,58 +74,59 @@ if (PatientDeceased is null) then 'unbekannt' else PatientDeceased
 };
 
 export const patientsMeasureBbmri = {
-    key: "bbmri-patients",
-    measure: {
-        code: {
-            text: "patients",
-        },
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "InInitialPopulation",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "Age",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "AgeClass",
-                },
-            },
-            {
-                code: {
-                    text: "Gender",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "Gender",
-                },
-            },
-            {
-                code: {
-                    text: "Custodian",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "Custodian",
-                },
-            },
-        ],
+  key: "bbmri-patients",
+  measure: {
+    code: {
+      text: "patients",
     },
-    cql: `
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "InInitialPopulation",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "Age",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "AgeClass",
+        },
+      },
+      {
+        code: {
+          text: "Gender",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "Gender",
+        },
+      },
+      {
+        code: {
+          text: "Custodian",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "Custodian",
+        },
+      },
+    ],
+  },
+  cql: `
 define AgeClass:
 if (Patient.birthDate is null) then 'unknown' else ToString((AgeInYears() div 10) * 10)
 
@@ -139,58 +141,59 @@ define Custodian:
 };
 
 export const patientsMeasureBbmriProd = {
-    key: "bbmri-patients",
-    measure: {
-        code: {
-            text: "patients",
-        },
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "InInitialPopulation",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "Age",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "AgeClass",
-                },
-            },
-            {
-                code: {
-                    text: "Gender",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "Gender",
-                },
-            },
-            {
-                code: {
-                    text: "Custodian",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "Custodian",
-                },
-            },
-        ],
+  key: "bbmri-patients",
+  measure: {
+    code: {
+      text: "patients",
     },
-    cql: `
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "InInitialPopulation",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "Age",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "AgeClass",
+        },
+      },
+      {
+        code: {
+          text: "Gender",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "Gender",
+        },
+      },
+      {
+        code: {
+          text: "Custodian",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "Custodian",
+        },
+      },
+    ],
+  },
+  cql: `
 BBMRI_STRAT_AGE_STRATIFIER
 
 BBMRI_STRAT_GENDER_STRATIFIER
@@ -201,46 +204,47 @@ BBMRI_STRAT_CUSTODIAN_STRATIFIER
 
 /* This defines a measure 'diagnosis' for creating a population of all diagnosis with additional stratifier DiagnosisCode */
 export const diagnosisMeasure = {
-    key: "diagnosis",
-    measure: {
-        code: {
-            text: "diagnosis",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Condition",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Diagnosis",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "diagnosis",
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "DiagnosisCode",
-                },
-            },
-        ],
+  key: "diagnosis",
+  measure: {
+    code: {
+      text: "diagnosis",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Condition",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Diagnosis",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "diagnosis",
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "DiagnosisCode",
+        },
+      },
+    ],
+  },
+  cql: `
 define Diagnosis:
 if InInitialPopulation then [Condition] else {} as List<Condition>
 
@@ -250,46 +254,47 @@ condition.code.coding.where(system = 'http://fhir.de/CodeSystem/bfarm/icd-10-gm'
 };
 
 export const diagnosisMeasureBbmri = {
-    key: "bbmri-diagnosis",
-    measure: {
-        code: {
-            text: "diagnosis",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Condition",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Diagnosis",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "diagnosis",
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "DiagnosisCode",
-                },
-            },
-        ],
+  key: "bbmri-diagnosis",
+  measure: {
+    code: {
+      text: "diagnosis",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Condition",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Diagnosis",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "diagnosis",
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "DiagnosisCode",
+        },
+      },
+    ],
+  },
+  cql: `
 define Diagnosis:
 if InInitialPopulation then [Condition] else {} as List<Condition>
 
@@ -307,92 +312,94 @@ Coalesce(
 };
 
 export const diagnosisMeasureBbmriProd = {
-    key: "bbmri-diagnosis",
-    measure: {
-        code: {
-            text: "diagnosis",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Condition",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Diagnosis",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "diagnosis",
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "DiagnosisCode",
-                },
-            },
-        ],
+  key: "bbmri-diagnosis",
+  measure: {
+    code: {
+      text: "diagnosis",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Condition",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Diagnosis",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "diagnosis",
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "DiagnosisCode",
+        },
+      },
+    ],
+  },
+  cql: `
 BBMRI_STRAT_DIAGNOSIS_STRATIFIER
 `,
 };
 
 /* This defines a measure 'specimen' for creating a population of all samples with additional stratifier SampleType */
 export const specimenMeasure = {
-    key: "specimen",
-    measure: {
-        code: {
-            text: "specimen",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Specimen",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Specimen",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "sample_kind",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "SampleType",
-                },
-            },
-        ],
+  key: "specimen",
+  measure: {
+    code: {
+      text: "specimen",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Specimen",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Specimen",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "sample_kind",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "SampleType",
+        },
+      },
+    ],
+  },
+  cql: `
 define Specimen:
 if InInitialPopulation then [Specimen] else {} as List<Specimen>
 
@@ -402,46 +409,47 @@ specimen.type.coding.where(system = 'https://fhir.bbmri.de/CodeSystem/SampleMate
 };
 
 export const specimenMeasureBbmri = {
-    key: "bbmri-specimen",
-    measure: {
-        code: {
-            text: "specimen",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Specimen",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Specimen",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "sample_kind",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "SampleType",
-                },
-            },
-        ],
+  key: "bbmri-specimen",
+  measure: {
+    code: {
+      text: "specimen",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Specimen",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Specimen",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "sample_kind",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "SampleType",
+        },
+      },
+    ],
+  },
+  cql: `
 define function SampleType(specimen FHIR.Specimen):
     case FHIRHelpers.ToCode(specimen.type.coding.where(system = 'https://fhir.bbmri.de/CodeSystem/SampleMaterialType').first())
        when Code 'plasma-edta' from SampleMaterialType then 'blood-plasma'
@@ -492,46 +500,47 @@ define Specimen:
 };
 
 export const specimenMeasureBbmriProd = {
-    key: "bbmri-specimen",
-    measure: {
-        code: {
-            text: "specimen",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Specimen",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Specimen",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "sample_kind",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "SampleType",
-                },
-            },
-        ],
+  key: "bbmri-specimen",
+  measure: {
+    code: {
+      text: "specimen",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Specimen",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Specimen",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "sample_kind",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "SampleType",
+        },
+      },
+    ],
+  },
+  cql: `
 BBMRI_STRAT_SAMPLE_TYPE_STRATIFIER
 
 BBMRI_STRAT_DEF_SPECIMEN
@@ -539,64 +548,65 @@ BBMRI_STRAT_DEF_SPECIMEN
 };
 
 export const specimenMeasureUctLocator = {
-    key: "specimen-uct-locator",
-    measure: {
-        code: {
-            text: "specimen",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Specimen",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Specimen",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "sample_kind",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "SampleType",
-                },
-            },
-            {
-                code: {
-                    text: "Lagerort",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "Lagerort",
-                },
-            },
-            {
-                code: {
-                    text: "annotations",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "annotations",
-                },
-            },
-        ],
+  key: "specimen-uct-locator",
+  measure: {
+    code: {
+      text: "specimen",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Specimen",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Specimen",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "sample_kind",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "SampleType",
+        },
+      },
+      {
+        code: {
+          text: "Lagerort",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "Lagerort",
+        },
+      },
+      {
+        code: {
+          text: "annotations",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "annotations",
+        },
+      },
+    ],
+  },
+  cql: `
 define Specimen:
 if InInitialPopulation then [Specimen] else {} as List<Specimen>
 
@@ -614,46 +624,47 @@ define function annotations(specimen FHIR.Specimen):
 
 /* This defines a measure 'procedures' for creating a population of all procedures with additional stratifier ProcedureType */
 export const proceduresMeasure = {
-    key: "procedures",
-    measure: {
-        code: {
-            text: "procedures",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Procedure",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Procedure",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "ProcedureType",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "ProcedureType",
-                },
-            },
-        ],
+  key: "procedures",
+  measure: {
+    code: {
+      text: "procedures",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Procedure",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Procedure",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "ProcedureType",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "ProcedureType",
+        },
+      },
+    ],
+  },
+  cql: `
 define Procedure:
 if InInitialPopulation then [Procedure] else {} as List <Procedure>
 
@@ -664,92 +675,94 @@ procedure.category.coding.where(system = 'http://dktk.dkfz.de/fhir/onco/core/Cod
 
 /* This defines a measure 'medicationStatements for creating a population of all medicationStatements with additional stratifier MedicationType */
 export const medicationStatementsMeasure = {
-    key: "medicationStatements",
-    measure: {
-        code: {
-            text: "medicationStatements",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "MedicationStatement",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "MedicationStatement",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "MedicationType",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "ProcedureType",
-                },
-            },
-        ],
+  key: "medicationStatements",
+  measure: {
+    code: {
+      text: "medicationStatements",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "MedicationStatement",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "MedicationStatement",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "MedicationType",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "ProcedureType",
+        },
+      },
+    ],
+  },
+  cql: `
 define MedicationStatement:
 if InInitialPopulation then [MedicationStatement] else {} as List <MedicationStatement>
 `,
 };
 
 export const encountersMeasure = {
-    key: "encounters",
-    measure: {
-        code: {
-            text: "Encounters",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Encounter",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Encounter",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "Departments",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "Departments",
-                },
-            },
-        ],
+  key: "encounters",
+  measure: {
+    code: {
+      text: "Encounters",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Encounter",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Encounter",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "Departments",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "Departments",
+        },
+      },
+    ],
+  },
+  cql: `
 define Encounter:
 if InInitialPopulation then [Encounter] else {} as List<Encounter>
 
@@ -760,58 +773,59 @@ encounter.identifier.where(system = 'http://dktk.dkfz.de/fhir/sid/hki-department
 };
 
 export const dktkPatientsMeasure = {
-    key: "patients",
-    measure: {
-        code: {
-            text: "patients",
-        },
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "InInitialPopulation",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "Gender",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "Gender",
-                },
-            },
-            {
-                code: {
-                    text: "75186-7",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "Deceased",
-                },
-            },
-            {
-                code: {
-                    text: "Age",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "AgeClass",
-                },
-            },
-        ],
+  key: "patients",
+  measure: {
+    code: {
+      text: "patients",
     },
-    cql: `
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "InInitialPopulation",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "Gender",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "Gender",
+        },
+      },
+      {
+        code: {
+          text: "75186-7",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "Deceased",
+        },
+      },
+      {
+        code: {
+          text: "Age",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "AgeClass",
+        },
+      },
+    ],
+  },
+  cql: `
 
 DKTK_STRAT_GENDER_STRATIFIER
 
@@ -823,270 +837,276 @@ DKTK_STRAT_DECEASED_STRATIFIER
 };
 
 export const dktkDiagnosisMeasure = {
-    key: "diagnosis",
-    measure: {
-        code: {
-            text: "diagnosis",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Condition",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Diagnosis",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "diagnosis",
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "DiagnosisCode",
-                },
-            },
-        ],
+  key: "diagnosis",
+  measure: {
+    code: {
+      text: "diagnosis",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Condition",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Diagnosis",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "diagnosis",
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "DiagnosisCode",
+        },
+      },
+    ],
+  },
+  cql: `
 DKTK_STRAT_DIAGNOSIS_STRATIFIER
 `,
 };
 
 export const dktkSpecimenMeasure = {
-    key: "specimen",
-    measure: {
-        code: {
-            text: "specimen",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Specimen",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Specimen",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "sample_kind",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "SampleType",
-                },
-            },
-        ],
+  key: "specimen",
+  measure: {
+    code: {
+      text: "specimen",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Specimen",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Specimen",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "sample_kind",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "SampleType",
+        },
+      },
+    ],
+  },
+  cql: `
 DKTK_STRAT_SPECIMEN_STRATIFIER
 `,
 };
 
 export const dktkSpecificSpecimenMeasure = {
-    key: "specimen",
-    measure: {
-        code: {
-            text: "specimen",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Specimen",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Specimen",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "sample_kind",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "SampleType",
-                },
-            },
-        ],
+  key: "specimen",
+  measure: {
+    code: {
+      text: "specimen",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Specimen",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Specimen",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "sample_kind",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "SampleType",
+        },
+      },
+    ],
+  },
+  cql: `
 DKTK_REPLACE_SPECIMEN_STRATIFIER`,
 };
 
 export const dktkProceduresMeasure = {
-    key: "procedures",
-    measure: {
-        code: {
-            text: "procedures",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Procedure",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Procedure",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "ProcedureType",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "ProcedureType",
-                },
-            },
-        ],
+  key: "procedures",
+  measure: {
+    code: {
+      text: "procedures",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Procedure",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Procedure",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "ProcedureType",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "ProcedureType",
+        },
+      },
+    ],
+  },
+  cql: `
 DKTK_STRAT_PROCEDURE_STRATIFIER
 `,
 };
 
 export const dktkMedicationStatementsMeasure = {
-    key: "medicationStatements",
-    measure: {
-        code: {
-            text: "medicationStatements",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "MedicationStatement",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "MedicationStatement",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "MedicationType",
-                },
-                criteria: {
-                    language: "text/cql",
-                    expression: "ProcedureType",
-                },
-            },
-        ],
+  key: "medicationStatements",
+  measure: {
+    code: {
+      text: "medicationStatements",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "MedicationStatement",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "MedicationStatement",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "MedicationType",
+        },
+        criteria: {
+          language: "text/cql",
+          expression: "ProcedureType",
+        },
+      },
+    ],
+  },
+  cql: `
 DKTK_STRAT_MEDICATION_STRATIFIER
 `,
 };
 
 export const dktkHistologyMeasure = {
-    key: "Histo",
-    measure: {
-        code: {
-            text: "Histo",
-        },
-        extension: [
-            {
-                url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-                valueCode: "Observation",
-            },
-        ],
-        population: [
-            {
-                code: {
-                    coding: [
-                        {
-                            system: "http://terminology.hl7.org/CodeSystem/measure-population",
-                            code: "initial-population",
-                        },
-                    ],
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Histo",
-                },
-            },
-        ],
-        stratifier: [
-            {
-                code: {
-                    text: "Histologies",
-                },
-                criteria: {
-                    language: "text/cql-identifier",
-                    expression: "Histology",
-                },
-            },
-        ],
+  key: "Histo",
+  measure: {
+    code: {
+      text: "Histo",
     },
-    cql: `
+    extension: [
+      {
+        url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
+        valueCode: "Observation",
+      },
+    ],
+    population: [
+      {
+        code: {
+          coding: [
+            {
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Histo",
+        },
+      },
+    ],
+    stratifier: [
+      {
+        code: {
+          text: "Histologies",
+        },
+        criteria: {
+          language: "text/cql-identifier",
+          expression: "Histology",
+        },
+      },
+    ],
+  },
+  cql: `
   DKTK_REPLACE_HISTOLOGY_STRATIFIER
 `,
 };
