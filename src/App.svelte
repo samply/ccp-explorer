@@ -36,7 +36,11 @@
   }
 
   async function fetchCatalogue() {
-    const catalogueUrl = "catalogues/catalogue-dktk.json";
+    const catalogueUrl =
+      env.PUBLIC_ENVIRONMENT === "staging"
+        ? "catalogues/catalogue-dktk-staging.json"
+        : "catalogues/catalogue-dktk.json";
+
     const catalogue: Catalogue = await fetch(catalogueUrl).then((response) =>
       response.json(),
     );
