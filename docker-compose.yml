@@ -48,9 +48,8 @@ services:
       - "traefik.http.routers.oauth2.rule=Host(`${GUI_HOST}`) && PathPrefix(`/oauth2/`)"
       - "traefik.http.routers.oauth2.tls=true"
 
-  lens-web-components:
-    image: samply/lens:main
-    build: .
+  lens:
+    image: samply/ccp-explorer:main
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.lens.rule=Host(`${GUI_HOST}`)"
@@ -74,10 +73,9 @@ services:
       BIND_ADDR: 0.0.0.0:8055
       PRISM_URL: http://prism:8066
       RUST_LOG: "info"
-      LOG_FILE: /requests.log
+      LOG_FILE: /logs/requests.log
     volumes:
-      - ./requests.log:/requests.log
-
+      - ./logs:/logs
     depends_on:
       - "beam-proxy"
     labels:
@@ -134,4 +132,4 @@ secrets:
     # TODO: Key in BBMRI was directly stored in lens directory!
     file: /etc/lens/pki/${LOCAL_BEAM_ID}.priv.pem
   root.crt.pem:
-    file: ./rootcerts/${BROKER_HOST}-root.crt.pem
+    file: ./rootcerts/root.crt.pem
