@@ -24,4 +24,5 @@ vite.config.ts.timestamp-*
 
 docker-compose.override.yml
 traefik.yml
+traefik.yaml
 logs/
