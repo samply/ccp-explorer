@@ -1,8 +1,16 @@
 {
   "json.schemas": [
     {
-      "fileMatch": ["catalogue*.json"],
-      "url": "./node_modules/@samply/lens/schema/catalogue.schema.json"
-    }
+      "fileMatch": [
+        "catalogue*.json"
+      ],
+      "url": "./node_modules/@samply/lens/schema/catalogue.schema.json",
+    },
+    {
+      "fileMatch": [
+        "options*.json"
+      ],
+      "url": "./node_modules/@samply/lens/schema/options.schema.json",
+    },
   ]
 }
