@@ -6,6 +6,7 @@
     MeasureItem,
     LensDataPasser,
     Catalogue,
+    LensOptions,
   } from "@samply/lens";
   import { setOptions, setCatalogue, setMeasures } from "@samply/lens";
 
@@ -25,13 +26,11 @@
       env.PUBLIC_ENVIRONMENT === "staging"
         ? "options-ccp-demo.json"
         : "options-ccp-prod.json";
-    // TODO: add type here once Lens exports it
-    const options = await fetch(optionsUrl).then((response) => response.json());
 
+    const options: LensOptions = await fetch(optionsUrl).then((response) => response.json());
     if (env.PUBLIC_BACKEND_URL) {
       options.backends.spots[0].url = env.PUBLIC_BACKEND_URL;
     }
-
     setOptions(options);
   }
 

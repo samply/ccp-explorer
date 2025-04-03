@@ -1,4 +1,5 @@
 {
+  "language": "de",
   "iconOptions": {
     "deleteUrl": "delete_icon.svg",
     "infoUrl": "info-circle-svgrepo-com.svg",
@@ -203,8 +204,7 @@
           }
         ]
       }
-    ],
-    "claimedText": "Processing..."
+    ]
   },
   "resultSummaryOptions": {
     "title": "Ergebnisse",
