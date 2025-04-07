@@ -28,7 +28,7 @@
         : "options-ccp-prod.json";
 
     const options: LensOptions = await fetch(optionsUrl).then((response) => response.json());
-    if (env.PUBLIC_BACKEND_URL) {
+    if (env.PUBLIC_BACKEND_URL && options.backends?.spots !== undefined) {
       options.backends.spots[0].url = env.PUBLIC_BACKEND_URL;
     }
     setOptions(options);
