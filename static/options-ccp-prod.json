@@ -205,7 +205,8 @@
   },
   "resultSummaryOptions": {
     "title": "Ergebnisse",
-    "infoButtonText": "Umfang und Vollständigkeit der abfragbaren Daten hängt vom Datenimport in die lokalen Brückenköpfe durch die Standorte ab. Bekannte Limitation sind unter \"Known Issues\" (siehe „Weiterführende Informationen“) aufgeführt. Um eine Re-Identifizierung zu erschweren, werden Standortergebnisse modifiziert und auf Zehnerstellen gerundet. Meldet ein Standort keinen Treffer, wird für diesen null angezeigt.",    "dataTypes": [
+    "infoButtonText": "Umfang und Vollständigkeit der abfragbaren Daten hängt vom Datenimport in die lokalen Brückenköpfe durch die Standorte ab. Bekannte Limitation sind unter \"Known Issues\" (siehe „Weiterführende Informationen“) aufgeführt. Um eine Re-Identifizierung zu erschweren, werden Standortergebnisse modifiziert und auf Zehnerstellen gerundet. Meldet ein Standort keinen Treffer, wird für diesen null angezeigt.",
+    "dataTypes": [
       {
         "title": "Standorte",
         "dataKey": "collections"

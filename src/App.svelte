@@ -78,13 +78,13 @@
     a.href = URL.createObjectURL(blob);
     const currentDate = new Date();
 
-    const formattedDate = currentDate.toLocaleDateString('de-DE', {
-  year: 'numeric',
-  month: '2-digit',
-  day: '2-digit',
-  hour: '2-digit',
-  minute: '2-digit'
-});
+    const formattedDate = currentDate.toLocaleDateString("de-DE", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
     a.download = `ccp-explorer-query-${formattedDate}.html`;
 
     document.body.appendChild(a);
@@ -152,8 +152,8 @@
         showQuery={true}
       ></lens-info-button>
       <button class="save_button" on:click={saveQuery}
-      ><img alt="Suchkriterien Speichern" src="save_24.svg">
-    </button>
+        ><img alt="Suchkriterien Speichern" src="save_24.svg" />
+      </button>
       <lens-search-button title="Suchen"></lens-search-button>
     </div>
   </div>
