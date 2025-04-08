@@ -119,20 +119,20 @@ footer {
 
 .search-wrapper {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) auto auto auto;
   grid-gap: var(--gap-s);
   /* padding: var(--gap-xxs) 0; */
   background-color: var(--ghost-white);
 }
 
-.bookmark {
+.save_button {
+  position: relative;
+  cursor: pointer;
   height: 100%;
-  width: 30 px;
-  padding: 0;
-}
-
-.bookmark-icon {
-  width: 21px;
+  width: 38px;
+  background-color: var(--white);
+  border: solid 1px var(--blue);
+  border-radius: var(--border-radius-small);
 }
 
 .f-info-box {
