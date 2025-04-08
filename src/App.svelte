@@ -158,6 +158,7 @@
         <h2>Suchkriterien</h2>
         <lens-info-button
           message={[
+            `Die Suche erfolgt patienten-orientiert. `,
             `Bei Patienten mit mehreren onkologischen Diagnosen, können sich ausgewählte Suchkriterien nicht nur auf eine Erkrankung beziehen, sondern auch auf Weitere.`,
             `Innerhalb einer Kategorie werden verschiedene Ausprägungen mit einer „Oder-Verknüpfung“ gesucht; bei der Suche über mehrere Kategorien mit einer „Und-Verknüpfung“.`,
           ]}
