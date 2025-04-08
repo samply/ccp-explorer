@@ -154,6 +154,21 @@
   </div>
   <div class="grid">
     <div class="catalogue-wrapper">
+      <div class="f-info-box">
+        Weiterführende Informationen: <br />
+        Zur Nutzung
+        <img
+          src="info-circle-svgrepo-com.svg"
+          alt="info-icon"
+          width="18px"
+          height="18px"
+        />
+        und <a href="https://hub.dkfz.de/s/iP6A7zJzAQya3iC">Kown Issues</a>
+        beachten.
+        <a href="https://hub.dkfz.de/s/c7KmaCxSLQicw3Y">
+          Informationen zu Bioproben/Daten Anfragen</a
+        >
+      </div>
       <div class="catalogue">
         <h2>Suchkriterien</h2>
         <lens-info-button
