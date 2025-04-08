@@ -67,7 +67,7 @@
     setMeasures(measures);
   });
 
-  const saveAndOpenLink = () => {
+  const saveQuery = () => {
     const url = window.location.href;
     const query = btoa(JSON.stringify(dataPasser.getQueryAPI()));
     const htmlContent = `<html><head><meta http-equiv="refresh" content="0;url=${url}?query=${query}"></head><body></body></html>`;
@@ -75,7 +75,16 @@
     const blob = new Blob([htmlContent], { type: "text/html" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = `ccp-explorer-query-${new Date()}.html`;
+    const currentDate = new Date();
+
+    const formattedDate = currentDate.toLocaleDateString('de-DE', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit'
+});
+    a.download = `ccp-explorer-query-${formattedDate}.html`;
 
     document.body.appendChild(a);
     a.click();
@@ -135,19 +144,15 @@
 <main>
   <div class="search">
     <div class="search-wrapper">
-      <button class="bookmark" on:click={saveAndOpenLink}
-        ><img
-          src="bookmark.png"
-          alt="save query"
-          class="bookmark-icon"
-        /></button
-      >
       <lens-search-bar noMatchesFoundMessage="keine Ergebnisse gefunden"
       ></lens-search-bar>
       <lens-info-button
         noQueryMessage="Leere Suchanfrage: Sucht nach allen Ergebnissen."
         showQuery={true}
       ></lens-info-button>
+      <button class="save_button" on:click={saveQuery}
+      ><img alt="Suchkriterien Speichern" src="save_24.svg">
+    </button>
       <lens-search-button title="Suchen"></lens-search-button>
     </div>
   </div>
