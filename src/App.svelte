@@ -168,9 +168,11 @@
           width="18px"
           height="18px"
         />
-        und <a href="https://hub.dkfz.de/s/iP6A7zJzAQya3iC">Kown Issues</a>
+        und <a href="https://hub.dkfz.de/s/iP6A7zJzAQya3iC" target="_blank"
+        >Kown Issues</a>
         beachten.
-        <a href="https://hub.dkfz.de/s/c7KmaCxSLQicw3Y">
+        <a href="https://hub.dkfz.de/s/c7KmaCxSLQicw3Y" target="_blank"
+        >
           Informationen zu Bioproben/Daten Anfragen</a
         >
       </div>
