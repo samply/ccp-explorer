@@ -201,8 +201,7 @@
           }
         ]
       }
-    ],
-    "claimedText": "Processing..."
+    ]
   },
   "resultSummaryOptions": {
     "title": "Ergebnisse",
@@ -231,7 +230,6 @@
     ]
   },
   "backends": {
-    "customBackends": ["someUrl"],
     "spots": [
       {
         "name": "DKTK",
