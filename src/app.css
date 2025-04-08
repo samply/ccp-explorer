@@ -135,6 +135,16 @@ footer {
   width: 21px;
 }
 
+.f-info-box {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+info-icon {
+  width: 20px;
+  height: 20px;
+}
+
 .grid {
   position: relative;
   display: grid;
