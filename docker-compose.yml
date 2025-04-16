@@ -50,6 +50,8 @@ services:
 
   lens:
     image: samply/ccp-explorer:main
+    environment:
+      PUBLIC_ENVIRONMENT: ${PUBLIC_ENVIRONMENT}
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.lens.rule=Host(`${GUI_HOST}`)"

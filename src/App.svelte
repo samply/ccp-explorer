@@ -6,6 +6,7 @@
     MeasureItem,
     LensDataPasser,
     Catalogue,
+    LensOptions,
   } from "@samply/lens";
   import { setOptions, setCatalogue, setMeasures } from "@samply/lens";
 
@@ -25,13 +26,13 @@
       env.PUBLIC_ENVIRONMENT === "staging"
         ? "options-ccp-demo.json"
         : "options-ccp-prod.json";
-    // TODO: add type here once Lens exports it
-    const options = await fetch(optionsUrl).then((response) => response.json());
 
-    if (env.PUBLIC_BACKEND_URL) {
+    const options: LensOptions = await fetch(optionsUrl).then((response) =>
+      response.json(),
+    );
+    if (env.PUBLIC_BACKEND_URL && options.backends?.spots !== undefined) {
       options.backends.spots[0].url = env.PUBLIC_BACKEND_URL;
     }
-
     setOptions(options);
   }
 
@@ -67,7 +68,7 @@
     setMeasures(measures);
   });
 
-  const saveAndOpenLink = () => {
+  const saveQuery = () => {
     const url = window.location.href;
     const query = btoa(JSON.stringify(dataPasser.getQueryAPI()));
     const htmlContent = `<html><head><meta http-equiv="refresh" content="0;url=${url}?query=${query}"></head><body></body></html>`;
@@ -75,7 +76,16 @@
     const blob = new Blob([htmlContent], { type: "text/html" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = `ccp-explorer-query-${new Date()}.html`;
+    const currentDate = new Date();
+
+    const formattedDate = currentDate.toLocaleDateString("de-DE", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    a.download = `ccp-explorer-query-${formattedDate}.html`;
 
     document.body.appendChild(a);
     a.click();
@@ -135,28 +145,46 @@
 <main>
   <div class="search">
     <div class="search-wrapper">
-      <button class="bookmark" on:click={saveAndOpenLink}
-        ><img
-          src="bookmark.png"
-          alt="save query"
-          class="bookmark-icon"
-        /></button
-      >
       <lens-search-bar noMatchesFoundMessage="keine Ergebnisse gefunden"
       ></lens-search-bar>
       <lens-info-button
         noQueryMessage="Leere Suchanfrage: Sucht nach allen Ergebnissen."
         showQuery={true}
       ></lens-info-button>
+      <button
+        class="save_button"
+        on:click={saveQuery}
+        title="Suchanfrage speichern"
+        ><img alt="Suchkriterien Speichern" src="save_24.svg" />
+      </button>
       <lens-search-button title="Suchen"></lens-search-button>
     </div>
   </div>
   <div class="grid">
     <div class="catalogue-wrapper">
+      <div class="f-info-box">
+        Weiterführende Informationen: <br />
+        Zur Nutzung
+        <img
+          src="info-circle-svgrepo-com.svg"
+          alt="info-icon"
+          width="18px"
+          height="18px"
+        />
+        und
+        <a href="https://hub.dkfz.de/s/iP6A7zJzAQya3iC" target="_blank"
+          >Kown Issues</a
+        >
+        beachten.
+        <a href="https://hub.dkfz.de/s/c7KmaCxSLQicw3Y" target="_blank">
+          Informationen zu Bioproben/Daten Anfragen</a
+        >
+      </div>
       <div class="catalogue">
         <h2>Suchkriterien</h2>
         <lens-info-button
           message={[
+            `Die Suche erfolgt patienten-orientiert. `,
             `Bei Patienten mit mehreren onkologischen Diagnosen, können sich ausgewählte Suchkriterien nicht nur auf eine Erkrankung beziehen, sondern auch auf Weitere.`,
             `Innerhalb einer Kategorie werden verschiedene Ausprägungen mit einer „Oder-Verknüpfung“ gesucht; bei der Suche über mehrere Kategorien mit einer „Und-Verknüpfung“.`,
           ]}
