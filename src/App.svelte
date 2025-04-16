@@ -151,7 +151,10 @@
         noQueryMessage="Leere Suchanfrage: Sucht nach allen Ergebnissen."
         showQuery={true}
       ></lens-info-button>
-      <button class="save_button" on:click={saveQuery} title="Suchanfrage speichern"
+      <button
+        class="save_button"
+        on:click={saveQuery}
+        title="Suchanfrage speichern"
         ><img alt="Suchkriterien Speichern" src="save_24.svg" />
       </button>
       <lens-search-button title="Suchen"></lens-search-button>
@@ -168,11 +171,12 @@
           width="18px"
           height="18px"
         />
-        und <a href="https://hub.dkfz.de/s/iP6A7zJzAQya3iC" target="_blank"
-        >Kown Issues</a>
-        beachten.
-        <a href="https://hub.dkfz.de/s/c7KmaCxSLQicw3Y" target="_blank"
+        und
+        <a href="https://hub.dkfz.de/s/iP6A7zJzAQya3iC" target="_blank"
+          >Kown Issues</a
         >
+        beachten.
+        <a href="https://hub.dkfz.de/s/c7KmaCxSLQicw3Y" target="_blank">
           Informationen zu Bioproben/Daten Anfragen</a
         >
       </div>
