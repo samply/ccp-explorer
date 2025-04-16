@@ -151,7 +151,7 @@
         noQueryMessage="Leere Suchanfrage: Sucht nach allen Ergebnissen."
         showQuery={true}
       ></lens-info-button>
-      <button class="save_button" on:click={saveQuery}
+      <button class="save_button" on:click={saveQuery} title="Suchanfrage speichern"
         ><img alt="Suchkriterien Speichern" src="save_24.svg" />
       </button>
       <lens-search-button title="Suchen"></lens-search-button>
