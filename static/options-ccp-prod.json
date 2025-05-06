@@ -214,6 +214,18 @@
       {
         "title": "Patienten",
         "dataKey": "patients"
+      },
+      {
+        "title": "Bioproben",
+        "aggregatedDataKeys": [
+          {
+            "groupCode": "specimen"
+          },
+          {
+            "stratifierCode": "Histologies",
+            "stratumCode": "1"
+          }
+        ]
       }
     ]
   },
