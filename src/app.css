@@ -399,18 +399,6 @@ lens-catalogue::part(number-input-formfield):focus {
   height: 940px;
 }
 
-lens-catalogue::part(number-input-formfield) {
-  width: 60px;
-  margin-left: var(--gap-xs);
-  border: solid 1px var(--dark-gray);
-  border-radius: 0;
-  text-align: center;
-  font-size: var(--font-size-s);
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield !important;
-}
-
 lens-catalogue::part(number-input-formfield):focus {
   border-color: var(--light-blue);
   outline: none;
