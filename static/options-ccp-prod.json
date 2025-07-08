@@ -224,30 +224,5 @@
         ]
       }
     ]
-  },
-  "backends": {
-    "spots": [
-      {
-        "name": "DKTK",
-        "backendMeasures": "DKTK_STRAT_DEF_IN_INITIAL_POPULATION",
-        "url": "https://backend.data.dktk.dkfz.de/prod/",
-        "sites": [
-          "berlin-test",
-          "dresden",
-          "essen",
-          "frankfurt",
-          "freiburg",
-          "hannover",
-          "mainz",
-          "luebeck",
-          "muenchen-lmu",
-          "muenchen-tum",
-          "ulm",
-          "wuerzburg",
-          "mannheim",
-          "hamburg"
-        ]
-      }
-    ]
   }
 }

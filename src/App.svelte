@@ -33,6 +33,65 @@
   import { env } from "$env/dynamic/public";
   import { onMount } from "svelte";
 
+  export function getBackendUrl(): string {
+    let backendUrl;
+    if (env.PUBLIC_ENVIRONMENT === "staging") {
+      backendUrl = "https://backend.demo.lens.samply.de/prod/";
+    } else {
+      // production
+      backendUrl = "https://backend.data.dktk.dkfz.de/prod/";
+    }
+    if (env.PUBLIC_BACKEND_URL) {
+      backendUrl = env.PUBLIC_BACKEND_URL;
+    }
+    return backendUrl;
+  }
+
+  function getSiteList(): string[] {
+    if (env.PUBLIC_ENVIRONMENT === "staging") {
+      return [
+          "dktk-test",
+          "dktk-datashield-test",
+          "berlin",
+          "berlin-test",
+          "dresden",
+          "essen",
+          "frankfurt",
+          "freiburg",
+          "luebeck",
+          "marburg",
+          "hannover",
+          "mainz",
+          "muenchen-lmu",
+          "muenchen-tum",
+          "ulm",
+          "wuerzburg",
+          "mannheim",
+          "hamburg"
+        ];
+    } else if (env.PUBLIC_ENVIRONMENT === "acceptance") {
+      return ["eric-acc"];
+    } else {
+      // production
+      return [
+          "berlin-test",
+          "dresden",
+          "essen",
+          "frankfurt",
+          "freiburg",
+          "hannover",
+          "mainz",
+          "luebeck",
+          "muenchen-lmu",
+          "muenchen-tum",
+          "ulm",
+          "wuerzburg",
+          "mannheim",
+          "hamburg"
+        ];
+    }
+  }
+
   async function fetchOptions() {
     const optionsUrl =
       env.PUBLIC_ENVIRONMENT === "staging"
@@ -88,7 +147,6 @@
     );
 
     clearSiteResults();
-    const sites = ["berlin-test", "dresden", "essen", "frankfurt", "freiburg", "hannover", "mainz", "muenchen-lmu", "muenchen-tum", "ulm", "wuerzburg", "mannheim", "hamburg"];
     const query = btoa(
       JSON.stringify({
         lang: "cql",
@@ -97,8 +155,8 @@
       }),
     );
     createBeamTask(
-      "http://localhost:5123",
-      sites,
+      getBackendUrl(),
+      getSiteList(),
       query,
       abortController.signal,
       (result: BeamResult) => {
@@ -242,7 +300,7 @@
           <lens-info-button
             message={[
               `Die Suche erfolgt patienten-orientiert. `,
-            `Bei Patienten mit mehreren onkologischen Diagnosen, können sich ausgewählte Suchkriterien nicht nur auf eine Erkrankung beziehen, sondern auch auf Weitere.`,
+              `Bei Patienten mit mehreren onkologischen Diagnosen, können sich ausgewählte Suchkriterien nicht nur auf eine Erkrankung beziehen, sondern auch auf Weitere.`,
               `Innerhalb einer Kategorie werden verschiedene Ausprägungen mit einer „Oder-Verknüpfung“ gesucht; bei der Suche über mehrere Kategorien mit einer „Und-Verknüpfung“.`,
             ]}
             buttonSize="22px"

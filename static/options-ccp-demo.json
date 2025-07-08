@@ -228,35 +228,6 @@
       }
     ]
   },
-  "backends": {
-    "spots": [
-      {
-        "name": "DKTK",
-        "backendMeasures": "DKTK_STRAT_DEF_IN_INITIAL_POPULATION",
-        "url": "https://backend.demo.lens.samply.de/prod/",
-        "sites": [
-          "dktk-test",
-          "dktk-datashield-test",
-          "berlin",
-          "berlin-test",
-          "dresden",
-          "essen",
-          "frankfurt",
-          "freiburg",
-          "luebeck",
-          "marburg",
-          "hannover",
-          "mainz",
-          "muenchen-lmu",
-          "muenchen-tum",
-          "ulm",
-          "wuerzburg",
-          "mannheim",
-          "hamburg"
-        ]
-      }
-    ]
-  },
   "projectmanagerOptions": {
     "newProjectUrl": "https://requests.dktk.dkfz.de/project-manager-api/create-query-and-design-project",
     "editProjectUrl": "https://requests.dktk.dkfz.de/project-manager-api/edit-project",
