@@ -2,13 +2,25 @@
   import "./app.css";
 
   import type {
-    MeasureGroup,
     MeasureItem,
     LensDataPasser,
     Catalogue,
     LensOptions,
+    BeamResult,
   } from "@samply/lens";
-  import { setOptions, setCatalogue, setMeasures } from "@samply/lens";
+  import {
+    setOptions,
+    setCatalogue,
+    clearSiteResults,
+    markSiteClaimed,
+    setSiteResult,
+    measureReportToSiteResult,
+    createBeamTask,
+    getAst,
+    translateAstToCql,
+    buildLibrary,
+    buildMeasure,
+  } from "@samply/lens";
 
   import {
     dktkDiagnosisMeasure,
@@ -48,24 +60,69 @@
     setCatalogue(catalogue);
   }
 
-  const measures: MeasureGroup[] = [
-    {
-      name: "DKTK",
-      measures: [
-        dktkPatientsMeasure as MeasureItem,
-        dktkDiagnosisMeasure as MeasureItem,
-        dktkSpecificSpecimenMeasure as MeasureItem,
-        dktkProceduresMeasure as MeasureItem,
-        dktkMedicationStatementsMeasure as MeasureItem,
-        dktkHistologyMeasure as MeasureItem,
-      ],
-    },
+  const measures: MeasureItem[] = [
+    dktkPatientsMeasure as MeasureItem,
+    dktkDiagnosisMeasure as MeasureItem,
+    dktkSpecificSpecimenMeasure as MeasureItem,
+    dktkProceduresMeasure as MeasureItem,
+    dktkMedicationStatementsMeasure as MeasureItem,
+    dktkHistologyMeasure as MeasureItem,
   ];
+
+  let abortController = new AbortController();
+  window.addEventListener("lens-search-triggered", () => {
+    abortController.abort();
+    abortController = new AbortController();
+
+    // AST to CQL translation
+    const cql = translateAstToCql(
+      getAst(),
+      false,
+      "DKTK_STRAT_DEF_IN_INITIAL_POPULATION",
+      measures,
+    );
+    const lib = buildLibrary(cql);
+    const measure = buildMeasure(
+      lib.url,
+      measures.map((m) => m.measure),
+    );
+
+    clearSiteResults();
+    const sites = ["berlin-test", "dresden", "essen", "frankfurt", "freiburg", "hannover", "mainz", "muenchen-lmu", "muenchen-tum", "ulm", "wuerzburg", "mannheim", "hamburg"];
+    const query = btoa(
+      JSON.stringify({
+        lang: "cql",
+        lib,
+        measure,
+      }),
+    );
+    createBeamTask(
+      "http://localhost:5123",
+      sites,
+      query,
+      abortController.signal,
+      (result: BeamResult) => {
+        const site = result.from.split(".")[1];
+        if (result.status === "claimed") {
+          console.log(`Site ${site} claimed the task.`);
+          markSiteClaimed(site);
+        } else if (result.status === "succeeded") {
+          console.log(`Site ${site} completed the task successfully.`);
+          const measureReport = JSON.parse(atob(result.body));
+          setSiteResult(site, measureReportToSiteResult(measureReport));
+        } else {
+          console.error(
+            `Site ${site} failed with status ${result.status}:`,
+            result.body,
+          );
+        }
+      },
+    );
+  });
 
   onMount(() => {
     fetchOptions();
     fetchCatalogue();
-    setMeasures(measures);
   });
 
   const saveQuery = () => {
@@ -147,10 +204,9 @@
     <div class="search-wrapper">
       <lens-search-bar noMatchesFoundMessage="keine Ergebnisse gefunden"
       ></lens-search-bar>
-      <lens-info-button
+      <lens-query-explain-button
         noQueryMessage="Leere Suchanfrage: Sucht nach allen Ergebnissen."
-        showQuery={true}
-      ></lens-info-button>
+      ></lens-query-explain-button>
       <button
         class="save_button"
         on:click={saveQuery}
@@ -181,14 +237,17 @@
         >
       </div>
       <div class="catalogue">
-        <h2>Suchkriterien</h2>
-        <lens-info-button
-          message={[
-            `Die Suche erfolgt patienten-orientiert. `,
+        <div class="catalogue-header">
+          <h2>Suchkriterien</h2>
+          <lens-info-button
+            message={[
+              `Die Suche erfolgt patienten-orientiert. `,
             `Bei Patienten mit mehreren onkologischen Diagnosen, können sich ausgewählte Suchkriterien nicht nur auf eine Erkrankung beziehen, sondern auch auf Weitere.`,
-            `Innerhalb einer Kategorie werden verschiedene Ausprägungen mit einer „Oder-Verknüpfung“ gesucht; bei der Suche über mehrere Kategorien mit einer „Und-Verknüpfung“.`,
-          ]}
-        ></lens-info-button>
+              `Innerhalb einer Kategorie werden verschiedene Ausprägungen mit einer „Oder-Verknüpfung“ gesucht; bei der Suche über mehrere Kategorien mit einer „Und-Verknüpfung“.`,
+            ]}
+            buttonSize="22px"
+          ></lens-info-button>
+        </div>
         <lens-catalogue
           texts={catalogueText}
           toggle={{ collapsable: false, open: catalogueopen }}
@@ -345,3 +404,15 @@
 <error-toasts></error-toasts>
 
 <lens-data-passer bind:this={dataPasser}></lens-data-passer>
+
+<style>
+  .catalogue-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--gap-s);
+  }
+  .catalogue-header h2 {
+    margin: 0;
+  }
+</style>
