@@ -295,6 +295,7 @@
               `Innerhalb einer Kategorie werden verschiedene Ausprägungen mit einer „Oder-Verknüpfung“ gesucht; bei der Suche über mehrere Kategorien mit einer „Und-Verknüpfung“.`,
             ]}
             buttonSize="22px"
+            alignDialogue="left"
           ></lens-info-button>
         </div>
         <lens-catalogue
