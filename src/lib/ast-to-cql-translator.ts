@@ -2,13 +2,11 @@
  * TODO: Document this file. Move to Project
  */
 
-import {
-    type MeasureItem,
-    type AstBottomLayerValue,
-    type AstElement,
-    type AstTopLayer,
-    isBottomLayer,
-    isTopLayer,
+import type {
+     MeasureItem,
+     AstBottomLayerValue,
+     AstElement,
+     AstTopLayer,
 } from "@samply/lens";
 import {
     alias as aliasMap,
@@ -106,7 +104,7 @@ export const translateAstToCql = (
 };
 
 const isQueryEmptyRec = (query: AstElement): boolean => {
-    if (isBottomLayer(query)) {
+    if ("value" in query) {
         return false;
     }
     if (query.children.length === 0) {
@@ -125,7 +123,7 @@ const isQueryEmpty = (query: AstTopLayer): boolean => {
 const processAdditionalCriterion = (query: AstElement): string => {
     let additionalCriteria = "";
 
-    if (isTopLayer(query)) {
+    if ("operand" in query) {
         const top: AstTopLayer = query;
         top.children.forEach(function (child) {
             additionalCriteria += processAdditionalCriterion(child);
