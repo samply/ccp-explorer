@@ -2,10 +2,8 @@
   import "./app.css";
 
   import type {
-    MeasureItem,
     LensDataPasser,
     Catalogue,
-    LensOptions,
     BeamResult,
   } from "@samply/lens";
   import {
@@ -17,21 +15,16 @@
     measureReportToSiteResult,
     createBeamTask,
     getAst,
-    translateAstToCql,
     buildLibrary,
     buildMeasure,
   } from "@samply/lens";
+  import { translateAstToCql } from "$lib/ast-to-cql-translator";
+  import { optionsStore, type Options } from "$lib/options";
 
-  import {
-    dktkDiagnosisMeasure,
-    dktkMedicationStatementsMeasure,
-    dktkPatientsMeasure,
-    dktkProceduresMeasure,
-    dktkSpecificSpecimenMeasure,
-    dktkHistologyMeasure,
-  } from "./measures";
+  import { measures } from "./measures";
   import { env } from "$env/dynamic/public";
   import { onMount } from "svelte";
+    import { negotiate } from "$lib/ccpProjectManager";
 
   export function getBackendUrl(): string {
     let backendUrl;
@@ -50,45 +43,45 @@
   function getSiteList(): string[] {
     if (env.PUBLIC_ENVIRONMENT === "staging") {
       return [
-          "dktk-test",
-          "dktk-datashield-test",
-          "berlin",
-          "berlin-test",
-          "dresden",
-          "essen",
-          "frankfurt",
-          "freiburg",
-          "luebeck",
-          "marburg",
-          "hannover",
-          "mainz",
-          "muenchen-lmu",
-          "muenchen-tum",
-          "ulm",
-          "wuerzburg",
-          "mannheim",
-          "hamburg"
-        ];
+        "dktk-test",
+        "dktk-datashield-test",
+        "berlin",
+        "berlin-test",
+        "dresden",
+        "essen",
+        "frankfurt",
+        "freiburg",
+        "luebeck",
+        "marburg",
+        "hannover",
+        "mainz",
+        "muenchen-lmu",
+        "muenchen-tum",
+        "ulm",
+        "wuerzburg",
+        "mannheim",
+        "hamburg",
+      ];
     } else if (env.PUBLIC_ENVIRONMENT === "acceptance") {
       return ["eric-acc"];
     } else {
       // production
       return [
-          "berlin-test",
-          "dresden",
-          "essen",
-          "frankfurt",
-          "freiburg",
-          "hannover",
-          "mainz",
-          "luebeck",
-          "muenchen-lmu",
-          "muenchen-tum",
-          "ulm",
-          "wuerzburg",
-          "mannheim",
-          "hamburg"
-        ];
+        "berlin-test",
+        "dresden",
+        "essen",
+        "frankfurt",
+        "freiburg",
+        "hannover",
+        "mainz",
+        "luebeck",
+        "muenchen-lmu",
+        "muenchen-tum",
+        "ulm",
+        "wuerzburg",
+        "mannheim",
+        "hamburg",
+      ];
     }
   }
 
@@ -98,12 +91,13 @@
         ? "options-ccp-demo.json"
         : "options-ccp-prod.json";
 
-    const options: LensOptions = await fetch(optionsUrl).then((response) =>
+    const options: Options = await fetch(optionsUrl).then((response) =>
       response.json(),
     );
     if (env.PUBLIC_BACKEND_URL && options.backends?.spots !== undefined) {
       options.backends.spots[0].url = env.PUBLIC_BACKEND_URL;
     }
+    optionsStore.set(options);
     setOptions(options);
   }
 
@@ -118,15 +112,6 @@
     );
     setCatalogue(catalogue);
   }
-
-  const measures: MeasureItem[] = [
-    dktkPatientsMeasure as MeasureItem,
-    dktkDiagnosisMeasure as MeasureItem,
-    dktkSpecificSpecimenMeasure as MeasureItem,
-    dktkProceduresMeasure as MeasureItem,
-    dktkMedicationStatementsMeasure as MeasureItem,
-    dktkHistologyMeasure as MeasureItem,
-  ];
 
   let abortController = new AbortController();
   window.addEventListener("lens-search-triggered", () => {
@@ -176,6 +161,10 @@
         }
       },
     );
+  });
+
+  window.addEventListener("lens-negotiate-triggered", () => {
+    negotiate();
   });
 
   onMount(() => {

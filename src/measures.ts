@@ -1,3 +1,6 @@
+import type { MeasureItem } from "@samply/lens"
+
+// TODO: type annotate them with MeasureItem directly, but need to find out why type is not compatible
 /* This defines a measure 'patients' for creating a population of all patients with additional stratifier Gender, Age and Deceased */
 export const patientsMeasure = {
   key: "patients",
@@ -1110,3 +1113,12 @@ export const dktkHistologyMeasure = {
   DKTK_REPLACE_HISTOLOGY_STRATIFIER
 `,
 };
+
+export const measures: MeasureItem[] = [
+  dktkPatientsMeasure as MeasureItem,
+  dktkDiagnosisMeasure as MeasureItem,
+  dktkSpecificSpecimenMeasure as MeasureItem,
+  dktkProceduresMeasure as MeasureItem,
+  dktkMedicationStatementsMeasure as MeasureItem,
+  dktkHistologyMeasure as MeasureItem,
+];

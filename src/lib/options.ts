@@ -3,14 +3,21 @@
 // `npm run schemagen` to update the JSON schema.
 
 import { type LensOptions } from "@samply/lens";
+import { writable } from "svelte/store";
+
+export const optionsStore = writable<Options>();
 
 export type Options = LensOptions & {
     projectmanagerOptions?: ProjectManagerOptions;
 };
 
-type ProjectManagerOptions = {
+export type ProjectManagerOptionsSiteMapping = {
+    site: string;
+    collection: string;
+};
+
+export type ProjectManagerOptions = {
     newProjectUrl: string;
     editProjectUrl: string;
-    /** Mapping from site name to collection name */
-    siteMappings: Record<string, string>;
+    siteMappings: ProjectManagerOptionsSiteMapping[];
 };
