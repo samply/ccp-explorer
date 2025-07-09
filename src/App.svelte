@@ -98,6 +98,8 @@
       options.backends.spots[0].url = env.PUBLIC_BACKEND_URL;
     }
     optionsStore.set(options);
+    // This is not nice but we somehow need get rid of the CCP explorer specific options
+    delete options.projectmanagerOptions;
     setOptions(options);
   }
 
