@@ -149,10 +149,8 @@
       (result: BeamResult) => {
         const site = result.from.split(".")[1];
         if (result.status === "claimed") {
-          console.log(`Site ${site} claimed the task.`);
           markSiteClaimed(site);
         } else if (result.status === "succeeded") {
-          console.log(`Site ${site} completed the task successfully.`);
           const measureReport = JSON.parse(atob(result.body));
           setSiteResult(site, measureReportToSiteResult(measureReport));
         } else {
