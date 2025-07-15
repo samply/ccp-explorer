@@ -1,8 +1,7 @@
-import type { MeasureItem } from "@samply/lens"
+import type { MeasureItem } from "@samply/lens";
 
-// TODO: type annotate them with MeasureItem directly, but need to find out why type is not compatible
-/* This defines a measure 'patients' for creating a population of all patients with additional stratifier Gender, Age and Deceased */
-export const patientsMeasure = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const patientsMeasure: MeasureItem = {
   key: "patients",
   measure: {
     code: {
@@ -76,7 +75,8 @@ if (PatientDeceased is null) then 'unbekannt' else PatientDeceased
 `,
 };
 
-export const patientsMeasureBbmri = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const patientsMeasureBbmri: MeasureItem = {
   key: "bbmri-patients",
   measure: {
     code: {
@@ -143,7 +143,8 @@ define Custodian:
 `,
 };
 
-export const patientsMeasureBbmriProd = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const patientsMeasureBbmriProd: MeasureItem = {
   key: "bbmri-patients",
   measure: {
     code: {
@@ -206,7 +207,8 @@ BBMRI_STRAT_CUSTODIAN_STRATIFIER
 };
 
 /* This defines a measure 'diagnosis' for creating a population of all diagnosis with additional stratifier DiagnosisCode */
-export const diagnosisMeasure = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const diagnosisMeasure: MeasureItem = {
   key: "diagnosis",
   measure: {
     code: {
@@ -256,7 +258,8 @@ condition.code.coding.where(system = 'http://fhir.de/CodeSystem/bfarm/icd-10-gm'
 `,
 };
 
-export const diagnosisMeasureBbmri = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const diagnosisMeasureBbmri: MeasureItem = {
   key: "bbmri-diagnosis",
   measure: {
     code: {
@@ -314,7 +317,8 @@ Coalesce(
 `,
 };
 
-export const diagnosisMeasureBbmriProd = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const diagnosisMeasureBbmriProd: MeasureItem = {
   key: "bbmri-diagnosis",
   measure: {
     code: {
@@ -361,7 +365,8 @@ BBMRI_STRAT_DIAGNOSIS_STRATIFIER
 };
 
 /* This defines a measure 'specimen' for creating a population of all samples with additional stratifier SampleType */
-export const specimenMeasure = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const specimenMeasure: MeasureItem = {
   key: "specimen",
   measure: {
     code: {
@@ -411,7 +416,8 @@ specimen.type.coding.where(system = 'https://fhir.bbmri.de/CodeSystem/SampleMate
 `,
 };
 
-export const specimenMeasureBbmri = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const specimenMeasureBbmri: MeasureItem = {
   key: "bbmri-specimen",
   measure: {
     code: {
@@ -502,7 +508,8 @@ define Specimen:
 `,
 };
 
-export const specimenMeasureBbmriProd = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const specimenMeasureBbmriProd: MeasureItem = {
   key: "bbmri-specimen",
   measure: {
     code: {
@@ -550,7 +557,8 @@ BBMRI_STRAT_DEF_SPECIMEN
 `,
 };
 
-export const specimenMeasureUctLocator = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const specimenMeasureUctLocator: MeasureItem = {
   key: "specimen-uct-locator",
   measure: {
     code: {
@@ -626,7 +634,8 @@ define function annotations(specimen FHIR.Specimen):
 };
 
 /* This defines a measure 'procedures' for creating a population of all procedures with additional stratifier ProcedureType */
-export const proceduresMeasure = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const proceduresMeasure: MeasureItem = {
   key: "procedures",
   measure: {
     code: {
@@ -677,7 +686,8 @@ procedure.category.coding.where(system = 'http://dktk.dkfz.de/fhir/onco/core/Cod
 };
 
 /* This defines a measure 'medicationStatements for creating a population of all medicationStatements with additional stratifier MedicationType */
-export const medicationStatementsMeasure = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const medicationStatementsMeasure: MeasureItem = {
   key: "medicationStatements",
   measure: {
     code: {
@@ -724,7 +734,8 @@ if InInitialPopulation then [MedicationStatement] else {} as List <MedicationSta
 `,
 };
 
-export const encountersMeasure = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const encountersMeasure: MeasureItem = {
   key: "encounters",
   measure: {
     code: {
@@ -775,7 +786,7 @@ encounter.identifier.where(system = 'http://dktk.dkfz.de/fhir/sid/hki-department
 `,
 };
 
-export const dktkPatientsMeasure = {
+const dktkPatientsMeasure: MeasureItem = {
   key: "patients",
   measure: {
     code: {
@@ -839,7 +850,7 @@ DKTK_STRAT_DECEASED_STRATIFIER
 `,
 };
 
-export const dktkDiagnosisMeasure = {
+const dktkDiagnosisMeasure: MeasureItem = {
   key: "diagnosis",
   measure: {
     code: {
@@ -885,7 +896,8 @@ DKTK_STRAT_DIAGNOSIS_STRATIFIER
 `,
 };
 
-export const dktkSpecimenMeasure = {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const dktkSpecimenMeasure: MeasureItem = {
   key: "specimen",
   measure: {
     code: {
@@ -931,7 +943,7 @@ DKTK_STRAT_SPECIMEN_STRATIFIER
 `,
 };
 
-export const dktkSpecificSpecimenMeasure = {
+const dktkSpecificSpecimenMeasure: MeasureItem = {
   key: "specimen",
   measure: {
     code: {
@@ -976,7 +988,7 @@ export const dktkSpecificSpecimenMeasure = {
 DKTK_REPLACE_SPECIMEN_STRATIFIER`,
 };
 
-export const dktkProceduresMeasure = {
+const dktkProceduresMeasure: MeasureItem = {
   key: "procedures",
   measure: {
     code: {
@@ -1022,7 +1034,7 @@ DKTK_STRAT_PROCEDURE_STRATIFIER
 `,
 };
 
-export const dktkMedicationStatementsMeasure = {
+const dktkMedicationStatementsMeasure: MeasureItem = {
   key: "medicationStatements",
   measure: {
     code: {
@@ -1068,7 +1080,7 @@ DKTK_STRAT_MEDICATION_STRATIFIER
 `,
 };
 
-export const dktkHistologyMeasure = {
+const dktkHistologyMeasure: MeasureItem = {
   key: "Histo",
   measure: {
     code: {
@@ -1115,10 +1127,10 @@ export const dktkHistologyMeasure = {
 };
 
 export const measures: MeasureItem[] = [
-  dktkPatientsMeasure as MeasureItem,
-  dktkDiagnosisMeasure as MeasureItem,
-  dktkSpecificSpecimenMeasure as MeasureItem,
-  dktkProceduresMeasure as MeasureItem,
-  dktkMedicationStatementsMeasure as MeasureItem,
-  dktkHistologyMeasure as MeasureItem,
+  dktkPatientsMeasure,
+  dktkDiagnosisMeasure,
+  dktkSpecificSpecimenMeasure,
+  dktkProceduresMeasure,
+  dktkMedicationStatementsMeasure,
+  dktkHistologyMeasure,
 ];
