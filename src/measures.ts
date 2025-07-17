@@ -26,7 +26,7 @@ const dktkPatientsMeasure: MeasureItem = {
     stratifier: [
       {
         code: {
-          text: "Gender",
+          text: "gender",
         },
         criteria: {
           language: "text/cql",
@@ -44,7 +44,7 @@ const dktkPatientsMeasure: MeasureItem = {
       },
       {
         code: {
-          text: "Age",
+          text: "age_at_diagnosis",
         },
         criteria: {
           language: "text/cql",
@@ -187,7 +187,7 @@ const dktkProceduresMeasure: MeasureItem = {
     stratifier: [
       {
         code: {
-          text: "ProcedureType",
+          text: "therapy_of_tumor",
         },
         criteria: {
           language: "text/cql",
@@ -233,7 +233,7 @@ const dktkMedicationStatementsMeasure: MeasureItem = {
     stratifier: [
       {
         code: {
-          text: "MedicationType",
+          text: "medicationStatements",
         },
         criteria: {
           language: "text/cql",

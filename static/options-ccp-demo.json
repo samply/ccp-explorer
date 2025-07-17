@@ -21,12 +21,6 @@
     "dktk-datashield-test": "DKTK Datashield Test",
     "hamburg": "Hamburg"
   },
-  "catalogueKeyToResponseKeyMap": [
-    ["gender", "Gender"],
-    ["age_at_diagnosis", "Age"],
-    ["medicationStatements", "MedicationType"],
-    ["therapy_of_tumor", "ProcedureType"]
-  ],
   "chartOptions": {
     "patients": {
       "legendMapping": {
