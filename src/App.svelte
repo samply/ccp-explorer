@@ -4,7 +4,7 @@
   import type {
     LensDataPasser,
     Catalogue,
-    BeamResult,
+    SpotResult,
   } from "@samply/lens";
   import {
     setOptions,
@@ -12,8 +12,8 @@
     clearSiteResults,
     markSiteClaimed,
     setSiteResult,
-    measureReportToSiteResult,
-    createBeamTask,
+    measureReportToLensResult,
+    querySpot,
     getAst,
     buildLibrary,
     buildMeasure,
@@ -141,18 +141,18 @@
         measure,
       }),
     );
-    createBeamTask(
+    querySpot(
       getBackendUrl(),
       getSiteList(),
       query,
       abortController.signal,
-      (result: BeamResult) => {
+      (result: SpotResult) => {
         const site = result.from.split(".")[1];
         if (result.status === "claimed") {
           markSiteClaimed(site);
         } else if (result.status === "succeeded") {
           const measureReport = JSON.parse(atob(result.body));
-          setSiteResult(site, measureReportToSiteResult(measureReport));
+          setSiteResult(site, measureReportToLensResult(measureReport));
         } else {
           console.error(
             `Site ${site} failed with status ${result.status}:`,
