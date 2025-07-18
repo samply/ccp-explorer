@@ -21,24 +21,6 @@
     "hamburg": "Hamburg"
   },
   "chartOptions": {
-    "patients": {
-      "legendMapping": {
-        "berlin-test": "Berlin",
-        "bonn": "Bonn",
-        "dresden": "Dresden",
-        "essen": "Essen",
-        "frankfurt": "Frankfurt",
-        "freiburg": "Freiburg",
-        "hannover": "Hannover",
-        "mainz": "Mainz",
-        "muenchen-lmu": "München(LMU)",
-        "muenchen-tum": "München(TUM)",
-        "ulm": "Ulm",
-        "wuerzburg": "Würzburg",
-        "mannheim": "Mannheim",
-        "hamburg": "Hamburg"
-      }
-    },
     "gender": {
       "legendMapping": {
         "male": "Männlich",
