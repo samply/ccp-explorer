@@ -14,8 +14,7 @@
     querySpot,
     getAst,
     buildLibrary,
-    buildMeasure,
-    getQueryStore
+    buildMeasure
   } from "@samply/lens";
   import { translateAstToCql } from "./lib/ast-to-cql-translator";
   import { measures } from "./lib/measures";
