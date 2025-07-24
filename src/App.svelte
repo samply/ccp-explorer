@@ -17,6 +17,7 @@
   import { negotiate } from "./lib/project-manager";
   import { options } from "./lib/env-options";
   import { onMount } from "svelte";
+  import { SvelteMap } from "svelte/reactivity";
   import { env } from "$env/dynamic/public";
   import catalogueProd from "./config/catalogue.json";
   import catalogueTest from "./config/catalogue-test.json";
@@ -104,7 +105,7 @@
 
   let catalogueopen: boolean = false;
 
-  const genderHeaders: Map<string, string> = new Map<string, string>()
+  const genderHeaders: Map<string, string> = new SvelteMap<string, string>()
     .set("male", "männlich")
     .set("female", "weiblich")
     .set("other", "divers")
@@ -112,15 +113,15 @@
 
   const barChartBackgroundColors: string[] = ["#4dc9f6", "#3da4c7"];
 
-  const vitalStateHeaders: Map<string, string> = new Map<string, string>()
+  const vitalStateHeaders: Map<string, string> = new SvelteMap<string, string>()
     .set("lebend", "alive")
     .set("verstorben", "deceased")
     .set("unbekannt", "unknown");
 
-  const therapyHeaders: Map<string, string> = new Map<string, string>().set(
-    "medicationStatements",
-    "Sys. T",
-  );
+  const therapyHeaders: Map<string, string> = new SvelteMap<
+    string,
+    string
+  >().set("medicationStatements", "Sys. T");
 </script>
 
 <header>
