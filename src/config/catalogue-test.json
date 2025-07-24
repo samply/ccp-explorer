@@ -13,23 +13,19 @@
         "criteria": [
           {
             "key": "male",
-            "name": "Männlich",
-            "description": "Männlich"
+            "name": "Männlich"
           },
           {
             "key": "female",
-            "name": "Weiblich",
-            "description": "Weiblich"
+            "name": "Weiblich"
           },
           {
             "key": "other",
-            "name": "Divers",
-            "description": "Divers"
+            "name": "Divers"
           },
           {
             "key": "unknown",
-            "name": "Unbekannt",
-            "description": "Unbekannt"
+            "name": "Unbekannt"
           }
         ]
       },
@@ -46,13 +42,11 @@
         "criteria": [
           {
             "key": "lebend",
-            "name": "lebend",
-            "description": "lebend"
+            "name": "lebend"
           },
           {
             "key": "verstorben",
-            "name": "verstorben",
-            "description": "verstorben"
+            "name": "verstorben"
           }
         ]
       }
@@ -16799,3198 +16793,2559 @@
         "criteria": [
           {
             "key": "8000/0",
-            "name": "8000/0",
-            "description": "8000/0"
+            "name": "8000/0"
           },
           {
             "key": "8000/1",
-            "name": "8000/1",
-            "description": "8000/1"
+            "name": "8000/1"
           },
           {
             "key": "8000/3",
-            "name": "8000/3",
-            "description": "8000/3"
+            "name": "8000/3"
           },
           {
             "key": "8000/6",
-            "name": "8000/6",
-            "description": "8000/6"
+            "name": "8000/6"
           },
           {
             "key": "8001/3",
-            "name": "8001/3",
-            "description": "8001/3"
+            "name": "8001/3"
           },
           {
             "key": "8002/3",
-            "name": "8002/3",
-            "description": "8002/3"
+            "name": "8002/3"
           },
           {
             "key": "8004/3",
-            "name": "8004/3",
-            "description": "8004/3"
+            "name": "8004/3"
           },
           {
             "key": "8005/3",
-            "name": "8005/3",
-            "description": "8005/3"
+            "name": "8005/3"
           },
           {
             "key": "8010/0",
-            "name": "8010/0",
-            "description": "8010/0"
+            "name": "8010/0"
           },
           {
             "key": "8010/2",
-            "name": "8010/2",
-            "description": "8010/2"
+            "name": "8010/2"
           },
           {
             "key": "8010/3",
-            "name": "8010/3",
-            "description": "8010/3"
+            "name": "8010/3"
           },
           {
             "key": "8010/6",
-            "name": "8010/6",
-            "description": "8010/6"
+            "name": "8010/6"
           },
           {
             "key": "8010/9",
-            "name": "8010/9",
-            "description": "8010/9"
+            "name": "8010/9"
           },
           {
             "key": "8012/3",
-            "name": "8012/3",
-            "description": "8012/3"
+            "name": "8012/3"
           },
           {
             "key": "8012/6",
-            "name": "8012/6",
-            "description": "8012/6"
+            "name": "8012/6"
           },
           {
             "key": "8013/3",
-            "name": "8013/3",
-            "description": "8013/3"
+            "name": "8013/3"
           },
           {
             "key": "8013/6",
-            "name": "8013/6",
-            "description": "8013/6"
+            "name": "8013/6"
           },
           {
             "key": "8020/3",
-            "name": "8020/3",
-            "description": "8020/3"
+            "name": "8020/3"
           },
           {
             "key": "8020/6",
-            "name": "8020/6",
-            "description": "8020/6"
+            "name": "8020/6"
           },
           {
             "key": "8021/3",
-            "name": "8021/3",
-            "description": "8021/3"
+            "name": "8021/3"
           },
           {
             "key": "8022/3",
-            "name": "8022/3",
-            "description": "8022/3"
+            "name": "8022/3"
           },
           {
             "key": "8030/3",
-            "name": "8030/3",
-            "description": "8030/3"
+            "name": "8030/3"
           },
           {
             "key": "8031/3",
-            "name": "8031/3",
-            "description": "8031/3"
+            "name": "8031/3"
           },
           {
             "key": "8032/3",
-            "name": "8032/3",
-            "description": "8032/3"
+            "name": "8032/3"
           },
           {
             "key": "8033/3",
-            "name": "8033/3",
-            "description": "8033/3"
+            "name": "8033/3"
           },
           {
             "key": "8033/6",
-            "name": "8033/6",
-            "description": "8033/6"
+            "name": "8033/6"
           },
           {
             "key": "8035/3",
-            "name": "8035/3",
-            "description": "8035/3"
+            "name": "8035/3"
           },
           {
             "key": "8040/3",
-            "name": "8040/3",
-            "description": "8040/3"
+            "name": "8040/3"
           },
           {
             "key": "8041/3",
-            "name": "8041/3",
-            "description": "8041/3"
+            "name": "8041/3"
           },
           {
             "key": "8041/6",
-            "name": "8041/6",
-            "description": "8041/6"
+            "name": "8041/6"
           },
           {
             "key": "8042/3",
-            "name": "8042/3",
-            "description": "8042/3"
+            "name": "8042/3"
           },
           {
             "key": "8044/3",
-            "name": "8044/3",
-            "description": "8044/3"
+            "name": "8044/3"
           },
           {
             "key": "8045/3",
-            "name": "8045/3",
-            "description": "8045/3"
+            "name": "8045/3"
           },
           {
             "key": "8046/3",
-            "name": "8046/3",
-            "description": "8046/3"
+            "name": "8046/3"
           },
           {
             "key": "8046/6",
-            "name": "8046/6",
-            "description": "8046/6"
+            "name": "8046/6"
           },
           {
             "key": "8050/0",
-            "name": "8050/0",
-            "description": "8050/0"
+            "name": "8050/0"
           },
           {
             "key": "8050/3",
-            "name": "8050/3",
-            "description": "8050/3"
+            "name": "8050/3"
           },
           {
             "key": "8051/3",
-            "name": "8051/3",
-            "description": "8051/3"
+            "name": "8051/3"
           },
           {
             "key": "8052/2",
-            "name": "8052/2",
-            "description": "8052/2"
+            "name": "8052/2"
           },
           {
             "key": "8052/3",
-            "name": "8052/3",
-            "description": "8052/3"
+            "name": "8052/3"
           },
           {
             "key": "8053/0",
-            "name": "8053/0",
-            "description": "8053/0"
+            "name": "8053/0"
           },
           {
             "key": "8060/3",
-            "name": "8060/3",
-            "description": "8060/3"
+            "name": "8060/3"
           },
           {
             "key": "8070/2",
-            "name": "8070/2",
-            "description": "8070/2"
+            "name": "8070/2"
           },
           {
             "key": "8070/3",
-            "name": "8070/3",
-            "description": "8070/3"
+            "name": "8070/3"
           },
           {
             "key": "8070/6",
-            "name": "8070/6",
-            "description": "8070/6"
+            "name": "8070/6"
           },
           {
             "key": "8071/0",
-            "name": "8071/0",
-            "description": "8071/0"
+            "name": "8071/0"
           },
           {
             "key": "8071/1",
-            "name": "8071/1",
-            "description": "8071/1"
+            "name": "8071/1"
           },
           {
             "key": "8071/2",
-            "name": "8071/2",
-            "description": "8071/2"
+            "name": "8071/2"
           },
           {
             "key": "8071/3",
-            "name": "8071/3",
-            "description": "8071/3"
+            "name": "8071/3"
           },
           {
             "key": "8071/6",
-            "name": "8071/6",
-            "description": "8071/6"
+            "name": "8071/6"
           },
           {
             "key": "8072/3",
-            "name": "8072/3",
-            "description": "8072/3"
+            "name": "8072/3"
           },
           {
             "key": "8072/6",
-            "name": "8072/6",
-            "description": "8072/6"
+            "name": "8072/6"
           },
           {
             "key": "8073/3",
-            "name": "8073/3",
-            "description": "8073/3"
+            "name": "8073/3"
           },
           {
             "key": "8074/3",
-            "name": "8074/3",
-            "description": "8074/3"
+            "name": "8074/3"
           },
           {
             "key": "8075/3",
-            "name": "8075/3",
-            "description": "8075/3"
+            "name": "8075/3"
           },
           {
             "key": "8076/3",
-            "name": "8076/3",
-            "description": "8076/3"
+            "name": "8076/3"
           },
           {
             "key": "8077/0",
-            "name": "8077/0",
-            "description": "8077/0"
+            "name": "8077/0"
           },
           {
             "key": "8077/2",
-            "name": "8077/2",
-            "description": "8077/2"
+            "name": "8077/2"
           },
           {
             "key": "8078/3",
-            "name": "8078/3",
-            "description": "8078/3"
+            "name": "8078/3"
           },
           {
             "key": "8080/2",
-            "name": "8080/2",
-            "description": "8080/2"
+            "name": "8080/2"
           },
           {
             "key": "8081/2",
-            "name": "8081/2",
-            "description": "8081/2"
+            "name": "8081/2"
           },
           {
             "key": "8081/3",
-            "name": "8081/3",
-            "description": "8081/3"
+            "name": "8081/3"
           },
           {
             "key": "8082/3",
-            "name": "8082/3",
-            "description": "8082/3"
+            "name": "8082/3"
           },
           {
             "key": "8083/0",
-            "name": "8083/0",
-            "description": "8083/0"
+            "name": "8083/0"
           },
           {
             "key": "8083/3",
-            "name": "8083/3",
-            "description": "8083/3"
+            "name": "8083/3"
           },
           {
             "key": "8090/1",
-            "name": "8090/1",
-            "description": "8090/1"
+            "name": "8090/1"
           },
           {
             "key": "8090/3",
-            "name": "8090/3",
-            "description": "8090/3"
+            "name": "8090/3"
           },
           {
             "key": "8090/6",
-            "name": "8090/6",
-            "description": "8090/6"
+            "name": "8090/6"
           },
           {
             "key": "8091/3",
-            "name": "8091/3",
-            "description": "8091/3"
+            "name": "8091/3"
           },
           {
             "key": "8092/3",
-            "name": "8092/3",
-            "description": "8092/3"
+            "name": "8092/3"
           },
           {
             "key": "8093/3",
-            "name": "8093/3",
-            "description": "8093/3"
+            "name": "8093/3"
           },
           {
             "key": "8094/3",
-            "name": "8094/3",
-            "description": "8094/3"
+            "name": "8094/3"
           },
           {
             "key": "8095/3",
-            "name": "8095/3",
-            "description": "8095/3"
+            "name": "8095/3"
           },
           {
             "key": "8097/3",
-            "name": "8097/3",
-            "description": "8097/3"
+            "name": "8097/3"
           },
           {
             "key": "8098/3",
-            "name": "8098/3",
-            "description": "8098/3"
+            "name": "8098/3"
           },
           {
             "key": "8100/3",
-            "name": "8100/3",
-            "description": "8100/3"
+            "name": "8100/3"
           },
           {
             "key": "8104/3",
-            "name": "8104/3",
-            "description": "8104/3"
+            "name": "8104/3"
           },
           {
             "key": "8110/3",
-            "name": "8110/3",
-            "description": "8110/3"
+            "name": "8110/3"
           },
           {
             "key": "8120/1",
-            "name": "8120/1",
-            "description": "8120/1"
+            "name": "8120/1"
           },
           {
             "key": "8120/2",
-            "name": "8120/2",
-            "description": "8120/2"
+            "name": "8120/2"
           },
           {
             "key": "8120/3",
-            "name": "8120/3",
-            "description": "8120/3"
+            "name": "8120/3"
           },
           {
             "key": "8122/3",
-            "name": "8122/3",
-            "description": "8122/3"
+            "name": "8122/3"
           },
           {
             "key": "8123/3",
-            "name": "8123/3",
-            "description": "8123/3"
+            "name": "8123/3"
           },
           {
             "key": "8124/3",
-            "name": "8124/3",
-            "description": "8124/3"
+            "name": "8124/3"
           },
           {
             "key": "8130/1",
-            "name": "8130/1",
-            "description": "8130/1"
+            "name": "8130/1"
           },
           {
             "key": "8130/2",
-            "name": "8130/2",
-            "description": "8130/2"
+            "name": "8130/2"
           },
           {
             "key": "8130/3",
-            "name": "8130/3",
-            "description": "8130/3"
+            "name": "8130/3"
           },
           {
             "key": "8131/3",
-            "name": "8131/3",
-            "description": "8131/3"
+            "name": "8131/3"
           },
           {
             "key": "8140/2",
-            "name": "8140/2",
-            "description": "8140/2"
+            "name": "8140/2"
           },
           {
             "key": "8140/3",
-            "name": "8140/3",
-            "description": "8140/3"
+            "name": "8140/3"
           },
           {
             "key": "8140/4",
-            "name": "8140/4",
-            "description": "8140/4"
+            "name": "8140/4"
           },
           {
             "key": "8140/6",
-            "name": "8140/6",
-            "description": "8140/6"
+            "name": "8140/6"
           },
           {
             "key": "8141/3",
-            "name": "8141/3",
-            "description": "8141/3"
+            "name": "8141/3"
           },
           {
             "key": "8144/3",
-            "name": "8144/3",
-            "description": "8144/3"
+            "name": "8144/3"
           },
           {
             "key": "8145/3",
-            "name": "8145/3",
-            "description": "8145/3"
+            "name": "8145/3"
           },
           {
             "key": "8146/3",
-            "name": "8146/3",
-            "description": "8146/3"
+            "name": "8146/3"
           },
           {
             "key": "8147/3",
-            "name": "8147/3",
-            "description": "8147/3"
+            "name": "8147/3"
           },
           {
             "key": "8148/2",
-            "name": "8148/2",
-            "description": "8148/2"
+            "name": "8148/2"
           },
           {
             "key": "8151/1",
-            "name": "8151/1",
-            "description": "8151/1"
+            "name": "8151/1"
           },
           {
             "key": "8151/3",
-            "name": "8151/3",
-            "description": "8151/3"
+            "name": "8151/3"
           },
           {
             "key": "8153/1",
-            "name": "8153/1",
-            "description": "8153/1"
+            "name": "8153/1"
           },
           {
             "key": "8153/3",
-            "name": "8153/3",
-            "description": "8153/3"
+            "name": "8153/3"
           },
           {
             "key": "8155/1",
-            "name": "8155/1",
-            "description": "8155/1"
+            "name": "8155/1"
           },
           {
             "key": "8155/3",
-            "name": "8155/3",
-            "description": "8155/3"
+            "name": "8155/3"
           },
           {
             "key": "8160/3",
-            "name": "8160/3",
-            "description": "8160/3"
+            "name": "8160/3"
           },
           {
             "key": "8162/3",
-            "name": "8162/3",
-            "description": "8162/3"
+            "name": "8162/3"
           },
           {
             "key": "8163/2",
-            "name": "8163/2",
-            "description": "8163/2"
+            "name": "8163/2"
           },
           {
             "key": "8163/3",
-            "name": "8163/3",
-            "description": "8163/3"
+            "name": "8163/3"
           },
           {
             "key": "8170/3",
-            "name": "8170/3",
-            "description": "8170/3"
+            "name": "8170/3"
           },
           {
             "key": "8171/3",
-            "name": "8171/3",
-            "description": "8171/3"
+            "name": "8171/3"
           },
           {
             "key": "8174/3",
-            "name": "8174/3",
-            "description": "8174/3"
+            "name": "8174/3"
           },
           {
             "key": "8180/3",
-            "name": "8180/3",
-            "description": "8180/3"
+            "name": "8180/3"
           },
           {
             "key": "8190/3",
-            "name": "8190/3",
-            "description": "8190/3"
+            "name": "8190/3"
           },
           {
             "key": "8200/3",
-            "name": "8200/3",
-            "description": "8200/3"
+            "name": "8200/3"
           },
           {
             "key": "8201/3",
-            "name": "8201/3",
-            "description": "8201/3"
+            "name": "8201/3"
           },
           {
             "key": "8210/3",
-            "name": "8210/3",
-            "description": "8210/3"
+            "name": "8210/3"
           },
           {
             "key": "8211/2",
-            "name": "8211/2",
-            "description": "8211/2"
+            "name": "8211/2"
           },
           {
             "key": "8211/3",
-            "name": "8211/3",
-            "description": "8211/3"
+            "name": "8211/3"
           },
           {
             "key": "8230/3",
-            "name": "8230/3",
-            "description": "8230/3"
+            "name": "8230/3"
           },
           {
             "key": "8230/6",
-            "name": "8230/6",
-            "description": "8230/6"
+            "name": "8230/6"
           },
           {
             "key": "8231/3",
-            "name": "8231/3",
-            "description": "8231/3"
+            "name": "8231/3"
           },
           {
             "key": "8240/3",
-            "name": "8240/3",
-            "description": "8240/3"
+            "name": "8240/3"
           },
           {
             "key": "8240/6",
-            "name": "8240/6",
-            "description": "8240/6"
+            "name": "8240/6"
           },
           {
             "key": "8243/3",
-            "name": "8243/3",
-            "description": "8243/3"
+            "name": "8243/3"
           },
           {
             "key": "8244/3",
-            "name": "8244/3",
-            "description": "8244/3"
+            "name": "8244/3"
           },
           {
             "key": "8245/3",
-            "name": "8245/3",
-            "description": "8245/3"
+            "name": "8245/3"
           },
           {
             "key": "8246/3",
-            "name": "8246/3",
-            "description": "8246/3"
+            "name": "8246/3"
           },
           {
             "key": "8246/6",
-            "name": "8246/6",
-            "description": "8246/6"
+            "name": "8246/6"
           },
           {
             "key": "8247/3",
-            "name": "8247/3",
-            "description": "8247/3"
+            "name": "8247/3"
           },
           {
             "key": "8249/3",
-            "name": "8249/3",
-            "description": "8249/3"
+            "name": "8249/3"
           },
           {
             "key": "8249/6",
-            "name": "8249/6",
-            "description": "8249/6"
+            "name": "8249/6"
           },
           {
             "key": "8250/3",
-            "name": "8250/3",
-            "description": "8250/3"
+            "name": "8250/3"
           },
           {
             "key": "8251/3",
-            "name": "8251/3",
-            "description": "8251/3"
+            "name": "8251/3"
           },
           {
             "key": "8252/3",
-            "name": "8252/3",
-            "description": "8252/3"
+            "name": "8252/3"
           },
           {
             "key": "8252/6",
-            "name": "8252/6",
-            "description": "8252/6"
+            "name": "8252/6"
           },
           {
             "key": "8253/3",
-            "name": "8253/3",
-            "description": "8253/3"
+            "name": "8253/3"
           },
           {
             "key": "8253/6",
-            "name": "8253/6",
-            "description": "8253/6"
+            "name": "8253/6"
           },
           {
             "key": "8254/3",
-            "name": "8254/3",
-            "description": "8254/3"
+            "name": "8254/3"
           },
           {
             "key": "8255/3",
-            "name": "8255/3",
-            "description": "8255/3"
+            "name": "8255/3"
           },
           {
             "key": "8260/0",
-            "name": "8260/0",
-            "description": "8260/0"
+            "name": "8260/0"
           },
           {
             "key": "8260/3",
-            "name": "8260/3",
-            "description": "8260/3"
+            "name": "8260/3"
           },
           {
             "key": "8260/6",
-            "name": "8260/6",
-            "description": "8260/6"
+            "name": "8260/6"
           },
           {
             "key": "8262/3",
-            "name": "8262/3",
-            "description": "8262/3"
+            "name": "8262/3"
           },
           {
             "key": "8263/0",
-            "name": "8263/0",
-            "description": "8263/0"
+            "name": "8263/0"
           },
           {
             "key": "8263/2",
-            "name": "8263/2",
-            "description": "8263/2"
+            "name": "8263/2"
           },
           {
             "key": "8263/3",
-            "name": "8263/3",
-            "description": "8263/3"
+            "name": "8263/3"
           },
           {
             "key": "8264/2",
-            "name": "8264/2",
-            "description": "8264/2"
+            "name": "8264/2"
           },
           {
             "key": "8265/3",
-            "name": "8265/3",
-            "description": "8265/3"
+            "name": "8265/3"
           },
           {
             "key": "8265/6",
-            "name": "8265/6",
-            "description": "8265/6"
+            "name": "8265/6"
           },
           {
             "key": "8270/0",
-            "name": "8270/0",
-            "description": "8270/0"
+            "name": "8270/0"
           },
           {
             "key": "8270/3",
-            "name": "8270/3",
-            "description": "8270/3"
+            "name": "8270/3"
           },
           {
             "key": "8271/0",
-            "name": "8271/0",
-            "description": "8271/0"
+            "name": "8271/0"
           },
           {
             "key": "8272/0",
-            "name": "8272/0",
-            "description": "8272/0"
+            "name": "8272/0"
           },
           {
             "key": "8280/3",
-            "name": "8280/3",
-            "description": "8280/3"
+            "name": "8280/3"
           },
           {
             "key": "8290/0",
-            "name": "8290/0",
-            "description": "8290/0"
+            "name": "8290/0"
           },
           {
             "key": "8290/1",
-            "name": "8290/1",
-            "description": "8290/1"
+            "name": "8290/1"
           },
           {
             "key": "8290/3",
-            "name": "8290/3",
-            "description": "8290/3"
+            "name": "8290/3"
           },
           {
             "key": "8308/3",
-            "name": "8308/3",
-            "description": "8308/3"
+            "name": "8308/3"
           },
           {
             "key": "8310/1",
-            "name": "8310/1",
-            "description": "8310/1"
+            "name": "8310/1"
           },
           {
             "key": "8310/3",
-            "name": "8310/3",
-            "description": "8310/3"
+            "name": "8310/3"
           },
           {
             "key": "8310/6",
-            "name": "8310/6",
-            "description": "8310/6"
+            "name": "8310/6"
           },
           {
             "key": "8312/3",
-            "name": "8312/3",
-            "description": "8312/3"
+            "name": "8312/3"
           },
           {
             "key": "8316/3",
-            "name": "8316/3",
-            "description": "8316/3"
+            "name": "8316/3"
           },
           {
             "key": "8317/3",
-            "name": "8317/3",
-            "description": "8317/3"
+            "name": "8317/3"
           },
           {
             "key": "8318/3",
-            "name": "8318/3",
-            "description": "8318/3"
+            "name": "8318/3"
           },
           {
             "key": "8319/3",
-            "name": "8319/3",
-            "description": "8319/3"
+            "name": "8319/3"
           },
           {
             "key": "8323/3",
-            "name": "8323/3",
-            "description": "8323/3"
+            "name": "8323/3"
           },
           {
             "key": "8330/3",
-            "name": "8330/3",
-            "description": "8330/3"
+            "name": "8330/3"
           },
           {
             "key": "8330/6",
-            "name": "8330/6",
-            "description": "8330/6"
+            "name": "8330/6"
           },
           {
             "key": "8330/9",
-            "name": "8330/9",
-            "description": "8330/9"
+            "name": "8330/9"
           },
           {
             "key": "8331/3",
-            "name": "8331/3",
-            "description": "8331/3"
+            "name": "8331/3"
           },
           {
             "key": "8332/3",
-            "name": "8332/3",
-            "description": "8332/3"
+            "name": "8332/3"
           },
           {
             "key": "8337/3",
-            "name": "8337/3",
-            "description": "8337/3"
+            "name": "8337/3"
           },
           {
             "key": "8340/3",
-            "name": "8340/3",
-            "description": "8340/3"
+            "name": "8340/3"
           },
           {
             "key": "8340/6",
-            "name": "8340/6",
-            "description": "8340/6"
+            "name": "8340/6"
           },
           {
             "key": "8341/3",
-            "name": "8341/3",
-            "description": "8341/3"
+            "name": "8341/3"
           },
           {
             "key": "8342/3",
-            "name": "8342/3",
-            "description": "8342/3"
+            "name": "8342/3"
           },
           {
             "key": "8344/3",
-            "name": "8344/3",
-            "description": "8344/3"
+            "name": "8344/3"
           },
           {
             "key": "8370/3",
-            "name": "8370/3",
-            "description": "8370/3"
+            "name": "8370/3"
           },
           {
             "key": "8380/1",
-            "name": "8380/1",
-            "description": "8380/1"
+            "name": "8380/1"
           },
           {
             "key": "8380/3",
-            "name": "8380/3",
-            "description": "8380/3"
+            "name": "8380/3"
           },
           {
             "key": "8380/6",
-            "name": "8380/6",
-            "description": "8380/6"
+            "name": "8380/6"
           },
           {
             "key": "8382/3",
-            "name": "8382/3",
-            "description": "8382/3"
+            "name": "8382/3"
           },
           {
             "key": "8384/3",
-            "name": "8384/3",
-            "description": "8384/3"
+            "name": "8384/3"
           },
           {
             "key": "8390/3",
-            "name": "8390/3",
-            "description": "8390/3"
+            "name": "8390/3"
           },
           {
             "key": "8400/3",
-            "name": "8400/3",
-            "description": "8400/3"
+            "name": "8400/3"
           },
           {
             "key": "8400/6",
-            "name": "8400/6",
-            "description": "8400/6"
+            "name": "8400/6"
           },
           {
             "key": "8401/3",
-            "name": "8401/3",
-            "description": "8401/3"
+            "name": "8401/3"
           },
           {
             "key": "8402/3",
-            "name": "8402/3",
-            "description": "8402/3"
+            "name": "8402/3"
           },
           {
             "key": "8403/3",
-            "name": "8403/3",
-            "description": "8403/3"
+            "name": "8403/3"
           },
           {
             "key": "8407/3",
-            "name": "8407/3",
-            "description": "8407/3"
+            "name": "8407/3"
           },
           {
             "key": "8409/3",
-            "name": "8409/3",
-            "description": "8409/3"
+            "name": "8409/3"
           },
           {
             "key": "8409/6",
-            "name": "8409/6",
-            "description": "8409/6"
+            "name": "8409/6"
           },
           {
             "key": "8410/3",
-            "name": "8410/3",
-            "description": "8410/3"
+            "name": "8410/3"
           },
           {
             "key": "8430/1",
-            "name": "8430/1",
-            "description": "8430/1"
+            "name": "8430/1"
           },
           {
             "key": "8430/3",
-            "name": "8430/3",
-            "description": "8430/3"
+            "name": "8430/3"
           },
           {
             "key": "8440/3",
-            "name": "8440/3",
-            "description": "8440/3"
+            "name": "8440/3"
           },
           {
             "key": "8441/3",
-            "name": "8441/3",
-            "description": "8441/3"
+            "name": "8441/3"
           },
           {
             "key": "8442/1",
-            "name": "8442/1",
-            "description": "8442/1"
+            "name": "8442/1"
           },
           {
             "key": "8450/3",
-            "name": "8450/3",
-            "description": "8450/3"
+            "name": "8450/3"
           },
           {
             "key": "8452/3",
-            "name": "8452/3",
-            "description": "8452/3"
+            "name": "8452/3"
           },
           {
             "key": "8453/1",
-            "name": "8453/1",
-            "description": "8453/1"
+            "name": "8453/1"
           },
           {
             "key": "8453/2",
-            "name": "8453/2",
-            "description": "8453/2"
+            "name": "8453/2"
           },
           {
             "key": "8453/3",
-            "name": "8453/3",
-            "description": "8453/3"
+            "name": "8453/3"
           },
           {
             "key": "8460/3",
-            "name": "8460/3",
-            "description": "8460/3"
+            "name": "8460/3"
           },
           {
             "key": "8461/3",
-            "name": "8461/3",
-            "description": "8461/3"
+            "name": "8461/3"
           },
           {
             "key": "8461/6",
-            "name": "8461/6",
-            "description": "8461/6"
+            "name": "8461/6"
           },
           {
             "key": "8462/1",
-            "name": "8462/1",
-            "description": "8462/1"
+            "name": "8462/1"
           },
           {
             "key": "8463/1",
-            "name": "8463/1",
-            "description": "8463/1"
+            "name": "8463/1"
           },
           {
             "key": "8470/3",
-            "name": "8470/3",
-            "description": "8470/3"
+            "name": "8470/3"
           },
           {
             "key": "8472/1",
-            "name": "8472/1",
-            "description": "8472/1"
+            "name": "8472/1"
           },
           {
             "key": "8480/1",
-            "name": "8480/1",
-            "description": "8480/1"
+            "name": "8480/1"
           },
           {
             "key": "8480/3",
-            "name": "8480/3",
-            "description": "8480/3"
+            "name": "8480/3"
           },
           {
             "key": "8480/6",
-            "name": "8480/6",
-            "description": "8480/6"
+            "name": "8480/6"
           },
           {
             "key": "8481/3",
-            "name": "8481/3",
-            "description": "8481/3"
+            "name": "8481/3"
           },
           {
             "key": "8481/6",
-            "name": "8481/6",
-            "description": "8481/6"
+            "name": "8481/6"
           },
           {
             "key": "8482/3",
-            "name": "8482/3",
-            "description": "8482/3"
+            "name": "8482/3"
           },
           {
             "key": "8490/3",
-            "name": "8490/3",
-            "description": "8490/3"
+            "name": "8490/3"
           },
           {
             "key": "8490/6",
-            "name": "8490/6",
-            "description": "8490/6"
+            "name": "8490/6"
           },
           {
             "key": "8500/1",
-            "name": "8500/1",
-            "description": "8500/1"
+            "name": "8500/1"
           },
           {
             "key": "8500/2",
-            "name": "8500/2",
-            "description": "8500/2"
+            "name": "8500/2"
           },
           {
             "key": "8500/3",
-            "name": "8500/3",
-            "description": "8500/3"
+            "name": "8500/3"
           },
           {
             "key": "8500/6",
-            "name": "8500/6",
-            "description": "8500/6"
+            "name": "8500/6"
           },
           {
             "key": "8501/2",
-            "name": "8501/2",
-            "description": "8501/2"
+            "name": "8501/2"
           },
           {
             "key": "8503/0",
-            "name": "8503/0",
-            "description": "8503/0"
+            "name": "8503/0"
           },
           {
             "key": "8503/2",
-            "name": "8503/2",
-            "description": "8503/2"
+            "name": "8503/2"
           },
           {
             "key": "8503/3",
-            "name": "8503/3",
-            "description": "8503/3"
+            "name": "8503/3"
           },
           {
             "key": "8504/2",
-            "name": "8504/2",
-            "description": "8504/2"
+            "name": "8504/2"
           },
           {
             "key": "8504/3",
-            "name": "8504/3",
-            "description": "8504/3"
+            "name": "8504/3"
           },
           {
             "key": "8505/0",
-            "name": "8505/0",
-            "description": "8505/0"
+            "name": "8505/0"
           },
           {
             "key": "8507/2",
-            "name": "8507/2",
-            "description": "8507/2"
+            "name": "8507/2"
           },
           {
             "key": "8507/3",
-            "name": "8507/3",
-            "description": "8507/3"
+            "name": "8507/3"
           },
           {
             "key": "8510/3",
-            "name": "8510/3",
-            "description": "8510/3"
+            "name": "8510/3"
           },
           {
             "key": "8512/3",
-            "name": "8512/3",
-            "description": "8512/3"
+            "name": "8512/3"
           },
           {
             "key": "8520/2",
-            "name": "8520/2",
-            "description": "8520/2"
+            "name": "8520/2"
           },
           {
             "key": "8520/3",
-            "name": "8520/3",
-            "description": "8520/3"
+            "name": "8520/3"
           },
           {
             "key": "8521/3",
-            "name": "8521/3",
-            "description": "8521/3"
+            "name": "8521/3"
           },
           {
             "key": "8522/3",
-            "name": "8522/3",
-            "description": "8522/3"
+            "name": "8522/3"
           },
           {
             "key": "8523/3",
-            "name": "8523/3",
-            "description": "8523/3"
+            "name": "8523/3"
           },
           {
             "key": "8524/3",
-            "name": "8524/3",
-            "description": "8524/3"
+            "name": "8524/3"
           },
           {
             "key": "8525/3",
-            "name": "8525/3",
-            "description": "8525/3"
+            "name": "8525/3"
           },
           {
             "key": "8530/3",
-            "name": "8530/3",
-            "description": "8530/3"
+            "name": "8530/3"
           },
           {
             "key": "8540/3",
-            "name": "8540/3",
-            "description": "8540/3"
+            "name": "8540/3"
           },
           {
             "key": "8541/3",
-            "name": "8541/3",
-            "description": "8541/3"
+            "name": "8541/3"
           },
           {
             "key": "8542/2",
-            "name": "8542/2",
-            "description": "8542/2"
+            "name": "8542/2"
           },
           {
             "key": "8542/3",
-            "name": "8542/3",
-            "description": "8542/3"
+            "name": "8542/3"
           },
           {
             "key": "8550/3",
-            "name": "8550/3",
-            "description": "8550/3"
+            "name": "8550/3"
           },
           {
             "key": "8550/6",
-            "name": "8550/6",
-            "description": "8550/6"
+            "name": "8550/6"
           },
           {
             "key": "8551/3",
-            "name": "8551/3",
-            "description": "8551/3"
+            "name": "8551/3"
           },
           {
             "key": "8560/3",
-            "name": "8560/3",
-            "description": "8560/3"
+            "name": "8560/3"
           },
           {
             "key": "8562/3",
-            "name": "8562/3",
-            "description": "8562/3"
+            "name": "8562/3"
           },
           {
             "key": "8570/3",
-            "name": "8570/3",
-            "description": "8570/3"
+            "name": "8570/3"
           },
           {
             "key": "8571/3",
-            "name": "8571/3",
-            "description": "8571/3"
+            "name": "8571/3"
           },
           {
             "key": "8574/3",
-            "name": "8574/3",
-            "description": "8574/3"
+            "name": "8574/3"
           },
           {
             "key": "8574/6",
-            "name": "8574/6",
-            "description": "8574/6"
+            "name": "8574/6"
           },
           {
             "key": "8575/3",
-            "name": "8575/3",
-            "description": "8575/3"
+            "name": "8575/3"
           },
           {
             "key": "8580/1",
-            "name": "8580/1",
-            "description": "8580/1"
+            "name": "8580/1"
           },
           {
             "key": "8580/3",
-            "name": "8580/3",
-            "description": "8580/3"
+            "name": "8580/3"
           },
           {
             "key": "8581/3",
-            "name": "8581/3",
-            "description": "8581/3"
+            "name": "8581/3"
           },
           {
             "key": "8582/3",
-            "name": "8582/3",
-            "description": "8582/3"
+            "name": "8582/3"
           },
           {
             "key": "8583/1",
-            "name": "8583/1",
-            "description": "8583/1"
+            "name": "8583/1"
           },
           {
             "key": "8583/3",
-            "name": "8583/3",
-            "description": "8583/3"
+            "name": "8583/3"
           },
           {
             "key": "8584/3",
-            "name": "8584/3",
-            "description": "8584/3"
+            "name": "8584/3"
           },
           {
             "key": "8585/1",
-            "name": "8585/1",
-            "description": "8585/1"
+            "name": "8585/1"
           },
           {
             "key": "8585/3",
-            "name": "8585/3",
-            "description": "8585/3"
+            "name": "8585/3"
           },
           {
             "key": "8586/3",
-            "name": "8586/3",
-            "description": "8586/3"
+            "name": "8586/3"
           },
           {
             "key": "8620/3",
-            "name": "8620/3",
-            "description": "8620/3"
+            "name": "8620/3"
           },
           {
             "key": "8631/3",
-            "name": "8631/3",
-            "description": "8631/3"
+            "name": "8631/3"
           },
           {
             "key": "8640/1",
-            "name": "8640/1",
-            "description": "8640/1"
+            "name": "8640/1"
           },
           {
             "key": "8640/3",
-            "name": "8640/3",
-            "description": "8640/3"
+            "name": "8640/3"
           },
           {
             "key": "8650/1",
-            "name": "8650/1",
-            "description": "8650/1"
+            "name": "8650/1"
           },
           {
             "key": "8670/3",
-            "name": "8670/3",
-            "description": "8670/3"
+            "name": "8670/3"
           },
           {
             "key": "8673/3",
-            "name": "8673/3",
-            "description": "8673/3"
+            "name": "8673/3"
           },
           {
             "key": "8680/1",
-            "name": "8680/1",
-            "description": "8680/1"
+            "name": "8680/1"
           },
           {
             "key": "8680/3",
-            "name": "8680/3",
-            "description": "8680/3"
+            "name": "8680/3"
           },
           {
             "key": "8682/1",
-            "name": "8682/1",
-            "description": "8682/1"
+            "name": "8682/1"
           },
           {
             "key": "8690/1",
-            "name": "8690/1",
-            "description": "8690/1"
+            "name": "8690/1"
           },
           {
             "key": "8693/1",
-            "name": "8693/1",
-            "description": "8693/1"
+            "name": "8693/1"
           },
           {
             "key": "8700/0",
-            "name": "8700/0",
-            "description": "8700/0"
+            "name": "8700/0"
           },
           {
             "key": "8700/1",
-            "name": "8700/1",
-            "description": "8700/1"
+            "name": "8700/1"
           },
           {
             "key": "8700/3",
-            "name": "8700/3",
-            "description": "8700/3"
+            "name": "8700/3"
           },
           {
             "key": "8720/0",
-            "name": "8720/0",
-            "description": "8720/0"
+            "name": "8720/0"
           },
           {
             "key": "8720/1",
-            "name": "8720/1",
-            "description": "8720/1"
+            "name": "8720/1"
           },
           {
             "key": "8720/2",
-            "name": "8720/2",
-            "description": "8720/2"
+            "name": "8720/2"
           },
           {
             "key": "8720/3",
-            "name": "8720/3",
-            "description": "8720/3"
+            "name": "8720/3"
           },
           {
             "key": "8720/6",
-            "name": "8720/6",
-            "description": "8720/6"
+            "name": "8720/6"
           },
           {
             "key": "8721/3",
-            "name": "8721/3",
-            "description": "8721/3"
+            "name": "8721/3"
           },
           {
             "key": "8721/6",
-            "name": "8721/6",
-            "description": "8721/6"
+            "name": "8721/6"
           },
           {
             "key": "8727/0",
-            "name": "8727/0",
-            "description": "8727/0"
+            "name": "8727/0"
           },
           {
             "key": "8728/1",
-            "name": "8728/1",
-            "description": "8728/1"
+            "name": "8728/1"
           },
           {
             "key": "8730/3",
-            "name": "8730/3",
-            "description": "8730/3"
+            "name": "8730/3"
           },
           {
             "key": "8730/6",
-            "name": "8730/6",
-            "description": "8730/6"
+            "name": "8730/6"
           },
           {
             "key": "8742/2",
-            "name": "8742/2",
-            "description": "8742/2"
+            "name": "8742/2"
           },
           {
             "key": "8742/3",
-            "name": "8742/3",
-            "description": "8742/3"
+            "name": "8742/3"
           },
           {
             "key": "8743/2",
-            "name": "8743/2",
-            "description": "8743/2"
+            "name": "8743/2"
           },
           {
             "key": "8743/3",
-            "name": "8743/3",
-            "description": "8743/3"
+            "name": "8743/3"
           },
           {
             "key": "8743/6",
-            "name": "8743/6",
-            "description": "8743/6"
+            "name": "8743/6"
           },
           {
             "key": "8744/3",
-            "name": "8744/3",
-            "description": "8744/3"
+            "name": "8744/3"
           },
           {
             "key": "8745/3",
-            "name": "8745/3",
-            "description": "8745/3"
+            "name": "8745/3"
           },
           {
             "key": "8772/3",
-            "name": "8772/3",
-            "description": "8772/3"
+            "name": "8772/3"
           },
           {
             "key": "8773/3",
-            "name": "8773/3",
-            "description": "8773/3"
+            "name": "8773/3"
           },
           {
             "key": "8780/3",
-            "name": "8780/3",
-            "description": "8780/3"
+            "name": "8780/3"
           },
           {
             "key": "8781/3",
-            "name": "8781/3",
-            "description": "8781/3"
+            "name": "8781/3"
           },
           {
             "key": "8800/3",
-            "name": "8800/3",
-            "description": "8800/3"
+            "name": "8800/3"
           },
           {
             "key": "8801/3",
-            "name": "8801/3",
-            "description": "8801/3"
+            "name": "8801/3"
           },
           {
             "key": "8802/3",
-            "name": "8802/3",
-            "description": "8802/3"
+            "name": "8802/3"
           },
           {
             "key": "8802/6",
-            "name": "8802/6",
-            "description": "8802/6"
+            "name": "8802/6"
           },
           {
             "key": "8803/3",
-            "name": "8803/3",
-            "description": "8803/3"
+            "name": "8803/3"
           },
           {
             "key": "8804/3",
-            "name": "8804/3",
-            "description": "8804/3"
+            "name": "8804/3"
           },
           {
             "key": "8805/3",
-            "name": "8805/3",
-            "description": "8805/3"
+            "name": "8805/3"
           },
           {
             "key": "8806/3",
-            "name": "8806/3",
-            "description": "8806/3"
+            "name": "8806/3"
           },
           {
             "key": "8806/6",
-            "name": "8806/6",
-            "description": "8806/6"
+            "name": "8806/6"
           },
           {
             "key": "8810/0",
-            "name": "8810/0",
-            "description": "8810/0"
+            "name": "8810/0"
           },
           {
             "key": "8810/3",
-            "name": "8810/3",
-            "description": "8810/3"
+            "name": "8810/3"
           },
           {
             "key": "8811/3",
-            "name": "8811/3",
-            "description": "8811/3"
+            "name": "8811/3"
           },
           {
             "key": "8814/3",
-            "name": "8814/3",
-            "description": "8814/3"
+            "name": "8814/3"
           },
           {
             "key": "8815/0",
-            "name": "8815/0",
-            "description": "8815/0"
+            "name": "8815/0"
           },
           {
             "key": "8815/3",
-            "name": "8815/3",
-            "description": "8815/3"
+            "name": "8815/3"
           },
           {
             "key": "8821/1",
-            "name": "8821/1",
-            "description": "8821/1"
+            "name": "8821/1"
           },
           {
             "key": "8822/1",
-            "name": "8822/1",
-            "description": "8822/1"
+            "name": "8822/1"
           },
           {
             "key": "8824/1",
-            "name": "8824/1",
-            "description": "8824/1"
+            "name": "8824/1"
           },
           {
             "key": "8825/1",
-            "name": "8825/1",
-            "description": "8825/1"
+            "name": "8825/1"
           },
           {
             "key": "8825/3",
-            "name": "8825/3",
-            "description": "8825/3"
+            "name": "8825/3"
           },
           {
             "key": "8830/1",
-            "name": "8830/1",
-            "description": "8830/1"
+            "name": "8830/1"
           },
           {
             "key": "8830/3",
-            "name": "8830/3",
-            "description": "8830/3"
+            "name": "8830/3"
           },
           {
             "key": "8832/3",
-            "name": "8832/3",
-            "description": "8832/3"
+            "name": "8832/3"
           },
           {
             "key": "8840/3",
-            "name": "8840/3",
-            "description": "8840/3"
+            "name": "8840/3"
           },
           {
             "key": "8850/0",
-            "name": "8850/0",
-            "description": "8850/0"
+            "name": "8850/0"
           },
           {
             "key": "8850/1",
-            "name": "8850/1",
-            "description": "8850/1"
+            "name": "8850/1"
           },
           {
             "key": "8850/3",
-            "name": "8850/3",
-            "description": "8850/3"
+            "name": "8850/3"
           },
           {
             "key": "8851/3",
-            "name": "8851/3",
-            "description": "8851/3"
+            "name": "8851/3"
           },
           {
             "key": "8852/3",
-            "name": "8852/3",
-            "description": "8852/3"
+            "name": "8852/3"
           },
           {
             "key": "8853/3",
-            "name": "8853/3",
-            "description": "8853/3"
+            "name": "8853/3"
           },
           {
             "key": "8854/3",
-            "name": "8854/3",
-            "description": "8854/3"
+            "name": "8854/3"
           },
           {
             "key": "8858/3",
-            "name": "8858/3",
-            "description": "8858/3"
+            "name": "8858/3"
           },
           {
             "key": "8860/0",
-            "name": "8860/0",
-            "description": "8860/0"
+            "name": "8860/0"
           },
           {
             "key": "8890/3",
-            "name": "8890/3",
-            "description": "8890/3"
+            "name": "8890/3"
           },
           {
             "key": "8890/6",
-            "name": "8890/6",
-            "description": "8890/6"
+            "name": "8890/6"
           },
           {
             "key": "8891/3",
-            "name": "8891/3",
-            "description": "8891/3"
+            "name": "8891/3"
           },
           {
             "key": "8900/3",
-            "name": "8900/3",
-            "description": "8900/3"
+            "name": "8900/3"
           },
           {
             "key": "8901/3",
-            "name": "8901/3",
-            "description": "8901/3"
+            "name": "8901/3"
           },
           {
             "key": "8910/3",
-            "name": "8910/3",
-            "description": "8910/3"
+            "name": "8910/3"
           },
           {
             "key": "8912/3",
-            "name": "8912/3",
-            "description": "8912/3"
+            "name": "8912/3"
           },
           {
             "key": "8920/3",
-            "name": "8920/3",
-            "description": "8920/3"
+            "name": "8920/3"
           },
           {
             "key": "8920/6",
-            "name": "8920/6",
-            "description": "8920/6"
+            "name": "8920/6"
           },
           {
             "key": "8930/3",
-            "name": "8930/3",
-            "description": "8930/3"
+            "name": "8930/3"
           },
           {
             "key": "8931/3",
-            "name": "8931/3",
-            "description": "8931/3"
+            "name": "8931/3"
           },
           {
             "key": "8933/3",
-            "name": "8933/3",
-            "description": "8933/3"
+            "name": "8933/3"
           },
           {
             "key": "8936/0",
-            "name": "8936/0",
-            "description": "8936/0"
+            "name": "8936/0"
           },
           {
             "key": "8936/1",
-            "name": "8936/1",
-            "description": "8936/1"
+            "name": "8936/1"
           },
           {
             "key": "8936/3",
-            "name": "8936/3",
-            "description": "8936/3"
+            "name": "8936/3"
           },
           {
             "key": "8940/3",
-            "name": "8940/3",
-            "description": "8940/3"
+            "name": "8940/3"
           },
           {
             "key": "8941/3",
-            "name": "8941/3",
-            "description": "8941/3"
+            "name": "8941/3"
           },
           {
             "key": "8944/3",
-            "name": "8944/3",
-            "description": "8944/3"
+            "name": "8944/3"
           },
           {
             "key": "8950/3",
-            "name": "8950/3",
-            "description": "8950/3"
+            "name": "8950/3"
           },
           {
             "key": "8951/3",
-            "name": "8951/3",
-            "description": "8951/3"
+            "name": "8951/3"
           },
           {
             "key": "8960/3",
-            "name": "8960/3",
-            "description": "8960/3"
+            "name": "8960/3"
           },
           {
             "key": "8963/3",
-            "name": "8963/3",
-            "description": "8963/3"
+            "name": "8963/3"
           },
           {
             "key": "8964/3",
-            "name": "8964/3",
-            "description": "8964/3"
+            "name": "8964/3"
           },
           {
             "key": "8970/3",
-            "name": "8970/3",
-            "description": "8970/3"
+            "name": "8970/3"
           },
           {
             "key": "8980/3",
-            "name": "8980/3",
-            "description": "8980/3"
+            "name": "8980/3"
           },
           {
             "key": "8981/3",
-            "name": "8981/3",
-            "description": "8981/3"
+            "name": "8981/3"
           },
           {
             "key": "8982/3",
-            "name": "8982/3",
-            "description": "8982/3"
+            "name": "8982/3"
           },
           {
             "key": "8990/3",
-            "name": "8990/3",
-            "description": "8990/3"
+            "name": "8990/3"
           },
           {
             "key": "8991/3",
-            "name": "8991/3",
-            "description": "8991/3"
+            "name": "8991/3"
           },
           {
             "key": "9010/0",
-            "name": "9010/0",
-            "description": "9010/0"
+            "name": "9010/0"
           },
           {
             "key": "9020/1",
-            "name": "9020/1",
-            "description": "9020/1"
+            "name": "9020/1"
           },
           {
             "key": "9020/2",
-            "name": "9020/2",
-            "description": "9020/2"
+            "name": "9020/2"
           },
           {
             "key": "9020/3",
-            "name": "9020/3",
-            "description": "9020/3"
+            "name": "9020/3"
           },
           {
             "key": "9040/3",
-            "name": "9040/3",
-            "description": "9040/3"
+            "name": "9040/3"
           },
           {
             "key": "9041/3",
-            "name": "9041/3",
-            "description": "9041/3"
+            "name": "9041/3"
           },
           {
             "key": "9043/3",
-            "name": "9043/3",
-            "description": "9043/3"
+            "name": "9043/3"
           },
           {
             "key": "9043/6",
-            "name": "9043/6",
-            "description": "9043/6"
+            "name": "9043/6"
           },
           {
             "key": "9044/3",
-            "name": "9044/3",
-            "description": "9044/3"
+            "name": "9044/3"
           },
           {
             "key": "9050/3",
-            "name": "9050/3",
-            "description": "9050/3"
+            "name": "9050/3"
           },
           {
             "key": "9052/0",
-            "name": "9052/0",
-            "description": "9052/0"
+            "name": "9052/0"
           },
           {
             "key": "9052/3",
-            "name": "9052/3",
-            "description": "9052/3"
+            "name": "9052/3"
           },
           {
             "key": "9053/3",
-            "name": "9053/3",
-            "description": "9053/3"
+            "name": "9053/3"
           },
           {
             "key": "9060/3",
-            "name": "9060/3",
-            "description": "9060/3"
+            "name": "9060/3"
           },
           {
             "key": "9061/3",
-            "name": "9061/3",
-            "description": "9061/3"
+            "name": "9061/3"
           },
           {
             "key": "9063/3",
-            "name": "9063/3",
-            "description": "9063/3"
+            "name": "9063/3"
           },
           {
             "key": "9064/2",
-            "name": "9064/2",
-            "description": "9064/2"
+            "name": "9064/2"
           },
           {
             "key": "9064/3",
-            "name": "9064/3",
-            "description": "9064/3"
+            "name": "9064/3"
           },
           {
             "key": "9065/3",
-            "name": "9065/3",
-            "description": "9065/3"
+            "name": "9065/3"
           },
           {
             "key": "9070/3",
-            "name": "9070/3",
-            "description": "9070/3"
+            "name": "9070/3"
           },
           {
             "key": "9071/3",
-            "name": "9071/3",
-            "description": "9071/3"
+            "name": "9071/3"
           },
           {
             "key": "9080/0",
-            "name": "9080/0",
-            "description": "9080/0"
+            "name": "9080/0"
           },
           {
             "key": "9080/1",
-            "name": "9080/1",
-            "description": "9080/1"
+            "name": "9080/1"
           },
           {
             "key": "9080/3",
-            "name": "9080/3",
-            "description": "9080/3"
+            "name": "9080/3"
           },
           {
             "key": "9081/3",
-            "name": "9081/3",
-            "description": "9081/3"
+            "name": "9081/3"
           },
           {
             "key": "9084/0",
-            "name": "9084/0",
-            "description": "9084/0"
+            "name": "9084/0"
           },
           {
             "key": "9084/3",
-            "name": "9084/3",
-            "description": "9084/3"
+            "name": "9084/3"
           },
           {
             "key": "9085/3",
-            "name": "9085/3",
-            "description": "9085/3"
+            "name": "9085/3"
           },
           {
             "key": "9091/3",
-            "name": "9091/3",
-            "description": "9091/3"
+            "name": "9091/3"
           },
           {
             "key": "9100/3",
-            "name": "9100/3",
-            "description": "9100/3"
+            "name": "9100/3"
           },
           {
             "key": "9101/3",
-            "name": "9101/3",
-            "description": "9101/3"
+            "name": "9101/3"
           },
           {
             "key": "9120/0",
-            "name": "9120/0",
-            "description": "9120/0"
+            "name": "9120/0"
           },
           {
             "key": "9120/3",
-            "name": "9120/3",
-            "description": "9120/3"
+            "name": "9120/3"
           },
           {
             "key": "9121/0",
-            "name": "9121/0",
-            "description": "9121/0"
+            "name": "9121/0"
           },
           {
             "key": "9130/3",
-            "name": "9130/3",
-            "description": "9130/3"
+            "name": "9130/3"
           },
           {
             "key": "9131/0",
-            "name": "9131/0",
-            "description": "9131/0"
+            "name": "9131/0"
           },
           {
             "key": "9133/1",
-            "name": "9133/1",
-            "description": "9133/1"
+            "name": "9133/1"
           },
           {
             "key": "9133/3",
-            "name": "9133/3",
-            "description": "9133/3"
+            "name": "9133/3"
           },
           {
             "key": "9140/3",
-            "name": "9140/3",
-            "description": "9140/3"
+            "name": "9140/3"
           },
           {
             "key": "9150/0",
-            "name": "9150/0",
-            "description": "9150/0"
+            "name": "9150/0"
           },
           {
             "key": "9150/1",
-            "name": "9150/1",
-            "description": "9150/1"
+            "name": "9150/1"
           },
           {
             "key": "9150/3",
-            "name": "9150/3",
-            "description": "9150/3"
+            "name": "9150/3"
           },
           {
             "key": "9161/1",
-            "name": "9161/1",
-            "description": "9161/1"
+            "name": "9161/1"
           },
           {
             "key": "9172/0",
-            "name": "9172/0",
-            "description": "9172/0"
+            "name": "9172/0"
           },
           {
             "key": "9180/3",
-            "name": "9180/3",
-            "description": "9180/3"
+            "name": "9180/3"
           },
           {
             "key": "9180/6",
-            "name": "9180/6",
-            "description": "9180/6"
+            "name": "9180/6"
           },
           {
             "key": "9181/3",
-            "name": "9181/3",
-            "description": "9181/3"
+            "name": "9181/3"
           },
           {
             "key": "9182/3",
-            "name": "9182/3",
-            "description": "9182/3"
+            "name": "9182/3"
           },
           {
             "key": "9183/3",
-            "name": "9183/3",
-            "description": "9183/3"
+            "name": "9183/3"
           },
           {
             "key": "9185/3",
-            "name": "9185/3",
-            "description": "9185/3"
+            "name": "9185/3"
           },
           {
             "key": "9186/3",
-            "name": "9186/3",
-            "description": "9186/3"
+            "name": "9186/3"
           },
           {
             "key": "9192/3",
-            "name": "9192/3",
-            "description": "9192/3"
+            "name": "9192/3"
           },
           {
             "key": "9220/1",
-            "name": "9220/1",
-            "description": "9220/1"
+            "name": "9220/1"
           },
           {
             "key": "9220/3",
-            "name": "9220/3",
-            "description": "9220/3"
+            "name": "9220/3"
           },
           {
             "key": "9221/3",
-            "name": "9221/3",
-            "description": "9221/3"
+            "name": "9221/3"
           },
           {
             "key": "9231/3",
-            "name": "9231/3",
-            "description": "9231/3"
+            "name": "9231/3"
           },
           {
             "key": "9240/3",
-            "name": "9240/3",
-            "description": "9240/3"
+            "name": "9240/3"
           },
           {
             "key": "9242/3",
-            "name": "9242/3",
-            "description": "9242/3"
+            "name": "9242/3"
           },
           {
             "key": "9243/3",
-            "name": "9243/3",
-            "description": "9243/3"
+            "name": "9243/3"
           },
           {
             "key": "9250/1",
-            "name": "9250/1",
-            "description": "9250/1"
+            "name": "9250/1"
           },
           {
             "key": "9250/3",
-            "name": "9250/3",
-            "description": "9250/3"
+            "name": "9250/3"
           },
           {
             "key": "9251/1",
-            "name": "9251/1",
-            "description": "9251/1"
+            "name": "9251/1"
           },
           {
             "key": "9251/3",
-            "name": "9251/3",
-            "description": "9251/3"
+            "name": "9251/3"
           },
           {
             "key": "9252/0",
-            "name": "9252/0",
-            "description": "9252/0"
+            "name": "9252/0"
           },
           {
             "key": "9260/3",
-            "name": "9260/3",
-            "description": "9260/3"
+            "name": "9260/3"
           },
           {
             "key": "9260/6",
-            "name": "9260/6",
-            "description": "9260/6"
+            "name": "9260/6"
           },
           {
             "key": "9270/3",
-            "name": "9270/3",
-            "description": "9270/3"
+            "name": "9270/3"
           },
           {
             "key": "9350/1",
-            "name": "9350/1",
-            "description": "9350/1"
+            "name": "9350/1"
           },
           {
             "key": "9351/1",
-            "name": "9351/1",
-            "description": "9351/1"
+            "name": "9351/1"
           },
           {
             "key": "9352/1",
-            "name": "9352/1",
-            "description": "9352/1"
+            "name": "9352/1"
           },
           {
             "key": "9361/1",
-            "name": "9361/1",
-            "description": "9361/1"
+            "name": "9361/1"
           },
           {
             "key": "9362/3",
-            "name": "9362/3",
-            "description": "9362/3"
+            "name": "9362/3"
           },
           {
             "key": "9364/3",
-            "name": "9364/3",
-            "description": "9364/3"
+            "name": "9364/3"
           },
           {
             "key": "9370/3",
-            "name": "9370/3",
-            "description": "9370/3"
+            "name": "9370/3"
           },
           {
             "key": "9380/3",
-            "name": "9380/3",
-            "description": "9380/3"
+            "name": "9380/3"
           },
           {
             "key": "9381/3",
-            "name": "9381/3",
-            "description": "9381/3"
+            "name": "9381/3"
           },
           {
             "key": "9382/3",
-            "name": "9382/3",
-            "description": "9382/3"
+            "name": "9382/3"
           },
           {
             "key": "9383/1",
-            "name": "9383/1",
-            "description": "9383/1"
+            "name": "9383/1"
           },
           {
             "key": "9385/3",
-            "name": "9385/3",
-            "description": "9385/3"
+            "name": "9385/3"
           },
           {
             "key": "9386/3",
-            "name": "9386/3",
-            "description": "9386/3"
+            "name": "9386/3"
           },
           {
             "key": "9390/0",
-            "name": "9390/0",
-            "description": "9390/0"
+            "name": "9390/0"
           },
           {
             "key": "9390/1",
-            "name": "9390/1",
-            "description": "9390/1"
+            "name": "9390/1"
           },
           {
             "key": "9390/3",
-            "name": "9390/3",
-            "description": "9390/3"
+            "name": "9390/3"
           },
           {
             "key": "9391/3",
-            "name": "9391/3",
-            "description": "9391/3"
+            "name": "9391/3"
           },
           {
             "key": "9392/3",
-            "name": "9392/3",
-            "description": "9392/3"
+            "name": "9392/3"
           },
           {
             "key": "9394/1",
-            "name": "9394/1",
-            "description": "9394/1"
+            "name": "9394/1"
           },
           {
             "key": "9395/3",
-            "name": "9395/3",
-            "description": "9395/3"
+            "name": "9395/3"
           },
           {
             "key": "9396/3",
-            "name": "9396/3",
-            "description": "9396/3"
+            "name": "9396/3"
           },
           {
             "key": "9400/3",
-            "name": "9400/3",
-            "description": "9400/3"
+            "name": "9400/3"
           },
           {
             "key": "9401/3",
-            "name": "9401/3",
-            "description": "9401/3"
+            "name": "9401/3"
           },
           {
             "key": "9410/3",
-            "name": "9410/3",
-            "description": "9410/3"
+            "name": "9410/3"
           },
           {
             "key": "9411/3",
-            "name": "9411/3",
-            "description": "9411/3"
+            "name": "9411/3"
           },
           {
             "key": "9412/1",
-            "name": "9412/1",
-            "description": "9412/1"
+            "name": "9412/1"
           },
           {
             "key": "9413/0",
-            "name": "9413/0",
-            "description": "9413/0"
+            "name": "9413/0"
           },
           {
             "key": "9420/3",
-            "name": "9420/3",
-            "description": "9420/3"
+            "name": "9420/3"
           },
           {
             "key": "9421/1",
-            "name": "9421/1",
-            "description": "9421/1"
+            "name": "9421/1"
           },
           {
             "key": "9424/3",
-            "name": "9424/3",
-            "description": "9424/3"
+            "name": "9424/3"
           },
           {
             "key": "9425/3",
-            "name": "9425/3",
-            "description": "9425/3"
+            "name": "9425/3"
           },
           {
             "key": "9430/3",
-            "name": "9430/3",
-            "description": "9430/3"
+            "name": "9430/3"
           },
           {
             "key": "9432/1",
-            "name": "9432/1",
-            "description": "9432/1"
+            "name": "9432/1"
           },
           {
             "key": "9439/3",
-            "name": "9439/3",
-            "description": "9439/3"
+            "name": "9439/3"
           },
           {
             "key": "9440/3",
-            "name": "9440/3",
-            "description": "9440/3"
+            "name": "9440/3"
           },
           {
             "key": "9441/3",
-            "name": "9441/3",
-            "description": "9441/3"
+            "name": "9441/3"
           },
           {
             "key": "9442/3",
-            "name": "9442/3",
-            "description": "9442/3"
+            "name": "9442/3"
           },
           {
             "key": "9445/3",
-            "name": "9445/3",
-            "description": "9445/3"
+            "name": "9445/3"
           },
           {
             "key": "9450/3",
-            "name": "9450/3",
-            "description": "9450/3"
+            "name": "9450/3"
           },
           {
             "key": "9451/3",
-            "name": "9451/3",
-            "description": "9451/3"
+            "name": "9451/3"
           },
           {
             "key": "9470/3",
-            "name": "9470/3",
-            "description": "9470/3"
+            "name": "9470/3"
           },
           {
             "key": "9471/3",
-            "name": "9471/3",
-            "description": "9471/3"
+            "name": "9471/3"
           },
           {
             "key": "9473/3",
-            "name": "9473/3",
-            "description": "9473/3"
+            "name": "9473/3"
           },
           {
             "key": "9474/3",
-            "name": "9474/3",
-            "description": "9474/3"
+            "name": "9474/3"
           },
           {
             "key": "9475/3",
-            "name": "9475/3",
-            "description": "9475/3"
+            "name": "9475/3"
           },
           {
             "key": "9476/3",
-            "name": "9476/3",
-            "description": "9476/3"
+            "name": "9476/3"
           },
           {
             "key": "9477/3",
-            "name": "9477/3",
-            "description": "9477/3"
+            "name": "9477/3"
           },
           {
             "key": "9478/3",
-            "name": "9478/3",
-            "description": "9478/3"
+            "name": "9478/3"
           },
           {
             "key": "9490/3",
-            "name": "9490/3",
-            "description": "9490/3"
+            "name": "9490/3"
           },
           {
             "key": "9493/0",
-            "name": "9493/0",
-            "description": "9493/0"
+            "name": "9493/0"
           },
           {
             "key": "9500/3",
-            "name": "9500/3",
-            "description": "9500/3"
+            "name": "9500/3"
           },
           {
             "key": "9505/1",
-            "name": "9505/1",
-            "description": "9505/1"
+            "name": "9505/1"
           },
           {
             "key": "9505/3",
-            "name": "9505/3",
-            "description": "9505/3"
+            "name": "9505/3"
           },
           {
             "key": "9506/1",
-            "name": "9506/1",
-            "description": "9506/1"
+            "name": "9506/1"
           },
           {
             "key": "9508/3",
-            "name": "9508/3",
-            "description": "9508/3"
+            "name": "9508/3"
           },
           {
             "key": "9509/1",
-            "name": "9509/1",
-            "description": "9509/1"
+            "name": "9509/1"
           },
           {
             "key": "9510/3",
-            "name": "9510/3",
-            "description": "9510/3"
+            "name": "9510/3"
           },
           {
             "key": "9522/3",
-            "name": "9522/3",
-            "description": "9522/3"
+            "name": "9522/3"
           },
           {
             "key": "9530/0",
-            "name": "9530/0",
-            "description": "9530/0"
+            "name": "9530/0"
           },
           {
             "key": "9530/2",
-            "name": "9530/2",
-            "description": "9530/2"
+            "name": "9530/2"
           },
           {
             "key": "9530/3",
-            "name": "9530/3",
-            "description": "9530/3"
+            "name": "9530/3"
           },
           {
             "key": "9531/0",
-            "name": "9531/0",
-            "description": "9531/0"
+            "name": "9531/0"
           },
           {
             "key": "9532/0",
-            "name": "9532/0",
-            "description": "9532/0"
+            "name": "9532/0"
           },
           {
             "key": "9533/0",
-            "name": "9533/0",
-            "description": "9533/0"
+            "name": "9533/0"
           },
           {
             "key": "9534/0",
-            "name": "9534/0",
-            "description": "9534/0"
+            "name": "9534/0"
           },
           {
             "key": "9537/0",
-            "name": "9537/0",
-            "description": "9537/0"
+            "name": "9537/0"
           },
           {
             "key": "9538/1",
-            "name": "9538/1",
-            "description": "9538/1"
+            "name": "9538/1"
           },
           {
             "key": "9538/3",
-            "name": "9538/3",
-            "description": "9538/3"
+            "name": "9538/3"
           },
           {
             "key": "9539/1",
-            "name": "9539/1",
-            "description": "9539/1"
+            "name": "9539/1"
           },
           {
             "key": "9540/0",
-            "name": "9540/0",
-            "description": "9540/0"
+            "name": "9540/0"
           },
           {
             "key": "9540/1",
-            "name": "9540/1",
-            "description": "9540/1"
+            "name": "9540/1"
           },
           {
             "key": "9540/3",
-            "name": "9540/3",
-            "description": "9540/3"
+            "name": "9540/3"
           },
           {
             "key": "9560/0",
-            "name": "9560/0",
-            "description": "9560/0"
+            "name": "9560/0"
           },
           {
             "key": "9560/3",
-            "name": "9560/3",
-            "description": "9560/3"
+            "name": "9560/3"
           },
           {
             "key": "9561/3",
-            "name": "9561/3",
-            "description": "9561/3"
+            "name": "9561/3"
           },
           {
             "key": "9581/3",
-            "name": "9581/3",
-            "description": "9581/3"
+            "name": "9581/3"
           },
           {
             "key": "9590/3",
-            "name": "9590/3",
-            "description": "9590/3"
+            "name": "9590/3"
           },
           {
             "key": "9591/3",
-            "name": "9591/3",
-            "description": "9591/3"
+            "name": "9591/3"
           },
           {
             "key": "9593/1",
-            "name": "9593/1",
-            "description": "9593/1"
+            "name": "9593/1"
           },
           {
             "key": "9596/3",
-            "name": "9596/3",
-            "description": "9596/3"
+            "name": "9596/3"
           },
           {
             "key": "9597/3",
-            "name": "9597/3",
-            "description": "9597/3"
+            "name": "9597/3"
           },
           {
             "key": "9608/3",
-            "name": "9608/3",
-            "description": "9608/3"
+            "name": "9608/3"
           },
           {
             "key": "9613/3",
-            "name": "9613/3",
-            "description": "9613/3"
+            "name": "9613/3"
           },
           {
             "key": "9631/3",
-            "name": "9631/3",
-            "description": "9631/3"
+            "name": "9631/3"
           },
           {
             "key": "9650/3",
-            "name": "9650/3",
-            "description": "9650/3"
+            "name": "9650/3"
           },
           {
             "key": "9651/3",
-            "name": "9651/3",
-            "description": "9651/3"
+            "name": "9651/3"
           },
           {
             "key": "9652/3",
-            "name": "9652/3",
-            "description": "9652/3"
+            "name": "9652/3"
           },
           {
             "key": "9653/3",
-            "name": "9653/3",
-            "description": "9653/3"
+            "name": "9653/3"
           },
           {
             "key": "9659/3",
-            "name": "9659/3",
-            "description": "9659/3"
+            "name": "9659/3"
           },
           {
             "key": "9663/3",
-            "name": "9663/3",
-            "description": "9663/3"
+            "name": "9663/3"
           },
           {
             "key": "9667/3",
-            "name": "9667/3",
-            "description": "9667/3"
+            "name": "9667/3"
           },
           {
             "key": "9670/3",
-            "name": "9670/3",
-            "description": "9670/3"
+            "name": "9670/3"
           },
           {
             "key": "9671/3",
-            "name": "9671/3",
-            "description": "9671/3"
+            "name": "9671/3"
           },
           {
             "key": "9673/3",
-            "name": "9673/3",
-            "description": "9673/3"
+            "name": "9673/3"
           },
           {
             "key": "9675/3",
-            "name": "9675/3",
-            "description": "9675/3"
+            "name": "9675/3"
           },
           {
             "key": "9678/3",
-            "name": "9678/3",
-            "description": "9678/3"
+            "name": "9678/3"
           },
           {
             "key": "9679/3",
-            "name": "9679/3",
-            "description": "9679/3"
+            "name": "9679/3"
           },
           {
             "key": "9680/3",
-            "name": "9680/3",
-            "description": "9680/3"
+            "name": "9680/3"
           },
           {
             "key": "9684/3",
-            "name": "9684/3",
-            "description": "9684/3"
+            "name": "9684/3"
           },
           {
             "key": "9687/3",
-            "name": "9687/3",
-            "description": "9687/3"
+            "name": "9687/3"
           },
           {
             "key": "9688/3",
-            "name": "9688/3",
-            "description": "9688/3"
+            "name": "9688/3"
           },
           {
             "key": "9689/3",
-            "name": "9689/3",
-            "description": "9689/3"
+            "name": "9689/3"
           },
           {
             "key": "9690/3",
-            "name": "9690/3",
-            "description": "9690/3"
+            "name": "9690/3"
           },
           {
             "key": "9691/3",
-            "name": "9691/3",
-            "description": "9691/3"
+            "name": "9691/3"
           },
           {
             "key": "9695/3",
-            "name": "9695/3",
-            "description": "9695/3"
+            "name": "9695/3"
           },
           {
             "key": "9698/3",
-            "name": "9698/3",
-            "description": "9698/3"
+            "name": "9698/3"
           },
           {
             "key": "9699/3",
-            "name": "9699/3",
-            "description": "9699/3"
+            "name": "9699/3"
           },
           {
             "key": "9700/3",
-            "name": "9700/3",
-            "description": "9700/3"
+            "name": "9700/3"
           },
           {
             "key": "9701/3",
-            "name": "9701/3",
-            "description": "9701/3"
+            "name": "9701/3"
           },
           {
             "key": "9702/3",
-            "name": "9702/3",
-            "description": "9702/3"
+            "name": "9702/3"
           },
           {
             "key": "9705/3",
-            "name": "9705/3",
-            "description": "9705/3"
+            "name": "9705/3"
           },
           {
             "key": "9708/3",
-            "name": "9708/3",
-            "description": "9708/3"
+            "name": "9708/3"
           },
           {
             "key": "9709/3",
-            "name": "9709/3",
-            "description": "9709/3"
+            "name": "9709/3"
           },
           {
             "key": "9711/3",
-            "name": "9711/3",
-            "description": "9711/3"
+            "name": "9711/3"
           },
           {
             "key": "9714/3",
-            "name": "9714/3",
-            "description": "9714/3"
+            "name": "9714/3"
           },
           {
             "key": "9716/3",
-            "name": "9716/3",
-            "description": "9716/3"
+            "name": "9716/3"
           },
           {
             "key": "9717/3",
-            "name": "9717/3",
-            "description": "9717/3"
+            "name": "9717/3"
           },
           {
             "key": "9718/1",
-            "name": "9718/1",
-            "description": "9718/1"
+            "name": "9718/1"
           },
           {
             "key": "9718/3",
-            "name": "9718/3",
-            "description": "9718/3"
+            "name": "9718/3"
           },
           {
             "key": "9719/3",
-            "name": "9719/3",
-            "description": "9719/3"
+            "name": "9719/3"
           },
           {
             "key": "9721/1",
-            "name": "9721/1",
-            "description": "9721/1"
+            "name": "9721/1"
           },
           {
             "key": "9726/3",
-            "name": "9726/3",
-            "description": "9726/3"
+            "name": "9726/3"
           },
           {
             "key": "9727/3",
-            "name": "9727/3",
-            "description": "9727/3"
+            "name": "9727/3"
           },
           {
             "key": "9728/3",
-            "name": "9728/3",
-            "description": "9728/3"
+            "name": "9728/3"
           },
           {
             "key": "9729/3",
-            "name": "9729/3",
-            "description": "9729/3"
+            "name": "9729/3"
           },
           {
             "key": "9731/3",
-            "name": "9731/3",
-            "description": "9731/3"
+            "name": "9731/3"
           },
           {
             "key": "9732/3",
-            "name": "9732/3",
-            "description": "9732/3"
+            "name": "9732/3"
           },
           {
             "key": "9733/3",
-            "name": "9733/3",
-            "description": "9733/3"
+            "name": "9733/3"
           },
           {
             "key": "9734/3",
-            "name": "9734/3",
-            "description": "9734/3"
+            "name": "9734/3"
           },
           {
             "key": "9735/3",
-            "name": "9735/3",
-            "description": "9735/3"
+            "name": "9735/3"
           },
           {
             "key": "9738/1",
-            "name": "9738/1",
-            "description": "9738/1"
+            "name": "9738/1"
           },
           {
             "key": "9738/3",
-            "name": "9738/3",
-            "description": "9738/3"
+            "name": "9738/3"
           },
           {
             "key": "9740/1",
-            "name": "9740/1",
-            "description": "9740/1"
+            "name": "9740/1"
           },
           {
             "key": "9741/1",
-            "name": "9741/1",
-            "description": "9741/1"
+            "name": "9741/1"
           },
           {
             "key": "9741/3",
-            "name": "9741/3",
-            "description": "9741/3"
+            "name": "9741/3"
           },
           {
             "key": "9751/1",
-            "name": "9751/1",
-            "description": "9751/1"
+            "name": "9751/1"
           },
           {
             "key": "9751/3",
-            "name": "9751/3",
-            "description": "9751/3"
+            "name": "9751/3"
           },
           {
             "key": "9752/1",
-            "name": "9752/1",
-            "description": "9752/1"
+            "name": "9752/1"
           },
           {
             "key": "9753/1",
-            "name": "9753/1",
-            "description": "9753/1"
+            "name": "9753/1"
           },
           {
             "key": "9754/3",
-            "name": "9754/3",
-            "description": "9754/3"
+            "name": "9754/3"
           },
           {
             "key": "9755/3",
-            "name": "9755/3",
-            "description": "9755/3"
+            "name": "9755/3"
           },
           {
             "key": "9756/3",
-            "name": "9756/3",
-            "description": "9756/3"
+            "name": "9756/3"
           },
           {
             "key": "9757/3",
-            "name": "9757/3",
-            "description": "9757/3"
+            "name": "9757/3"
           },
           {
             "key": "9761/3",
-            "name": "9761/3",
-            "description": "9761/3"
+            "name": "9761/3"
           },
           {
             "key": "9765/1",
-            "name": "9765/1",
-            "description": "9765/1"
+            "name": "9765/1"
           },
           {
             "key": "9801/3",
-            "name": "9801/3",
-            "description": "9801/3"
+            "name": "9801/3"
           },
           {
             "key": "9805/3",
-            "name": "9805/3",
-            "description": "9805/3"
+            "name": "9805/3"
           },
           {
             "key": "9806/3",
-            "name": "9806/3",
-            "description": "9806/3"
+            "name": "9806/3"
           },
           {
             "key": "9807/3",
-            "name": "9807/3",
-            "description": "9807/3"
+            "name": "9807/3"
           },
           {
             "key": "9808/3",
-            "name": "9808/3",
-            "description": "9808/3"
+            "name": "9808/3"
           },
           {
             "key": "9811/3",
-            "name": "9811/3",
-            "description": "9811/3"
+            "name": "9811/3"
           },
           {
             "key": "9812/3",
-            "name": "9812/3",
-            "description": "9812/3"
+            "name": "9812/3"
           },
           {
             "key": "9813/3",
-            "name": "9813/3",
-            "description": "9813/3"
+            "name": "9813/3"
           },
           {
             "key": "9814/3",
-            "name": "9814/3",
-            "description": "9814/3"
+            "name": "9814/3"
           },
           {
             "key": "9818/3",
-            "name": "9818/3",
-            "description": "9818/3"
+            "name": "9818/3"
           },
           {
             "key": "9821/3",
-            "name": "9821/3",
-            "description": "9821/3"
+            "name": "9821/3"
           },
           {
             "key": "9823/3",
-            "name": "9823/3",
-            "description": "9823/3"
+            "name": "9823/3"
           },
           {
             "key": "9826/3",
-            "name": "9826/3",
-            "description": "9826/3"
+            "name": "9826/3"
           },
           {
             "key": "9827/3",
-            "name": "9827/3",
-            "description": "9827/3"
+            "name": "9827/3"
           },
           {
             "key": "9831/3",
-            "name": "9831/3",
-            "description": "9831/3"
+            "name": "9831/3"
           },
           {
             "key": "9833/3",
-            "name": "9833/3",
-            "description": "9833/3"
+            "name": "9833/3"
           },
           {
             "key": "9834/3",
-            "name": "9834/3",
-            "description": "9834/3"
+            "name": "9834/3"
           },
           {
             "key": "9835/3",
-            "name": "9835/3",
-            "description": "9835/3"
+            "name": "9835/3"
           },
           {
             "key": "9836/3",
-            "name": "9836/3",
-            "description": "9836/3"
+            "name": "9836/3"
           },
           {
             "key": "9837/3",
-            "name": "9837/3",
-            "description": "9837/3"
+            "name": "9837/3"
           },
           {
             "key": "9840/3",
-            "name": "9840/3",
-            "description": "9840/3"
+            "name": "9840/3"
           },
           {
             "key": "9860/3",
-            "name": "9860/3",
-            "description": "9860/3"
+            "name": "9860/3"
           },
           {
             "key": "9861/3",
-            "name": "9861/3",
-            "description": "9861/3"
+            "name": "9861/3"
           },
           {
             "key": "9863/3",
-            "name": "9863/3",
-            "description": "9863/3"
+            "name": "9863/3"
           },
           {
             "key": "9866/3",
-            "name": "9866/3",
-            "description": "9866/3"
+            "name": "9866/3"
           },
           {
             "key": "9867/3",
-            "name": "9867/3",
-            "description": "9867/3"
+            "name": "9867/3"
           },
           {
             "key": "9871/3",
-            "name": "9871/3",
-            "description": "9871/3"
+            "name": "9871/3"
           },
           {
             "key": "9872/3",
-            "name": "9872/3",
-            "description": "9872/3"
+            "name": "9872/3"
           },
           {
             "key": "9873/3",
-            "name": "9873/3",
-            "description": "9873/3"
+            "name": "9873/3"
           },
           {
             "key": "9874/3",
-            "name": "9874/3",
-            "description": "9874/3"
+            "name": "9874/3"
           },
           {
             "key": "9875/3",
-            "name": "9875/3",
-            "description": "9875/3"
+            "name": "9875/3"
           },
           {
             "key": "9876/3",
-            "name": "9876/3",
-            "description": "9876/3"
+            "name": "9876/3"
           },
           {
             "key": "9891/3",
-            "name": "9891/3",
-            "description": "9891/3"
+            "name": "9891/3"
           },
           {
             "key": "9895/3",
-            "name": "9895/3",
-            "description": "9895/3"
+            "name": "9895/3"
           },
           {
             "key": "9895/5",
-            "name": "9895/5",
-            "description": "9895/5"
+            "name": "9895/5"
           },
           {
             "key": "9896/3",
-            "name": "9896/3",
-            "description": "9896/3"
+            "name": "9896/3"
           },
           {
             "key": "9897/3",
-            "name": "9897/3",
-            "description": "9897/3"
+            "name": "9897/3"
           },
           {
             "key": "9898/1",
-            "name": "9898/1",
-            "description": "9898/1"
+            "name": "9898/1"
           },
           {
             "key": "9898/3",
-            "name": "9898/3",
-            "description": "9898/3"
+            "name": "9898/3"
           },
           {
             "key": "9910/3",
-            "name": "9910/3",
-            "description": "9910/3"
+            "name": "9910/3"
           },
           {
             "key": "9920/3",
-            "name": "9920/3",
-            "description": "9920/3"
+            "name": "9920/3"
           },
           {
             "key": "9930/3",
-            "name": "9930/3",
-            "description": "9930/3"
+            "name": "9930/3"
           },
           {
             "key": "9940/3",
-            "name": "9940/3",
-            "description": "9940/3"
+            "name": "9940/3"
           },
           {
             "key": "9945/3",
-            "name": "9945/3",
-            "description": "9945/3"
+            "name": "9945/3"
           },
           {
             "key": "9946/3",
-            "name": "9946/3",
-            "description": "9946/3"
+            "name": "9946/3"
           },
           {
             "key": "9950/3",
-            "name": "9950/3",
-            "description": "9950/3"
+            "name": "9950/3"
           },
           {
             "key": "9960/3",
-            "name": "9960/3",
-            "description": "9960/3"
+            "name": "9960/3"
           },
           {
             "key": "9961/3",
-            "name": "9961/3",
-            "description": "9961/3"
+            "name": "9961/3"
           },
           {
             "key": "9962/3",
-            "name": "9962/3",
-            "description": "9962/3"
+            "name": "9962/3"
           },
           {
             "key": "9964/3",
-            "name": "9964/3",
-            "description": "9964/3"
+            "name": "9964/3"
           },
           {
             "key": "9966/3",
-            "name": "9966/3",
-            "description": "9966/3"
+            "name": "9966/3"
           },
           {
             "key": "9971/3",
-            "name": "9971/3",
-            "description": "9971/3"
+            "name": "9971/3"
           },
           {
             "key": "9975/1",
-            "name": "9975/1",
-            "description": "9975/1"
+            "name": "9975/1"
           },
           {
             "key": "9975/3",
-            "name": "9975/3",
-            "description": "9975/3"
+            "name": "9975/3"
           },
           {
             "key": "9980/3",
-            "name": "9980/3",
-            "description": "9980/3"
+            "name": "9980/3"
           },
           {
             "key": "9982/3",
-            "name": "9982/3",
-            "description": "9982/3"
+            "name": "9982/3"
           },
           {
             "key": "9983/3",
-            "name": "9983/3",
-            "description": "9983/3"
+            "name": "9983/3"
           },
           {
             "key": "9985/3",
-            "name": "9985/3",
-            "description": "9985/3"
+            "name": "9985/3"
           },
           {
             "key": "9986/3",
-            "name": "9986/3",
-            "description": "9986/3"
+            "name": "9986/3"
           },
           {
             "key": "9987/3",
-            "name": "9987/3",
-            "description": "9987/3"
+            "name": "9987/3"
           },
           {
             "key": "9989/1",
-            "name": "9989/1",
-            "description": "9989/1"
+            "name": "9989/1"
           },
           {
             "key": "9989/3",
-            "name": "9989/3",
-            "description": "9989/3"
+            "name": "9989/3"
           }
         ]
       },
@@ -20003,33 +19358,27 @@
         "criteria": [
           {
             "key": "L",
-            "name": "Links",
-            "description": "Links"
+            "name": "Links"
           },
           {
             "key": "R",
-            "name": "Rechts",
-            "description": "Rechts"
+            "name": "Rechts"
           },
           {
             "key": "B",
-            "name": "Beidseitig",
-            "description": "Beidseitig"
+            "name": "Beidseitig"
           },
           {
             "key": "M",
-            "name": "Mittellinie/Mittig",
-            "description": "Mittellinie/Mittig"
+            "name": "Mittellinie/Mittig"
           },
           {
             "key": "U",
-            "name": "Unbekannt",
-            "description": "Unbekannt"
+            "name": "Unbekannt"
           },
           {
             "key": "T",
-            "name": "Trifft nicht zu",
-            "description": "Trifft nicht zu"
+            "name": "Trifft nicht zu"
           }
         ]
       },
@@ -20042,63 +19391,51 @@
         "criteria": [
           {
             "key": "0",
-            "name": "malignes Melanom der Konjunktiva",
-            "description": "malignes Melanom der Konjunktiva"
+            "name": "malignes Melanom der Konjunktiva"
           },
           {
             "key": "1",
-            "name": "gut differenziert",
-            "description": "gut differenziert"
+            "name": "gut differenziert"
           },
           {
             "key": "2",
-            "name": "mäßig differenziert",
-            "description": "mäßig differenziert"
+            "name": "mäßig differenziert"
           },
           {
             "key": "3",
-            "name": "schlecht differenziert",
-            "description": "schlecht differenziert"
+            "name": "schlecht differenziert"
           },
           {
             "key": "4",
-            "name": "undifferenziert",
-            "description": "undifferenziert"
+            "name": "undifferenziert"
           },
           {
             "key": "X",
-            "name": "nicht bestimmbar",
-            "description": "nicht bestimmbar"
+            "name": "nicht bestimmbar"
           },
           {
             "key": "L",
-            "name": "low grade (G1 oder G2)",
-            "description": "low grade (G1 oder G2)"
+            "name": "low grade (G1 oder G2)"
           },
           {
             "key": "M",
-            "name": "intermediate (G2 oder G3)",
-            "description": "intermediate (G2 oder G3)"
+            "name": "intermediate (G2 oder G3)"
           },
           {
             "key": "H",
-            "name": "high grade (G3 oder G4)",
-            "description": "high grade (G3 oder G4)"
+            "name": "high grade (G3 oder G4)"
           },
           {
             "key": "B",
-            "name": "Borderline",
-            "description": "Borderline"
+            "name": "Borderline"
           },
           {
             "key": "U",
-            "name": "unbekannt",
-            "description": "unbekannt"
+            "name": "unbekannt"
           },
           {
             "key": "T",
-            "name": "trifft nicht zu",
-            "description": "trifft nicht zu"
+            "name": "trifft nicht zu"
           }
         ]
       },
@@ -20120,18 +19457,15 @@
             "criteria": [
               {
                 "key": "0",
-                "name": "0",
-                "description": "0"
+                "name": "0"
               },
               {
                 "key": "0a",
-                "name": "0a",
-                "description": "0a"
+                "name": "0a"
               },
               {
                 "key": "0is",
-                "name": "0is",
-                "description": "0is"
+                "name": "0is"
               }
             ]
           },
@@ -20145,18 +19479,15 @@
             "criteria": [
               {
                 "key": "IA",
-                "name": "IA",
-                "description": "IA"
+                "name": "IA"
               },
               {
                 "key": "IA1",
-                "name": "IA1",
-                "description": "IA1"
+                "name": "IA1"
               },
               {
                 "key": "IA2",
-                "name": "IA2",
-                "description": "IA2"
+                "name": "IA2"
               }
             ]
           },
@@ -20170,18 +19501,15 @@
             "criteria": [
               {
                 "key": "IB",
-                "name": "IB",
-                "description": "IB"
+                "name": "IB"
               },
               {
                 "key": "IB1",
-                "name": "IB1",
-                "description": "IB1"
+                "name": "IB1"
               },
               {
                 "key": "IB2",
-                "name": "IB2",
-                "description": "IB2"
+                "name": "IB2"
               }
             ]
           },
@@ -20195,8 +19523,7 @@
             "criteria": [
               {
                 "key": "IC",
-                "name": "IC",
-                "description": "IC"
+                "name": "IC"
               }
             ]
           },
@@ -20210,33 +19537,27 @@
             "criteria": [
               {
                 "key": "II",
-                "name": "II",
-                "description": "II"
+                "name": "II"
               },
               {
                 "key": "IIA",
-                "name": "IIA",
-                "description": "IIA"
+                "name": "IIA"
               },
               {
                 "key": "IIA1",
-                "name": "IIA1",
-                "description": "IIA1"
+                "name": "IIA1"
               },
               {
                 "key": "IIA2",
-                "name": "IIA2",
-                "description": "IIA2"
+                "name": "IIA2"
               },
               {
                 "key": "IIB",
-                "name": "IIB",
-                "description": "IIB"
+                "name": "IIB"
               },
               {
                 "key": "IIC",
-                "name": "IIC",
-                "description": "IIC"
+                "name": "IIC"
               }
             ]
           },
@@ -20250,33 +19571,27 @@
             "criteria": [
               {
                 "key": "III",
-                "name": "III",
-                "description": "III"
+                "name": "III"
               },
               {
                 "key": "IIIA",
-                "name": "IIIA",
-                "description": "IIIA"
+                "name": "IIIA"
               },
               {
                 "key": "IIIB",
-                "name": "IIIB",
-                "description": "IIIB"
+                "name": "IIIB"
               },
               {
                 "key": "IIIC",
-                "name": "IIIC",
-                "description": "IIIC"
+                "name": "IIIC"
               },
               {
                 "key": "IIIC1",
-                "name": "IIIC1",
-                "description": "IIIC1"
+                "name": "IIIC1"
               },
               {
                 "key": "IIIC2",
-                "name": "IIIC2",
-                "description": "IIIC2"
+                "name": "IIIC2"
               }
             ]
           },
@@ -20290,23 +19605,19 @@
             "criteria": [
               {
                 "key": "IV",
-                "name": "IV",
-                "description": "IV"
+                "name": "IV"
               },
               {
                 "key": "IVA",
-                "name": "IVA",
-                "description": "IVA"
+                "name": "IVA"
               },
               {
                 "key": "IVB",
-                "name": "IVB",
-                "description": "IVB"
+                "name": "IVB"
               },
               {
                 "key": "IVC",
-                "name": "IVC",
-                "description": "IVC"
+                "name": "IVC"
               }
             ]
           },
@@ -20320,8 +19631,7 @@
             "criteria": [
               {
                 "key": "IS",
-                "name": "IS",
-                "description": "IS"
+                "name": "IS"
               }
             ]
           }
@@ -20351,7 +19661,6 @@
                   {
                     "key": "0",
                     "name": "0",
-                    "description": "0",
                     "aggregatedValue": [
                       [
                         {
@@ -20378,7 +19687,6 @@
                   {
                     "key": "1",
                     "name": "1",
-                    "description": "1",
                     "aggregatedValue": [
                       [
                         {
@@ -20395,7 +19703,6 @@
                   {
                     "key": "1a",
                     "name": "1a",
-                    "description": "1a",
                     "aggregatedValue": [
                       [
                         {
@@ -20412,7 +19719,6 @@
                   {
                     "key": "1a1",
                     "name": "1a1",
-                    "description": "1a1",
                     "aggregatedValue": [
                       [
                         {
@@ -20429,7 +19735,6 @@
                   {
                     "key": "1a2",
                     "name": "1a2",
-                    "description": "1a2",
                     "aggregatedValue": [
                       [
                         {
@@ -20446,7 +19751,6 @@
                   {
                     "key": "1b",
                     "name": "1b",
-                    "description": "1b",
                     "aggregatedValue": [
                       [
                         {
@@ -20463,7 +19767,6 @@
                   {
                     "key": "1b1",
                     "name": "1b1",
-                    "description": "1b1",
                     "aggregatedValue": [
                       [
                         {
@@ -20480,7 +19783,6 @@
                   {
                     "key": "1b2",
                     "name": "1b2",
-                    "description": "1b2",
                     "aggregatedValue": [
                       [
                         {
@@ -20497,7 +19799,6 @@
                   {
                     "key": "1c",
                     "name": "1c",
-                    "description": "1c",
                     "aggregatedValue": [
                       [
                         {
@@ -20514,7 +19815,6 @@
                   {
                     "key": "1c1",
                     "name": "1c1",
-                    "description": "1c1",
                     "aggregatedValue": [
                       [
                         {
@@ -20531,7 +19831,6 @@
                   {
                     "key": "1c2",
                     "name": "1c2",
-                    "description": "1c2",
                     "aggregatedValue": [
                       [
                         {
@@ -20548,7 +19847,6 @@
                   {
                     "key": "1c3",
                     "name": "1c3",
-                    "description": "1c3",
                     "aggregatedValue": [
                       [
                         {
@@ -20565,7 +19863,6 @@
                   {
                     "key": "1d",
                     "name": "1d",
-                    "description": "1d",
                     "aggregatedValue": [
                       [
                         {
@@ -20582,7 +19879,6 @@
                   {
                     "key": "1mi",
                     "name": "1mi",
-                    "description": "1mi",
                     "aggregatedValue": [
                       [
                         {
@@ -20609,7 +19905,6 @@
                   {
                     "key": "2",
                     "name": "2",
-                    "description": "2",
                     "aggregatedValue": [
                       [
                         {
@@ -20626,7 +19921,6 @@
                   {
                     "key": "2a",
                     "name": "2a",
-                    "description": "2a",
                     "aggregatedValue": [
                       [
                         {
@@ -20643,7 +19937,6 @@
                   {
                     "key": "2a1",
                     "name": "2a1",
-                    "description": "2a1",
                     "aggregatedValue": [
                       [
                         {
@@ -20660,7 +19953,6 @@
                   {
                     "key": "2a2",
                     "name": "2a2",
-                    "description": "2a2",
                     "aggregatedValue": [
                       [
                         {
@@ -20677,7 +19969,6 @@
                   {
                     "key": "2b",
                     "name": "2b",
-                    "description": "2b",
                     "aggregatedValue": [
                       [
                         {
@@ -20694,7 +19985,6 @@
                   {
                     "key": "2c",
                     "name": "2c",
-                    "description": "2c",
                     "aggregatedValue": [
                       [
                         {
@@ -20711,7 +20001,6 @@
                   {
                     "key": "2d",
                     "name": "2d",
-                    "description": "2d",
                     "aggregatedValue": [
                       [
                         {
@@ -20738,7 +20027,6 @@
                   {
                     "key": "3",
                     "name": "3",
-                    "description": "3",
                     "aggregatedValue": [
                       [
                         {
@@ -20755,7 +20043,6 @@
                   {
                     "key": "3a",
                     "name": "3a",
-                    "description": "3a",
                     "aggregatedValue": [
                       [
                         {
@@ -20772,7 +20059,6 @@
                   {
                     "key": "3b",
                     "name": "3b",
-                    "description": "3b",
                     "aggregatedValue": [
                       [
                         {
@@ -20789,7 +20075,6 @@
                   {
                     "key": "3c",
                     "name": "3c",
-                    "description": "3c",
                     "aggregatedValue": [
                       [
                         {
@@ -20806,7 +20091,6 @@
                   {
                     "key": "3d",
                     "name": "3d",
-                    "description": "3d",
                     "aggregatedValue": [
                       [
                         {
@@ -20833,7 +20117,6 @@
                   {
                     "key": "4",
                     "name": "4",
-                    "description": "4",
                     "aggregatedValue": [
                       [
                         {
@@ -20850,7 +20133,6 @@
                   {
                     "key": "4a",
                     "name": "4a",
-                    "description": "4a",
                     "aggregatedValue": [
                       [
                         {
@@ -20867,7 +20149,6 @@
                   {
                     "key": "4b",
                     "name": "4b",
-                    "description": "4b",
                     "aggregatedValue": [
                       [
                         {
@@ -20884,7 +20165,6 @@
                   {
                     "key": "4c",
                     "name": "4c",
-                    "description": "4c",
                     "aggregatedValue": [
                       [
                         {
@@ -20901,7 +20181,6 @@
                   {
                     "key": "4d",
                     "name": "4d",
-                    "description": "4d",
                     "aggregatedValue": [
                       [
                         {
@@ -20918,7 +20197,6 @@
                   {
                     "key": "4e",
                     "name": "4e",
-                    "description": "4e",
                     "aggregatedValue": [
                       [
                         {
@@ -20945,7 +20223,6 @@
                   {
                     "key": "a",
                     "name": "a",
-                    "description": "a",
                     "aggregatedValue": [
                       [
                         {
@@ -20972,7 +20249,6 @@
                   {
                     "key": "is",
                     "name": "is",
-                    "description": "is",
                     "aggregatedValue": [
                       [
                         {
@@ -20989,7 +20265,6 @@
                   {
                     "key": "is(DCIS)",
                     "name": "is(DCIS)",
-                    "description": "is(DCIS)",
                     "aggregatedValue": [
                       [
                         {
@@ -21006,7 +20281,6 @@
                   {
                     "key": "is(LCIS)",
                     "name": "is(LCIS)",
-                    "description": "is(LCIS)",
                     "aggregatedValue": [
                       [
                         {
@@ -21023,7 +20297,6 @@
                   {
                     "key": "is(Paget)",
                     "name": "is(Paget)",
-                    "description": "is(Paget)",
                     "aggregatedValue": [
                       [
                         {
@@ -21040,7 +20313,6 @@
                   {
                     "key": "is(pd",
                     "name": "is(pd)",
-                    "description": "is(pd)",
                     "aggregatedValue": [
                       [
                         {
@@ -21057,7 +20329,6 @@
                   {
                     "key": "is(pu)",
                     "name": "is(pu)",
-                    "description": "is(pu)",
                     "aggregatedValue": [
                       [
                         {
@@ -21084,7 +20355,6 @@
                   {
                     "key": "X",
                     "name": "X",
-                    "description": "X",
                     "aggregatedValue": [
                       [
                         {
@@ -21112,7 +20382,6 @@
               {
                 "key": "(sn)(mol+)",
                 "name": "(sn)(mol+)",
-                "description": "(sn)(mol+)",
                 "aggregatedValue": [
                   [
                     {
@@ -21129,7 +20398,6 @@
               {
                 "key": "(sn)(mol-)",
                 "name": "(sn)(mol-)",
-                "description": "(sn)(mol-)",
                 "aggregatedValue": [
                   [
                     {
@@ -21146,7 +20414,6 @@
               {
                 "key": "(sn)(i+)",
                 "name": "(sn)(i+)",
-                "description": "(sn)(i+)",
                 "aggregatedValue": [
                   [
                     {
@@ -21163,7 +20430,6 @@
               {
                 "key": "(sn)(i-)",
                 "name": "(sn)(i-)",
-                "description": "(sn)(i-)",
                 "aggregatedValue": [
                   [
                     {
@@ -21180,7 +20446,6 @@
               {
                 "key": "(mol+)",
                 "name": "(mol+)",
-                "description": "(mol+)",
                 "aggregatedValue": [
                   [
                     {
@@ -21197,7 +20462,6 @@
               {
                 "key": "(mol-)",
                 "name": "(mol-)",
-                "description": "(mol-)",
                 "aggregatedValue": [
                   [
                     {
@@ -21214,7 +20478,6 @@
               {
                 "key": "(i+)",
                 "name": "(i+)",
-                "description": "(i+)",
                 "aggregatedValue": [
                   [
                     {
@@ -21231,7 +20494,6 @@
               {
                 "key": "(i-)",
                 "name": "(i-)",
-                "description": "(i-)",
                 "aggregatedValue": [
                   [
                     {
@@ -21248,7 +20510,6 @@
               {
                 "key": "X",
                 "name": "X",
-                "description": "X",
                 "aggregatedValue": [
                   [
                     {
@@ -21265,7 +20526,6 @@
               {
                 "key": "X(sn)",
                 "name": "X(sn)",
-                "description": "X(sn)",
                 "aggregatedValue": [
                   [
                     {
@@ -21282,7 +20542,6 @@
               {
                 "key": "0",
                 "name": "0",
-                "description": "0",
                 "aggregatedValue": [
                   [
                     {
@@ -21299,7 +20558,6 @@
               {
                 "key": "0(sn)",
                 "name": "0(sn)",
-                "description": "0(sn)",
                 "aggregatedValue": [
                   [
                     {
@@ -21316,7 +20574,6 @@
               {
                 "key": "0(i+)",
                 "name": "0(i+)",
-                "description": "0(i+)",
                 "aggregatedValue": [
                   [
                     {
@@ -21333,7 +20590,6 @@
               {
                 "key": "0(i-)",
                 "name": "0(i-)",
-                "description": "0(i-)",
                 "aggregatedValue": [
                   [
                     {
@@ -21350,7 +20606,6 @@
               {
                 "key": "0(mol+)",
                 "name": "0(mol+)",
-                "description": "0(mol+)",
                 "aggregatedValue": [
                   [
                     {
@@ -21367,7 +20622,6 @@
               {
                 "key": "0(mol-)",
                 "name": "0(mol-)",
-                "description": "0(mol-)",
                 "aggregatedValue": [
                   [
                     {
@@ -21384,7 +20638,6 @@
               {
                 "key": "1",
                 "name": "1",
-                "description": "1",
                 "aggregatedValue": [
                   [
                     {
@@ -21401,7 +20654,6 @@
               {
                 "key": "1a",
                 "name": "1a",
-                "description": "1a",
                 "aggregatedValue": [
                   [
                     {
@@ -21418,7 +20670,6 @@
               {
                 "key": "1b",
                 "name": "1b",
-                "description": "1b",
                 "aggregatedValue": [
                   [
                     {
@@ -21435,7 +20686,6 @@
               {
                 "key": "1c",
                 "name": "1c",
-                "description": "1c",
                 "aggregatedValue": [
                   [
                     {
@@ -21452,7 +20702,6 @@
               {
                 "key": "1mi",
                 "name": "1mi",
-                "description": "1mi",
                 "aggregatedValue": [
                   [
                     {
@@ -21469,7 +20718,6 @@
               {
                 "key": "2",
                 "name": "2",
-                "description": "2",
                 "aggregatedValue": [
                   [
                     {
@@ -21486,7 +20734,6 @@
               {
                 "key": "2a",
                 "name": "2a",
-                "description": "2a",
                 "aggregatedValue": [
                   [
                     {
@@ -21503,7 +20750,6 @@
               {
                 "key": "2b",
                 "name": "2b",
-                "description": "2b",
                 "aggregatedValue": [
                   [
                     {
@@ -21520,7 +20766,6 @@
               {
                 "key": "2c",
                 "name": "2c",
-                "description": "2c",
                 "aggregatedValue": [
                   [
                     {
@@ -21537,7 +20782,6 @@
               {
                 "key": "3",
                 "name": "3",
-                "description": "3",
                 "aggregatedValue": [
                   [
                     {
@@ -21554,7 +20798,6 @@
               {
                 "key": "3a",
                 "name": "3a",
-                "description": "3a",
                 "aggregatedValue": [
                   [
                     {
@@ -21571,7 +20814,6 @@
               {
                 "key": "3b",
                 "name": "3b",
-                "description": "3b",
                 "aggregatedValue": [
                   [
                     {
@@ -21588,7 +20830,6 @@
               {
                 "key": "3c",
                 "name": "3c",
-                "description": "3c",
                 "aggregatedValue": [
                   [
                     {
@@ -21605,7 +20846,6 @@
               {
                 "key": "X",
                 "name": "X",
-                "description": "X",
                 "aggregatedValue": [
                   [
                     {
@@ -21631,7 +20871,6 @@
               {
                 "key": "0",
                 "name": "0",
-                "description": "0",
                 "aggregatedValue": [
                   [
                     {
@@ -21648,7 +20887,6 @@
               {
                 "key": "1",
                 "name": "1",
-                "description": "1",
                 "aggregatedValue": [
                   [
                     {
@@ -21665,7 +20903,6 @@
               {
                 "key": "1a",
                 "name": "1a",
-                "description": "1a",
                 "aggregatedValue": [
                   [
                     {
@@ -21682,7 +20919,6 @@
               {
                 "key": "1b",
                 "name": "1b",
-                "description": "1b",
                 "aggregatedValue": [
                   [
                     {
@@ -21699,7 +20935,6 @@
               {
                 "key": "1c",
                 "name": "1c",
-                "description": "1c",
                 "aggregatedValue": [
                   [
                     {
@@ -21716,7 +20951,6 @@
               {
                 "key": "1d",
                 "name": "1d",
-                "description": "1d",
                 "aggregatedValue": [
                   [
                     {
@@ -21733,7 +20967,6 @@
               {
                 "key": "1e",
                 "name": "1e",
-                "description": "1e",
                 "aggregatedValue": [
                   [
                     {
@@ -21750,7 +20983,6 @@
               {
                 "key": "0(i-)",
                 "name": "0(i-)",
-                "description": "0(i-)",
                 "aggregatedValue": [
                   [
                     {
@@ -21767,7 +20999,6 @@
               {
                 "key": "0(i+)",
                 "name": "0(i+)",
-                "description": "0(i+)",
                 "aggregatedValue": [
                   [
                     {
@@ -21784,7 +21015,6 @@
               {
                 "key": "0(mol-)",
                 "name": "0(mol-)",
-                "description": "0(mol-)",
                 "aggregatedValue": [
                   [
                     {
@@ -21801,7 +21031,6 @@
               {
                 "key": "0(mol+)",
                 "name": "0(mol+)",
-                "description": "0(mol+)",
                 "aggregatedValue": [
                   [
                     {
@@ -21827,7 +21056,6 @@
               {
                 "key": "m",
                 "name": "Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk",
-                "description": "Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk",
                 "aggregatedValue": [
                   [
                     {
@@ -21844,7 +21072,6 @@
               {
                 "key": "2",
                 "name": "(2) simultaner Tumoren",
-                "description": "(2) simultaner Tumoren",
                 "aggregatedValue": [
                   [
                     {
@@ -21861,7 +21088,6 @@
               {
                 "key": "3",
                 "name": "(3) simultaner Tumoren",
-                "description": "(3) simultaner Tumoren",
                 "aggregatedValue": [
                   [
                     {
@@ -21878,7 +21104,6 @@
               {
                 "key": "4",
                 "name": "(4) simultaner Tumoren",
-                "description": "(4) simultaner Tumoren",
                 "aggregatedValue": [
                   [
                     {
@@ -21895,7 +21120,6 @@
               {
                 "key": "5",
                 "name": "(5) simultaner Tumoren",
-                "description": "(5) simultaner Tumoren",
                 "aggregatedValue": [
                   [
                     {
@@ -21912,7 +21136,6 @@
               {
                 "key": "6",
                 "name": "(6) simultaner Tumoren",
-                "description": "(6) simultaner Tumoren",
                 "aggregatedValue": [
                   [
                     {
@@ -21929,7 +21152,6 @@
               {
                 "key": "7",
                 "name": "(7) simultaner Tumoren",
-                "description": "(7) simultaner Tumoren",
                 "aggregatedValue": [
                   [
                     {
@@ -21946,7 +21168,6 @@
               {
                 "key": "8",
                 "name": "(8) simultaner Tumoren",
-                "description": "(8) simultaner Tumoren",
                 "aggregatedValue": [
                   [
                     {
@@ -21963,7 +21184,6 @@
               {
                 "key": "9",
                 "name": "(9) simultaner Tumoren",
-                "description": "(9) simultaner Tumoren",
                 "aggregatedValue": [
                   [
                     {
@@ -21989,7 +21209,6 @@
               {
                 "key": "y",
                 "name": "Klassifikation erfolgte während oder nach initialer multimodaler Therapie",
-                "description": "Klassifikation erfolgte während oder nach initialer multimodaler Therapie",
                 "aggregatedValue": [
                   [
                     {
@@ -22015,7 +21234,6 @@
               {
                 "key": "r",
                 "name": "Klassifikation erfolgte zur Beurteilung eines Rezidivs",
-                "description": "Klassifikation erfolgte zur Beurteilung eines Rezidivs",
                 "aggregatedValue": [
                   [
                     {
@@ -22042,33 +21260,27 @@
         "criteria": [
           {
             "key": "R0",
-            "name": "kein Residualtumor",
-            "description": "kein Residualtumor"
+            "name": "kein Residualtumor"
           },
           {
             "key": "R1",
-            "name": "Mikroskopischer Residualtumor",
-            "description": "Mikroskopischer Residualtumor"
+            "name": "Mikroskopischer Residualtumor"
           },
           {
             "key": "R2",
-            "name": "Makroskopischer Residualtumor",
-            "description": "Makroskopischer Residualtumor"
+            "name": "Makroskopischer Residualtumor"
           },
           {
             "key": "R1(is)",
-            "name": "In-Situ-Rest",
-            "description": "In-Situ-Rest"
+            "name": "In-Situ-Rest"
           },
           {
             "key": "R1(cy+)",
-            "name": "Cytologischer Rest",
-            "description": "Cytologischer Rest"
+            "name": "Cytologischer Rest"
           },
           {
             "key": "RX",
-            "name": "Vorhandensein von Residualtumor kann nicht beurteilt werden",
-            "description": "Vorhandensein von Residualtumor kann nicht beurteilt werden"
+            "name": "Vorhandensein von Residualtumor kann nicht beurteilt werden"
           }
         ]
       },
@@ -22081,8 +21293,7 @@
         "criteria": [
           {
             "key": "J",
-            "name": "Ja",
-            "description": "Ja"
+            "name": "Ja"
           }
         ]
       },
@@ -22095,63 +21306,51 @@
         "criteria": [
           {
             "key": "PUL",
-            "name": "Lunge",
-            "description": "Lunge"
+            "name": "Lunge"
           },
           {
             "key": "OSS",
-            "name": "Knochen",
-            "description": "Knochen"
+            "name": "Knochen"
           },
           {
             "key": "HEP",
-            "name": "Leber",
-            "description": "Leber"
+            "name": "Leber"
           },
           {
             "key": "BRA",
-            "name": "Hirn",
-            "description": "Hirn"
+            "name": "Hirn"
           },
           {
             "key": "LYM",
-            "name": "Lymphknoten",
-            "description": "Lymphknoten"
+            "name": "Lymphknoten"
           },
           {
             "key": "MAR",
-            "name": "Knochenmark",
-            "description": "Knochenmark"
+            "name": "Knochenmark"
           },
           {
             "key": "PLE",
-            "name": "Pleura",
-            "description": "Pleura"
+            "name": "Pleura"
           },
           {
             "key": "PER",
-            "name": "Peritoneum",
-            "description": "Peritoneum"
+            "name": "Peritoneum"
           },
           {
             "key": "ADR",
-            "name": "Nebennieren",
-            "description": "Nebennieren"
+            "name": "Nebennieren"
           },
           {
             "key": "SKI",
-            "name": "Haut",
-            "description": "Haut"
+            "name": "Haut"
           },
           {
             "key": "OTH",
-            "name": "Andere Organe",
-            "description": "Andere Organe"
+            "name": "Andere Organe"
           },
           {
             "key": "GEN",
-            "name": "Generalisierte Metastasierung",
-            "description": "Generalisierte Metastasierung"
+            "name": "Generalisierte Metastasierung"
           }
         ]
       }
@@ -22203,7 +21402,9 @@
     "fieldType": "group",
     "key": "response_to_therapy",
     "name": "Ansprechen auf Therapie",
-    "infoButtonText": ["Beurteilung der Erkrankung im Verlauf"],
+    "infoButtonText": [
+      "Beurteilung der Erkrankung im Verlauf"
+    ],
     "childCategories": [
       {
         "key": "21976-6",
@@ -22211,52 +21412,45 @@
         "system": "",
         "fieldType": "single-select",
         "type": "EQUALS",
-        "infoButtonText": ["Gesamtbeurteilung des Tumorstatus"],
+        "infoButtonText": [
+          "Gesamtbeurteilung des Tumorstatus"
+        ],
         "criteria": [
           {
             "key": "V",
-            "name": "Vollremission (complete remission, CR)",
-            "description": "Vollremission (complete remission, CR)"
+            "name": "Vollremission (complete remission, CR)"
           },
           {
             "key": "T",
-            "name": "Teilremission / mindestens 50% Rückgang des Tumors (partial remission, PR)",
-            "description": "Teilremission / mindestens 50% Rückgang des Tumors (partial remission, PR)"
+            "name": "Teilremission / mindestens 50% Rückgang des Tumors (partial remission, PR)"
           },
           {
             "key": "K",
-            "name": "Keine Änderung (no change, NC) = stable disease",
-            "description": "Keine Änderung (no change, NC) = stable disease"
+            "name": "Keine Änderung (no change, NC) = stable disease"
           },
           {
             "key": "P",
-            "name": "Progression",
-            "description": "Progression"
+            "name": "Progression"
           },
           {
             "key": "D",
-            "name": "Divergentes Geschehen",
-            "description": "Divergentes Geschehen"
+            "name": "Divergentes Geschehen"
           },
           {
             "key": "B",
-            "name": "Klinische Besserung des Zustandes, Kriterien für Teilremission jedoch nicht erfüllt (minimal response, MR)",
-            "description": "Klinische Besserung des Zustandes, Kriterien für Teilremission jedoch nicht erfüllt (minimal response, MR)"
+            "name": "Klinische Besserung des Zustandes, Kriterien für Teilremission jedoch nicht erfüllt (minimal response, MR)"
           },
           {
             "key": "R",
-            "name": "Vollremission mit residualen Auffälligkeiten (CRr)",
-            "description": "Vollremission mit residualen Auffälligkeiten (CRr)"
+            "name": "Vollremission mit residualen Auffälligkeiten (CRr)"
           },
           {
             "key": "U",
-            "name": "Beurteilung unmöglich",
-            "description": "Beurteilung unmöglich"
+            "name": "Beurteilung unmöglich"
           },
           {
             "key": "X",
-            "name": "Fehlende Angabe",
-            "description": "Fehlende Angabe"
+            "name": "Fehlende Angabe"
           }
         ]
       },
@@ -22266,47 +21460,41 @@
         "system": "",
         "fieldType": "single-select",
         "type": "EQUALS",
-        "infoButtonText": ["Beurteilung der Situation im Primärtumorbereich"],
+        "infoButtonText": [
+          "Beurteilung der Situation im Primärtumorbereich"
+        ],
         "criteria": [
           {
             "key": "K",
-            "name": "Kein Tumor nachweisbar",
-            "description": "Kein Tumor nachweisbar"
+            "name": "Kein Tumor nachweisbar"
           },
           {
             "key": "T",
-            "name": "Tumorreste (Residualtumor)",
-            "description": "Tumorreste (Residualtumor)"
+            "name": "Tumorreste (Residualtumor)"
           },
           {
             "key": "P",
-            "name": "Tumorreste Residualtumor Progress",
-            "description": "Tumorreste Residualtumor Progress"
+            "name": "Tumorreste Residualtumor Progress"
           },
           {
             "key": "N",
-            "name": "Tumorreste Residualtumor No Change",
-            "description": "Tumorreste Residualtumor No Change"
+            "name": "Tumorreste Residualtumor No Change"
           },
           {
             "key": "R",
-            "name": "Lokalrezidiv",
-            "description": "Lokalrezidiv"
+            "name": "Lokalrezidiv"
           },
           {
             "key": "F",
-            "name": "Fraglicher Befund",
-            "description": "Fraglicher Befund"
+            "name": "Fraglicher Befund"
           },
           {
             "key": "U",
-            "name": "unbekannt",
-            "description": "unbekannt"
+            "name": "unbekannt"
           },
           {
             "key": "X",
-            "name": "Fehlende Angabe",
-            "description": "Fehlende Angabe"
+            "name": "Fehlende Angabe"
           }
         ]
       },
@@ -22322,43 +21510,35 @@
         "criteria": [
           {
             "key": "K",
-            "name": "Kein Lymphknotenbefall nachweisbar",
-            "description": "Kein Lymphknotenbefall nachweisbar"
+            "name": "Kein Lymphknotenbefall nachweisbar"
           },
           {
             "key": "R",
-            "name": "Neu aufgetretenes Lymphknotenrezidiv",
-            "description": "Neu aufgetretenes Lymphknotenrezidiv"
+            "name": "Neu aufgetretenes Lymphknotenrezidiv"
           },
           {
             "key": "T",
-            "name": "bekannter Lymphknotenbefall Residuen",
-            "description": "bekannter Lymphknotenbefall Residuen"
+            "name": "bekannter Lymphknotenbefall Residuen"
           },
           {
             "key": "P",
-            "name": "bekannter Lymphknotenbefall Progress",
-            "description": "bekannter Lymphknotenbefall Progress"
+            "name": "bekannter Lymphknotenbefall Progress"
           },
           {
             "key": "N",
-            "name": "bekannter Lymphknotenbefall No Change",
-            "description": "bekannter Lymphknotenbefall No Change"
+            "name": "bekannter Lymphknotenbefall No Change"
           },
           {
             "key": "F",
-            "name": "Fraglicher Befund",
-            "description": "Fraglicher Befund"
+            "name": "Fraglicher Befund"
           },
           {
             "key": "U",
-            "name": "unbekannt",
-            "description": "unbekannt"
+            "name": "unbekannt"
           },
           {
             "key": "X",
-            "name": "Fehlende Angabe",
-            "description": "Fehlende Angabe"
+            "name": "Fehlende Angabe"
           }
         ]
       },
@@ -22374,48 +21554,39 @@
         "criteria": [
           {
             "key": "K",
-            "name": "Keine Fernmetastasen nachweisbar",
-            "description": "Keine Fernmetastasen nachweisbar"
+            "name": "Keine Fernmetastasen nachweisbar"
           },
           {
             "key": "M",
-            "name": "Verbliebene Fernmetastase(n)",
-            "description": "Verbliebene Fernmetastase(n)"
+            "name": "Verbliebene Fernmetastase(n)"
           },
           {
             "key": "R",
-            "name": "Neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv",
-            "description": "Neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv"
+            "name": "Neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv"
           },
           {
             "key": "T",
-            "name": "Fernmetastasen Residuen",
-            "description": "Fernmetastasen Residuen"
+            "name": "Fernmetastasen Residuen"
           },
           {
             "key": "P",
-            "name": "Fernmetastasen Progress",
-            "description": "Fernmetastasen Progress"
+            "name": "Fernmetastasen Progress"
           },
           {
             "key": "N",
-            "name": "Fernmetastasen No Change",
-            "description": "Fernmetastasen No Change"
+            "name": "Fernmetastasen No Change"
           },
           {
             "key": "F",
-            "name": "Fraglicher Befund",
-            "description": "Fraglicher Befund"
+            "name": "Fraglicher Befund"
           },
           {
             "key": "U",
-            "name": "Unbekannt",
-            "description": "Unbekannt"
+            "name": "Unbekannt"
           },
           {
             "key": "X",
-            "name": "Fehlende Angabe",
-            "description": "Fehlende Angabe"
+            "name": "Fehlende Angabe"
           }
         ]
       }
@@ -22500,18 +21671,15 @@
           },
           {
             "key": "whole-blood",
-            "name": "Vollblut",
-            "description": "Vollblut"
+            "name": "Vollblut"
           },
           {
             "key": "blood-serum",
-            "name": "Serum",
-            "description": "Serum"
+            "name": "Serum"
           },
           {
             "key": "blood-plasma",
-            "name": "Plasma",
-            "description": "Plasma"
+            "name": "Plasma"
           },
           {
             "key": "buffy-coat",
@@ -22530,8 +21698,7 @@
           },
           {
             "key": "urine",
-            "name": "Urin",
-            "description": "Urin"
+            "name": "Urin"
           },
           {
             "key": "swab",
@@ -22555,8 +21722,7 @@
           },
           {
             "key": "bone-marrow",
-            "name": "Knochenmark",
-            "description": "Knochenmark"
+            "name": "Knochenmark"
           },
           {
             "key": "saliva",
@@ -22570,13 +21736,11 @@
           },
           {
             "key": "dna",
-            "name": "DNA",
-            "description": "DNA"
+            "name": "DNA"
           },
           {
             "key": "rna",
-            "name": "RNA",
-            "description": "RNA"
+            "name": "RNA"
           },
           {
             "key": "derivative-other",
@@ -22966,8 +22130,7 @@
           },
           {
             "key": "KIAA1549",
-            "name": "KIAA1549",
-            "description": "KIAA1549"
+            "name": "KIAA1549"
           },
           {
             "key": "CASP8",
@@ -23739,7 +22902,9 @@
     "fieldType": "group",
     "key": "project",
     "name": "Forschungsprojekte",
-    "infoButtonText": ["Projekt-Übersicht"],
+    "infoButtonText": [
+      "Projekt-Übersicht"
+    ],
     "infoLink": {
       "link": "https://hub.dkfz.de/s/EZTqXGcx7mWWapr",
       "display": "↗Projekt-Übersicht"
