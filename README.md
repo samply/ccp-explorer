@@ -5,7 +5,7 @@ Staging: https://demo.lens.samply.de/
 
 ## Environment variables
 
-| Variable             | Description                                                     |
-| -------------------- | --------------------------------------------------------------- |
+| Variable             | Description                                                  |
+| -------------------- | ------------------------------------------------------------ |
 | `PUBLIC_ENVIRONMENT` | Can be either `production` or `test` (default: `production`) |
-| `PUBLIC_SPOT_URL` | Overwrites the Spot URL (optional)                              |
+| `PUBLIC_SPOT_URL`    | Overwrites the Spot URL (optional)                           |

@@ -21402,9 +21402,7 @@
     "fieldType": "group",
     "key": "response_to_therapy",
     "name": "Ansprechen auf Therapie",
-    "infoButtonText": [
-      "Beurteilung der Erkrankung im Verlauf"
-    ],
+    "infoButtonText": ["Beurteilung der Erkrankung im Verlauf"],
     "childCategories": [
       {
         "key": "21976-6",
@@ -21412,9 +21410,7 @@
         "system": "",
         "fieldType": "single-select",
         "type": "EQUALS",
-        "infoButtonText": [
-          "Gesamtbeurteilung des Tumorstatus"
-        ],
+        "infoButtonText": ["Gesamtbeurteilung des Tumorstatus"],
         "criteria": [
           {
             "key": "V",
@@ -21460,9 +21456,7 @@
         "system": "",
         "fieldType": "single-select",
         "type": "EQUALS",
-        "infoButtonText": [
-          "Beurteilung der Situation im Primärtumorbereich"
-        ],
+        "infoButtonText": ["Beurteilung der Situation im Primärtumorbereich"],
         "criteria": [
           {
             "key": "K",
@@ -22902,9 +22896,7 @@
     "fieldType": "group",
     "key": "project",
     "name": "Forschungsprojekte",
-    "infoButtonText": [
-      "Projekt-Übersicht"
-    ],
+    "infoButtonText": ["Projekt-Übersicht"],
     "infoLink": {
       "link": "https://hub.dkfz.de/s/EZTqXGcx7mWWapr",
       "display": "↗Projekt-Übersicht"

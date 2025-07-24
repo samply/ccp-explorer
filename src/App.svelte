@@ -1,9 +1,6 @@
 <script lang="ts">
   import "./app.css";
-  import type {
-    Catalogue,
-    SpotResult,
-  } from "@samply/lens";
+  import type { Catalogue, SpotResult } from "@samply/lens";
   import {
     setOptions,
     setCatalogue,
@@ -13,7 +10,7 @@
     querySpot,
     getAst,
     buildLibrary,
-    buildMeasure
+    buildMeasure,
   } from "@samply/lens";
   import { translateAstToCql } from "./lib/ast-to-cql-translator";
   import { measures } from "./lib/measures";
@@ -21,9 +18,9 @@
   import { options } from "./lib/env-options";
   import { onMount } from "svelte";
   import { env } from "$env/dynamic/public";
-  import catalogueProd from './config/catalogue.json';
-  import catalogueTest from './config/catalogue-test.json';
-  
+  import catalogueProd from "./config/catalogue.json";
+  import catalogueTest from "./config/catalogue-test.json";
+
   let abortController = new AbortController();
   window.addEventListener("lens-search-triggered", () => {
     abortController.abort();
@@ -50,24 +47,20 @@
         measure,
       }),
     );
-    querySpot(
-      query,
-      abortController.signal,
-      (result: SpotResult) => {
-        const site = result.from.split(".")[1];
-        if (result.status === "claimed") {
-          markSiteClaimed(site);
-        } else if (result.status === "succeeded") {
-          const siteResult = JSON.parse(atob(result.body));
-          setSiteResult(site, siteResult);
-        } else {
-          console.error(
-            `Site ${site} failed with status ${result.status}:`,
-            result.body,
-          );
-        }
-      },
-    );
+    querySpot(query, abortController.signal, (result: SpotResult) => {
+      const site = result.from.split(".")[1];
+      if (result.status === "claimed") {
+        markSiteClaimed(site);
+      } else if (result.status === "succeeded") {
+        const siteResult = JSON.parse(atob(result.body));
+        setSiteResult(site, siteResult);
+      } else {
+        console.error(
+          `Site ${site} failed with status ${result.status}:`,
+          result.body,
+        );
+      }
+    });
   });
 
   window.addEventListener("lens-negotiate-triggered", () => {
@@ -75,11 +68,11 @@
   });
 
   onMount(() => {
-		setOptions(options);
+    setOptions(options);
 
     // Set the catalogue based on the environment
     let catalogue = catalogueProd as Catalogue;
-    if (env.PUBLIC_ENVIRONMENT === 'test') {
+    if (env.PUBLIC_ENVIRONMENT === "test") {
       catalogue = catalogueTest as Catalogue;
     }
     setCatalogue(catalogue);
@@ -194,8 +187,7 @@
             alignDialogue="left"
           ></lens-info-button>
         </div>
-        <lens-catalogue
-          toggle={{ collapsable: false, open: catalogueopen }}
+        <lens-catalogue toggle={{ collapsable: false, open: catalogueopen }}
         ></lens-catalogue>
       </div>
     </div>
