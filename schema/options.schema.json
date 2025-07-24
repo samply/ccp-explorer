@@ -19,7 +19,10 @@
                 "type": "array"
               }
             },
-            "required": ["name", "values"],
+            "required": [
+              "name",
+              "values"
+            ],
             "type": "object"
           },
           "type": "array"
@@ -68,7 +71,9 @@
           "type": "object"
         }
       },
-      "required": ["hoverText"],
+      "required": [
+        "hoverText"
+      ],
       "type": "object"
     },
     "HeaderData": {
@@ -105,7 +110,9 @@
           "type": "string"
         }
       },
-      "required": ["title"],
+      "required": [
+        "title"
+      ],
       "type": "object"
     },
     "NegotiateOptions": {
@@ -127,7 +134,11 @@
           "type": "string"
         }
       },
-      "required": ["url", "authorizationHeader", "siteMappings"],
+      "required": [
+        "url",
+        "authorizationHeader",
+        "siteMappings"
+      ],
       "type": "object"
     },
     "NegotiateOptionsSiteMapping": {
@@ -150,7 +161,12 @@
           "type": "string"
         }
       },
-      "required": ["site", "collection", "site_id", "collection_name"],
+      "required": [
+        "site",
+        "collection",
+        "site_id",
+        "collection_name"
+      ],
       "type": "object"
     },
     "Options": {
@@ -223,7 +239,11 @@
           "type": "array"
         }
       },
-      "required": ["newProjectUrl", "editProjectUrl", "siteMappings"],
+      "required": [
+        "newProjectUrl",
+        "editProjectUrl",
+        "siteMappings"
+      ],
       "type": "object"
     },
     "ProjectManagerOptionsSiteMapping": {
@@ -236,7 +256,10 @@
           "type": "string"
         }
       },
-      "required": ["site", "collection"],
+      "required": [
+        "site",
+        "collection"
+      ],
       "type": "object"
     },
     "ResultSummaryOptions": {
@@ -255,7 +278,9 @@
           "type": "string"
         }
       },
-      "required": ["dataTypes"],
+      "required": [
+        "dataTypes"
+      ],
       "type": "object"
     },
     "TableOptions": {
@@ -268,7 +293,9 @@
           "type": "array"
         }
       },
-      "required": ["headerData"],
+      "required": [
+        "headerData"
+      ],
       "type": "object"
     },
     "Texts": {
@@ -283,3 +310,4 @@
     }
   }
 }
+
