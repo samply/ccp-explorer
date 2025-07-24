@@ -10,7 +10,6 @@
     clearSiteResults,
     markSiteClaimed,
     setSiteResult,
-    measureReportToLensResult,
     querySpot,
     getAst,
     buildLibrary,
@@ -59,8 +58,8 @@
         if (result.status === "claimed") {
           markSiteClaimed(site);
         } else if (result.status === "succeeded") {
-          const measureReport = JSON.parse(atob(result.body));
-          setSiteResult(site, measureReportToLensResult(measureReport));
+          const siteResult = JSON.parse(atob(result.body));
+          setSiteResult(site, siteResult);
         } else {
           console.error(
             `Site ${site} failed with status ${result.status}:`,
@@ -108,19 +107,6 @@
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-  };
-
-  /**
-   * TODO: add catalogueText option to config file
-   */
-  const catalogueText = {
-    group: "Group",
-    collapseButtonTitle: "Collapse Tree",
-    expandButtonTitle: "Expand Tree",
-    numberInput: {
-      labelFrom: "von",
-      labelTo: "bis",
-    },
   };
 
   let catalogueopen: boolean = false;
@@ -209,7 +195,6 @@
           ></lens-info-button>
         </div>
         <lens-catalogue
-          texts={catalogueText}
           toggle={{ collapsable: false, open: catalogueopen }}
         ></lens-catalogue>
       </div>
