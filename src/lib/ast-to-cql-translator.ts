@@ -3,7 +3,7 @@
  */
 
 import type {
-     MeasureItem,
+     FhirMeasureItem,
      AstBottomLayerValue,
      AstElement,
      AstTopLayer,
@@ -20,7 +20,7 @@ export const translateAstToCql = (
     query: AstTopLayer,
     returnOnlySingeltons: boolean = true,
     backendMeasures: string,
-    measures: MeasureItem[],
+    measures: FhirMeasureItem[],
 ): string => {
     const localMeasures: { key: string; cql: string }[] = [];
     measures.forEach((x) => {

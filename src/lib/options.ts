@@ -3,9 +3,6 @@
 // `npm run schemagen` to update the JSON schema.
 
 import { type LensOptions } from "@samply/lens";
-import { writable } from "svelte/store";
-
-export const optionsStore = writable<Options>();
 
 export type Options = LensOptions & {
     projectmanagerOptions?: ProjectManagerOptions;

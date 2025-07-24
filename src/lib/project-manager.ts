@@ -1,8 +1,8 @@
 import { getAst, getQueryStore, getSelectedSites, getHumanReadableQuery, buildLibrary, buildMeasure } from "@samply/lens";
-import { measures } from "../measures";
-import { get } from "svelte/store";
+import { measures } from "./measures";
 import { translateAstToCql } from "$lib/ast-to-cql-translator";
-import { optionsStore, type ProjectManagerOptions, type ProjectManagerOptionsSiteMapping } from "$lib/options";
+import { options } from "./env-options";
+import type { ProjectManagerOptions, ProjectManagerOptionsSiteMapping } from "$lib/options";
 
 type PmBody = {
     query: string;
@@ -18,22 +18,18 @@ type ProjectManagerResponse = Response & {
 };
 
 export const negotiate = async (): Promise<void> => {
-    const currentProjectmanagerOptions =
-        get(optionsStore).projectmanagerOptions;
-    if (currentProjectmanagerOptions === undefined) {
+    if (options.projectmanagerOptions === undefined) {
         console.error('"projectmanagerOptions" is missing from the options');
         return;
     }
 
     const humanReadable: string = getHumanReadableQuery();
-    const collections = getSelectedSites().map((site) => {
-        return currentProjectmanagerOptions.siteMappings.find(
-            (mapping) => mapping.site === site
-        );
-    });
+    const collections = options.projectmanagerOptions.siteMappings.filter(
+        (mapping) => getSelectedSites().includes(mapping.site)
+    );
 
     const response: ProjectManagerResponse = await sendRequestToProjectManager(
-        currentProjectmanagerOptions,
+        options.projectmanagerOptions,
         humanReadable,
         collections,
     );

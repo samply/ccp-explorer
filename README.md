@@ -7,5 +7,5 @@ Staging: https://demo.lens.samply.de/
 
 | Variable             | Description                                                     |
 | -------------------- | --------------------------------------------------------------- |
-| `PUBLIC_ENVIRONMENT` | Can be either `production` or `staging` (default: `production`) |
-| `PUBLIC_BACKEND_URL` | Overwrites the Spot URL (optional)                              |
+| `PUBLIC_ENVIRONMENT` | Can be either `production` or `test` (default: `production`) |
+| `PUBLIC_SPOT_URL` | Overwrites the Spot URL (optional)                              |

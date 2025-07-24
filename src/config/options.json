@@ -1,7 +1,8 @@
 {
+  "spotUrl": "https://backend.data.dktk.dkfz.de/prod",
   "language": "de",
   "siteMappings": {
-    "berlin": "Berlin (OBDS)",
+    "berlin": "Berlin",
     "berlin-test": "Berlin",
     "bonn": "Bonn",
     "dresden": "Dresden",
@@ -18,7 +19,6 @@
     "wuerzburg": "Würzburg",
     "mannheim": "Mannheim",
     "dktk-test": "DKTK-Test",
-    "dktk-datashield-test": "DKTK Datashield Test",
     "hamburg": "Hamburg"
   },
   "chartOptions": {
@@ -60,7 +60,7 @@
     },
     "medicationStatements": {
       "hintText": [
-        "Art der systemischen oder abwartenden Therapie (ADT Basisdatensatz Versionen 2014, 2021)"
+        "Angezeigt wird die Art der systemischen oder abwartenden Therapie (ADT Basisdatensatz Versionen 2014, 2021). Bei Patienten mit mehreren onkologischen Diagnosen werden auch Einträge angezeigt, die ggfs. nicht den ausgewählten Suchkriterien entsprechen. "
       ],
       "tooltips": {
         "CH": "Chemotherapie",
@@ -196,76 +196,6 @@
             "stratumCode": "1"
           }
         ]
-      }
-    ]
-  },
-  "projectmanagerOptions": {
-    "newProjectUrl": "https://requests.dktk.dkfz.de/project-manager-api/create-query-and-design-project",
-    "editProjectUrl": "https://requests.dktk.dkfz.de/project-manager-api/edit-project",
-    "siteMappings": [
-      {
-        "site": "DKTK-Test",
-        "collection": "lens-dktk-test"
-      },
-      {
-        "site": "dktk-datashield-test",
-        "collection": "lens-dktk-datashield-test"
-      },
-      {
-        "site": "Berlin",
-        "collection": "lens-berlin"
-      },
-      {
-        "site": "Berlin (OBDS)",
-        "collection": "lens-berlin"
-      },
-      {
-        "site": "Dresden",
-        "collection": "lens-dresden"
-      },
-      {
-        "site": "Essen",
-        "collection": "lens-essen"
-      },
-      {
-        "site": "Frankfurt",
-        "collection": "lens-frankfurt"
-      },
-      {
-        "site": "Freiburg",
-        "collection": "lens-freiburg"
-      },
-      {
-        "site": "Hannover",
-        "collection": "lens-hannover"
-      },
-      {
-        "site": "Mainz",
-        "collection": "lens-mainz"
-      },
-      {
-        "site": "München(LMU)",
-        "collection": "lens-muenchen-lmu"
-      },
-      {
-        "site": "München(TUM)",
-        "collection": "lens-muenchen-tum"
-      },
-      {
-        "site": "Ulm",
-        "collection": "lens-ulm"
-      },
-      {
-        "site": "Würzburg",
-        "collection": "lens-wuerzburg"
-      },
-      {
-        "site": "Mannheim",
-        "collection": "lens-mannheim"
-      },
-      {
-        "site": "Hamburg",
-        "collection": "lens-hamburg"
       }
     ]
   }

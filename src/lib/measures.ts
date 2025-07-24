@@ -1,6 +1,6 @@
-import type { MeasureItem } from "@samply/lens";
+import type { FhirMeasureItem } from "@samply/lens";
 
-const dktkPatientsMeasure: MeasureItem = {
+const dktkPatientsMeasure: FhirMeasureItem = {
   key: "patients",
   measure: {
     code: {
@@ -64,7 +64,7 @@ DKTK_STRAT_DECEASED_STRATIFIER
 `,
 };
 
-const dktkDiagnosisMeasure: MeasureItem = {
+const dktkDiagnosisMeasure: FhirMeasureItem = {
   key: "diagnosis",
   measure: {
     code: {
@@ -110,7 +110,7 @@ DKTK_STRAT_DIAGNOSIS_STRATIFIER
 `,
 };
 
-const dktkSpecificSpecimenMeasure: MeasureItem = {
+const dktkSpecificSpecimenMeasure: FhirMeasureItem = {
   key: "specimen",
   measure: {
     code: {
@@ -155,7 +155,7 @@ const dktkSpecificSpecimenMeasure: MeasureItem = {
 DKTK_REPLACE_SPECIMEN_STRATIFIER`,
 };
 
-const dktkProceduresMeasure: MeasureItem = {
+const dktkProceduresMeasure: FhirMeasureItem = {
   key: "procedures",
   measure: {
     code: {
@@ -201,7 +201,7 @@ DKTK_STRAT_PROCEDURE_STRATIFIER
 `,
 };
 
-const dktkMedicationStatementsMeasure: MeasureItem = {
+const dktkMedicationStatementsMeasure: FhirMeasureItem = {
   key: "medicationStatements",
   measure: {
     code: {
@@ -247,7 +247,7 @@ DKTK_STRAT_MEDICATION_STRATIFIER
 `,
 };
 
-const dktkHistologyMeasure: MeasureItem = {
+const dktkHistologyMeasure: FhirMeasureItem = {
   key: "Histo",
   measure: {
     code: {
@@ -293,7 +293,7 @@ const dktkHistologyMeasure: MeasureItem = {
 `,
 };
 
-export const measures: MeasureItem[] = [
+export const measures: FhirMeasureItem[] = [
   dktkPatientsMeasure,
   dktkDiagnosisMeasure,
   dktkSpecificSpecimenMeasure,

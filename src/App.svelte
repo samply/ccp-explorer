@@ -1,8 +1,6 @@
 <script lang="ts">
   import "./app.css";
-
   import type {
-    LensDataPasser,
     Catalogue,
     SpotResult,
   } from "@samply/lens";
@@ -17,104 +15,17 @@
     getAst,
     buildLibrary,
     buildMeasure,
+    getQueryStore
   } from "@samply/lens";
-  import { translateAstToCql } from "$lib/ast-to-cql-translator";
-  import { optionsStore, type Options } from "$lib/options";
-
-  import { measures } from "./measures";
-  import { env } from "$env/dynamic/public";
+  import { translateAstToCql } from "./lib/ast-to-cql-translator";
+  import { measures } from "./lib/measures";
+  import { negotiate } from "./lib/project-manager";
+  import { options } from "./lib/env-options";
   import { onMount } from "svelte";
-    import { negotiate } from "$lib/ccpProjectManager";
-
-  export function getBackendUrl(): string {
-    let backendUrl;
-    if (env.PUBLIC_ENVIRONMENT === "staging") {
-      backendUrl = "https://backend.demo.lens.samply.de/prod/";
-    } else {
-      // production
-      backendUrl = "https://backend.data.dktk.dkfz.de/prod/";
-    }
-    if (env.PUBLIC_BACKEND_URL) {
-      backendUrl = env.PUBLIC_BACKEND_URL;
-    }
-    return backendUrl;
-  }
-
-  function getSiteList(): string[] {
-    if (env.PUBLIC_ENVIRONMENT === "staging") {
-      return [
-        "dktk-test",
-        "dktk-datashield-test",
-        "berlin",
-        "berlin-test",
-        "dresden",
-        "essen",
-        "frankfurt",
-        "freiburg",
-        "luebeck",
-        "marburg",
-        "hannover",
-        "mainz",
-        "muenchen-lmu",
-        "muenchen-tum",
-        "ulm",
-        "wuerzburg",
-        "mannheim",
-        "hamburg",
-      ];
-    } else if (env.PUBLIC_ENVIRONMENT === "acceptance") {
-      return ["eric-acc"];
-    } else {
-      // production
-      return [
-        "berlin-test",
-        "dresden",
-        "essen",
-        "frankfurt",
-        "freiburg",
-        "hannover",
-        "mainz",
-        "luebeck",
-        "muenchen-lmu",
-        "muenchen-tum",
-        "ulm",
-        "wuerzburg",
-        "mannheim",
-        "hamburg",
-      ];
-    }
-  }
-
-  async function fetchOptions() {
-    const optionsUrl =
-      env.PUBLIC_ENVIRONMENT === "staging"
-        ? "options-ccp-demo.json"
-        : "options-ccp-prod.json";
-
-    const options: Options = await fetch(optionsUrl).then((response) =>
-      response.json(),
-    );
-    if (env.PUBLIC_BACKEND_URL && options.backends?.spots !== undefined) {
-      options.backends.spots[0].url = env.PUBLIC_BACKEND_URL;
-    }
-    optionsStore.set(options);
-    // This is not nice but we somehow need get rid of the CCP explorer specific options
-    delete options.projectmanagerOptions;
-    setOptions(options);
-  }
-
-  async function fetchCatalogue() {
-    const catalogueUrl =
-      env.PUBLIC_ENVIRONMENT === "staging"
-        ? "catalogues/catalogue-dktk-staging.json"
-        : "catalogues/catalogue-dktk.json";
-
-    const catalogue: Catalogue = await fetch(catalogueUrl).then((response) =>
-      response.json(),
-    );
-    setCatalogue(catalogue);
-  }
-
+  import { env } from "$env/dynamic/public";
+  import catalogueProd from './config/catalogue.json';
+  import catalogueTest from './config/catalogue-test.json';
+  
   let abortController = new AbortController();
   window.addEventListener("lens-search-triggered", () => {
     abortController.abort();
@@ -142,8 +53,6 @@
       }),
     );
     querySpot(
-      getBackendUrl(),
-      getSiteList(),
       query,
       abortController.signal,
       (result: SpotResult) => {
@@ -168,14 +77,20 @@
   });
 
   onMount(() => {
-    fetchOptions();
-    fetchCatalogue();
+		setOptions(options);
+
+    // Set the catalogue based on the environment
+    let catalogue = catalogueProd as Catalogue;
+    if (env.PUBLIC_ENVIRONMENT === 'test') {
+      catalogue = catalogueTest as Catalogue;
+    }
+    setCatalogue(catalogue);
   });
 
   const saveQuery = () => {
+    // The query is already stored in the URL, so we can create a simple HTML file that redirects to the current URL.
     const url = window.location.href;
-    const query = btoa(JSON.stringify(dataPasser.getQueryAPI()));
-    const htmlContent = `<html><head><meta http-equiv="refresh" content="0;url=${url}?query=${query}"></head><body></body></html>`;
+    const htmlContent = `<html><head><meta http-equiv="refresh" content="0;url=${url}"></head><body></body></html>`;
 
     const blob = new Blob([htmlContent], { type: "text/html" });
     const a = document.createElement("a");
@@ -228,8 +143,6 @@
     "medicationStatements",
     "Sys. T",
   );
-
-  let dataPasser: LensDataPasser;
 </script>
 
 <header>
@@ -305,7 +218,7 @@
     <div class="charts">
       <div class="chart-wrapper result-summary">
         <lens-result-summary></lens-result-summary>
-        {#if env.PUBLIC_ENVIRONMENT === "staging"}
+        {#if options.projectmanagerOptions}
           <lens-negotiate-button
             type="ProjectManager"
             title="Daten und Proben Anfragen"
@@ -318,7 +231,7 @@
       <div class="chart-wrapper">
         <lens-chart
           title="Patienten pro Standort"
-          catalogueGroupCode="patients"
+          dataKey="patients"
           perSite={true}
           displayLegends={true}
           chartType="pie"
@@ -335,7 +248,7 @@
       <div class="chart-wrapper">
         <lens-chart
           title="Geschlecht"
-          catalogueGroupCode="gender"
+          dataKey="gender"
           chartType="pie"
           displayLegends={true}
           headers={genderHeaders}
@@ -344,7 +257,7 @@
       <div class="chart-wrapper chart-diagnosis">
         <lens-chart
           title="Diagnose"
-          catalogueGroupCode="diagnosis"
+          dataKey="diagnosis"
           chartType="bar"
           indexAxis="y"
           groupingDivider="."
@@ -358,7 +271,7 @@
       <div class="chart-wrapper chart-age-distribution">
         <lens-chart
           title="Alter bei Erstdiagnose"
-          catalogueGroupCode="age_at_diagnosis"
+          dataKey="age_at_diagnosis"
           chartType="bar"
           groupRange={10}
           filterRegex="^(([0-9]?[0-9]$)|(1[0-2]0))"
@@ -370,7 +283,7 @@
       <div class="chart-wrapper">
         <lens-chart
           title="Vitalstatus"
-          catalogueGroupCode="75186-7"
+          dataKey="75186-7"
           chartType="pie"
           displayLegends={true}
           headers={vitalStateHeaders}
@@ -379,7 +292,7 @@
       <div class="chart-wrapper">
         <lens-chart
           title="Therapieart"
-          catalogueGroupCode="therapy_of_tumor"
+          dataKey="therapy_of_tumor"
           chartType="bar"
           headers={therapyHeaders}
           xAxisTitle="Art der Therapie"
@@ -390,7 +303,7 @@
       <div class="chart-wrapper">
         <lens-chart
           title="Systemische Therapien"
-          catalogueGroupCode="medicationStatements"
+          dataKey="medicationStatements"
           chartType="bar"
           xAxisTitle="Art der Therapie"
           yAxisTitle="Anzahl der Therapieeinträge"
@@ -400,7 +313,7 @@
       <div class="chart-wrapper">
         <lens-chart
           title="Proben"
-          catalogueGroupCode="sample_kind"
+          dataKey="sample_kind"
           chartType="bar"
           xAxisTitle="Probentypen"
           yAxisTitle="Probenanzahl"
@@ -450,8 +363,6 @@
 </footer>
 
 <error-toasts></error-toasts>
-
-<lens-data-passer bind:this={dataPasser}></lens-data-passer>
 
 <style>
   .catalogue-header {
