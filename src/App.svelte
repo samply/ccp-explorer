@@ -168,7 +168,7 @@
         />
         und
         <a href="https://hub.dkfz.de/s/iP6A7zJzAQya3iC" target="_blank"
-          >Kown Issues</a
+          >Known Issues</a
         >
         beachten.
         <a href="https://hub.dkfz.de/s/c7KmaCxSLQicw3Y" target="_blank">
@@ -217,8 +217,9 @@
       <div class="chart-wrapper result-table">
         <lens-result-table pageSize="10">
           <div slot="above-pagination" class="result-table-hint-text">
-            * Die Anzahl der möglichen vorhandenen FFPE-Proben aus der
-            Pathologie beruht auf der Menge der gezählten Histologien.
+            * In den lokalen Pathologien liegt von jedem Patienten idR
+            zusätzlich mindestens eine FFPE-Probe (Formalin-fixierte und
+            Paraffin eingebettet) als Basis der Diagnose vor.
           </div>
         </lens-result-table>
       </div>
