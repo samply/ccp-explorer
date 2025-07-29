@@ -7216,7 +7216,7 @@
               {
                 "key": "C02.%",
                 "name": "C02.%",
-                "description": "Bösartige Neubildung: Vordere zwei Drittel der Zunge, Bereich nicht näher bezeichnet",
+                "description": "Bösartige Neubildung sonstiger und nicht näher bezeichneter Teile der Zunge",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7264,7 +7264,7 @@
               {
                 "key": "C03.%",
                 "name": "C03.%",
-                "description": "Bösartige Neubildung: Oberkieferzahnfleisch",
+                "description": "Bösartige Neubildung des Zahnfleisches",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7292,7 +7292,7 @@
               {
                 "key": "C04.%",
                 "name": "C04.%",
-                "description": "Bösartige Neubildung: Mundboden, mehrere Teilbereiche überlappend",
+                "description": "Bösartige Neubildung des Mundbodens",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7325,7 +7325,7 @@
               {
                 "key": "C05.%",
                 "name": "C05.%",
-                "description": "Bösartige Neubildung: Gaumen, mehrere Teilbereiche überlappend",
+                "description": "Bösartige Neubildung des Gaumens",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7363,7 +7363,7 @@
               {
                 "key": "C06.%",
                 "name": "C06.%",
-                "description": "Bösartige Neubildung: Mund, nicht näher bezeichnet",
+                "description": "Bösartige Neubildung sonstiger und nicht näher bezeichneter Teile des Mundes",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7406,40 +7406,40 @@
               {
                 "key": "C08.%",
                 "name": "C08.%",
-                "description": "Bösartige Neubildung ohne Angabe der Lokalisation",
+                "description": "Bösartige Neubildung sonstiger und nicht näher bezeichneter großer Speicheldrüsen",
                 "subgroup": [
                   {
                     "visible": false,
                     "key": "C08",
                     "name": "C08",
-                    "description": "Bösartige Neubildung ohne Angabe der Lokalisation"
+                    "description": ""
                   },
                   {
                     "key": "C08.0",
                     "name": "C08.0",
-                    "description": "Bösartige Neubildung ohne Angabe der Lokalisation"
+                    "description": "Bösartige Neubildung: Glandula submandibularis"
                   },
                   {
                     "key": "C08.1",
                     "name": "C08.1",
-                    "description": "Bösartige Neubildung ohne Angabe der Lokalisation"
+                    "description": "Bösartige Neubildung: Glandula sublingualis"
                   },
                   {
                     "key": "C08.8",
                     "name": "C08.8",
-                    "description": "Bösartige Neubildung ohne Angabe der Lokalisation"
+                    "description": "Bösartige Neubildung: Große Speicheldrüsen, mehrere Teilbereiche überlappend"
                   },
                   {
                     "key": "C08.9",
                     "name": "C08.9",
-                    "description": "Bösartige Neubildung ohne Angabe der Lokalisation"
+                    "description": "Bösartige Neubildung: Große Speicheldrüse, nicht näher bezeichnet"
                   }
                 ]
               },
               {
                 "key": "C09.%",
                 "name": "C09.%",
-                "description": "Bösartige Neubildung: Fossa tonsillaris",
+                "description": "Bösartige Neubildung der Tonsille",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7472,7 +7472,7 @@
               {
                 "key": "C10.%",
                 "name": "C10.%",
-                "description": "Bösartige Neubildung: Hinterwand des Oropharynx",
+                "description": "Bösartige Neubildung des Oropharynx",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7520,7 +7520,7 @@
               {
                 "key": "C11.%",
                 "name": "C11.%",
-                "description": "Bösartige Neubildung: Hinterwand des Nasopharynx",
+                "description": "Bösartige Neubildung des Nasopharynx",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7568,7 +7568,7 @@
               {
                 "key": "C13.%",
                 "name": "C13.%",
-                "description": "Bösartige Neubildung: Aryepiglottische Falte, hypopharyngeale Seite",
+                "description": "Bösartige Neubildung des Hypopharynx",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7606,7 +7606,7 @@
               {
                 "key": "C14.%",
                 "name": "C14.%",
-                "description": "Bösartige Neubildung: Lippe, Mundhöhle und Pharynx, mehrere Teilbereiche überlappend",
+                "description": "Bösartige Neubildung sonstiger und ungenau bezeichneter Lokalisationen der Lippe, der Mundhöhle und des Pharynx",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7641,7 +7641,7 @@
               {
                 "key": "C15.%",
                 "name": "C15.%",
-                "description": "Bösartige Neubildung: Abdominaler Ösophagus",
+                "description": "Bösartige Neubildung des Ösophagus",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7694,7 +7694,7 @@
               {
                 "key": "C16.%",
                 "name": "C16.%",
-                "description": "Bösartige Neubildung: Antrum pyloricum",
+                "description": "Bösartige Neubildung des Magens",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7752,7 +7752,7 @@
               {
                 "key": "C17.%",
                 "name": "C17.%",
-                "description": "Bösartige Neubildung: Duodenum",
+                "description": "Bösartige Neubildung des Dünndarmes",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7795,7 +7795,7 @@
               {
                 "key": "C18.%",
                 "name": "C18.%",
-                "description": "Bösartige Neubildung: Appendix vermiformis",
+                "description": "Bösartige Neubildung des Kolons",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7868,7 +7868,7 @@
               {
                 "key": "C21.%",
                 "name": "C21.%",
-                "description": "Bösartige Neubildung: Analkanal",
+                "description": "Bösartige Neubildung des Anus und des Analkanals",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7901,7 +7901,7 @@
               {
                 "key": "C22.%",
                 "name": "C22.%",
-                "description": "Angiosarkom der Leber",
+                "description": "Bösartige Neubildung der Leber und der intrahepatischen Gallengänge",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7954,7 +7954,7 @@
               {
                 "key": "C24.%",
                 "name": "C24.%",
-                "description": "Bösartige Neubildung: Ampulla hepatopancreatica [Ampulla Vateri]",
+                "description": "Bösartige Neubildung sonstiger und nicht näher bezeichneter Teile der Gallenwege",
                 "subgroup": [
                   {
                     "visible": false,
@@ -7987,7 +7987,7 @@
               {
                 "key": "C25.%",
                 "name": "C25.%",
-                "description": "Bösartige Neubildung: Ductus pancreaticus",
+                "description": "Bösartige Neubildung des Pankreas",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8040,7 +8040,7 @@
               {
                 "key": "C26.%",
                 "name": "C26.%",
-                "description": "Bösartige Neubildung: Intestinaltrakt, Teil nicht näher bezeichnet",
+                "description": "Bösartige Neubildung sonstiger und ungenau bezeichneter Verdauungsorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8080,7 +8080,7 @@
               {
                 "key": "C30.%",
                 "name": "C30.%",
-                "description": "Bösartige Neubildung: Mittelohr",
+                "description": "Bösartige Neubildung der Nasenhöhle und des Mittelohres",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8103,7 +8103,7 @@
               {
                 "key": "C31.%",
                 "name": "C31.%",
-                "description": "Bösartige Neubildung: Nasennebenhöhle, nicht näher bezeichnet",
+                "description": "Bösartige Neubildung der Nasennebenhöhlen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8146,7 +8146,7 @@
               {
                 "key": "C32.%",
                 "name": "C32.%",
-                "description": "Bösartige Neubildung: Glottis",
+                "description": "Bösartige Neubildung des Larynx",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8194,7 +8194,7 @@
               {
                 "key": "C34.%",
                 "name": "C34.%",
-                "description": "Bösartige Neubildung: Bronchus oder Lunge, nicht näher bezeichnet",
+                "description": "Bösartige Neubildung der Bronchien und der Lunge",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8242,7 +8242,7 @@
               {
                 "key": "C38.%",
                 "name": "C38.%",
-                "description": "Bösartige Neubildung: Herz",
+                "description": "Bösartige Neubildung des Herzens, des Mediastinums und der Pleura",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8285,7 +8285,7 @@
               {
                 "key": "C39.%",
                 "name": "C39.%",
-                "description": "Bösartige Neubildung: Atmungsorgane und sonstige intrathorakale Organe, mehrere Teilbereiche überlappend",
+                "description": "Bösartige Neubildung sonstiger und ungenau bezeichneter Lokalisationen des Atmungssystems und sonstiger intrathorakaler Organe",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8320,7 +8320,7 @@
               {
                 "key": "C40.%",
                 "name": "C40.%",
-                "description": "Bösartige Neubildung des Knochens und des Gelenkknorpels: Kurze Knochen der oberen Extremität",
+                "description": "Bösartige Neubildung des Knochens und des Gelenkknorpels der Extremitäten",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8363,7 +8363,7 @@
               {
                 "key": "C41.%",
                 "name": "C41.%",
-                "description": "Bösartige Neubildung des Knochens und des Gelenkknorpels: Beckenknochen",
+                "description": "Bösartige Neubildung des Knochens und des Gelenkknorpels sonstiger und nicht näher bezeichneter Lokalisationen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8374,7 +8374,7 @@
                   {
                     "key": "C41.0%",
                     "name": "C41.0%",
-                    "description": "Bösartige Neubildung des Knochens und des Gelenkknorpels: Hirn- und Gesichtsschädel",
+                    "description": "Bösartige Neubildung des Knochens und des Gelenkknorpels sonstiger und nicht näher bezeichneter Lokalisationen",
                     "subgroup": [
                       {
                         "key": "C41.0",
@@ -8457,7 +8457,7 @@
               {
                 "key": "C43.%",
                 "name": "C43.%",
-                "description": "Bösartiges Melanom der Haut, mehrere Teilbereiche überlappend",
+                "description": "Bösartiges Melanom der Haut",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8520,7 +8520,7 @@
               {
                 "key": "C44.%",
                 "name": "C44.%",
-                "description": "Bösartige Neubildung der Haut, nicht näher bezeichnet",
+                "description": "Sonstige bösartige Neubildungen der Haut",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8541,7 +8541,7 @@
                   {
                     "key": "C44.5%",
                     "name": "C44.5%",
-                    "description": "",
+                    "description": "Sonstige bösartige Neubildungen: Haut des Rumpfes",
                     "subgroup": [
                       {
                         "visible": true,
@@ -8613,7 +8613,7 @@
               {
                 "key": "C45.%",
                 "name": "C45.%",
-                "description": "Mesotheliom der Pleura",
+                "description": "Mesotheliom",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8651,7 +8651,7 @@
               {
                 "key": "C46.%",
                 "name": "C46.%",
-                "description": "Kaposi-Sarkom der Haut",
+                "description": "Kaposi-Sarkom [Sarcoma idiopathicum multiplex haemorrhagicum]",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8699,7 +8699,7 @@
               {
                 "key": "C47.%",
                 "name": "C47.%",
-                "description": "Bösartige Neubildung: Periphere Nerven der oberen Extremität, einschließlich Schulter",
+                "description": "Bösartige Neubildung der peripheren Nerven und des autonomen Nervensystems",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8757,7 +8757,7 @@
               {
                 "key": "C48.%",
                 "name": "C48.%",
-                "description": "Bösartige Neubildung: Näher bezeichnete Teile des Peritoneums",
+                "description": "Bösartige Neubildung des Retroperitoneums und des Peritoneums",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8790,7 +8790,7 @@
               {
                 "key": "C49.%",
                 "name": "C49.%",
-                "description": "Bösartige Neubildung: Bindegewebe und andere Weichteilgewebe der oberen Extremität, einschließlich Schulter",
+                "description": "Bösartige Neubildung sonstigen Bindegewebes und anderer Weichteilgewebe",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8850,7 +8850,7 @@
           {
             "key": "C50.%",
             "name": "C50.%",
-            "description": "Bösartige Neubildung: Brustdrüse, mehrere Teilbereiche überlappend",
+            "description": "Bösartige Neubildung der Brustdrüse [Mamma]",
             "subgroup": [
               {
                 "visible": false,
@@ -8913,7 +8913,7 @@
               {
                 "key": "C51.%",
                 "name": "C51.%",
-                "description": "Bösartige Neubildung der Vulva: Klitoris",
+                "description": "Bösartige Neubildung der Vulva",
                 "subgroup": [
                   {
                     "visible": false,
@@ -8951,7 +8951,7 @@
               {
                 "key": "C52",
                 "name": "C52",
-                "description": "Bösartige Neubildung der Vagina"
+                "description": "Bösartige Neubildung der Cervix uteri"
               },
               {
                 "key": "C53.%",
@@ -8989,7 +8989,7 @@
               {
                 "key": "C54.%",
                 "name": "C54.%",
-                "description": "Bösartige Neubildung: Corpus uteri, mehrere Teilbereiche überlappend",
+                "description": "Bösartige Neubildung des Corpus uteri",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9042,7 +9042,7 @@
               {
                 "key": "C57.%",
                 "name": "C57.%",
-                "description": "Bösartige Neubildung: Lig. latum uteri",
+                "description": "Bösartige Neubildung sonstiger und nicht näher bezeichneter weiblicher Genitalorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9107,7 +9107,7 @@
               {
                 "key": "C60.%",
                 "name": "C60.%",
-                "description": "Bösartige Neubildung: Glans penis",
+                "description": "Bösartige Neubildung des Penis",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9150,7 +9150,7 @@
               {
                 "key": "C62.%",
                 "name": "C62.%",
-                "description": "Bösartige Neubildung: Deszendierter Hoden",
+                "description": "Bösartige Neubildung des Hodens",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9178,7 +9178,7 @@
               {
                 "key": "C63.%",
                 "name": "C63.%",
-                "description": "Bösartige Neubildung: Männliche Genitalorgane, mehrere Teilbereiche überlappend",
+                "description": "Bösartige Neubildung sonstiger und nicht näher bezeichneter männlicher Genitalorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9248,7 +9248,7 @@
               {
                 "key": "C67.%",
                 "name": "C67.%",
-                "description": "Bösartige Neubildung: Apex vesicae",
+                "description": "Bösartige Neubildung der Harnblase",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9311,7 +9311,7 @@
               {
                 "key": "C68.%",
                 "name": "C68.%",
-                "description": "Bösartige Neubildung: Harnorgan, nicht näher bezeichnet",
+                "description": "Bösartige Neubildung sonstiger und nicht näher bezeichneter Harnorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9351,7 +9351,7 @@
               {
                 "key": "C69.%",
                 "name": "C69.%",
-                "description": "Bösartige Neubildung: Auge und Augenanhangsgebilde, mehrere Teilbereiche überlappend",
+                "description": "Bösartige Neubildung des Auges und der Augenanhangsgebilde",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9409,7 +9409,7 @@
               {
                 "key": "C70.%",
                 "name": "C70.%",
-                "description": "Bösartige Neubildung: Hirnhäute",
+                "description": "Bösartige Neubildung der Meningen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9437,7 +9437,7 @@
               {
                 "key": "C71.%",
                 "name": "C71.%",
-                "description": "Bösartige Neubildung: Frontallappen",
+                "description": "Bösartige Neubildung des Gehirns",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9500,7 +9500,7 @@
               {
                 "key": "C72.%",
                 "name": "C72.%",
-                "description": "Bösartige Neubildung: Cauda equina",
+                "description": "Bösartige Neubildung des Rückenmarkes, der Hirnnerven und anderer Teile des Zentralnervensystems",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9565,7 +9565,7 @@
               {
                 "key": "C74.%",
                 "name": "C74.%",
-                "description": "Bösartige Neubildung: Nebenniere, nicht näher bezeichnet",
+                "description": "Bösartige Neubildung der Nebenniere",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9593,7 +9593,7 @@
               {
                 "key": "C75.%",
                 "name": "C75.%",
-                "description": "Bösartige Neubildung: Beteiligung mehrerer endokriner Drüsen, nicht näher bezeichnet",
+                "description": "Bösartige Neubildung sonstiger endokriner Drüsen und verwandter Strukturen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9653,7 +9653,7 @@
               {
                 "key": "C76.%",
                 "name": "C76.%",
-                "description": "Bösartige Neubildung ungenau bezeichneter Lokalisationen: Abdomen",
+                "description": "Bösartige Neubildung sonstiger und ungenau bezeichneter Lokalisationen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9706,7 +9706,7 @@
               {
                 "key": "C77.%",
                 "name": "C77.%",
-                "description": "Sekundäre und nicht näher bezeichnete bösartige Neubildung: Axilläre Lymphknoten und Lymphknoten der oberen Extremität",
+                "description": "Sekundäre und nicht näher bezeichnete bösartige Neubildung der Lymphknoten",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9759,7 +9759,7 @@
               {
                 "key": "C78.%",
                 "name": "C78.%",
-                "description": "Sekundäre bösartige Neubildung der Leber und der intrahepatischen Gallengänge",
+                "description": "Sekundäre bösartige Neubildung der Atmungs- und Verdauungsorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9817,7 +9817,7 @@
               {
                 "key": "C79.%",
                 "name": "C79.%",
-                "description": "Sekundäre bösartige Neubildung der Harnblase sowie sonstiger und nicht näher bezeichneter Harnorgane",
+                "description": "Sekundäre bösartige Neubildung an sonstigen und nicht näher bezeichneten Lokalisationen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9910,7 +9910,7 @@
               {
                 "key": "C80.%",
                 "name": "C80.%",
-                "description": "Bösartige Neubildung, nicht näher bezeichnet",
+                "description": "Bösartige Neubildung ohne Angabe der Lokalisation",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9940,7 +9940,7 @@
               {
                 "key": "C81.%",
                 "name": "C81.%",
-                "description": "Gemischtzelliges (klassisches) Hodgkin-Lymphom",
+                "description": "Hodgkin-Lymphom [Lymphogranulomatose]",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9988,7 +9988,7 @@
               {
                 "key": "C82.%",
                 "name": "C82.%",
-                "description": "Diffuses Follikelzentrumslymphom",
+                "description": "Follikuläres Lymphom",
                 "subgroup": [
                   {
                     "visible": false,
@@ -10046,7 +10046,7 @@
               {
                 "key": "C83.%",
                 "name": "C83.%",
-                "description": "Burkitt-Lymphom",
+                "description": "Nicht follikuläres Lymphom",
                 "subgroup": [
                   {
                     "visible": false,
@@ -10094,7 +10094,7 @@
               {
                 "key": "C84.%",
                 "name": "C84.%",
-                "description": "Anaplastisches großzelliges Lymphom, ALK-negativ",
+                "description": "Reifzellige T/NK-Zell-Lymphome",
                 "subgroup": [
                   {
                     "visible": false,
@@ -10147,7 +10147,7 @@
               {
                 "key": "C85.%",
                 "name": "C85.%",
-                "description": "B-Zell-Lymphom, nicht näher bezeichnet",
+                "description": "Sonstige und nicht näher bezeichnete Typen des Non-Hodgkin-Lymphoms",
                 "subgroup": [
                   {
                     "visible": false,
@@ -10180,7 +10180,7 @@
               {
                 "key": "C86.%",
                 "name": "C86.%",
-                "description": "Angioimmunoblastisches T-Zell-Lymphom",
+                "description": "Weitere spezifizierte T/NK-Zell-Lymphome",
                 "subgroup": [
                   {
                     "visible": false,
@@ -10228,7 +10228,7 @@
               {
                 "key": "C88.%",
                 "name": "C88.%",
-                "description": "Bösartige immunproliferative Krankheit, nicht näher bezeichnet",
+                "description": "Bösartige immunproliferative Krankheiten",
                 "subgroup": [
                   {
                     "visible": false,
@@ -10379,7 +10379,7 @@
               {
                 "key": "C90.%",
                 "name": "C90.%",
-                "description": "Extramedulläres Plasmozytom",
+                "description": "Plasmozytom und bösartige Plasmazellen-Neubildungen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -10484,7 +10484,7 @@
               {
                 "key": "C91.%",
                 "name": "C91.%",
-                "description": "Chronische lymphatische Leukämie vom B-Zell-Typ [CLL]",
+                "description": "Lymphatische Leukämie",
                 "subgroup": [
                   {
                     "visible": false,
@@ -10704,7 +10704,7 @@
               {
                 "key": "C92.%",
                 "name": "C92.%",
-                "description": "Chronische myeloische Leukämie [CML], BCR/ABL-positiv",
+                "description": "Myeloische Leukämie",
                 "subgroup": [
                   {
                     "visible": false,
@@ -10715,7 +10715,7 @@
                   {
                     "key": "C92.0%",
                     "name": "C92.0%",
-                    "description": "",
+                    "description": "Akute myeloblastische Leukämie [AML]",
                     "subgroup": [
                       {
                         "visible": false,
@@ -10761,7 +10761,7 @@
                   {
                     "key": "C92.2%",
                     "name": "C92.2%",
-                    "description": "Chronische myeloische Leukämie [CML], BCR/ABL-positiv",
+                    "description": "Atypische chronische myeloische Leukämie, BCR/ABL-negativ",
                     "subgroup": [
                       {
                         "visible": false,
@@ -10947,7 +10947,7 @@
               {
                 "key": "C93.%",
                 "name": "C93.%",
-                "description": "Chronische myelomonozytäre Leukämie",
+                "description": "Monozytenleukämie",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11075,7 +11075,7 @@
               {
                 "key": "C94.%",
                 "name": "C94.%",
-                "description": "Akute Lymphoblastische Leukämie",
+                "description": "Sonstige Leukämien näher bezeichneten Zelltyps",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11109,7 +11109,7 @@
                   {
                     "key": "C94.1%",
                     "name": "C94.1%",
-                    "description": "Akute Lymphoblastische Leukämie",
+                    "description": "Akute Megakaryoblastenleukämie",
                     "subgroup": [
                       {
                         "visible": false,
@@ -11120,19 +11120,19 @@
                       {
                         "key": "C94.11",
                         "name": "C94.11",
-                        "description": "Akute Lymphoblastische Leukämie: In kompletter Remission"
+                        "description": "Akute Megakaryoblastenleukämie: In kompletter Remission"
                       },
                       {
                         "key": "C94.10",
                         "name": "C94.10",
-                        "description": "Akute Lymphoblastische Leukämie: Ohne Angabe einer kompletten Remission"
+                        "description": "Akute Megakaryoblastenleukämie: Ohne Angabe einer kompletten Remission"
                       }
                     ]
                   },
                   {
                     "key": "C94.2%",
                     "name": "C94.2%",
-                    "description": "Akute Lymphoblastische Leukämie",
+                    "description": "Akute Megakaryoblastenleukämie",
                     "subgroup": [
                       {
                         "visible": false,
@@ -11143,19 +11143,19 @@
                       {
                         "key": "C94.21",
                         "name": "C94.21",
-                        "description": "Akute Lymphoblastische Leukämie: In kompletter Remission"
+                        "description": "Akute Megakaryoblastenleukämie: In kompletter Remission"
                       },
                       {
                         "key": "C94.20",
                         "name": "C94.20",
-                        "description": "Akute Lymphoblastische Leukämie: Ohne Angabe einer kompletten Remission"
+                        "description": "Akute Megakaryoblastenleukämie: Ohne Angabe einer kompletten Remission"
                       }
                     ]
                   },
                   {
                     "key": "C94.3%",
                     "name": "C94.3%",
-                    "description": "Akute Lymphoblastische Leukämie",
+                    "description": "Mastzellenleukämie",
                     "subgroup": [
                       {
                         "visible": false,
@@ -11166,19 +11166,19 @@
                       {
                         "key": "C94.31",
                         "name": "C94.31",
-                        "description": "Akute Lymphoblastische Leukämie: In kompletter Remission"
+                        "description": "Mastzellenleukämie: In kompletter Remission"
                       },
                       {
                         "key": "C94.30",
                         "name": "C94.30",
-                        "description": "Akute Lymphoblastische Leukämie: Ohne Angabe einer kompletten Remission"
+                        "description": "Mastzellenleukämie: Ohne Angabe einer kompletten Remission"
                       }
                     ]
                   },
                   {
                     "key": "C94.4%",
                     "name": "C94.4%",
-                    "description": "Akute Lymphoblastische Leukämie",
+                    "description": "Akute Panmyelose mit Myelofibrose",
                     "subgroup": [
                       {
                         "visible": false,
@@ -11189,12 +11189,35 @@
                       {
                         "key": "C94.41",
                         "name": "C94.41",
-                        "description": "Akute Lymphoblastische Leukämie: In kompletter Remission"
+                        "description": "Akute Panmyelose mit Myelofibrose: In kompletter Remission"
                       },
                       {
                         "key": "C94.40",
                         "name": "C94.40",
-                        "description": "Akute Lymphoblastische Leukämie: Ohne Angabe einer kompletten Remission"
+                        "description": "Akute Panmyelose mit Myelofibrose: Ohne Angabe einer kompletten Remission"
+                      }
+                    ]
+                  },
+                                    {
+                    "key": "C94.6%",
+                    "name": "C94.6%",
+                    "description": "Myelodysplastische und myeloproliferative Krankheit, nicht klassifizierbar",
+                    "subgroup": [
+                      {
+                        "visible": false,
+                        "key": "C94.6",
+                        "name": "C94.6",
+                        "description": "Sonstige näher bezeichnete Leukämien"
+                      },
+                      {
+                        "key": "C94.61",
+                        "name": "C94.61",
+                        "description": "Myelodysplastische und myeloproliferative Krankheit, nicht klassifizierbar: In kompletter Remission"
+                      },
+                      {
+                        "key": "C94.60",
+                        "name": "C94.60",
+                        "description": "Myelodysplastische und myeloproliferative Krankheit, nicht klassifizierbar: Ohne Angabe einer kompletten Remission"
                       }
                     ]
                   },
@@ -11220,13 +11243,18 @@
                         "description": "Sonstige näher bezeichnete Leukämien: Ohne Angabe einer kompletten Remission"
                       }
                     ]
+                  },
+                  {
+                    "key": "C94.8",
+                    "name": "C94.8",
+                    "description": "Blastenkrise bei chronischer myeloischer Leukämie [CML]"
                   }
                 ]
               },
               {
                 "key": "C95.%",
                 "name": "C95.%",
-                "description": "Akute Leukämie nicht näher bezeichneten Zelltyps",
+                "description": "Leukämie nicht näher bezeichneten Zelltyps",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11237,7 +11265,7 @@
                   {
                     "key": "C95.0%",
                     "name": "C95.0%",
-                    "description": "Akute Leukämie nicht näher bezeichneten Zelltyps: In kompletter Remission",
+                    "description": "Akute Leukämie nicht näher bezeichneten Zelltyps",
                     "subgroup": [
                       {
                         "visible": false,
@@ -11336,7 +11364,7 @@
               {
                 "key": "C96.%",
                 "name": "C96.%",
-                "description": "Bösartige Neubildung des lymphatischen, blutbildenden und verwandten Gewebes, nicht näher bezeichnet",
+                "description": "Sonstige und nicht näher bezeichnete bösartige Neubildungen des lymphatischen, blutbildenden und verwandten Gewebes",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11401,7 +11429,7 @@
               {
                 "key": "D00.%",
                 "name": "D00.%",
-                "description": "Carcinoma in situ: Lippe, Mundhöhle und Pharynx",
+                "description": "Carcinoma in situ der Mundhöhle, des Ösophagus und des Magens",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11429,7 +11457,7 @@
               {
                 "key": "D01.%",
                 "name": "D01.%",
-                "description": "Carcinoma in situ: Analkanal und Anus",
+                "description": "Carcinoma in situ sonstiger und nicht näher bezeichneter Verdauungsorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11482,7 +11510,7 @@
               {
                 "key": "D02.%",
                 "name": "D02.%",
-                "description": "Carcinoma in situ: Atmungssystem, nicht näher bezeichnet",
+                "description": "Carcinoma in situ des Mittelohres und des Atmungssystems",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11520,7 +11548,7 @@
               {
                 "key": "D03.%",
                 "name": "D03.%",
-                "description": "Melanoma in situ an sonstigen Lokalisationen",
+                "description": "Melanoma in situ",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11583,7 +11611,7 @@
               {
                 "key": "D04.%",
                 "name": "D04.%",
-                "description": "Carcinoma in situ: Behaarte Kopfhaut und Haut des Halses",
+                "description": "Carcinoma in situ der Haut",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11646,7 +11674,7 @@
               {
                 "key": "D05.%",
                 "name": "D05.%",
-                "description": "Carcinoma in situ der Brustdrüse, nicht näher bezeichnet",
+                "description": "Carcinoma in situ der Brustdrüse [Mamma]",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11679,7 +11707,7 @@
               {
                 "key": "D06.%",
                 "name": "D06.%",
-                "description": "Carcinoma in situ: Cervix uteri, nicht näher bezeichnet",
+                "description": "Carcinoma in situ der Cervix uteri",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11712,7 +11740,7 @@
               {
                 "key": "D07.%",
                 "name": "D07.%",
-                "description": "Carcinoma in situ: Endometrium",
+                "description": "Carcinoma in situ sonstiger und nicht näher bezeichneter Genitalorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11760,7 +11788,7 @@
               {
                 "key": "D09.%",
                 "name": "D09.%",
-                "description": "Carcinoma in situ sonstiger näher bezeichneter Lokalisationen",
+                "description": "Carcinoma in situ sonstiger und nicht näher bezeichneter Lokalisationen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11810,7 +11838,7 @@
               {
                 "key": "D10.%",
                 "name": "D10.%",
-                "description": "Gutartige Neubildung: Hypopharynx",
+                "description": "Gutartige Neubildung des Mundes und des Pharynx",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11868,7 +11896,7 @@
               {
                 "key": "D11.%",
                 "name": "D11.%",
-                "description": "Gutartige Neubildung: Große Speicheldrüse, nicht näher bezeichnet",
+                "description": "Gutartige Neubildung der großen Speicheldrüsen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11896,7 +11924,7 @@
               {
                 "key": "D12.%",
                 "name": "D12.%",
-                "description": "Gutartige Neubildung: Analkanal und Anus",
+                "description": "Gutartige Neubildung des Kolons, des Rektums, des Analkanals und des Anus",
                 "subgroup": [
                   {
                     "visible": false,
@@ -11959,7 +11987,7 @@
               {
                 "key": "D13.%",
                 "name": "D13.%",
-                "description": "Gutartige Neubildung: Duodenum",
+                "description": "Gutartige Neubildung sonstiger und ungenau bezeichneter Teile des Verdauungssystems",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12017,7 +12045,7 @@
               {
                 "key": "D14.%",
                 "name": "D14.%",
-                "description": "Gutartige Neubildung: Atmungssystem, nicht näher bezeichnet",
+                "description": "Gutartige Neubildung des Mittelohres und des Atmungssystems",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12055,7 +12083,7 @@
               {
                 "key": "D15.%",
                 "name": "D15.%",
-                "description": "Gutartige Neubildung: Herz",
+                "description": "Gutartige Neubildung sonstiger und nicht näher bezeichneter intrathorakaler Organe",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12093,7 +12121,7 @@
               {
                 "key": "D16.%",
                 "name": "D16.%",
-                "description": "Gutartige Neubildung des Knochens und des Gelenkknorpels: Kraniofazial",
+                "description": "Gutartige Neubildung des Knochens und des Gelenkknorpels",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12171,7 +12199,7 @@
               {
                 "key": "D17.%",
                 "name": "D17.%",
-                "description": "Gutartige Neubildung des Fettgewebes an sonstigen Lokalisationen",
+                "description": "Gutartige Neubildung des Fettgewebes",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12229,7 +12257,7 @@
               {
                 "key": "D18.%",
                 "name": "D18.%",
-                "description": "Hämangiom: Auge und Orbita",
+                "description": "Hämangiom und Lymphangiom",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12240,7 +12268,7 @@
                   {
                     "key": "D18.0%",
                     "name": "D18.0%",
-                    "description": "Hämangiom:",
+                    "description": "Hämangiom",
                     "subgroup": [
                       {
                         "visible": false,
@@ -12291,9 +12319,9 @@
                     ]
                   },
                   {
-                    "key": "D18.0%",
-                    "name": "D18.0%",
-                    "description": "Hämangiom:",
+                    "key": "D18.1%",
+                    "name": "D18.1%",
+                    "description": "Lymphangiom",
                     "subgroup": [
                       {
                         "visible": false,
@@ -12338,7 +12366,7 @@
               {
                 "key": "D19.%",
                 "name": "D19.%",
-                "description": "Gutartige Neubildung: Mesotheliales Gewebe an sonstigen Lokalisationen",
+                "description": "Gutartige Neubildung des mesothelialen Gewebes",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12371,7 +12399,7 @@
               {
                 "key": "D20.%",
                 "name": "D20.%",
-                "description": "Gutartige Neubildung: Peritoneum",
+                "description": "Gutartige Neubildung des Weichteilgewebes des Retroperitoneums und des Peritoneums",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12394,7 +12422,7 @@
               {
                 "key": "D21.%",
                 "name": "D21.%",
-                "description": "Sonstige gutartige Neubildungen: Bindegewebe und andere Weichteilgewebe der oberen Extremität, einschließlich Schulter",
+                "description": "Sonstige gutartige Neubildungen des Bindegewebes und anderer Weichteilgewebe",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12447,7 +12475,7 @@
               {
                 "key": "D22.%",
                 "name": "D22.%",
-                "description": "Melanozytennävus der Lippe",
+                "description": "Melanozytennävus",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12505,7 +12533,7 @@
               {
                 "key": "D23.%",
                 "name": "D23.%",
-                "description": "Sonstige gutartige Neubildungen: Behaarte Kopfhaut und Haut des Halses",
+                "description": "Sonstige gutartige Neubildungen der Haut",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12568,7 +12596,7 @@
               {
                 "key": "D25.%",
                 "name": "D25.%",
-                "description": "Intramurales Leiomyom des Uterus",
+                "description": "Leiomyom des Uterus",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12601,7 +12629,7 @@
               {
                 "key": "D26.%",
                 "name": "D26.%",
-                "description": "Sonstige gutartige Neubildungen: Cervix uteri",
+                "description": "Sonstige gutartige Neubildungen des Uterus",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12639,7 +12667,7 @@
               {
                 "key": "D28.%",
                 "name": "D28.%",
-                "description": "Gutartige Neubildung: Sonstige näher bezeichnete weibliche Genitalorgane",
+                "description": "Gutartige Neubildung sonstiger und nicht näher bezeichneter weiblicher Genitalorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12677,7 +12705,7 @@
               {
                 "key": "D29.%",
                 "name": "D29.%",
-                "description": "Gutartige Neubildung: Hoden",
+                "description": "Gutartige Neubildung der männlichen Genitalorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12725,7 +12753,7 @@
               {
                 "key": "D30.%",
                 "name": "D30.%",
-                "description": "Gutartige Neubildung: Harnblase",
+                "description": "Gutartige Neubildung der Harnorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12773,7 +12801,7 @@
               {
                 "key": "D31.%",
                 "name": "D31.%",
-                "description": "Gutartige Neubildung: Auge, nicht näher bezeichnet",
+                "description": "Gutartige Neubildung des Auges und der Augenanhangsgebilde",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12826,7 +12854,7 @@
               {
                 "key": "D32.%",
                 "name": "D32.%",
-                "description": "Gutartige Neubildung: Hirnhäute",
+                "description": "Gutartige Neubildung der Meningen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12854,7 +12882,7 @@
               {
                 "key": "D33.%",
                 "name": "D33.%",
-                "description": "Gutartige Neubildung: Gehirn, infratentoriell",
+                "description": "Gutartige Neubildung des Gehirns und anderer Teile des Zentralnervensystems",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12907,7 +12935,7 @@
               {
                 "key": "D35.%",
                 "name": "D35.%",
-                "description": "Gutartige Neubildung: Beteiligung mehrerer endokriner Drüsen",
+                "description": "Gutartige Neubildung sonstiger und nicht näher bezeichneter endokriner Drüsen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -12970,7 +12998,7 @@
               {
                 "key": "D36.%",
                 "name": "D36.%",
-                "description": "Gutartige Neubildung an nicht näher bezeichneter Lokalisation",
+                "description": "Gutartige Neubildung an sonstigen und nicht näher bezeichneten Lokalisationen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -13010,7 +13038,7 @@
               {
                 "key": "D37.%",
                 "name": "D37.%",
-                "description": "Neubildung unsicheren oder unbekannten Verhaltens: Appendix vermiformis",
+                "description": "Neubildung unsicheren oder unbekannten Verhaltens der Mundhöhle und der Verdauungsorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -13056,7 +13084,7 @@
                   {
                     "key": "D37.7%",
                     "name": "D37.7%",
-                    "description": "",
+                    "description": "Sonstige Verdauungsorgane",
                     "subgroup": [
                       {
                         "visible": false,
@@ -13086,7 +13114,7 @@
               {
                 "key": "D38.%",
                 "name": "D38.%",
-                "description": "Neubildung unsicheren oder unbekannten Verhaltens: Atmungsorgan, nicht näher bezeichnet",
+                "description": "Neubildung unsicheren oder unbekannten Verhaltens des Mittelohres, der Atmungsorgane und der intrathorakalen Organe",
                 "subgroup": [
                   {
                     "visible": false,
@@ -13134,7 +13162,7 @@
               {
                 "key": "D39.%",
                 "name": "D39.%",
-                "description": "Neubildung unsicheren oder unbekannten Verhaltens: Ovar",
+                "description": "Neubildung unsicheren oder unbekannten Verhaltens der weiblichen Genitalorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -13172,7 +13200,7 @@
               {
                 "key": "D40.%",
                 "name": "D40.%",
-                "description": "Neubildung unsicheren oder unbekannten Verhaltens: Hoden",
+                "description": "Neubildung unsicheren oder unbekannten Verhaltens der männlichen Genitalorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -13205,7 +13233,7 @@
               {
                 "key": "D41.%",
                 "name": "D41.%",
-                "description": "Neubildung unsicheren oder unbekannten Verhaltens: Harnblase",
+                "description": "Neubildung unsicheren oder unbekannten Verhaltens der Harnorgane",
                 "subgroup": [
                   {
                     "visible": false,
@@ -13253,7 +13281,7 @@
               {
                 "key": "D42.%",
                 "name": "D42.%",
-                "description": "Neubildung unsicheren oder unbekannten Verhaltens: Hirnhäute",
+                "description": "Neubildung unsicheren oder unbekannten Verhaltens der Meningen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -13281,7 +13309,7 @@
               {
                 "key": "D43.%",
                 "name": "D43.%",
-                "description": "Neubildung unsicheren oder unbekannten Verhaltens: Gehirn, infratentoriell",
+                "description": "Neubildung unsicheren oder unbekannten Verhaltens des Gehirns und des Zentralnervensystems",
                 "subgroup": [
                   {
                     "visible": false,
@@ -13329,7 +13357,7 @@
               {
                 "key": "D44.%",
                 "name": "D44.%",
-                "description": "Neubildung unsicheren oder unbekannten Verhaltens: Beteiligung mehrerer endokriner Drüsen",
+                "description": "Neubildung unsicheren oder unbekannten Verhaltens der endokrinen Drüsen",
                 "subgroup": [
                   {
                     "visible": false,
@@ -13397,7 +13425,7 @@
               {
                 "key": "D46.%",
                 "name": "D46.%",
-                "description": "Myelodysplastisches Syndrom mit isolierter del(5q)-Chromosomenanomalie",
+                "description": "Myelodysplastische Syndrome",
                 "subgroup": [
                   {
                     "visible": false,
@@ -13450,7 +13478,7 @@
               {
                 "key": "D47.%",
                 "name": "D47.%",
-                "description": "Chronische Eosinophilen-Leukämie [Hypereosinophiles Syndrom]",
+                "description": "Sonstige Neubildungen unsicheren oder unbekannten Verhaltens des lymphatischen, blutbildenden und verwandten Gewebes",
                 "subgroup": [
                   {
                     "visible": false,
@@ -13503,7 +13531,7 @@
               {
                 "key": "D48.%",
                 "name": "D48.%",
-                "description": "Neubildung unsicheren oder unbekannten Verhaltens, nicht näher bezeichnet",
+                "description": "Neubildung unsicheren oder unbekannten Verhaltens an sonstigen und nicht näher bezeichneten Lokalisationen",
                 "subgroup": [
                   {
                     "visible": false,
