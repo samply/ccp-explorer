@@ -217,7 +217,9 @@
       <div class="chart-wrapper result-table">
         <lens-result-table pageSize="10">
           <div slot="above-pagination" class="result-table-hint-text">
-            * In den lokalen Pathologien liegt von jedem Patienten idR zusätzlich mindestens eine FFPE-Probe (Formalin-fixierte und Paraffin eingebettet) als Basis der Diagnose vor.
+            * In den lokalen Pathologien liegt von jedem Patienten idR
+            zusätzlich mindestens eine FFPE-Probe (Formalin-fixierte und
+            Paraffin eingebettet) als Basis der Diagnose vor.
           </div>
         </lens-result-table>
       </div>
