@@ -117,6 +117,7 @@ services:
       BEAM_APP_ID_LONG: prism.${LOCAL_BEAM_ID}.${BROKER_HOST}
       CORS_ORIGIN: "https://${GUI_HOST}"
       SITES: ${SITES}
+      PROJECT: dktk
       BIND_ADDR: 0.0.0.0:8066
       RUST_LOG: "debug,hyper=info"
     depends_on:
