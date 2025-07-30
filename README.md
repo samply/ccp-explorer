@@ -1,7 +1,7 @@
 # CCP Explorer
 
 Production: https://data.dktk.dkfz.de/  
-Staging: https://demo.lens.samply.de/
+Test: https://demo.lens.samply.de/
 
 ## Environment variables
 
