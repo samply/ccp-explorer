@@ -29,6 +29,8 @@ jobs:
       image-name: "samply/ccp-explorer"
       # Where to push your images ("dockerhub", "ghcr", "both" or "none")
       push-to: dockerhub
+      # If GHCR is not set up trying to clean up old images fails
+      ghcr-retention-policy: keep
     # This passes the secrets from calling workflow to the called workflow
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
