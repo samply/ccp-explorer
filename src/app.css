@@ -393,7 +393,7 @@ lens-catalogue::part(number-input-formfield):focus {
   outline: none;
 }
 
-.chart-diagnosis lens-chart::part(chart-canvas) {
+.chart-diagnosis lens-chart::part(lens-chart-canvas) {
   width: 100%;
   max-height: 1000px;
   height: 940px;
