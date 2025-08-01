@@ -71,7 +71,8 @@ services:
       BEAM_PROXY_URL: http://beam-proxy:8081
       BEAM_APP_ID: "spot.${LOCAL_BEAM_ID}.${BROKER_HOST}"
       CORS_ORIGIN: "https://${GUI_HOST}"
-      CATALOGUE_URL: "${CATALOGUE_URL}"
+      SITES: ${SITES}
+      TRANSFORM: LENS
       BIND_ADDR: 0.0.0.0:8055
       PRISM_URL: http://prism:8066
       RUST_LOG: "info"
@@ -116,7 +117,7 @@ services:
       BEAM_APP_ID_LONG: prism.${LOCAL_BEAM_ID}.${BROKER_HOST}
       CORS_ORIGIN: "https://${GUI_HOST}"
       SITES: ${SITES}
-      PROJECT: ${PROJECT}
+      PROJECT: dktk
       BIND_ADDR: 0.0.0.0:8066
       RUST_LOG: "debug,hyper=info"
     depends_on:

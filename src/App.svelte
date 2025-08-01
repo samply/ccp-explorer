@@ -1,77 +1,88 @@
 <script lang="ts">
   import "./app.css";
-
-  import type {
-    MeasureGroup,
-    MeasureItem,
-    LensDataPasser,
-    Catalogue,
-    LensOptions,
-  } from "@samply/lens";
-  import { setOptions, setCatalogue, setMeasures } from "@samply/lens";
-
+  import type { Catalogue, SpotResult } from "@samply/lens";
   import {
-    dktkDiagnosisMeasure,
-    dktkMedicationStatementsMeasure,
-    dktkPatientsMeasure,
-    dktkProceduresMeasure,
-    dktkSpecificSpecimenMeasure,
-    dktkHistologyMeasure,
-  } from "./measures";
-  import { env } from "$env/dynamic/public";
+    setOptions,
+    setCatalogue,
+    clearSiteResults,
+    markSiteClaimed,
+    setSiteResult,
+    querySpot,
+    getAst,
+    buildLibrary,
+    buildMeasure,
+  } from "@samply/lens";
+  import { translateAstToCql } from "./lib/ast-to-cql-translator";
+  import { measures } from "./lib/measures";
+  import { negotiate } from "./lib/project-manager";
+  import { options } from "./lib/env-options";
   import { onMount } from "svelte";
+  import { SvelteMap } from "svelte/reactivity";
+  import { env } from "$env/dynamic/public";
+  import catalogueProd from "./config/catalogue.json";
+  import catalogueTest from "./config/catalogue-test.json";
 
-  async function fetchOptions() {
-    const optionsUrl =
-      env.PUBLIC_ENVIRONMENT === "staging"
-        ? "options-ccp-demo.json"
-        : "options-ccp-prod.json";
+  let abortController = new AbortController();
+  window.addEventListener("lens-search-triggered", () => {
+    abortController.abort();
+    abortController = new AbortController();
 
-    const options: LensOptions = await fetch(optionsUrl).then((response) =>
-      response.json(),
+    // AST to CQL translation
+    const cql = translateAstToCql(
+      getAst(),
+      false,
+      "DKTK_STRAT_DEF_IN_INITIAL_POPULATION",
+      measures,
     );
-    if (env.PUBLIC_BACKEND_URL && options.backends?.spots !== undefined) {
-      options.backends.spots[0].url = env.PUBLIC_BACKEND_URL;
-    }
-    setOptions(options);
-  }
-
-  async function fetchCatalogue() {
-    const catalogueUrl =
-      env.PUBLIC_ENVIRONMENT === "staging"
-        ? "catalogues/catalogue-dktk-staging.json"
-        : "catalogues/catalogue-dktk.json";
-
-    const catalogue: Catalogue = await fetch(catalogueUrl).then((response) =>
-      response.json(),
+    const lib = buildLibrary(cql);
+    const measure = buildMeasure(
+      lib.url,
+      measures.map((m) => m.measure),
     );
-    setCatalogue(catalogue);
-  }
 
-  const measures: MeasureGroup[] = [
-    {
-      name: "DKTK",
-      measures: [
-        dktkPatientsMeasure as MeasureItem,
-        dktkDiagnosisMeasure as MeasureItem,
-        dktkSpecificSpecimenMeasure as MeasureItem,
-        dktkProceduresMeasure as MeasureItem,
-        dktkMedicationStatementsMeasure as MeasureItem,
-        dktkHistologyMeasure as MeasureItem,
-      ],
-    },
-  ];
+    clearSiteResults();
+    const query = btoa(
+      JSON.stringify({
+        lang: "cql",
+        lib,
+        measure,
+      }),
+    );
+    querySpot(query, abortController.signal, (result: SpotResult) => {
+      const site = result.from.split(".")[1];
+      if (result.status === "claimed") {
+        markSiteClaimed(site);
+      } else if (result.status === "succeeded") {
+        const siteResult = JSON.parse(atob(result.body));
+        setSiteResult(site, siteResult);
+      } else {
+        console.error(
+          `Site ${site} failed with status ${result.status}:`,
+          result.body,
+        );
+      }
+    });
+  });
+
+  window.addEventListener("lens-negotiate-triggered", () => {
+    negotiate();
+  });
 
   onMount(() => {
-    fetchOptions();
-    fetchCatalogue();
-    setMeasures(measures);
+    setOptions(options);
+
+    // Set the catalogue based on the environment
+    let catalogue = catalogueProd as Catalogue;
+    if (env.PUBLIC_ENVIRONMENT === "test") {
+      catalogue = catalogueTest as Catalogue;
+    }
+    setCatalogue(catalogue);
   });
 
   const saveQuery = () => {
+    // The query is already stored in the URL, so we can create a simple HTML file that redirects to the current URL.
     const url = window.location.href;
-    const query = btoa(JSON.stringify(dataPasser.getQueryAPI()));
-    const htmlContent = `<html><head><meta http-equiv="refresh" content="0;url=${url}?query=${query}"></head><body></body></html>`;
+    const htmlContent = `<html><head><meta http-equiv="refresh" content="0;url=${url}"></head><body></body></html>`;
 
     const blob = new Blob([htmlContent], { type: "text/html" });
     const a = document.createElement("a");
@@ -92,22 +103,9 @@
     document.body.removeChild(a);
   };
 
-  /**
-   * TODO: add catalogueText option to config file
-   */
-  const catalogueText = {
-    group: "Group",
-    collapseButtonTitle: "Collapse Tree",
-    expandButtonTitle: "Expand Tree",
-    numberInput: {
-      labelFrom: "von",
-      labelTo: "bis",
-    },
-  };
-
   let catalogueopen: boolean = false;
 
-  const genderHeaders: Map<string, string> = new Map<string, string>()
+  const genderHeaders: Map<string, string> = new SvelteMap<string, string>()
     .set("male", "männlich")
     .set("female", "weiblich")
     .set("other", "divers")
@@ -115,17 +113,15 @@
 
   const barChartBackgroundColors: string[] = ["#4dc9f6", "#3da4c7"];
 
-  const vitalStateHeaders: Map<string, string> = new Map<string, string>()
+  const vitalStateHeaders: Map<string, string> = new SvelteMap<string, string>()
     .set("lebend", "alive")
     .set("verstorben", "deceased")
     .set("unbekannt", "unknown");
 
-  const therapyHeaders: Map<string, string> = new Map<string, string>().set(
-    "medicationStatements",
-    "Sys. T",
-  );
-
-  let dataPasser: LensDataPasser;
+  const therapyHeaders: Map<string, string> = new SvelteMap<
+    string,
+    string
+  >().set("medicationStatements", "Sys. T");
 </script>
 
 <header>
@@ -147,10 +143,9 @@
     <div class="search-wrapper">
       <lens-search-bar noMatchesFoundMessage="keine Ergebnisse gefunden"
       ></lens-search-bar>
-      <lens-info-button
+      <lens-query-explain-button
         noQueryMessage="Leere Suchanfrage: Sucht nach allen Ergebnissen."
-        showQuery={true}
-      ></lens-info-button>
+      ></lens-query-explain-button>
       <button
         class="save_button"
         on:click={saveQuery}
@@ -173,7 +168,7 @@
         />
         und
         <a href="https://hub.dkfz.de/s/iP6A7zJzAQya3iC" target="_blank"
-          >Kown Issues</a
+          >Known Issues</a
         >
         beachten.
         <a href="https://hub.dkfz.de/s/c7KmaCxSLQicw3Y" target="_blank">
@@ -181,24 +176,26 @@
         >
       </div>
       <div class="catalogue">
-        <h2>Suchkriterien</h2>
-        <lens-info-button
-          message={[
-            `Die Suche erfolgt patienten-orientiert. `,
-            `Bei Patienten mit mehreren onkologischen Diagnosen, können sich ausgewählte Suchkriterien nicht nur auf eine Erkrankung beziehen, sondern auch auf Weitere.`,
-            `Innerhalb einer Kategorie werden verschiedene Ausprägungen mit einer „Oder-Verknüpfung“ gesucht; bei der Suche über mehrere Kategorien mit einer „Und-Verknüpfung“.`,
-          ]}
-        ></lens-info-button>
-        <lens-catalogue
-          texts={catalogueText}
-          toggle={{ collapsable: false, open: catalogueopen }}
+        <div class="catalogue-header">
+          <h2>Suchkriterien</h2>
+          <lens-info-button
+            message={[
+              `Die Suche erfolgt patienten-orientiert. `,
+              `Bei Patienten mit mehreren onkologischen Diagnosen, können sich ausgewählte Suchkriterien nicht nur auf eine Erkrankung beziehen, sondern auch auf Weitere.`,
+              `Innerhalb einer Kategorie werden verschiedene Ausprägungen mit einer „Oder-Verknüpfung“ gesucht; bei der Suche über mehrere Kategorien mit einer „Und-Verknüpfung“.`,
+            ]}
+            buttonSize="22px"
+            alignDialogue="left"
+          ></lens-info-button>
+        </div>
+        <lens-catalogue toggle={{ collapsable: false, open: catalogueopen }}
         ></lens-catalogue>
       </div>
     </div>
     <div class="charts">
       <div class="chart-wrapper result-summary">
         <lens-result-summary></lens-result-summary>
-        {#if env.PUBLIC_ENVIRONMENT === "staging"}
+        {#if options.projectmanagerOptions}
           <lens-negotiate-button
             type="ProjectManager"
             title="Daten und Proben Anfragen"
@@ -211,7 +208,7 @@
       <div class="chart-wrapper">
         <lens-chart
           title="Patienten pro Standort"
-          catalogueGroupCode="patients"
+          dataKey="patients"
           perSite={true}
           displayLegends={true}
           chartType="pie"
@@ -219,16 +216,20 @@
       </div>
       <div class="chart-wrapper result-table">
         <lens-result-table pageSize="10">
-          <div slot="above-pagination" class="result-table-hint-text">
-            * Die Anzahl der möglichen vorhandenen FFPE-Proben aus der
-            Pathologie beruht auf der Menge der gezählten Histologien.
+          <div
+            slot="lens-result-above-pagination"
+            class="result-table-hint-text"
+          >
+            * In den lokalen Pathologien liegt von jedem Patienten idR
+            zusätzlich mindestens eine FFPE-Probe (Formalin-fixierte und
+            Paraffin eingebettet) als Basis der Diagnose vor.
           </div>
         </lens-result-table>
       </div>
       <div class="chart-wrapper">
         <lens-chart
           title="Geschlecht"
-          catalogueGroupCode="gender"
+          dataKey="gender"
           chartType="pie"
           displayLegends={true}
           headers={genderHeaders}
@@ -237,7 +238,7 @@
       <div class="chart-wrapper chart-diagnosis">
         <lens-chart
           title="Diagnose"
-          catalogueGroupCode="diagnosis"
+          dataKey="diagnosis"
           chartType="bar"
           indexAxis="y"
           groupingDivider="."
@@ -251,7 +252,7 @@
       <div class="chart-wrapper chart-age-distribution">
         <lens-chart
           title="Alter bei Erstdiagnose"
-          catalogueGroupCode="age_at_diagnosis"
+          dataKey="age_at_diagnosis"
           chartType="bar"
           groupRange={10}
           filterRegex="^(([0-9]?[0-9]$)|(1[0-2]0))"
@@ -263,7 +264,7 @@
       <div class="chart-wrapper">
         <lens-chart
           title="Vitalstatus"
-          catalogueGroupCode="75186-7"
+          dataKey="75186-7"
           chartType="pie"
           displayLegends={true}
           headers={vitalStateHeaders}
@@ -272,7 +273,7 @@
       <div class="chart-wrapper">
         <lens-chart
           title="Therapieart"
-          catalogueGroupCode="therapy_of_tumor"
+          dataKey="therapy_of_tumor"
           chartType="bar"
           headers={therapyHeaders}
           xAxisTitle="Art der Therapie"
@@ -283,7 +284,7 @@
       <div class="chart-wrapper">
         <lens-chart
           title="Systemische Therapien"
-          catalogueGroupCode="medicationStatements"
+          dataKey="medicationStatements"
           chartType="bar"
           xAxisTitle="Art der Therapie"
           yAxisTitle="Anzahl der Therapieeinträge"
@@ -293,7 +294,7 @@
       <div class="chart-wrapper">
         <lens-chart
           title="Proben"
-          catalogueGroupCode="sample_kind"
+          dataKey="sample_kind"
           chartType="bar"
           xAxisTitle="Probentypen"
           yAxisTitle="Probenanzahl"
@@ -344,4 +345,14 @@
 
 <error-toasts></error-toasts>
 
-<lens-data-passer bind:this={dataPasser}></lens-data-passer>
+<style>
+  .catalogue-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--gap-s);
+  }
+  .catalogue-header h2 {
+    margin: 0;
+  }
+</style>

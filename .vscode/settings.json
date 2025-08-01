@@ -6,7 +6,7 @@
     },
     {
       "fileMatch": ["options*.json"],
-      "url": "./node_modules/@samply/lens/schema/options.schema.json"
+      "url": "./schema/options.schema.json"
     }
   ]
 }

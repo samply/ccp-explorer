@@ -19,4 +19,5 @@ jobs:
       - run: npx eslint .
       - run: npm run check
       - run: npm run build
+      - run: bash scripts/generate-json-schema.bash --check
       - run: bash scripts/validate-json-schema.bash
