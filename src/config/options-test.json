@@ -52,9 +52,7 @@
       "hintText": [
         "Bei Patienten mit mehreren onkologischen Diagnosen werden auch Einträge angezeigt, die ggfs. nicht den ausgewählten Suchkriterien entsprechen."
       ],
-      "aggregations": [
-        "medicationStatements"
-      ],
+      "aggregations": ["medicationStatements"],
       "tooltips": {
         "OP": "Operationen",
         "ST": "Strahlentherapien",
