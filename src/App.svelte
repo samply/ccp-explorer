@@ -215,7 +215,7 @@
         ></lens-chart>
       </div>
       <div class="chart-wrapper result-table">
-        <lens-result-table pageSize="10">
+        <lens-result-table pageSize={10}>
           <div
             slot="lens-result-above-pagination"
             class="result-table-hint-text"
