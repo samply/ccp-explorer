@@ -1,5 +1,5 @@
 {
-  "spotUrl": "https://backend.data.dktk.dkfz.de/prod",
+  "spotUrl": "http://localhost:8100",
   "language": "de",
   "siteMappings": {
     "berlin": "Berlin",
