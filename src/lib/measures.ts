@@ -297,45 +297,46 @@ export const dktkMonoObservationMeasure: FhirMeasureItem = {
   key: "MolecularMarker",
   measure: {
     code: {
-      text: "MolecularMarker"
+      text: "MolecularMarker",
     },
     extension: [
       {
         url: "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis",
-        valueCode: "Observation"
-      }
+        valueCode: "Observation",
+      },
     ],
     population: [
       {
         code: {
           coding: [
             {
-              system: "http://terminology.hl7.org/CodeSystem/measure-population",
-              code: "initial-population"
-            }
-          ]
+              system:
+                "http://terminology.hl7.org/CodeSystem/measure-population",
+              code: "initial-population",
+            },
+          ],
         },
         criteria: {
           language: "text/cql-identifier",
-          expression: "GeneticVariantCount"
-        }
-      }
+          expression: "GeneticVariantCount",
+        },
+      },
     ],
     stratifier: [
       {
         code: {
-          text: "MolecularMarkers"
+          text: "MolecularMarkers",
         },
         criteria: {
           language: "text/cql-identifier",
-          expression: "GeneticVariantCode"
-        }
-      }
-    ]
+          expression: "GeneticVariantCode",
+        },
+      },
+    ],
   },
   cql: `
   DKTK_STRAT_GENETIC_VARIANT
-  `
+  `,
 };
 
 export const measures: FhirMeasureItem[] = [
@@ -347,4 +348,3 @@ export const measures: FhirMeasureItem[] = [
   dktkHistologyMeasure,
   dktkMonoObservationMeasure,
 ];
-
