@@ -303,6 +303,16 @@
         >
         </lens-chart>
       </div>
+      <div class="chart-wrapper chart-wrapper-mol">
+        <lens-chart
+          title="MolecularMarkers"
+          dataKey="MolecularMarkers"
+          chartType="bar"
+          xAxisTitle="Marker"
+          backgroundColor={barChartBackgroundColors}
+        >
+        </lens-chart>
+      </div>
     </div>
   </div>
 </main>

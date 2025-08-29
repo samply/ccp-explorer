@@ -193,6 +193,10 @@ info-icon {
   display: grid;
 }
 
+.chart-wrapper-mol {
+  grid-column: span 4;
+}
+
 .result-summary {
   grid-column: 1/-1;
 }
