@@ -14,8 +14,6 @@ import {
   criterionMap,
 } from "$lib/cqlquery-mappings";
 
-const codesystems: string[] = ["codesystem loinc: 'http://loinc.org'"];
-
 export const translateAstToCql = (
   query: AstTopLayer,
   returnOnlySingeltons: boolean = true,
@@ -492,19 +490,9 @@ const substituteCQLExpression = (
   cqlString = cqlString.replace(new RegExp("{{K}}"), key);
   if (alias && alias[0]) {
     cqlString = cqlString.replace(new RegExp("{{A1}}", "g"), alias[0]);
-    const systemExpression =
-      "codesystem " + alias[0] + ": '" + aliasMap.get(alias[0]) + "'";
-    if (!codesystems.includes(systemExpression)) {
-      codesystems.push(systemExpression);
-    }
   }
   if (alias && alias[1]) {
     cqlString = cqlString.replace(new RegExp("{{A2}}", "g"), alias[1]);
-    const systemExpression =
-      "codesystem " + alias[1] + ": '" + aliasMap.get(alias[1]) + "'";
-    if (!codesystems.includes(systemExpression)) {
-      codesystems.push(systemExpression);
-    }
   }
   if (min !== undefined) {
     cqlString = cqlString.replace(new RegExp("{{D1}}"), min.toString());
@@ -518,13 +506,9 @@ const substituteCQLExpression = (
 const getCodesystems = (): string => {
   let codesystemString: string = "";
 
-  codesystems.forEach((systems) => {
-    codesystemString += systems + "\n";
-  });
-
-  if (codesystems.length > 0) {
-    codesystemString += "\n";
+  for (const [key, value] of aliasMap) {
+    codesystemString += "codesystem " + key + ": '" + value + "'\n";
   }
 
-  return codesystemString;
+  return codesystemString + "\n";
 };
