@@ -21,20 +21,24 @@
   import { env } from "$env/dynamic/public";
   import catalogueProd from "./config/catalogue.json";
   import catalogueTest from "./config/catalogue-test.json";
+  import { writable } from "svelte/store";
 
   let abortController = new AbortController();
-  window.addEventListener("lens-search-triggered", () => {
+  let promptVisible = writable(false);
+  let promptValue = writable("");
+  let resolver: any;
+  window.addEventListener("lens-search-triggered", async () => {
     abortController.abort();
     abortController = new AbortController();
 
     // AST to CQL translation
-    const cql = translateAstToCql(
+    let cql = translateAstToCql(
       getAst(),
       false,
       "DKTK_STRAT_DEF_IN_INITIAL_POPULATION",
       measures,
     );
-    console.log(cql);
+    cql = await customPrompt(cql)
     const lib = buildLibrary(cql);
     const measure = buildMeasure(
       lib.url,
@@ -123,6 +127,19 @@
     string,
     string
   >().set("medicationStatements", "Sys. T");
+  function customPrompt(defaultValue: string): Promise<string> {
+    promptValue.set(defaultValue);
+    promptVisible.set(true);
+
+    return new Promise((resolve) => {
+      resolver = resolve;
+    });
+  }
+
+  function handleOk() {
+    promptVisible.set(false);
+    resolver($promptValue);
+  }
 </script>
 
 <header>
@@ -140,6 +157,17 @@
   </div>
 </header>
 <main>
+{#if $promptVisible}
+  <div class="backdrop">
+    <div class="modal">
+      <h3>Modify cql query</h3>
+      <textarea bind:value={$promptValue} rows="4"></textarea>
+      <div class="actions">
+        <button on:click={handleOk}>OK</button>
+      </div>
+    </div>
+  </div>
+{/if}
   <div class="search">
     <div class="search-wrapper">
       <lens-search-bar noMatchesFoundMessage="keine Ergebnisse gefunden"
@@ -365,5 +393,29 @@
   }
   .catalogue-header h2 {
     margin: 0;
+  }
+  .backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .modal {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    width: 600px;
+  }
+  textarea {
+    width: 100%;
+    min-height: 600px;
+  }
+  .actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
   }
 </style>
