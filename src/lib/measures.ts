@@ -346,5 +346,5 @@ export const measures: FhirMeasureItem[] = [
   dktkProceduresMeasure,
   dktkMedicationStatementsMeasure,
   dktkHistologyMeasure,
-  dktkMonoObservationMeasure,
+  // dktkMonoObservationMeasure,
 ];
