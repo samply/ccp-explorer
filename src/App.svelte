@@ -34,6 +34,7 @@
       "DKTK_STRAT_DEF_IN_INITIAL_POPULATION",
       measures,
     );
+    console.log(cql);
     const lib = buildLibrary(cql);
     const measure = buildMeasure(
       lib.url,
