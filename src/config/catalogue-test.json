@@ -30,7 +30,7 @@
         ]
       },
       {
-        "key": "75186-7",
+        "key": "vitalStatus",
         "name": "Vitalstatus",
         "system": "http://dktk.dkfz.de/fhir/onco/core/CodeSystem/VitalstatusCS",
         "fieldType": "single-select",
@@ -13591,7 +13591,7 @@
         ]
       },
       {
-        "key": "urn:oid:2.16.840.1.113883.6.43.1",
+        "key": "conditionLocalization",
         "name": "Lokalisation ICD-O-3",
         "infoButtonText": [
           "Eine Suche mit dem Platzhalter (%) schließt Untergruppen in die Suche ein, z.B. C34.% sucht nach allen Untergruppen für C34."
@@ -16813,7 +16813,7 @@
         ]
       },
       {
-        "key": "59847-4",
+        "key": "morphology",
         "name": "Morphologie ICD-O-3",
         "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
         "fieldType": "autocomplete",
@@ -19411,7 +19411,7 @@
         ]
       },
       {
-        "key": "59542-1",
+        "key": "grading",
         "name": "Grading",
         "system": "http://dktk.dkfz.de/fhir/onco/core/CodeSystem/GradingCS",
         "fieldType": "single-select",
@@ -19469,14 +19469,14 @@
       },
       {
         "fieldType": "group",
-        "key": "21908-9",
+        "key": "uiccstadium",
         "name": "UICC Stadium",
         "infoButtonText": [
           "Kriterien beziehen sich auf die klinische oder pathologische TNM-Klassifikation."
         ],
         "childCategories": [
           {
-            "key": "21908-9",
+            "key": "uiccstadium",
             "subCategoryName": "0",
             "name": "UICC Stadium",
             "system": "http://dktk.dkfz.de/fhir/onco/core/CodeSystem/UiccstadiumCS",
@@ -19498,7 +19498,7 @@
             ]
           },
           {
-            "key": "21908-9",
+            "key": "uiccstadium",
             "subCategoryName": "IA",
             "name": "UICC Stadium",
             "system": "http://dktk.dkfz.de/fhir/onco/core/CodeSystem/UiccstadiumCS",
@@ -19520,7 +19520,7 @@
             ]
           },
           {
-            "key": "21908-9",
+            "key": "uiccstadium",
             "subCategoryName": "IB",
             "name": "UICC Stadium",
             "system": "http://dktk.dkfz.de/fhir/onco/core/CodeSystem/UiccstadiumCS",
@@ -19542,7 +19542,7 @@
             ]
           },
           {
-            "key": "21908-9",
+            "key": "uiccstadium",
             "subCategoryName": "IC",
             "name": "UICC Stadium",
             "system": "http://dktk.dkfz.de/fhir/onco/core/CodeSystem/UiccstadiumCS",
@@ -19556,7 +19556,7 @@
             ]
           },
           {
-            "key": "21908-9",
+            "key": "uiccstadium",
             "subCategoryName": "II",
             "name": "UICC Stadium",
             "system": "http://dktk.dkfz.de/fhir/onco/core/CodeSystem/UiccstadiumCS",
@@ -19590,7 +19590,7 @@
             ]
           },
           {
-            "key": "21908-9",
+            "key": "uiccstadium",
             "subCategoryName": "III",
             "name": "UICC Stadium",
             "system": "http://dktk.dkfz.de/fhir/onco/core/CodeSystem/UiccstadiumCS",
@@ -19624,7 +19624,7 @@
             ]
           },
           {
-            "key": "21908-9",
+            "key": "uiccstadium",
             "subCategoryName": "IV",
             "name": "UICC Stadium",
             "system": "http://dktk.dkfz.de/fhir/onco/core/CodeSystem/UiccstadiumCS",
@@ -19650,7 +19650,7 @@
             ]
           },
           {
-            "key": "21908-9",
+            "key": "uiccstadium",
             "subCategoryName": "IS",
             "name": "UICC Stadium",
             "system": "http://dktk.dkfz.de/fhir/onco/core/CodeSystem/UiccstadiumCS",
@@ -21385,44 +21385,54 @@
     ]
   },
   {
-    "key": "therapy_of_tumor",
+    "key": "",
     "name": "Therapie des Tumors",
     "infoButtonText": [
       "Gibt an, ob für den Patienten ausgewählte Therapien dokumentiert wurden."
     ],
-    "system": "",
-    "fieldType": "single-select",
-    "type": "EQUALS",
-    "criteria": [
+    "fieldType": "group",
+    "childCategories": [
       {
-        "key": "OP",
-        "name": "Operation",
-        "description": ""
+        "type": "EQUALS",
+        "system": "",
+        "name": "Chirurgische/Strahlentherapie",
+        "fieldType": "single-select",
+        "key": "procedure",
+        "criteria": [
+          {
+            "key": "OP",
+            "name": "Operation"
+          },
+          {
+            "key": "ST",
+            "name": "Strahlentherapie"
+          }
+        ]
       },
       {
-        "key": "ST",
-        "name": "Strahlentherapie",
-        "description": ""
-      },
-      {
-        "key": "CH",
-        "name": "Chemotherapie",
-        "description": ""
-      },
-      {
-        "key": "IM",
-        "name": "Immuntherapie",
-        "description": ""
-      },
-      {
-        "key": "HO",
-        "name": "Hormontherapie",
-        "description": ""
-      },
-      {
-        "key": "KM",
-        "name": "Knochenmarktransplantation",
-        "description": ""
+        "type": "EQUALS",
+        "system": "",
+        "name": "Andere Therapien",
+        "fieldType": "single-select",
+        "key": "medicationStatement",
+        "criteria": [
+          {
+            "key": "CH",
+            "name": "Chemotherapie"
+          },
+          {
+            "key": "IM",
+            "name": "Immuntherapie"
+          },
+          {
+            "key": "HO",
+            "name": "Hormontherapie"
+          },
+          {
+            "key": "KM",
+            "name": "Knochenmarktransplantation"
+          }
+        ]
       }
     ]
   },
@@ -21433,7 +21443,7 @@
     "infoButtonText": ["Beurteilung der Erkrankung im Verlauf"],
     "childCategories": [
       {
-        "key": "21976-6",
+        "key": "responseOverTime",
         "name": "Ansprechen im Verlauf",
         "system": "",
         "fieldType": "single-select",
@@ -21479,7 +21489,7 @@
         ]
       },
       {
-        "key": "LA4583-6",
+        "key": "localRegionalRecurrence",
         "name": "Lokales/regionäres Rezidiv",
         "system": "",
         "fieldType": "single-select",
@@ -21521,7 +21531,7 @@
         ]
       },
       {
-        "key": "LA4370-8",
+        "key": "lymphNodeRecurrence",
         "name": "Lymphknoten-Rezidiv",
         "system": "",
         "fieldType": "single-select",
@@ -21565,7 +21575,7 @@
         ]
       },
       {
-        "key": "LA4226-2",
+        "key": "distantMetastases",
         "name": "Fernmetastasen",
         "system": "",
         "fieldType": "single-select",
@@ -21779,7 +21789,7 @@
     "name": "Molekulare Marker",
     "childCategories": [
       {
-        "key": "48018-6",
+        "key": "observationMolecularMarkerName",
         "name": "Gen",
         "system": "http://www.genenames.org",
         "fieldType": "autocomplete",
@@ -22887,7 +22897,7 @@
         ]
       },
       {
-        "key": "48005-3",
+        "key": "observationMolecularMarkerAminoacidchange",
         "name": "Aminosäureänderung",
         "system": "http://loinc.org",
         "fieldType": "autocomplete",
@@ -22895,7 +22905,7 @@
         "criteria": []
       },
       {
-        "key": "81290-9",
+        "key": "observationMolecularMarkerDNAchange",
         "name": "DNA Änderung",
         "system": "http://loinc.org",
         "fieldType": "autocomplete",
@@ -22903,7 +22913,7 @@
         "criteria": []
       },
       {
-        "key": "81248-7",
+        "key": "observationMolecularMarkerSeqRefNCBI",
         "name": "SeqRefNCBI",
         "system": "http://loinc.org",
         "fieldType": "autocomplete",
@@ -22911,7 +22921,7 @@
         "criteria": []
       },
       {
-        "key": "81249-5",
+        "key": "observationMolecularMarkerEnsemblID",
         "name": "EnsemblID",
         "system": "http://loinc.org",
         "fieldType": "autocomplete",
