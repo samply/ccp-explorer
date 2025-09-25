@@ -19647,11 +19647,11 @@
         "childCategories": [
           {
             "fieldType": "group",
-            "key": "21905-5",
+            "key": "TNM-T",
             "name": "TNM-T",
             "childCategories": [
               {
-                "key": "21905-5",
+                "key": "TNM-T",
                 "name": "TNM-T",
                 "subCategoryName": "0",
                 "system": "",
@@ -19660,24 +19660,12 @@
                 "criteria": [
                   {
                     "key": "0",
-                    "name": "0",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "0"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "0"
-                        }
-                      ]
-                    ]
+                    "name": "0"
                   }
                 ]
               },
               {
-                "key": "21905-5",
+                "key": "TNM-T",
                 "name": "TNM-T",
                 "subCategoryName": "1",
                 "system": "",
@@ -19686,216 +19674,60 @@
                 "criteria": [
                   {
                     "key": "1",
-                    "name": "1",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "1"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "1"
-                        }
-                      ]
-                    ]
+                    "name": "1"
                   },
                   {
                     "key": "1a",
-                    "name": "1a",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "1a"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "1a"
-                        }
-                      ]
-                    ]
+                    "name": "1a"
                   },
                   {
                     "key": "1a1",
-                    "name": "1a1",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "1a1"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "1a1"
-                        }
-                      ]
-                    ]
+                    "name": "1a1"
                   },
                   {
                     "key": "1a2",
-                    "name": "1a2",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "1a2"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "1a2"
-                        }
-                      ]
-                    ]
+                    "name": "1a2"
                   },
                   {
                     "key": "1b",
-                    "name": "1b",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "1b"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "1b"
-                        }
-                      ]
-                    ]
+                    "name": "1b"
                   },
                   {
                     "key": "1b1",
-                    "name": "1b1",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "1b1"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "1b1"
-                        }
-                      ]
-                    ]
+                    "name": "1b1"
                   },
                   {
                     "key": "1b2",
-                    "name": "1b2",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "1b2"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "1b2"
-                        }
-                      ]
-                    ]
+                    "name": "1b2"
                   },
                   {
                     "key": "1c",
-                    "name": "1c",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "1c"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "1c"
-                        }
-                      ]
-                    ]
+                    "name": "1c"
                   },
                   {
                     "key": "1c1",
-                    "name": "1c1",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "1c1"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "1c1"
-                        }
-                      ]
-                    ]
+                    "name": "1c1"
                   },
                   {
                     "key": "1c2",
-                    "name": "1c2",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "1c2"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "1c2"
-                        }
-                      ]
-                    ]
+                    "name": "1c2"
                   },
                   {
                     "key": "1c3",
-                    "name": "1c3",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "1c3"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "1c3"
-                        }
-                      ]
-                    ]
+                    "name": "1c3"
                   },
                   {
                     "key": "1d",
-                    "name": "1d",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "1d"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "1d"
-                        }
-                      ]
-                    ]
+                    "name": "1d"
                   },
                   {
                     "key": "1mi",
-                    "name": "1mi",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "1mi"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "1mi"
-                        }
-                      ]
-                    ]
+                    "name": "1mi"
                   }
                 ]
               },
               {
-                "key": "21905-5",
+                "key": "TNM-T",
                 "name": "TNM-T",
                 "subCategoryName": "2",
                 "system": "",
@@ -19904,120 +19736,36 @@
                 "criteria": [
                   {
                     "key": "2",
-                    "name": "2",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "2"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "2"
-                        }
-                      ]
-                    ]
+                    "name": "2"
                   },
                   {
                     "key": "2a",
-                    "name": "2a",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "2a"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "2a"
-                        }
-                      ]
-                    ]
+                    "name": "2a"
                   },
                   {
                     "key": "2a1",
-                    "name": "2a1",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "2a1"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "2a1"
-                        }
-                      ]
-                    ]
+                    "name": "2a1"
                   },
                   {
                     "key": "2a2",
-                    "name": "2a2",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "2a2"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "2a2"
-                        }
-                      ]
-                    ]
+                    "name": "2a2"
                   },
                   {
                     "key": "2b",
-                    "name": "2b",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "2b"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "2b"
-                        }
-                      ]
-                    ]
+                    "name": "2b"
                   },
                   {
                     "key": "2c",
-                    "name": "2c",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "2c"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "2c"
-                        }
-                      ]
-                    ]
+                    "name": "2c"
                   },
                   {
                     "key": "2d",
-                    "name": "2d",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "2d"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "2d"
-                        }
-                      ]
-                    ]
+                    "name": "2d"
                   }
                 ]
               },
               {
-                "key": "21905-5",
+                "key": "TNM-T",
                 "name": "TNM-T",
                 "subCategoryName": "3",
                 "system": "",
@@ -20026,88 +19774,28 @@
                 "criteria": [
                   {
                     "key": "3",
-                    "name": "3",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "3"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "3"
-                        }
-                      ]
-                    ]
+                    "name": "3"
                   },
                   {
                     "key": "3a",
-                    "name": "3a",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "3a"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "3a"
-                        }
-                      ]
-                    ]
+                    "name": "3a"
                   },
                   {
                     "key": "3b",
-                    "name": "3b",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "3b"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "3b"
-                        }
-                      ]
-                    ]
+                    "name": "3b"
                   },
                   {
                     "key": "3c",
-                    "name": "3c",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "3c"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "3c"
-                        }
-                      ]
-                    ]
+                    "name": "3c"
                   },
                   {
                     "key": "3d",
-                    "name": "3d",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "3d"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "3d"
-                        }
-                      ]
-                    ]
+                    "name": "3d"
                   }
                 ]
               },
               {
-                "key": "21905-5",
+                "key": "TNM-T",
                 "name": "TNM-T",
                 "subCategoryName": "4",
                 "system": "",
@@ -20116,104 +19804,32 @@
                 "criteria": [
                   {
                     "key": "4",
-                    "name": "4",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "4"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "4"
-                        }
-                      ]
-                    ]
+                    "name": "4"
                   },
                   {
                     "key": "4a",
-                    "name": "4a",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "4a"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "4a"
-                        }
-                      ]
-                    ]
+                    "name": "4a"
                   },
                   {
                     "key": "4b",
-                    "name": "4b",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "4b"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "4b"
-                        }
-                      ]
-                    ]
+                    "name": "4b"
                   },
                   {
                     "key": "4c",
-                    "name": "4c",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "4c"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "4c"
-                        }
-                      ]
-                    ]
+                    "name": "4c"
                   },
                   {
                     "key": "4d",
-                    "name": "4d",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "4d"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "4d"
-                        }
-                      ]
-                    ]
+                    "name": "4d"
                   },
                   {
                     "key": "4e",
-                    "name": "4e",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "4e"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "4e"
-                        }
-                      ]
-                    ]
+                    "name": "4e"
                   }
                 ]
               },
               {
-                "key": "21905-5",
+                "key": "TNM-T",
                 "name": "TNM-T",
                 "subCategoryName": "is",
                 "system": "",
@@ -20222,24 +19838,12 @@
                 "criteria": [
                   {
                     "key": "a",
-                    "name": "a",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "a"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "a"
-                        }
-                      ]
-                    ]
+                    "name": "a"
                   }
                 ]
               },
               {
-                "key": "21905-5",
+                "key": "TNM-T",
                 "name": "TNM-T",
                 "subCategoryName": "is (Mamma)",
                 "system": "",
@@ -20248,104 +19852,32 @@
                 "criteria": [
                   {
                     "key": "is",
-                    "name": "is",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "is"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "is"
-                        }
-                      ]
-                    ]
+                    "name": "is"
                   },
                   {
                     "key": "is(DCIS)",
-                    "name": "is(DCIS)",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "is(DCIS)"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "is(DCIS)"
-                        }
-                      ]
-                    ]
+                    "name": "is(DCIS)"
                   },
                   {
                     "key": "is(LCIS)",
-                    "name": "is(LCIS)",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "is(LCIS)"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "is(LCIS)"
-                        }
-                      ]
-                    ]
+                    "name": "is(LCIS)"
                   },
                   {
                     "key": "is(Paget)",
-                    "name": "is(Paget)",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "is(Paget)"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "is(Paget)"
-                        }
-                      ]
-                    ]
+                    "name": "is(Paget)"
                   },
                   {
                     "key": "is(pd",
-                    "name": "is(pd)",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "is(pd)"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "is(pd)"
-                        }
-                      ]
-                    ]
+                    "name": "is(pd)"
                   },
                   {
                     "key": "is(pu)",
-                    "name": "is(pu)",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "is(pu)"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "is(pu)"
-                        }
-                      ]
-                    ]
+                    "name": "is(pu)"
                   }
                 ]
               },
               {
-                "key": "21905-5",
+                "key": "TNM-T",
                 "name": "TNM-T",
                 "subCategoryName": "X",
                 "system": "",
@@ -20354,26 +19886,14 @@
                 "criteria": [
                   {
                     "key": "X",
-                    "name": "X",
-                    "aggregatedValue": [
-                      [
-                        {
-                          "value": "21905-5",
-                          "name": "X"
-                        },
-                        {
-                          "value": "21899-0",
-                          "name": "X"
-                        }
-                      ]
-                    ]
+                    "name": "X"
                   }
                 ]
               }
             ]
           },
           {
-            "key": "21906-3",
+            "key": "TNM-N",
             "name": "TNM-N",
             "system": "",
             "fieldType": "single-select",
@@ -20381,488 +19901,128 @@
             "criteria": [
               {
                 "key": "(sn)(mol+)",
-                "name": "(sn)(mol+)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "(sn)(mol+)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "(sn)(mol+)"
-                    }
-                  ]
-                ]
+                "name": "(sn)(mol+)"
               },
               {
                 "key": "(sn)(mol-)",
-                "name": "(sn)(mol-)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "(sn)(mol-)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "(sn)(mol-)"
-                    }
-                  ]
-                ]
+                "name": "(sn)(mol-)"
               },
               {
                 "key": "(sn)(i+)",
-                "name": "(sn)(i+)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "(sn)(i+)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "(sn)(i+)"
-                    }
-                  ]
-                ]
+                "name": "(sn)(i+)"
               },
               {
                 "key": "(sn)(i-)",
-                "name": "(sn)(i-)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "(sn)(i-)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "(sn)(i-)"
-                    }
-                  ]
-                ]
+                "name": "(sn)(i-)"
               },
               {
                 "key": "(mol+)",
-                "name": "(mol+)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "(mol+)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "(mol+)"
-                    }
-                  ]
-                ]
+                "name": "(mol+)"
               },
               {
                 "key": "(mol-)",
-                "name": "(mol-)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "(mol-)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "(mol-)"
-                    }
-                  ]
-                ]
+                "name": "(mol-)"
               },
               {
                 "key": "(i+)",
-                "name": "(i+)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "(i+)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "(i+)"
-                    }
-                  ]
-                ]
+                "name": "(i+)"
               },
               {
                 "key": "(i-)",
-                "name": "(i-)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "(i-)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "(i-)"
-                    }
-                  ]
-                ]
+                "name": "(i-)"
               },
               {
                 "key": "X",
-                "name": "X",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "X"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "X"
-                    }
-                  ]
-                ]
+                "name": "X"
               },
               {
                 "key": "X(sn)",
-                "name": "X(sn)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "X(sn)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "X(sn)"
-                    }
-                  ]
-                ]
+                "name": "X(sn)"
               },
               {
                 "key": "0",
-                "name": "0",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "0"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "0"
-                    }
-                  ]
-                ]
+                "name": "0"
               },
               {
                 "key": "0(sn)",
-                "name": "0(sn)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "0(sn)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "0(sn)"
-                    }
-                  ]
-                ]
+                "name": "0(sn)"
               },
               {
                 "key": "0(i+)",
-                "name": "0(i+)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "0(i+)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "0(i+)"
-                    }
-                  ]
-                ]
+                "name": "0(i+)"
               },
               {
                 "key": "0(i-)",
-                "name": "0(i-)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "0(i-)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "0(i-)"
-                    }
-                  ]
-                ]
+                "name": "0(i-)"
               },
               {
                 "key": "0(mol+)",
-                "name": "0(mol+)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "0(mol+)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "0(mol+)"
-                    }
-                  ]
-                ]
+                "name": "0(mol+)"
               },
               {
                 "key": "0(mol-)",
-                "name": "0(mol-)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "0(mol-)"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "0(mol-)"
-                    }
-                  ]
-                ]
+                "name": "0(mol-)"
               },
               {
                 "key": "1",
-                "name": "1",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "1"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "1"
-                    }
-                  ]
-                ]
+                "name": "1"
               },
               {
                 "key": "1a",
-                "name": "1a",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "1a"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "1a"
-                    }
-                  ]
-                ]
+                "name": "1a"
               },
               {
                 "key": "1b",
-                "name": "1b",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "1b"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "1b"
-                    }
-                  ]
-                ]
+                "name": "1b"
               },
               {
                 "key": "1c",
-                "name": "1c",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "1c"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "1c"
-                    }
-                  ]
-                ]
+                "name": "1c"
               },
               {
                 "key": "1mi",
-                "name": "1mi",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "1mi"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "1mi"
-                    }
-                  ]
-                ]
+                "name": "1mi"
               },
               {
                 "key": "2",
-                "name": "2",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "2"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "2"
-                    }
-                  ]
-                ]
+                "name": "2"
               },
               {
                 "key": "2a",
-                "name": "2a",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "2a"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "2a"
-                    }
-                  ]
-                ]
+                "name": "2a"
               },
               {
                 "key": "2b",
-                "name": "2b",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "2b"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "2b"
-                    }
-                  ]
-                ]
+                "name": "2b"
               },
               {
                 "key": "2c",
-                "name": "2c",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "2c"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "2c"
-                    }
-                  ]
-                ]
+                "name": "2c"
               },
               {
                 "key": "3",
-                "name": "3",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "3"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "3"
-                    }
-                  ]
-                ]
+                "name": "3"
               },
               {
                 "key": "3a",
-                "name": "3a",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "3a"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "3a"
-                    }
-                  ]
-                ]
+                "name": "3a"
               },
               {
                 "key": "3b",
-                "name": "3b",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "3b"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "3b"
-                    }
-                  ]
-                ]
+                "name": "3b"
               },
               {
                 "key": "3c",
-                "name": "3c",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "3c"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "3c"
-                    }
-                  ]
-                ]
+                "name": "3c"
               },
               {
                 "key": "X",
-                "name": "X",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21906-3",
-                      "name": "X"
-                    },
-                    {
-                      "value": "21900-6",
-                      "name": "X"
-                    }
-                  ]
-                ]
+                "name": "X"
               }
             ]
           },
           {
-            "key": "21907-1",
+            "key": "TNM-M",
             "name": "TNM-M",
             "system": "",
             "fieldType": "single-select",
@@ -20870,184 +20030,52 @@
             "criteria": [
               {
                 "key": "0",
-                "name": "0",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21907-1",
-                      "name": "0"
-                    },
-                    {
-                      "value": "21901-4",
-                      "name": "0"
-                    }
-                  ]
-                ]
+                "name": "0"
               },
               {
                 "key": "1",
-                "name": "1",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21907-1",
-                      "name": "1"
-                    },
-                    {
-                      "value": "21901-4",
-                      "name": "1"
-                    }
-                  ]
-                ]
+                "name": "1"
               },
               {
                 "key": "1a",
-                "name": "1a",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21907-1",
-                      "name": "1a"
-                    },
-                    {
-                      "value": "21901-4",
-                      "name": "1a"
-                    }
-                  ]
-                ]
+                "name": "1a"
               },
               {
                 "key": "1b",
-                "name": "1b",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21907-1",
-                      "name": "1b"
-                    },
-                    {
-                      "value": "21901-4",
-                      "name": "1b"
-                    }
-                  ]
-                ]
+                "name": "1b"
               },
               {
                 "key": "1c",
-                "name": "1c",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21907-1",
-                      "name": "1c"
-                    },
-                    {
-                      "value": "21901-4",
-                      "name": "1c"
-                    }
-                  ]
-                ]
+                "name": "1c"
               },
               {
                 "key": "1d",
-                "name": "1d",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21907-1",
-                      "name": "1d"
-                    },
-                    {
-                      "value": "21901-4",
-                      "name": "1d"
-                    }
-                  ]
-                ]
+                "name": "1d"
               },
               {
                 "key": "1e",
-                "name": "1e",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21907-1",
-                      "name": "1e"
-                    },
-                    {
-                      "value": "21901-4",
-                      "name": "1e"
-                    }
-                  ]
-                ]
+                "name": "1e"
               },
               {
                 "key": "0(i-)",
-                "name": "0(i-)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21907-1",
-                      "name": "0(i-)"
-                    },
-                    {
-                      "value": "21901-4",
-                      "name": "0(i-)"
-                    }
-                  ]
-                ]
+                "name": "0(i-)"
               },
               {
                 "key": "0(i+)",
-                "name": "0(i+)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21907-1",
-                      "name": "0(i+)"
-                    },
-                    {
-                      "value": "21901-4",
-                      "name": "0(i+)"
-                    }
-                  ]
-                ]
+                "name": "0(i+)"
               },
               {
                 "key": "0(mol-)",
-                "name": "0(mol-)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21907-1",
-                      "name": "0(mol-)"
-                    },
-                    {
-                      "value": "21901-4",
-                      "name": "0(mol-)"
-                    }
-                  ]
-                ]
+                "name": "0(mol-)"
               },
               {
                 "key": "0(mol+)",
-                "name": "0(mol+)",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21907-1",
-                      "name": "0(mol+)"
-                    },
-                    {
-                      "value": "21901-4",
-                      "name": "0(mol+)"
-                    }
-                  ]
-                ]
+                "name": "0(mol+)"
               }
             ]
           },
           {
-            "key": "42030-7",
+            "key": "TNM-m-Symbol",
             "name": "TNM-m-Symbol",
             "system": "",
             "fieldType": "single-select",
@@ -21055,152 +20083,44 @@
             "criteria": [
               {
                 "key": "m",
-                "name": "Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "42030-7",
-                      "name": "m"
-                    },
-                    {
-                      "value": "42030-7",
-                      "name": "m"
-                    }
-                  ]
-                ]
+                "name": "Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk"
               },
               {
                 "key": "2",
-                "name": "(2) simultaner Tumoren",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "59479-6",
-                      "name": "2"
-                    },
-                    {
-                      "value": "42030-7",
-                      "name": "2"
-                    }
-                  ]
-                ]
+                "name": "(2) simultaner Tumoren"
               },
               {
                 "key": "3",
-                "name": "(3) simultaner Tumoren",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "42030-7",
-                      "name": "3"
-                    },
-                    {
-                      "value": "42030-7",
-                      "name": "3"
-                    }
-                  ]
-                ]
+                "name": "(3) simultaner Tumoren"
               },
               {
                 "key": "4",
-                "name": "(4) simultaner Tumoren",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "42030-7",
-                      "name": "4"
-                    },
-                    {
-                      "value": "42030-7",
-                      "name": "4"
-                    }
-                  ]
-                ]
+                "name": "(4) simultaner Tumoren"
               },
               {
                 "key": "5",
-                "name": "(5) simultaner Tumoren",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "42030-7",
-                      "name": "5"
-                    },
-                    {
-                      "value": "42030-7",
-                      "name": "5"
-                    }
-                  ]
-                ]
+                "name": "(5) simultaner Tumoren"
               },
               {
                 "key": "6",
-                "name": "(6) simultaner Tumoren",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "42030-7",
-                      "name": "6"
-                    },
-                    {
-                      "value": "42030-7",
-                      "name": "6"
-                    }
-                  ]
-                ]
+                "name": "(6) simultaner Tumoren"
               },
               {
                 "key": "7",
-                "name": "(7) simultaner Tumoren",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "42030-7",
-                      "name": "7"
-                    },
-                    {
-                      "value": "42030-7",
-                      "name": "7"
-                    }
-                  ]
-                ]
+                "name": "(7) simultaner Tumoren"
               },
               {
                 "key": "8",
-                "name": "(8) simultaner Tumoren",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "42030-7",
-                      "name": "8"
-                    },
-                    {
-                      "value": "42030-7",
-                      "name": "8"
-                    }
-                  ]
-                ]
+                "name": "(8) simultaner Tumoren"
               },
               {
                 "key": "9",
-                "name": "(9) simultaner Tumoren",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "42030-7",
-                      "name": "9"
-                    },
-                    {
-                      "value": "42030-7",
-                      "name": "9"
-                    }
-                  ]
-                ]
+                "name": "(9) simultaner Tumoren"
               }
             ]
           },
           {
-            "key": "59479-6",
+            "key": "TNM-y-Symbol",
             "name": "TNM-y-Symbol",
             "system": "",
             "fieldType": "single-select",
@@ -21208,24 +20128,12 @@
             "criteria": [
               {
                 "key": "y",
-                "name": "Klassifikation erfolgte während oder nach initialer multimodaler Therapie",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "59479-6",
-                      "name": "y"
-                    },
-                    {
-                      "value": "59479-6",
-                      "name": "y"
-                    }
-                  ]
-                ]
+                "name": "Klassifikation erfolgte während oder nach initialer multimodaler Therapie"
               }
             ]
           },
           {
-            "key": "21983-2",
+            "key": "TNM-r-Symbol",
             "name": "TNM-r-Symbol",
             "system": "",
             "fieldType": "single-select",
@@ -21233,19 +20141,7 @@
             "criteria": [
               {
                 "key": "r",
-                "name": "Klassifikation erfolgte zur Beurteilung eines Rezidivs",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "21983-2",
-                      "name": "r"
-                    },
-                    {
-                      "value": "21983-2",
-                      "name": "r"
-                    }
-                  ]
-                ]
+                "name": "Klassifikation erfolgte zur Beurteilung eines Rezidivs"
               }
             ]
           }
