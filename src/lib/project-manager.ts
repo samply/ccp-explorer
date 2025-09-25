@@ -3,11 +3,7 @@ import {
   getQueryStore,
   getSelectedSites,
   getHumanReadableQuery,
-  buildLibrary,
-  buildMeasure,
 } from "@samply/lens";
-import { measures } from "./measures";
-import { translateAstToCql } from "$lib/ast-to-cql-translator";
 import { options } from "./env-options";
 import type {
   ProjectManagerOptions,
@@ -149,26 +145,8 @@ function buildPMBody(
   returnURL: string,
   projectCode: string,
 ): string {
-  /**
-   * The Translation is DKTK/CCP specific.
-   */
-
-  const cql = translateAstToCql(
-    getAst(),
-    false,
-    "DKTK_STRAT_DEF_IN_INITIAL_POPULATION",
-    measures,
-  );
-
-  const lib = buildLibrary(cql);
-  const measure = buildMeasure(
-    lib.url,
-    measures.map((m) => m.measure),
-  );
-  const query = btoa(JSON.stringify({ lang: "cql", lib, measure }));
-
   const body: PmBody = {
-    query,
+    query: JSON.stringify(getAst()),
     "explorer-ids": negotiationPartners,
     "query-format": "CQL_DATA",
     "human-readable": humanReadable,
