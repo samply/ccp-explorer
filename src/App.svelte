@@ -9,11 +9,7 @@
     setSiteResult,
     querySpot,
     getAst,
-    buildLibrary,
-    buildMeasure,
   } from "@samply/lens";
-  import { translateAstToCql } from "./lib/ast-to-cql-translator";
-  import { measures } from "./lib/measures";
   import { negotiate } from "./lib/project-manager";
   import { options } from "./lib/env-options";
   import { onMount } from "svelte";
@@ -26,27 +22,18 @@
   window.addEventListener("lens-search-triggered", () => {
     abortController.abort();
     abortController = new AbortController();
-
-    // AST to CQL translation
-    const cql = translateAstToCql(
-      getAst(),
-      false,
-      "DKTK_STRAT_DEF_IN_INITIAL_POPULATION",
-      measures,
-    );
-    console.log(cql);
-    const lib = buildLibrary(cql);
-    const measure = buildMeasure(
-      lib.url,
-      measures.map((m) => m.measure),
-    );
-
     clearSiteResults();
-    const query = btoa(
+
+    /** Helper function to base64 encode a UTF-8 string */
+    const base64Encode = (utf8String: string) =>
+      btoa(String.fromCharCode(...new TextEncoder().encode(utf8String)));
+
+    const query = base64Encode(
       JSON.stringify({
-        lang: "cql",
-        lib,
-        measure,
+        lang: "ast",
+        payload: base64Encode(
+          JSON.stringify({ ast: getAst(), id: crypto.randomUUID() }),
+        ),
       }),
     );
     querySpot(query, abortController.signal, (result: SpotResult) => {
