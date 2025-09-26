@@ -9,6 +9,7 @@
     setSiteResult,
     querySpot,
     getAst,
+    hideFailedSite,
   } from "@samply/lens";
   import { negotiate } from "./lib/project-manager";
   import { options } from "./lib/env-options";
@@ -44,6 +45,7 @@
         const siteResult = JSON.parse(atob(result.body));
         setSiteResult(site, siteResult);
       } else {
+        hideFailedSite(site);
         console.error(
           `Site ${site} failed with status ${result.status}:`,
           result.body,
@@ -190,7 +192,6 @@
           ></lens-negotiate-button>
         {/if}
         <lens-search-modified-display></lens-search-modified-display>
-        >
       </div>
       <div class="chart-wrapper">
         <lens-chart
@@ -202,16 +203,11 @@
         ></lens-chart>
       </div>
       <div class="chart-wrapper result-table">
-        <lens-result-table pageSize={10}>
-          <div
-            slot="lens-result-above-pagination"
-            class="result-table-hint-text"
-          >
-            * In den lokalen Pathologien liegt von jedem Patienten idR
-            zusätzlich mindestens eine FFPE-Probe (Formalin-fixierte und
-            Paraffin eingebettet) als Basis der Diagnose vor.
-          </div>
-        </lens-result-table>
+        <lens-result-table pageSize={10}></lens-result-table>
+        <br>
+        * In den lokalen Pathologien liegt von jedem Patienten idR zusätzlich mindestens
+        eine FFPE-Probe (Formalin-fixierte und Paraffin eingebettet) als Basis der
+        Diagnose vor.
       </div>
       <div class="chart-wrapper">
         <lens-chart
