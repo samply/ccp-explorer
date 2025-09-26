@@ -1,4 +1,4 @@
-name: Docker CI
+name: CI
 
 on:
   pull_request:
@@ -6,7 +6,20 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm ci
+      - run: npx prettier --check .
+      - run: npx eslint .
+      - run: npx svelte-check
+      - run: bash scripts/generate-json-schema.bash --check
+      - run: bash scripts/validate-json-schema.bash
+
+  docker:
+    needs: linting
     uses: samply/github-workflows/.github/workflows/docker-ci.yml@main
     with:
       image-name: "samply/ccp-explorer"
