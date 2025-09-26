@@ -148,7 +148,7 @@ info-icon {
 .grid {
   position: relative;
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 500px 1fr;
   grid-gap: var(--gap-m);
   padding: 0 var(--gap-xs) var(--gap-xs);
 }
@@ -191,6 +191,10 @@ info-icon {
   border-radius: var(--border-radius-small);
   border: solid 1px var(--lightest-gray);
   display: grid;
+}
+
+.chart-wrapper-mol {
+  grid-column: span 4;
 }
 
 .result-summary {
