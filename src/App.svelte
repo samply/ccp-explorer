@@ -189,8 +189,7 @@
             title="Daten und Proben Anfragen"
           ></lens-negotiate-button>
         {/if}
-        <lens-search-modified-display
-          >Diagramme repräsentieren nicht mehr die aktuelle Suche!</lens-search-modified-display
+        <lens-search-modified-display></lens-search-modified-display>
         >
       </div>
       <div class="chart-wrapper">
@@ -341,7 +340,7 @@
   >
 </footer>
 
-<error-toasts></error-toasts>
+<lens-toast></lens-toast>
 
 <style>
   .catalogue-header {
