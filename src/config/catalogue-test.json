@@ -7162,24 +7162,19 @@
                     "description": "Bösartige Neubildung der Lippe"
                   },
                   {
-                    "key": "C00.8",
-                    "name": "C00.8",
-                    "description": "Bösartige Neubildung: Lippe, mehrere Teilbereiche überlappend"
+                    "key": "C00.0",
+                    "name": "C00.0",
+                    "description": "Bösartige Neubildung: Äußere Oberlippe"
                   },
                   {
-                    "key": "C00.9",
-                    "name": "C00.9",
-                    "description": "Bösartige Neubildung: Lippe, nicht näher bezeichnet"
+                    "key": "C00.1",
+                    "name": "C00.1",
+                    "description": "Bösartige Neubildung: Äußere Unterlippe"
                   },
                   {
-                    "key": "C00.5",
-                    "name": "C00.5",
-                    "description": "Bösartige Neubildung: Lippe, nicht näher bezeichnet, Innenseite"
-                  },
-                  {
-                    "key": "C00.6",
-                    "name": "C00.6",
-                    "description": "Bösartige Neubildung: Lippenkommissur"
+                    "key": "C00.2",
+                    "name": "C00.2",
+                    "description": "Bösartige Neubildung: Äußere Lippe, nicht näher bezeichnet"
                   },
                   {
                     "key": "C00.3",
@@ -7192,19 +7187,24 @@
                     "description": "Bösartige Neubildung: Unterlippe, Innenseite"
                   },
                   {
-                    "key": "C00.2",
-                    "name": "C00.2",
-                    "description": "Bösartige Neubildung: Äußere Lippe, nicht näher bezeichnet"
+                    "key": "C00.5",
+                    "name": "C00.5",
+                    "description": "Bösartige Neubildung: Lippe, nicht näher bezeichnet, Innenseite"
                   },
                   {
-                    "key": "C00.0",
-                    "name": "C00.0",
-                    "description": "Bösartige Neubildung: Äußere Oberlippe"
+                    "key": "C00.6",
+                    "name": "C00.6",
+                    "description": "Bösartige Neubildung: Lippenkommissur"
                   },
                   {
-                    "key": "C00.1",
-                    "name": "C00.1",
-                    "description": "Bösartige Neubildung: Äußere Unterlippe"
+                    "key": "C00.8",
+                    "name": "C00.8",
+                    "description": "Bösartige Neubildung: Lippe, mehrere Teilbereiche überlappend"
+                  },
+                  {
+                    "key": "C00.9",
+                    "name": "C00.9",
+                    "description": "Bösartige Neubildung: Lippe, nicht näher bezeichnet"
                   }
                 ]
               },
@@ -8951,12 +8951,12 @@
               {
                 "key": "C52",
                 "name": "C52",
-                "description": "Bösartige Neubildung der Cervix uteri"
+                "description": "Bösartige Neubildung der Vagina"
               },
               {
                 "key": "C53.%",
                 "name": "C53.%",
-                "description": "Bösartige Neubildung: Cervix uteri, mehrere Teilbereiche überlappend",
+                "description": "Bösartige Neubildung der Cervix uteri",
                 "subgroup": [
                   {
                     "visible": false,
@@ -9229,11 +9229,6 @@
                 "key": "C64",
                 "name": "C64",
                 "description": "Bösartige Neubildung der Niere, ausgenommen Nierenbecken"
-              },
-              {
-                "key": "C65",
-                "name": "C65",
-                "description": "Bösartige Neubildung des Nierenbeckens"
               },
               {
                 "key": "C65",
