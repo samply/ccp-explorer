@@ -49,7 +49,7 @@ services:
       - "traefik.http.routers.oauth2.tls=true"
 
   lens:
-    image: samply/ccp-explorer:main
+    image: samply/ccp-explorer:latest
     environment:
       PUBLIC_ENVIRONMENT: ${PUBLIC_ENVIRONMENT}
     labels:
