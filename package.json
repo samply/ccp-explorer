@@ -2,7 +2,7 @@
   "name": "ccp-explorer",
   "license": "Apache-2.0",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite dev",
