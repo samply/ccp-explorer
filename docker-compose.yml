@@ -73,6 +73,7 @@ services:
       CORS_ORIGIN: "https://${GUI_HOST}"
       SITES: ${SITES}
       TRANSFORM: LENS
+      PROJECT: dktk
       BIND_ADDR: 0.0.0.0:8055
       PRISM_URL: http://prism:8066
       RUST_LOG: "info"
