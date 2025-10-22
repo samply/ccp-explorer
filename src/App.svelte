@@ -59,7 +59,7 @@
   });
 
   onMount(() => {
-    setOptions(options);
+    setOptions(structuredClone(options));
 
     // Set the catalogue based on the environment
     let catalogue = catalogueProd as Catalogue;
