@@ -59,7 +59,7 @@ services:
       - "traefik.http.routers.lens.middlewares=traefik-forward-auth"
 
   spot:
-    image: samply/rustyspot:main
+    image: samply/rustyspot:latest
     platform: linux/amd64
     ports:
       - "8055:8055"
