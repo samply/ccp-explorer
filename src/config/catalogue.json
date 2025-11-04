@@ -8539,27 +8539,19 @@
                     "description": "Sonstige bösartige Neubildungen: Behaarte Kopfhaut und Haut des Halses"
                   },
                   {
-                    "key": "C44.5%",
-                    "name": "C44.5%",
-                    "description": "Sonstige bösartige Neubildungen: Haut des Rumpfes",
-                    "subgroup": [
-                      {
-                        "visible": true,
-                        "key": "C44.5",
-                        "name": "C44.5",
-                        "description": ""
-                      },
-                      {
-                        "key": "C44.50",
-                        "name": "C44.50",
-                        "description": "Sonstige bösartige Neubildungen: Perianalhaut"
-                      },
-                      {
-                        "key": "C44.59",
-                        "name": "C44.59",
-                        "description": "Sonstige bösartige Neubildungen: sonstiger und nicht näher bezeichneter Teile des Rumpfes"
-                      }
-                    ]
+                    "key": "C44.5",
+                    "name": "C44.5",
+                    "description": "Sonstige bösartige Neubildungen: Haut des Rumpfes"
+                  },                  
+                  {
+                    "key": "C44.50",
+                    "name": "C44.50",
+                    "description": "Sonstige bösartige Neubildungen: Perianalhaut"
+                  },
+                  {
+                    "key": "C44.59",
+                    "name": "C44.59",
+                    "description": "Sonstige bösartige Neubildungen: sonstiger und nicht näher bezeichneter Teile des Rumpfes"
                   },
                   {
                     "key": "C44.6",
