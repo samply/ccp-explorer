@@ -78,7 +78,7 @@ async function sendRequestToProjectManager(
     temporaryToken = res.headers.get("Authorization");
   } catch (error) {
     console.log("error", error);
-    return new Response() as Response & { redirect_uri: string; };
+    return new Response() as Response & { redirect_uri: string };
   }
 
   /**
