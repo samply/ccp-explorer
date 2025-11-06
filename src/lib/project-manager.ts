@@ -78,7 +78,7 @@ async function sendRequestToProjectManager(
     temporaryToken = res.headers.get("Authorization");
   } catch (error) {
     console.log("error", error);
-    return new Response() as Response & { redirect_uri: string };
+    return new Response() as Response & { redirect_uri: string; };
   }
 
   /**
@@ -145,17 +145,21 @@ function buildPMBody(
   returnURL: string,
   projectCode: string,
 ): string {
+  /** Helper function to base64 encode a UTF-8 string */
+  const base64Encode = (utf8String: string) =>
+    btoa(String.fromCharCode(...new TextEncoder().encode(utf8String)));
+
   const body: PmBody = {
-    query: JSON.stringify(getAst()),
+    query: base64Encode(JSON.stringify(getAst())),
     "explorer-ids": negotiationPartners,
-    "query-format": "CQL_DATA",
+    "query-format": "AST_DATA",
     "human-readable": humanReadable,
     "project-code": projectCode,
     "explorer-url":
       returnURL +
       projectCode +
       "&query=" +
-      btoa(JSON.stringify(getQueryStore())),
+      base64Encode(JSON.stringify(getQueryStore())),
   };
   return JSON.stringify(body);
 }
