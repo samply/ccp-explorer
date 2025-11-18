@@ -86,7 +86,7 @@
       hour: "2-digit",
       minute: "2-digit",
     });
-    a.download = `ccp-explorer-query-${formattedDate}.html`;
+    a.download = `biodatahub-explorer-query-${formattedDate}.html`;
 
     document.body.appendChild(a);
     a.click();
@@ -119,7 +119,7 @@
     <div class="logo">
       <img src="../dktk.svg" alt="Logo des DKTK" />
     </div>
-    <h1>CCP Explorer</h1>
+    <h1 class="header-h1">DKTK BioDataHub Explorer</h1>
     <div class="logo logo-dkfz">
       <img
         src="../Deutsches_Krebsforschungszentrum_Logo.svg"
@@ -310,15 +310,10 @@
   >
     Known Issues
   </a>
-  <a
-    href="https://dktk.dkfz.de/forschung/Plattformen-und-Technologie-Netzwerke/klinische-plattformen/ccp-faq"
-    class="faq"
-    target="_blank">FAQ</a
-  >
-  <a class="ccp" href="https://dktk.dkfz.de/ccp" target="_blank">
-    Clinical Communication Platform (CCP)
+  <a href="https://dktk.dkfz.de/ccp" target="_blank">
+    BioDataHub (BDH)
   </a>
-  <a class="email" href="mailto:CCP@dkfz.de">Kontakt</a>
+  <a class="email" href="mailto:biodatahub@dkfz.de">Kontakt</a>
   <a
     class="user-agreement"
     href="https://hub.dkfz.de/s/MPCg2kK23LH8Yii"
@@ -349,5 +344,9 @@
   }
   .catalogue-header h2 {
     margin: 0;
+  }
+
+  .header-h1 {
+      color: #2b63b8;
   }
 </style>
