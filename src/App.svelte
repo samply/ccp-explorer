@@ -310,9 +310,7 @@
   >
     Known Issues
   </a>
-  <a href="https://dktk.dkfz.de/ccp" target="_blank">
-    BioDataHub (BDH)
-  </a>
+  <a href="https://dktk.dkfz.de/ccp" target="_blank"> BioDataHub (BDH) </a>
   <a class="email" href="mailto:biodatahub@dkfz.de">Kontakt</a>
   <a
     class="user-agreement"
@@ -347,6 +345,6 @@
   }
 
   .header-h1 {
-      color: #2b63b8;
+    color: #2b63b8;
   }
 </style>
