@@ -18,6 +18,7 @@
   import { env } from "$env/dynamic/public";
   import catalogueProd from "./config/catalogue.json";
   import catalogueTest from "./config/catalogue-test.json";
+  import { v4 as uuidv4 } from "uuid";
 
   let abortController = new AbortController();
   window.addEventListener("lens-search-triggered", () => {
@@ -32,9 +33,7 @@
     const query = base64Encode(
       JSON.stringify({
         lang: "ast",
-        payload: base64Encode(
-          JSON.stringify({ ast: getAst(), id: crypto.randomUUID() }),
-        ),
+        payload: base64Encode(JSON.stringify({ ast: getAst(), id: uuidv4() })),
       }),
     );
     querySpot(query, abortController.signal, (result: SpotResult) => {
