@@ -9,6 +9,7 @@ import type {
   ProjectManagerOptions,
   ProjectManagerOptionsSiteMapping,
 } from "$lib/options";
+import { v4 as uuidv4 } from "uuid";
 
 type PmBody = {
   query: string;
@@ -150,7 +151,7 @@ function buildPMBody(
     btoa(String.fromCharCode(...new TextEncoder().encode(utf8String)));
 
   const body: PmBody = {
-    query: base64Encode(JSON.stringify(getAst())),
+    query: base64Encode(JSON.stringify({ ast: getAst(), id: uuidv4() })),
     "explorer-ids": negotiationPartners,
     "query-format": "AST_DATA",
     "human-readable": humanReadable,

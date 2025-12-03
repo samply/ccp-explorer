@@ -37,6 +37,7 @@
     "vite": "^7.2.2"
   },
   "dependencies": {
-    "@samply/lens": "^0.6.2"
+    "@samply/lens": "^0.6.2",
+    "uuid": "^13.0.0"
   }
 }
