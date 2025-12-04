@@ -151,7 +151,12 @@ function buildPMBody(
     btoa(String.fromCharCode(...new TextEncoder().encode(utf8String)));
 
   const body: PmBody = {
-    query: base64Encode(JSON.stringify({ ast: getAst(), id: uuidv4() })),
+    query: base64Encode(
+      JSON.stringify({
+        lang: "ast",
+        payload: base64Encode(JSON.stringify({ ast: getAst(), id: uuidv4() })),
+      }),
+    ),
     "explorer-ids": negotiationPartners,
     "query-format": "AST_DATA",
     "human-readable": humanReadable,
