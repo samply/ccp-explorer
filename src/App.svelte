@@ -9,7 +9,7 @@
     setSiteResult,
     querySpot,
     getAst,
-    hideFailedSite,
+    removeFailedSite,
   } from "@samply/lens";
   import { negotiate } from "./lib/project-manager";
   import { options } from "./lib/env-options";
@@ -44,7 +44,7 @@
         const siteResult = JSON.parse(atob(result.body));
         setSiteResult(site, siteResult);
       } else {
-        hideFailedSite(site);
+        removeFailedSite(site);
         console.error(
           `Site ${site} failed with status ${result.status}:`,
           result.body,
@@ -173,8 +173,8 @@
               `Bei Patienten mit mehreren onkologischen Diagnosen, können sich ausgewählte Suchkriterien nicht nur auf eine Erkrankung beziehen, sondern auch auf Weitere.`,
               `Innerhalb einer Kategorie werden verschiedene Ausprägungen mit einer „Oder-Verknüpfung“ gesucht; bei der Suche über mehrere Kategorien mit einer „Und-Verknüpfung“.`,
             ]}
-            buttonSize="22px"
-            alignDialogue="left"
+            buttonSize={22}
+            alignDialogue="bottom-left"
           ></lens-info-button>
         </div>
         <lens-catalogue toggle={{ collapsable: false, open: catalogueopen }}
