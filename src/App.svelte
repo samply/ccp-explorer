@@ -309,7 +309,7 @@
   >
     Known Issues
   </a>
-  <a href="https://dktk.dkfz.de/ccp" target="_blank"> BioDataHub (BDH) </a>
+  <a href="https://dktk.dkfz.de/en/research/core-facilities/biodatahub" target="_blank"> BioDataHub (BDH) </a>
   <a class="email" href="mailto:biodatahub@dkfz.de">Kontakt</a>
   <a
     class="user-agreement"
