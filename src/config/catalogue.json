@@ -20432,10 +20432,6 @@
                   "name": "tumor-tissue-ffpe"
                 },
                 {
-                  "value": "histology",
-                  "name": "tumor-tissue-ffpe"
-                },
-                {
                   "value": "sample_kind",
                   "name": "tissue-ffpe"
                 },
@@ -20477,8 +20473,7 @@
           },
           {
             "key": "tissue-other",
-            "name": "Gewebe, andere Konservierungsart",
-            "description": "???"
+            "name": "Gewebe, andere Konservierungsart"
           },
           {
             "key": "whole-blood",
