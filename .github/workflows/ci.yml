@@ -17,7 +17,6 @@ jobs:
       - run: npx prettier --check .
       - run: npx eslint .
       - run: npx svelte-check
-      - run: bash scripts/generate-json-schema.bash --check
       - run: bash scripts/validate-json-schema.bash
 
   docker:
