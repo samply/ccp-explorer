@@ -3,12 +3,8 @@ import {
   getQueryStore,
   getSelectedSites,
   getHumanReadableQuery,
+  getOptions,
 } from "@samply/lens";
-import { options } from "./env-options";
-import type {
-  ProjectManagerOptions,
-  ProjectManagerOptionsSiteMapping,
-} from "$lib/options";
 import { v4 as uuidv4 } from "uuid";
 
 type PmBody = {
@@ -24,21 +20,47 @@ type ProjectManagerResponse = Response & {
   redirect_uri?: string;
 };
 
+type ProjectManagerOptions = {
+  newProjectUrl: string;
+  editProjectUrl: string;
+};
+
+function isProjectManagerOptions(obj: unknown): obj is ProjectManagerOptions {
+  return (
+    typeof obj === "object" &&
+    obj !== null &&
+    "newProjectUrl" in obj &&
+    "editProjectUrl" in obj &&
+    typeof obj.newProjectUrl === "string" &&
+    typeof obj.editProjectUrl === "string"
+  );
+}
+
 export const negotiate = async (): Promise<void> => {
-  if (options.projectmanagerOptions === undefined) {
-    console.error('"projectmanagerOptions" is missing from the options');
+  const options = getOptions();
+  if (
+    !options ||
+    !isProjectManagerOptions(options.projectManagerOptions) ||
+    !options.siteMappings
+  ) {
+    console.error("Projectmanager options not set");
     return;
   }
 
   const humanReadable: string = getHumanReadableQuery();
-  const collections = options.projectmanagerOptions.siteMappings.filter(
-    (mapping) => getSelectedSites().includes(mapping.site),
-  );
+
+  const collectionIds = Object.entries(options.siteMappings)
+    .filter(([siteId]) => getSelectedSites().includes(siteId))
+    .map(([, siteInfo]) =>
+      typeof siteInfo === "object" ? siteInfo.collectionId : undefined,
+    )
+    .filter((collectionId) => collectionId !== undefined);
 
   const response: ProjectManagerResponse = await sendRequestToProjectManager(
-    options.projectmanagerOptions,
+    options.projectManagerOptions.editProjectUrl,
+    options.projectManagerOptions.newProjectUrl,
     humanReadable,
-    collections,
+    collectionIds,
   );
 
   if (!response.redirect_uri) {
@@ -57,13 +79,14 @@ export const negotiate = async (): Promise<void> => {
 /**
  * @param currentProjectmanagerOptions the current project manager options
  * @param humanReadable a human readable query string to view in the negotiator project
- * @param collections the collections to negotiate with
+ * @param collectionIds the collection ids of the selected sites to send to the project manager
  * @returns a promise containing the response from the project manager. The response contains the redirect uri
  */
 async function sendRequestToProjectManager(
-  currentProjectmanagerOptions: ProjectManagerOptions,
+  editProjectUrl: string,
+  newProjectUrl: string,
   humanReadable: string,
-  collections: ProjectManagerOptionsSiteMapping[],
+  collectionIds: string[],
 ): Promise<ProjectManagerResponse> {
   /**
    * get temporary token from oauth2
@@ -88,18 +111,14 @@ async function sendRequestToProjectManager(
   // const queryParam: string =
   //     queryBase64String != "" ? `&query=${queryBase64String}` : "";
 
-  const negotiationPartners = collections
-    .map((collection) => collection.collection.toLocaleLowerCase())
-    .join(",");
+  const negotiationPartners = collectionIds.join(",");
   const returnURL: string = `${window.location.protocol}//${window.location.host}/?collections=${negotiationPartners}`;
   const urlParams: URLSearchParams = new URLSearchParams(
     window.location.search,
   );
 
   const projectCode: string | null = urlParams.get("project-code");
-  const negotiateUrl = projectCode
-    ? currentProjectmanagerOptions.editProjectUrl
-    : currentProjectmanagerOptions.newProjectUrl;
+  const negotiateUrl = projectCode ? editProjectUrl : newProjectUrl;
 
   let response!: ProjectManagerResponse;
 

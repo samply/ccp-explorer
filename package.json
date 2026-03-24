@@ -12,8 +12,7 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format": "prettier --write .",
-    "lint": "prettier --check . && eslint .",
-    "schemagen": "bash scripts/generate-json-schema.bash"
+    "lint": "prettier --check . && eslint ."
   },
   "devDependencies": {
     "@eslint/compat": "^2.0.3",
@@ -37,7 +36,7 @@
     "vite": "^7.3.1"
   },
   "dependencies": {
-    "@samply/lens": "^0.6.5",
+    "@samply/lens": "^0.6.6",
     "uuid": "^13.0.0"
   }
 }

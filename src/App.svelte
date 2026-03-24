@@ -1,6 +1,6 @@
 <script lang="ts">
   import "./app.css";
-  import type { Catalogue, SpotResult } from "@samply/lens";
+  import type { Catalogue, LensOptions, SpotResult } from "@samply/lens";
   import {
     setOptions,
     setCatalogue,
@@ -12,12 +12,13 @@
     removeFailedSite,
   } from "@samply/lens";
   import { negotiate } from "./lib/project-manager";
-  import { options } from "./lib/env-options";
   import { onMount } from "svelte";
   import { SvelteMap } from "svelte/reactivity";
   import { env } from "$env/dynamic/public";
   import catalogueProd from "./config/catalogue.json";
   import catalogueTest from "./config/catalogue-test.json";
+  import optionsProd from "./config/options.json";
+  import optionsTest from "./config/options-test.json";
   import { v4 as uuidv4 } from "uuid";
 
   let abortController = new AbortController();
@@ -58,7 +59,15 @@
   });
 
   onMount(() => {
-    setOptions(structuredClone(options));
+    // Set the options based on the environment
+    let options: LensOptions = optionsProd;
+    if (env.PUBLIC_ENVIRONMENT === "test") {
+      options = optionsTest;
+    }
+    if (env.PUBLIC_SPOT_URL) {
+      options.spotUrl = env.PUBLIC_SPOT_URL;
+    }
+    setOptions(options);
 
     // Set the catalogue based on the environment
     let catalogue = catalogueProd as Catalogue;
@@ -184,7 +193,7 @@
     <div class="charts">
       <div class="chart-wrapper result-summary">
         <lens-result-summary></lens-result-summary>
-        {#if options.projectmanagerOptions}
+        {#if env.PUBLIC_ENVIRONMENT === "test"}
           <lens-negotiate-button
             type="ProjectManager"
             title="Daten und Proben Anfragen"
