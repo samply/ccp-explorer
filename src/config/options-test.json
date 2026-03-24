@@ -2,26 +2,86 @@
   "spotUrl": "https://backend.demo.lens.samply.de/prod",
   "language": "de",
   "siteMappings": {
-    "berlin": "Berlin (OBDS)",
-    "berlin-test": "Berlin",
-    "bonn": "Bonn",
-    "dresden": "Dresden",
-    "dresden-test": "Dresden-Test",
-    "essen": "Essen",
-    "frankfurt": "Frankfurt",
-    "freiburg": "Freiburg",
-    "hannover": "Hannover",
-    "mainz": "Mainz",
-    "muenchen-lmu": "München(LMU)",
-    "muenchen-tum": "München(TUM)",
-    "ulm": "Ulm",
-    "marburg": "Marburg",
-    "luebeck": "UKSH",
-    "wuerzburg": "Würzburg",
-    "mannheim": "Mannheim",
-    "dktk-test": "DKTK-Test",
-    "dktk-datashield-test": "DKTK Datashield Test",
-    "hamburg": "Hamburg"
+    "berlin": {
+      "displayName": "Berlin (OBDS)",
+      "collectionId": "lens-berlin"
+    },
+    "berlin-test": {
+      "displayName": "Berlin",
+      "collectionId": "lens-berlin"
+    },
+    "bonn": {
+      "displayName": "Bonn",
+      "collectionId": "lens-bonn"
+    },
+    "dresden": {
+      "displayName": "Dresden",
+      "collectionId": "lens-dresden"
+    },
+    "dresden-test": {
+      "displayName": "Dresden-Test",
+      "collectionId": "lens-dresden-test"
+    },
+    "essen": {
+      "displayName": "Essen",
+      "collectionId": "lens-essen"
+    },
+    "frankfurt": {
+      "displayName": "Frankfurt",
+      "collectionId": "lens-frankfurt"
+    },
+    "freiburg": {
+      "displayName": "Freiburg",
+      "collectionId": "lens-freiburg"
+    },
+    "hannover": {
+      "displayName": "Hannover",
+      "collectionId": "lens-hannover"
+    },
+    "mainz": {
+      "displayName": "Mainz",
+      "collectionId": "lens-mainz"
+    },
+    "muenchen-lmu": {
+      "displayName": "München(LMU)",
+      "collectionId": "lens-muenchen-lmu"
+    },
+    "muenchen-tum": {
+      "displayName": "München(TUM)",
+      "collectionId": "lens-muenchen-tum"
+    },
+    "ulm": {
+      "displayName": "Ulm",
+      "collectionId": "lens-ulm"
+    },
+    "marburg": {
+      "displayName": "Marburg",
+      "collectionId": "lens-marburg"
+    },
+    "luebeck": {
+      "displayName": "UKSH",
+      "collectionId": "lens-luebeck"
+    },
+    "wuerzburg": {
+      "displayName": "Würzburg",
+      "collectionId": "lens-wuerzburg"
+    },
+    "mannheim": {
+      "displayName": "Mannheim",
+      "collectionId": "lens-mannheim"
+    },
+    "dktk-test": {
+      "displayName": "DKTK-Test",
+      "collectionId": "lens-dktk-test"
+    },
+    "dktk-datashield-test": {
+      "displayName": "DKTK Datashield Test",
+      "collectionId": "lens-dktk-datashield-test"
+    },
+    "hamburg": {
+      "displayName": "Hamburg",
+      "collectionId": "lens-hamburg"
+    }
   },
   "chartOptions": {
     "gender": {
@@ -185,74 +245,8 @@
       }
     ]
   },
-  "projectmanagerOptions": {
+  "projectManagerOptions": {
     "newProjectUrl": "https://requests.dktk.dkfz.de/project-manager-api/create-query-and-design-project",
-    "editProjectUrl": "https://requests.dktk.dkfz.de/project-manager-api/edit-project",
-    "siteMappings": [
-      {
-        "site": "DKTK-Test",
-        "collection": "lens-dktk-test"
-      },
-      {
-        "site": "DKTK Datashield Test",
-        "collection": "lens-dktk-datashield-test"
-      },
-      {
-        "site": "Berlin",
-        "collection": "lens-berlin"
-      },
-      {
-        "site": "Berlin (OBDS)",
-        "collection": "lens-berlin"
-      },
-      {
-        "site": "Dresden",
-        "collection": "lens-dresden"
-      },
-      {
-        "site": "Essen",
-        "collection": "lens-essen"
-      },
-      {
-        "site": "Frankfurt",
-        "collection": "lens-frankfurt"
-      },
-      {
-        "site": "Freiburg",
-        "collection": "lens-freiburg"
-      },
-      {
-        "site": "Hannover",
-        "collection": "lens-hannover"
-      },
-      {
-        "site": "Mainz",
-        "collection": "lens-mainz"
-      },
-      {
-        "site": "München(LMU)",
-        "collection": "lens-muenchen-lmu"
-      },
-      {
-        "site": "München(TUM)",
-        "collection": "lens-muenchen-tum"
-      },
-      {
-        "site": "Ulm",
-        "collection": "lens-ulm"
-      },
-      {
-        "site": "Würzburg",
-        "collection": "lens-wuerzburg"
-      },
-      {
-        "site": "Mannheim",
-        "collection": "lens-mannheim"
-      },
-      {
-        "site": "Hamburg",
-        "collection": "lens-hamburg"
-      }
-    ]
+    "editProjectUrl": "https://requests.dktk.dkfz.de/project-manager-api/edit-project"
   }
 }
