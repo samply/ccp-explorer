@@ -83,7 +83,8 @@
       "collectionId": "lens-hamburg"
     },
     "master": {
-      "displayName": "MASTER"
+      "displayName": "MASTER",
+      "collectionId": "lens-master"
     }
   },
   "chartOptions": {
