@@ -19,7 +19,8 @@
     "wuerzburg": "Würzburg",
     "mannheim": "Mannheim",
     "dktk-test": "DKTK-Test",
-    "hamburg": "Hamburg"
+    "hamburg": "Hamburg",
+    "master": "MASTER"
   },
   "chartOptions": {
     "gender": {
