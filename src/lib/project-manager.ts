@@ -4,7 +4,6 @@ import {
   getSelectedSites,
   getHumanReadableQuery,
   getOptions,
-  type QueryItem,
 } from "@samply/lens";
 import { v4 as uuidv4 } from "uuid";
 
@@ -15,7 +14,7 @@ type PmBody = {
   "human-readable": string;
   "project-code": string;
   "explorer-url": string;
-  "query-store"?: QueryItem[][];
+  "query-details": string;
 };
 
 type ProjectManagerResponse = Response & {
@@ -187,7 +186,7 @@ function buildPMBody(
       projectCode +
       "&query=" +
       base64Encode(JSON.stringify(getQueryStore())),
-    "query-store": getQueryStore(),
+    "query-details": base64Encode(JSON.stringify(getQueryStore())),
   };
   return JSON.stringify(body);
 }
