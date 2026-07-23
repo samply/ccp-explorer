@@ -120,6 +120,7 @@ async function sendRequestToProjectManager(
 
   const projectCode: string | null = urlParams.get("project-code");
   const negotiateUrl = projectCode ? editProjectUrl : newProjectUrl;
+  const method = projectCode ? "PUT" : "POST";
 
   let response!: ProjectManagerResponse;
 
@@ -132,7 +133,7 @@ async function sendRequestToProjectManager(
 
   try {
     response = await fetch(pmRequestUrl, {
-      method: "POST",
+      method: method,
       headers: {
         returnAccept: "application/json; charset=utf-8",
         "Content-Type": "application/json",
