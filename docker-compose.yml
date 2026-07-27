@@ -36,7 +36,7 @@ services:
       - OAUTH2_PROXY_ALLOWED_GROUPS=${ALLOWED_GROUPS}
       # For some reason, login.verbis.dkfz.de does not have a "groups" scope but this comes automatically through a
       # scope called microprofile-jwt. Remove the following line once we have a "groups" scope.
-      - OAUTH2_PROXY_SCOPE=openid profile email
+      - OAUTH2_PROXY_SCOPE=openid profile email offline_access
       # Pass Authorization Header and some user information to spot
       - OAUTH2_PROXY_SET_AUTHORIZATION_HEADER=true
       - OAUTH2_PROXY_SET_XAUTHREQUEST=true
