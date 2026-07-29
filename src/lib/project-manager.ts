@@ -49,9 +49,10 @@ export const negotiate = async (): Promise<void> => {
   }
 
   const humanReadable: string = getHumanReadableQuery();
+  const selectedSites = getSelectedSites();
 
   const collectionIds = Object.entries(options.siteMappings)
-    .filter(([siteId]) => getSelectedSites().includes(siteId))
+    .filter(([siteId]) => selectedSites.includes(siteId))
     .map(([, siteInfo]) =>
       typeof siteInfo === "object" ? siteInfo.collectionId : undefined,
     )
@@ -62,6 +63,7 @@ export const negotiate = async (): Promise<void> => {
     options.projectManagerOptions.newProjectUrl,
     humanReadable,
     collectionIds,
+    selectedSites,
   );
 
   if (!response.redirect_uri) {
@@ -81,6 +83,7 @@ export const negotiate = async (): Promise<void> => {
  * @param currentProjectmanagerOptions the current project manager options
  * @param humanReadable a human readable query string to view in the negotiator project
  * @param collectionIds the collection ids of the selected sites to send to the project manager
+ * @param selectedSites the Lens site IDs selected for negotiation
  * @returns a promise containing the response from the project manager. The response contains the redirect uri
  */
 async function sendRequestToProjectManager(
@@ -88,6 +91,7 @@ async function sendRequestToProjectManager(
   newProjectUrl: string,
   humanReadable: string,
   collectionIds: string[],
+  selectedSites: string[],
 ): Promise<ProjectManagerResponse> {
   /**
    * get temporary token from oauth2
@@ -113,12 +117,16 @@ async function sendRequestToProjectManager(
   //     queryBase64String != "" ? `&query=${queryBase64String}` : "";
 
   const negotiationPartners = collectionIds.join(",");
-  const returnURL: string = `${window.location.protocol}//${window.location.host}/?collections=${negotiationPartners}`;
   const urlParams: URLSearchParams = new URLSearchParams(
     window.location.search,
   );
 
   const projectCode: string | null = urlParams.get("project-code");
+  const returnURL = buildExplorerUrl(
+    negotiationPartners,
+    selectedSites,
+    projectCode,
+  );
   const negotiateUrl = projectCode ? editProjectUrl : newProjectUrl;
   const method = projectCode ? "PUT" : "POST";
 
@@ -143,7 +151,7 @@ async function sendRequestToProjectManager(
         humanReadable,
         negotiationPartners,
         returnURL,
-        projectCode ? projectCode : "",
+        projectCode ?? "",
       ),
     }).then((response) => response.json());
 
@@ -182,12 +190,46 @@ function buildPMBody(
     "query-format": "AST_DATA",
     "human-readable": humanReadable,
     "project-code": projectCode,
-    "explorer-url":
-      returnURL +
-      projectCode +
-      "&query=" +
+    "explorer-url": addQueryToExplorerUrl(
+      returnURL,
       base64Encode(JSON.stringify(getQueryStore())),
+    ),
     "query-details": base64Encode(JSON.stringify(getQueryStore())),
   };
   return JSON.stringify(body);
+}
+
+/**
+ * Build the URL used to return from the project manager. Lens restores selected
+ * bridgeheads from the base64-encoded `datarequests` URL parameter.
+ */
+function buildExplorerUrl(
+  negotiationPartners: string,
+  selectedSites: string[],
+  projectCode: string | null,
+): string {
+  const url = new URL(window.location.pathname, window.location.origin);
+
+  // Keep the collection IDs for consumers of the existing project-manager URL.
+  url.searchParams.set("collections", negotiationPartners);
+  url.searchParams.set(
+    "datarequests",
+    btoa(
+      String.fromCharCode(
+        ...new TextEncoder().encode(JSON.stringify(selectedSites)),
+      ),
+    ),
+  );
+
+  if (projectCode) {
+    url.searchParams.set("project-code", projectCode);
+  }
+
+  return url.toString();
+}
+
+function addQueryToExplorerUrl(returnURL: string, query: string): string {
+  const url = new URL(returnURL);
+  url.searchParams.set("query", query);
+  return url.toString();
 }
