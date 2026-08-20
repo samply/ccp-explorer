@@ -103,6 +103,12 @@
 
   let catalogueopen: boolean = false;
 
+  const projectManagerButtonTitle = new URLSearchParams(
+    window.location.search,
+  ).has("project-code")
+    ? "Daten- und Probenanfrage bearbeiten"
+    : "Daten und Proben anfragen";
+
   const genderHeaders: Map<string, string> = new SvelteMap<string, string>()
     .set("male", "männlich")
     .set("female", "weiblich")
@@ -196,7 +202,7 @@
         {#if env.PUBLIC_ENVIRONMENT === "test"}
           <lens-negotiate-button
             type="ProjectManager"
-            title="Daten und Proben Anfragen"
+            title={projectManagerButtonTitle}
           ></lens-negotiate-button>
         {/if}
         <lens-search-modified-display></lens-search-modified-display>
