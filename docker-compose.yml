@@ -44,6 +44,12 @@ services:
       - "traefik.enable=true"
       - "traefik.http.middlewares.traefik-forward-auth.forwardauth.address=http://traefik-forward-auth:4180"
       - "traefik.http.middlewares.traefik-forward-auth.forwardauth.authResponseHeaders=Authorization, X-Forwarded-User, X-Auth-Request-User, X-Auth-Request-Email"
+      # Without this, Traefik discards the Set-Cookie that oauth2-proxy returns on its
+      # 202 after a token refresh, so the browser keeps replaying the original refresh
+      # token until the IdP rotates it away and the session dies. Only exact cookie
+      # names are copied, so the chunks oauth2-proxy creates past 4000 bytes are listed
+      # too (names not present in the auth response are simply skipped).
+      - "traefik.http.middlewares.traefik-forward-auth.forwardauth.addAuthCookiesToResponse=_oauth2_proxy,_oauth2_proxy_0,_oauth2_proxy_1,_oauth2_proxy_2,_oauth2_proxy_3"
       - "traefik.http.services.traefik-forward-auth.loadbalancer.server.port=4180"
       - "traefik.http.routers.oauth2.rule=Host(`${GUI_HOST}`) && PathPrefix(`/oauth2/`)"
       - "traefik.http.routers.oauth2.tls=true"
