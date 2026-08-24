@@ -22,7 +22,7 @@
   import { v4 as uuidv4 } from "uuid";
 
   let abortController = new AbortController();
-  window.addEventListener("lens-search-triggered", () => {
+  function sendQuery() {
     abortController.abort();
     abortController = new AbortController();
     clearSiteResults();
@@ -43,6 +43,7 @@
         markSiteClaimed(site);
       } else if (result.status === "succeeded") {
         const siteResult = JSON.parse(atob(result.body));
+        console.log(siteResult);
         setSiteResult(site, siteResult);
       } else {
         removeFailedSite(site);
@@ -52,6 +53,10 @@
         );
       }
     });
+  }
+
+  window.addEventListener("lens-search-triggered", () => {
+    sendQuery();
   });
 
   window.addEventListener("lens-negotiate-triggered", () => {
@@ -75,6 +80,10 @@
       catalogue = catalogueTest as Catalogue;
     }
     setCatalogue(catalogue);
+
+    // Wait for the search bar to initialize (load query from URL) before sending the initial query.
+    // Using setTimeout to ensure the custom element's onMount has completed.
+    setTimeout(() => sendQuery(), 0);
   });
 
   const saveQuery = () => {
@@ -223,6 +232,16 @@
         eine FFPE-Probe (Formalin-fixierte und Paraffin eingebettet) als Basis der
         Diagnose vor.
       </div>
+      {#if env.PUBLIC_ENVIRONMENT === "test"}
+        <div class="chart-wrapper chart-master">
+          <lens-chart
+            title="MASTER Analysemethoden"
+            dataKey="analysis_method"
+            chartType="pie"
+            displayLegends={true}
+          ></lens-chart>
+        </div>
+      {/if}
       <div class="chart-wrapper">
         <lens-chart
           title="Geschlecht"
@@ -230,20 +249,6 @@
           chartType="pie"
           displayLegends={true}
           headers={genderHeaders}
-        ></lens-chart>
-      </div>
-      <div class="chart-wrapper chart-diagnosis">
-        <lens-chart
-          title="Diagnose"
-          dataKey="diagnosis"
-          chartType="bar"
-          indexAxis="y"
-          groupingDivider="."
-          groupingLabel=".%"
-          filterRegex={"^(C.{2,6}|D[0-4][0-9].{0,4})"}
-          xAxisTitle="Anzahl der Diagnosen"
-          yAxisTitle="ICD-10-Codes"
-          backgroundColor={barChartBackgroundColors}
         ></lens-chart>
       </div>
       <div class="chart-wrapper chart-age-distribution">
@@ -278,7 +283,7 @@
           backgroundColor={barChartBackgroundColors}
         ></lens-chart>
       </div>
-      <div class="chart-wrapper">
+      <div class="chart-wrapper chart-systemische">
         <lens-chart
           title="Systemische Therapien"
           dataKey="medicationStatements"
@@ -300,13 +305,29 @@
         >
         </lens-chart>
       </div>
+      <div class="chart-wrapper chart-diagnosis">
+        <lens-chart
+          title="Top 20 Diagnosen"
+          dataKey="diagnosis"
+          chartType="bar"
+          topN={20}
+          groupingDivider="."
+          groupingLabel=".%"
+          filterRegex={"^(C.{2,6}|D[0-4][0-9].{0,4})"}
+          xAxisTitle="ICD-10-Codes"
+          yAxisTitle="Anzahl der Diagnosen"
+          backgroundColor={barChartBackgroundColors}
+        ></lens-chart>
+      </div>
       {#if env.PUBLIC_ENVIRONMENT === "test"}
         <div class="chart-wrapper chart-wrapper-mol">
           <lens-chart
-            title="MolecularMarkers"
+            title="Top 20 veränderte Gene"
             dataKey="MolecularMarkers"
             chartType="bar"
-            xAxisTitle="Marker"
+            topN={20}
+            xAxisTitle="Gen"
+            yAxisTitle="Anzahl der Patienten"
             backgroundColor={barChartBackgroundColors}
           >
           </lens-chart>

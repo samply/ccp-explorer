@@ -96,7 +96,7 @@ async function sendRequestToProjectManager(
   /**
    * get temporary token from oauth2
    */
-  let temporaryToken: string | null = "";
+  let temporaryToken: string | null;
 
   try {
     const res = await fetch(`/oauth2/auth`, {
