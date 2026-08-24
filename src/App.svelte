@@ -22,7 +22,7 @@
   import { v4 as uuidv4 } from "uuid";
 
   let abortController = new AbortController();
-  window.addEventListener("lens-search-triggered", () => {
+  function sendQuery() {
     abortController.abort();
     abortController = new AbortController();
     clearSiteResults();
@@ -53,6 +53,10 @@
         );
       }
     });
+  }
+
+  window.addEventListener("lens-search-triggered", () => {
+    sendQuery();
   });
 
   window.addEventListener("lens-negotiate-triggered", () => {
@@ -76,6 +80,10 @@
       catalogue = catalogueTest as Catalogue;
     }
     setCatalogue(catalogue);
+
+    // Wait for the search bar to initialize (load query from URL) before sending the initial query.
+    // Using setTimeout to ensure the custom element's onMount has completed.
+    setTimeout(() => sendQuery(), 0);
   });
 
   const saveQuery = () => {
