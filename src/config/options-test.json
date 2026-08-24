@@ -96,6 +96,18 @@
         "other": "Divers"
       }
     },
+    "analysis_method": {
+      "legendMapping": {
+        "wgs": "Ganzgenom-Sequenzierung (WGS)",
+        "rnaseq": "RNA-Sequenzierung (RNA-Seq)",
+        "wes": "Exom-Sequenzierung (WES)",
+        "epic": "Methylierungs-Array (EPIC)",
+        "proteome": "Proteom (Massenspektrometrie)",
+        "phosprot": "Phosphoproteom (Massenspektrometrie)",
+        "wes+wgs_lc": "WES + niedrig aufgelöste WGS",
+        "panel": "Gen-Panel"
+      }
+    },
     "diagnosis": {
       "hintText": [
         "Bei Patienten mit mehreren onkologischen Diagnosen werden auch Einträge angezeigt, die ggfs. nicht den ausgewählten Suchkriterien entsprechen."
