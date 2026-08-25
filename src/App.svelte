@@ -65,9 +65,9 @@
 
   onMount(() => {
     // Set the options based on the environment
-    let options: LensOptions = optionsProd;
+    let options: LensOptions = optionsProd as LensOptions;
     if (env.PUBLIC_ENVIRONMENT === "test") {
-      options = optionsTest;
+      options = optionsTest as LensOptions;
     }
     if (env.PUBLIC_SPOT_URL) {
       options.spotUrl = env.PUBLIC_SPOT_URL;
