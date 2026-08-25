@@ -164,7 +164,9 @@
         "title": "Bioproben*",
         "dataKey": "specimen"
       }
-    ]
+    ],
+    "defaultSortBy": "patients",
+    "defaultSortOrder": "desc"
   },
   "resultSummaryOptions": {
     "title": "Ergebnisse",
