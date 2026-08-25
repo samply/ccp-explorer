@@ -1,5 +1,5 @@
 {
-  "spotUrl": "https://backend.demo.lens.samply.de/prod",
+  "spotUrl": "/prod",
   "language": "de",
   "siteMappings": {
     "berlin": {
