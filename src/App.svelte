@@ -235,11 +235,15 @@
       {#if env.PUBLIC_ENVIRONMENT === "test"}
         <div class="chart-wrapper chart-master">
           <lens-chart
-            title="MASTER Analysemethoden"
+            title="Analysemethoden"
             dataKey="analysis_method"
             chartType="pie"
             displayLegends={true}
           ></lens-chart>
+          <p class="master-hint">
+            <img src="master-logo.png" alt="" />
+            Nur verfügbar für Datensätze aus MASTER.
+          </p>
         </div>
       {/if}
       <div class="chart-wrapper">
