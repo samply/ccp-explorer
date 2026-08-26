@@ -26,3 +26,6 @@ docker-compose.override.yml
 traefik.yml
 traefik.yaml
 logs/
+# Inputs and caches of scripts/generate-gene-criteria.py
+hgnc_complete_set.txt
+gene-names.json
