@@ -198509,105 +198509,96 @@
           "Deletion: p.96_97del (nur Positionen, ohne Aminosäure-Buchstaben) · Deletion mit Insertion: p.E345delinsER",
           "Der Drei-Buchstaben-Code (z. B. p.Val600Glu) kommt in den Daten nicht vor und liefert keine Treffer. Stopp-Codons werden als X geschrieben, nicht als Ter."
         ]
-      }
-    ]
-  },
-  {
-    "fieldType": "group",
-    "key": "project",
-    "name": "Forschungsprojekte",
-    "infoButtonText": ["Projekt-Übersicht"],
-    "infoLink": {
-      "link": "https://hub.dkfz.de/s/EZTqXGcx7mWWapr",
-      "display": "↗Projekt-Übersicht"
-    },
-    "childCategories": [
+      },
       {
-        "key": "pseudo_projects",
-        "name": "Projektname",
+        "key": "analysis_method",
+        "name": "Analysemethoden",
         "fieldType": "single-select",
         "type": "EQUALS",
+        "infoButtonText": [
+          "Diese Auswahl umfasst die Analysen (auch „Datenlayer“ genannt), die im Rahmen des MASTER-Projekts für einen Patienten durchgeführt wurden.",
+          "Sie können die Suche auf Patienten einschränken, bei denen eine bestimmte Analyse durchgeführt wurde."
+        ],
         "criteria": [
           {
-            "key": "DKTK000002089",
-            "name": "EXLIQUID",
-            "description": ""
+            "key": "wgs",
+            "name": "Ganzgenom-Sequenzierung (WGS)"
           },
           {
-            "key": "DKTK000001985",
-            "name": "RiskY-AML",
-            "description": ""
+            "key": "rnaseq",
+            "name": "RNA-Sequenzierung (RNA-Seq)"
           },
           {
-            "key": "DKTK000001986",
-            "name": "MASTER-Programm",
-            "description": ""
+            "key": "wes",
+            "name": "Exom-Sequenzierung (WES)"
           },
           {
-            "key": "DKTK000001950",
-            "name": "IRCC",
-            "description": ""
+            "key": "epic",
+            "name": "Methylierungs-Array (EPIC)"
           },
           {
-            "key": "DKTK000001951",
-            "name": "ARMANI",
-            "description": ""
+            "key": "proteome",
+            "name": "Proteom (Massenspektrometrie)"
           },
           {
-            "key": "DKTK999999999",
-            "name": "Testprojekt",
-            "description": ""
+            "key": "phosprot",
+            "name": "Phosphoproteom (Massenspektrometrie)"
           },
           {
-            "key": "DKTK000000791",
-            "name": "ReKo",
-            "description": ""
+            "key": "wes+wgs_lc",
+            "name": "WES + niedrig aufgelöste WGS"
+          },
+          {
+            "key": "panel",
+            "name": "Gen-Panel"
           }
         ]
       }
     ]
   },
   {
-    "key": "analysis_method",
-    "name": "Analysemethoden",
+    "key": "pseudo_projects",
+    "name": "Forschungsprojekte",
     "fieldType": "single-select",
     "type": "EQUALS",
     "infoButtonText": [
-      "Diese Auswahl umfasst die Analysen (auch „Datenlayer“ genannt), die im Rahmen des MASTER-Projekts für einen Patienten durchgeführt wurden.",
-      "Sie können die Suche auf Patienten einschränken, bei denen eine bestimmte Analyse durchgeführt wurde."
+      "Sie können die Suche auf Patienten einschränken, die an einem bestimmten Forschungsprojekt teilnehmen."
     ],
     "criteria": [
       {
-        "key": "wgs",
-        "name": "Ganzgenom-Sequenzierung (WGS)"
+        "key": "DKTK000002089",
+        "name": "EXLIQUID",
+        "description": ""
       },
       {
-        "key": "rnaseq",
-        "name": "RNA-Sequenzierung (RNA-Seq)"
+        "key": "DKTK000001985",
+        "name": "RiskY-AML",
+        "description": ""
       },
       {
-        "key": "wes",
-        "name": "Exom-Sequenzierung (WES)"
+        "key": "DKTK000001986",
+        "name": "MASTER-Programm",
+        "description": ""
       },
       {
-        "key": "epic",
-        "name": "Methylierungs-Array (EPIC)"
+        "key": "DKTK000001950",
+        "name": "IRCC",
+        "description": ""
       },
       {
-        "key": "proteome",
-        "name": "Proteom (Massenspektrometrie)"
+        "key": "DKTK000001951",
+        "name": "ARMANI",
+        "description": ""
       },
       {
-        "key": "phosprot",
-        "name": "Phosphoproteom (Massenspektrometrie)"
+        "key": "DKTK999999999",
+        "name": "Testprojekt",
+        "description": ""
       },
       {
-        "key": "wes+wgs_lc",
-        "name": "WES + niedrig aufgelöste WGS"
-      },
-      {
-        "key": "panel",
-        "name": "Gen-Panel"
+        "key": "DKTK000000791",
+        "name": "ReKo",
+        "description": ""
       }
     ]
   }
