@@ -235,7 +235,7 @@
       {#if env.PUBLIC_ENVIRONMENT === "test"}
         <div class="chart-wrapper chart-master">
           <lens-chart
-            title="Analysemethoden"
+            title="Omics-Daten"
             dataKey="analysis_method"
             chartType="pie"
             displayLegends={true}

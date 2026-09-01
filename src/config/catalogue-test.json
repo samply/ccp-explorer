@@ -198512,7 +198512,7 @@
       },
       {
         "key": "analysis_method",
-        "name": "Analysemethoden",
+        "name": "Omics-Daten",
         "fieldType": "single-select",
         "type": "EQUALS",
         "infoButtonText": [
