@@ -619,7 +619,7 @@
                     },
                     {
                       "value": "diagnosis",
-                      "name": "C08%"
+                      "name": "C08%."
                     }
                   ],
                   [
@@ -693,7 +693,7 @@
                     },
                     {
                       "value": "diagnosis",
-                      "name": "C08%"
+                      "name": "C08%."
                     }
                   ],
                   [
@@ -1647,7 +1647,7 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "9053/3 "
+                      "name": "9053/3"
                     }
                   ]
                 ]
@@ -1788,7 +1788,7 @@
                   [
                     {
                       "value": "diagnosis",
-                      "name": "C16.0 "
+                      "name": "C16.0"
                     }
                   ],
                   [
@@ -2808,11 +2808,11 @@
                   [
                     {
                       "value": "morphology",
-                      "name": "8051/3    "
+                      "name": "8051/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "8052/3   "
+                      "name": "8052/3"
                     },
                     {
                       "value": "morphology",
@@ -2820,11 +2820,11 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "8076/3     "
+                      "name": "8076/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "8082/3  "
+                      "name": "8082/3"
                     },
                     {
                       "value": "morphology",
@@ -2864,7 +2864,7 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "8490/3   "
+                      "name": "8490/3"
                     },
                     {
                       "value": "morphology",
@@ -2876,7 +2876,7 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "9110/3       "
+                      "name": "9110/3"
                     }
                   ]
                 ]
@@ -2911,11 +2911,11 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "8382/3     "
+                      "name": "8382/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "8383/3     "
+                      "name": "8383/3"
                     },
                     {
                       "value": "morphology",
@@ -3033,15 +3033,15 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "8310/3  "
+                      "name": "8310/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "8380/3  "
+                      "name": "8380/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "8384/3  "
+                      "name": "8384/3"
                     },
                     {
                       "value": "morphology",
@@ -3072,11 +3072,11 @@
                   [
                     {
                       "value": "morphology",
-                      "name": "8805/3 "
+                      "name": "8805/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "8890/3   "
+                      "name": "8890/3"
                     },
                     {
                       "value": "morphology",
@@ -3084,7 +3084,7 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "8931/3  "
+                      "name": "8931/3"
                     },
                     {
                       "value": "morphology",
@@ -3092,7 +3092,7 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "8934/3 "
+                      "name": "8934/3"
                     },
                     {
                       "value": "morphology",
@@ -3998,7 +3998,7 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "8772/3 "
+                      "name": "8772/3"
                     },
                     {
                       "value": "morphology",
@@ -4029,7 +4029,7 @@
                   [
                     {
                       "value": "morphology",
-                      "name": "8720/2 "
+                      "name": "8720/2"
                     },
                     {
                       "value": "morphology",
@@ -4461,7 +4461,7 @@
                     },
                     {
                       "value": "diagnosis",
-                      "name": "C46%"
+                      "name": "C46%."
                     },
                     {
                       "value": "diagnosis",
@@ -4704,19 +4704,19 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "9814/3 "
+                      "name": "9814/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9815/3 "
+                      "name": "9815/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9816/3 "
+                      "name": "9816/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9817/3 "
+                      "name": "9817/3"
                     },
                     {
                       "value": "morphology",
@@ -4728,11 +4728,11 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "9836/3 "
+                      "name": "9836/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9837/3 "
+                      "name": "9837/3"
                     }
                   ]
                 ]
@@ -4751,7 +4751,7 @@
                   [
                     {
                       "value": "morphology",
-                      "name": "9826/3 "
+                      "name": "9826/3"
                     }
                   ]
                 ]
@@ -4871,7 +4871,7 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "9809/3 "
+                      "name": "9809/3"
                     }
                   ]
                 ]
@@ -4938,23 +4938,23 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "9865/3 "
+                      "name": "9865/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9867/3 "
+                      "name": "9867/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9869/3 "
+                      "name": "9869/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9870/3 "
+                      "name": "9870/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9871/3 "
+                      "name": "9871/3"
                     },
                     {
                       "value": "morphology",
@@ -4962,39 +4962,39 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "9873/3 "
+                      "name": "9873/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9874/3 "
+                      "name": "9874/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9891/3 "
+                      "name": "9891/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9895/3 "
+                      "name": "9895/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9896/3 "
+                      "name": "9896/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9897/3 "
+                      "name": "9897/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9910/3 "
+                      "name": "9910/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9911/3 "
+                      "name": "9911/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9920/3 "
+                      "name": "9920/3"
                     }
                   ]
                 ]
@@ -5013,7 +5013,7 @@
                   [
                     {
                       "value": "morphology",
-                      "name": "9866/3 "
+                      "name": "9866/3"
                     }
                   ]
                 ]
@@ -5195,7 +5195,7 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "9982/3 "
+                      "name": "9982/3"
                     },
                     {
                       "value": "morphology",
@@ -5207,11 +5207,11 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "9985/3 "
+                      "name": "9985/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9986/3 "
+                      "name": "9986/3"
                     },
                     {
                       "value": "morphology",
@@ -5219,11 +5219,11 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "9989/3 "
+                      "name": "9989/3"
                     },
                     {
                       "value": "morphology",
-                      "name": "9991/3 "
+                      "name": "9991/3"
                     },
                     {
                       "value": "morphology",
@@ -5426,7 +5426,7 @@
                   [
                     {
                       "value": "morphology",
-                      "name": "9826/3 "
+                      "name": "9826/3"
                     }
                   ]
                 ]
@@ -5708,25 +5708,6 @@
                 ]
               },
               {
-                "key": "urn:dktk:code:134:2",
-                "name": "Non-Hodgkin-Lymphom: Burkitt-Lymphom",
-                "description": "",
-                "aggregatedValue": [
-                  [
-                    {
-                      "value": "diagnosis",
-                      "name": "C83.7"
-                    }
-                  ],
-                  [
-                    {
-                      "value": "morphology",
-                      "name": "9687/3"
-                    }
-                  ]
-                ]
-              },
-              {
                 "key": "urn:dktk:code:136:2",
                 "name": "Non-Hodgkin-Lymphom: Lymphoblastisches Lymphom",
                 "description": "",
@@ -5744,7 +5725,7 @@
                     },
                     {
                       "value": "morphology",
-                      "name": "9728/3 "
+                      "name": "9728/3"
                     },
                     {
                       "value": "morphology",
@@ -6848,6 +6829,29 @@
                     {
                       "value": "diagnosis",
                       "name": "C72.%"
+                    }
+                  ],
+                  [
+                    {
+                      "value": "morphology",
+                      "name": "9500/3"
+                    }
+                  ]
+                ]
+              },
+              {
+                "key": "urn:dktk:code:173:3",
+                "name": "Neuroblastom Non ZNS",
+                "description": "",
+                "aggregatedValue": [
+                  [
+                    {
+                      "value": "diagnosis",
+                      "name": "C74.%"
+                    },
+                    {
+                      "value": "diagnosis",
+                      "name": "C47.%"
                     }
                   ],
                   [
