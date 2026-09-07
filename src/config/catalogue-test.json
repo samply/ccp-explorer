@@ -20565,8 +20565,52 @@
   {
     "fieldType": "group",
     "key": "MolecularMarker1",
-    "name": "Molekulare Marker",
+    "name": "Molekulare Daten",
     "childCategories": [
+      {
+        "key": "analysis_method",
+        "name": "Omics-Daten",
+        "fieldType": "single-select",
+        "type": "EQUALS",
+        "infoButtonText": [
+          "Diese Auswahl umfasst die Analysen (auch „Datenlayer“ genannt), die im Rahmen des MASTER-Projekts für einen Patienten durchgeführt wurden.",
+          "Sie können die Suche auf Patienten einschränken, bei denen eine bestimmte Analyse durchgeführt wurde."
+        ],
+        "criteria": [
+          {
+            "key": "wgs",
+            "name": "Ganzgenom-Sequenzierung (WGS)"
+          },
+          {
+            "key": "wes",
+            "name": "Exom-Sequenzierung (WES)"
+          },
+          {
+            "key": "wes+wgs_lc",
+            "name": "WES + niedrig aufgelöste WGS"
+          },
+          {
+            "key": "panel",
+            "name": "Gen-Panel"
+          },
+          {
+            "key": "rnaseq",
+            "name": "RNA-Sequenzierung (RNA-Seq)"
+          },
+          {
+            "key": "proteome",
+            "name": "Proteom (Massenspektrometrie)"
+          },
+          {
+            "key": "epic",
+            "name": "Methylierungs-Array (EPIC)"
+          },
+          {
+            "key": "phosprot",
+            "name": "Phosphoproteom (Massenspektrometrie)"
+          }
+        ]
+      },
       {
         "key": "observationMolecularMarkerName",
         "name": "Gen",
@@ -198508,50 +198552,6 @@
           "Substitution: p.V600E · Nonsense (Stopp-Gewinn): p.R213X · Frameshift: p.K1357fs",
           "Deletion: p.96_97del (nur Positionen, ohne Aminosäure-Buchstaben) · Deletion mit Insertion: p.E345delinsER",
           "Der Drei-Buchstaben-Code (z. B. p.Val600Glu) kommt in den Daten nicht vor und liefert keine Treffer. Stopp-Codons werden als X geschrieben, nicht als Ter."
-        ]
-      },
-      {
-        "key": "analysis_method",
-        "name": "Omics-Daten",
-        "fieldType": "single-select",
-        "type": "EQUALS",
-        "infoButtonText": [
-          "Diese Auswahl umfasst die Analysen (auch „Datenlayer“ genannt), die im Rahmen des MASTER-Projekts für einen Patienten durchgeführt wurden.",
-          "Sie können die Suche auf Patienten einschränken, bei denen eine bestimmte Analyse durchgeführt wurde."
-        ],
-        "criteria": [
-          {
-            "key": "wgs",
-            "name": "Ganzgenom-Sequenzierung (WGS)"
-          },
-          {
-            "key": "rnaseq",
-            "name": "RNA-Sequenzierung (RNA-Seq)"
-          },
-          {
-            "key": "wes",
-            "name": "Exom-Sequenzierung (WES)"
-          },
-          {
-            "key": "epic",
-            "name": "Methylierungs-Array (EPIC)"
-          },
-          {
-            "key": "proteome",
-            "name": "Proteom (Massenspektrometrie)"
-          },
-          {
-            "key": "phosprot",
-            "name": "Phosphoproteom (Massenspektrometrie)"
-          },
-          {
-            "key": "wes+wgs_lc",
-            "name": "WES + niedrig aufgelöste WGS"
-          },
-          {
-            "key": "panel",
-            "name": "Gen-Panel"
-          }
         ]
       }
     ]
