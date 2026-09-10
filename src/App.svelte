@@ -208,12 +208,10 @@
     <div class="charts">
       <div class="chart-wrapper result-summary">
         <lens-result-summary></lens-result-summary>
-        {#if env.PUBLIC_ENVIRONMENT === "test"}
-          <lens-negotiate-button
-            type="ProjectManager"
-            title={projectManagerButtonTitle}
-          ></lens-negotiate-button>
-        {/if}
+        <lens-negotiate-button
+          type="ProjectManager"
+          title={projectManagerButtonTitle}
+        ></lens-negotiate-button>
         <lens-search-modified-display></lens-search-modified-display>
       </div>
       <div class="chart-wrapper">
