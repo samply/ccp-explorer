@@ -2,25 +2,82 @@
   "spotUrl": "/prod",
   "language": "de",
   "siteMappings": {
-    "berlin": "Berlin",
-    "berlin-test": "Berlin",
-    "bonn": "Bonn",
-    "dresden": "Dresden",
-    "essen": "Essen",
-    "frankfurt": "Frankfurt",
-    "freiburg": "Freiburg",
-    "hannover": "Hannover",
-    "mainz": "Mainz",
-    "muenchen-lmu": "München(LMU)",
-    "muenchen-tum": "München(TUM)",
-    "ulm": "Ulm",
-    "marburg": "Marburg",
-    "luebeck": "UKSH",
-    "wuerzburg": "Würzburg",
-    "mannheim": "Mannheim",
-    "dktk-test": "DKTK-Test",
-    "hamburg": "Hamburg",
-    "master": "MASTER"
+    "berlin": {
+      "displayName": "Berlin",
+      "collectionId": "lens-berlin"
+    },
+    "berlin-test": {
+      "displayName": "Berlin",
+      "collectionId": "lens-berlin"
+    },
+    "bonn": {
+      "displayName": "Bonn",
+      "collectionId": "lens-bonn"
+    },
+    "dresden": {
+      "displayName": "Dresden",
+      "collectionId": "lens-dresden"
+    },
+    "essen": {
+      "displayName": "Essen",
+      "collectionId": "lens-essen"
+    },
+    "frankfurt": {
+      "displayName": "Frankfurt",
+      "collectionId": "lens-frankfurt"
+    },
+    "freiburg": {
+      "displayName": "Freiburg",
+      "collectionId": "lens-freiburg"
+    },
+    "hannover": {
+      "displayName": "Hannover",
+      "collectionId": "lens-hannover"
+    },
+    "mainz": {
+      "displayName": "Mainz",
+      "collectionId": "lens-mainz"
+    },
+    "muenchen-lmu": {
+      "displayName": "München(LMU)",
+      "collectionId": "lens-muenchen-lmu"
+    },
+    "muenchen-tum": {
+      "displayName": "München(TUM)",
+      "collectionId": "lens-muenchen-tum"
+    },
+    "ulm": {
+      "displayName": "Ulm",
+      "collectionId": "lens-ulm"
+    },
+    "marburg": {
+      "displayName": "Marburg",
+      "collectionId": "lens-marburg"
+    },
+    "luebeck": {
+      "displayName": "UKSH",
+      "collectionId": "lens-luebeck"
+    },
+    "wuerzburg": {
+      "displayName": "Würzburg",
+      "collectionId": "lens-wuerzburg"
+    },
+    "mannheim": {
+      "displayName": "Mannheim",
+      "collectionId": "lens-mannheim"
+    },
+    "dktk-test": {
+      "displayName": "DKTK-Test",
+      "collectionId": "lens-dktk-test"
+    },
+    "hamburg": {
+      "displayName": "Hamburg",
+      "collectionId": "lens-hamburg"
+    },
+    "master": {
+      "displayName": "MASTER",
+      "collectionId": "lens-master"
+    }
   },
   "chartOptions": {
     "gender": {
@@ -185,5 +242,9 @@
         "dataKey": "specimen"
       }
     ]
+  },
+  "projectManagerOptions": {
+    "newProjectUrl": "https://requests.dktk.dkfz.de/project-manager-api/create-query-and-design-project",
+    "editProjectUrl": "https://requests.dktk.dkfz.de/project-manager-api/project/edit"
   }
 }
