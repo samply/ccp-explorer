@@ -218,8 +218,11 @@
         "dataKey": "patients"
       },
       {
-        "title": "Bioproben*",
-        "dataKey": "specimen"
+        "title": "Bioproben",
+        "dataKey": "specimen",
+        "hintText": [
+          "In den lokalen Pathologien liegt von jedem Patienten in der Regel zusätzlich mindestens eine FFPE-Probe (formalinfixiert und in Paraffin eingebettet) als Basis der Diagnose vor."
+        ]
       }
     ],
     "defaultSortBy": "patients",

@@ -20613,7 +20613,7 @@
       },
       {
         "key": "observationMolecularMarkerName",
-        "name": "Gen",
+        "name": "Gen-Symbol",
         "fieldType": "autocomplete",
         "type": "EQUALS",
         "criteria": [
@@ -117365,60 +117365,99 @@
         ]
       },
       {
-        "key": "observationMolecularMarkerVariantType",
-        "name": "Variantentyp",
-        "fieldType": "single-select",
-        "type": "EQUALS",
-        "criteria": [
+        "key": "variant_characterization",
+        "name": "Variantencharakterisierung",
+        "fieldType": "group",
+        "childCategories": [
           {
-            "key": "nonsynonymous-snv",
-            "name": "Missense (Aminosäureaustausch)",
-            "description": "Verändert den eingebauten Baustein (Aminosäure) des Proteins."
+            "key": "observationMolecularMarkerVariantType",
+            "name": "Variantentyp",
+            "fieldType": "single-select",
+            "type": "EQUALS",
+            "criteria": [
+              {
+                "key": "nonsynonymous-snv",
+                "name": "Missense (Aminosäureaustausch)",
+                "description": "Verändert den eingebauten Baustein (Aminosäure) des Proteins."
+              },
+              {
+                "key": "stopgain",
+                "name": "Nonsense (vorzeitiges Stoppsignal)",
+                "description": "Erzeugt vorzeitig ein Stopp-Signal, das Protein bleibt unvollständig."
+              },
+              {
+                "key": "stoploss",
+                "name": "Stopp-Verlust",
+                "description": "Ein normales Stopp-Signal geht verloren, das Protein wird zu lang."
+              },
+              {
+                "key": "synonymous",
+                "name": "Stille Mutation (synonym)",
+                "description": "Die DNA ändert sich, das Protein bleibt identisch. Es liegt eine nachgewiesene Sequenzänderung vor - kein Wildtyp."
+              },
+              {
+                "key": "splice-site",
+                "name": "Spleißstellen-Variante",
+                "description": "Variante am Übergang zwischen zwei Gen-Abschnitten (Splice-Donor/-Akzeptor an intronischer Position +1/+2/-1/-2). Eigene fachliche Kategorie, kein fehlender Wert."
+              },
+              {
+                "key": "frameshift-deletion",
+                "name": "Deletion mit Leserasterverschiebung",
+                "description": "Verschiebt den gesamten nachfolgenden Lesecode, meist gravierend."
+              },
+              {
+                "key": "nonframeshift-deletion",
+                "name": "Deletion im Leseraster (In-Frame)",
+                "description": "Einzelne Bausteine fehlen, der restliche Lesecode bleibt erhalten."
+              },
+              {
+                "key": "frameshift-insertion",
+                "name": "Insertion mit Leserasterverschiebung",
+                "description": "Verschiebt den gesamten nachfolgenden Lesecode durch eingefügte Bausteine, meist gravierend."
+              },
+              {
+                "key": "nonframeshift-insertion",
+                "name": "Insertion im Leseraster (In-Frame)",
+                "description": "Einzelne Bausteine kommen hinzu, der Lesecode bleibt erhalten."
+              },
+              {
+                "key": "unknown",
+                "name": "nicht bestimmbar",
+                "description": "Die funktionelle Auswirkung konnte nicht bestimmt werden. In MASTER zugleich der Marker für Varianten, die keinem einzelnen Gen zugeordnet werden konnten (Klärungsabfrage K-17). Die Variante selbst ist nachgewiesen."
+              }
+            ]
           },
           {
-            "key": "stopgain",
-            "name": "Nonsense (vorzeitiges Stoppsignal)",
-            "description": "Erzeugt vorzeitig ein Stopp-Signal, das Protein bleibt unvollständig."
-          },
-          {
-            "key": "stoploss",
-            "name": "Stopp-Verlust",
-            "description": "Ein normales Stopp-Signal geht verloren, das Protein wird zu lang."
-          },
-          {
-            "key": "synonymous",
-            "name": "Stille Mutation (synonym)",
-            "description": "Die DNA ändert sich, das Protein bleibt identisch. Es liegt eine nachgewiesene Sequenzänderung vor - kein Wildtyp."
-          },
-          {
-            "key": "splice-site",
-            "name": "Spleißstellen-Variante",
-            "description": "Variante am Übergang zwischen zwei Gen-Abschnitten (Splice-Donor/-Akzeptor an intronischer Position +1/+2/-1/-2). Eigene fachliche Kategorie, kein fehlender Wert."
-          },
-          {
-            "key": "frameshift-deletion",
-            "name": "Deletion mit Leserasterverschiebung",
-            "description": "Verschiebt den gesamten nachfolgenden Lesecode, meist gravierend."
-          },
-          {
-            "key": "nonframeshift-deletion",
-            "name": "Deletion im Leseraster (In-Frame)",
-            "description": "Einzelne Bausteine fehlen, der restliche Lesecode bleibt erhalten."
-          },
-          {
-            "key": "frameshift-insertion",
-            "name": "Insertion mit Leserasterverschiebung",
-            "description": "Verschiebt den gesamten nachfolgenden Lesecode durch eingefügte Bausteine, meist gravierend."
-          },
-          {
-            "key": "nonframeshift-insertion",
-            "name": "Insertion im Leseraster (In-Frame)",
-            "description": "Einzelne Bausteine kommen hinzu, der Lesecode bleibt erhalten."
-          },
-          {
-            "key": "unknown",
-            "name": "nicht bestimmbar",
-            "description": "Die funktionelle Auswirkung konnte nicht bestimmt werden. In MASTER zugleich der Marker für Varianten, die keinem einzelnen Gen zugeordnet werden konnten (Klärungsabfrage K-17). Die Variante selbst ist nachgewiesen."
+            "key": "observationMolecularMarkerVariantCode",
+            "name": "Befundausprägung",
+            "fieldType": "single-select",
+            "type": "EQUALS",
+            "criteria": [
+              {
+                "key": "M",
+                "name": "Mutation/positiv"
+              },
+              {
+                "key": "W",
+                "name": "Wildtyp/nicht mutiert/negativ"
+              },
+              {
+                "key": "P",
+                "name": "Polymorphismus"
+              },
+              {
+                "key": "S",
+                "name": "Sonstiges"
+              },
+              {
+                "key": "N",
+                "name": "nicht bestimmbar"
+              },
+              {
+                "key": "U",
+                "name": "unbekannt"
+              }
+            ]
           }
         ]
       },

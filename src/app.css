@@ -221,6 +221,12 @@ info-icon {
   grid-column: span 2;
 }
 
+/* Prod has fewer charts than test, so this one fills a single column there.
+   Remove once the test-only charts are enabled on prod as well. */
+.env-prod .chart-systemische {
+  grid-column: span 1;
+}
+
 .sample-information-text {
   font-size: var(--font-size-xxs);
 }
@@ -449,6 +455,25 @@ lens-search-button::part(lens-search-button) {
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+/**
+  Result table
+*/
+
+/* Keep the hint button on the same line as the column title */
+lens-result-table::part(lens-info-button) {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Open the hint dialogue towards the table instead of past the card edge.
+   The dialogue sits inside a <th>, so it needs the bold reset. */
+lens-result-table::part(lens-info-button-dialogue) {
+  left: auto;
+  right: 0;
+  transform: none;
+  font-weight: normal;
 }
 
 .result-table-hint-text {

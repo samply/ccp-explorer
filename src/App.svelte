@@ -151,7 +151,7 @@
     </div>
   </div>
 </header>
-<main>
+<main class={env.PUBLIC_ENVIRONMENT === "test" ? "env-test" : "env-prod"}>
   <div class="search">
     <div class="search-wrapper">
       <lens-search-bar noMatchesFoundMessage="keine Ergebnisse gefunden"
@@ -224,11 +224,7 @@
         ></lens-chart>
       </div>
       <div class="chart-wrapper result-table">
-        <lens-result-table pageSize={10}></lens-result-table>
-        <br />
-        * In den lokalen Pathologien liegt von jedem Patienten idR zusätzlich mindestens
-        eine FFPE-Probe (Formalin-fixierte und Paraffin eingebettet) als Basis der
-        Diagnose vor.
+        <lens-result-table></lens-result-table>
       </div>
       {#if env.PUBLIC_ENVIRONMENT === "test"}
         <div class="chart-wrapper chart-master">
