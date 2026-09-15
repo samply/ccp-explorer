@@ -619,7 +619,7 @@
                     },
                     {
                       "value": "diagnosis",
-                      "name": "C08%."
+                      "name": "C08.%"
                     }
                   ],
                   [
@@ -693,7 +693,7 @@
                     },
                     {
                       "value": "diagnosis",
-                      "name": "C08%."
+                      "name": "C08.%"
                     }
                   ],
                   [
