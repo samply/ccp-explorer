@@ -231,8 +231,9 @@
           <lens-chart
             title="Omics-Daten"
             dataKey="analysis_method"
-            chartType="pie"
-            displayLegends={true}
+            chartType="bar"
+            filterRegex="^(?!phosprot$)"
+            yAxisTitle="Anzahl der Patienten"
           ></lens-chart>
           <p class="master-hint">
             <img src="master-logo.png" alt="" />
