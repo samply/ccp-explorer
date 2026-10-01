@@ -20579,35 +20579,27 @@
         "criteria": [
           {
             "key": "wgs",
-            "name": "Ganzgenom-Sequenzierung (WGS)"
+            "name": "Whole Genome Sequencing (WGS)"
           },
           {
             "key": "wes",
-            "name": "Exom-Sequenzierung (WES)"
-          },
-          {
-            "key": "wes+wgs_lc",
-            "name": "WES + niedrig aufgelöste WGS"
+            "name": "Whole Exome Sequencing (WES)"
           },
           {
             "key": "panel",
-            "name": "Gen-Panel"
+            "name": "Genpanel"
           },
           {
             "key": "rnaseq",
-            "name": "RNA-Sequenzierung (RNA-Seq)"
+            "name": "RNA Sequencing (RNA-Seq)"
           },
           {
             "key": "proteome",
-            "name": "Proteom (Massenspektrometrie)"
+            "name": "Proteome (Mass Spectrometry)"
           },
           {
             "key": "epic",
-            "name": "Methylierungs-Array (EPIC)"
-          },
-          {
-            "key": "phosprot",
-            "name": "Phosphoproteom (Massenspektrometrie)"
+            "name": "Methylation Array (EPIC)"
           }
         ]
       },
