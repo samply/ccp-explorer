@@ -267,7 +267,7 @@
     ]
   },
   "projectManagerOptions": {
-    "newProjectUrl": "https://requests.dktk.dkfz.de/project-manager-api/create-query-and-design-project",
-    "editProjectUrl": "https://requests.dktk.dkfz.de/project-manager-api/project/edit"
+    "newProjectUrl": "https://dktk-test-projekt-manager.vms.verbis.dkfz.de/api/create-query-and-design-project",
+    "editProjectUrl": "https://dktk-test-projekt-manager.vms.verbis.dkfz.de/api/project/edit"
   }
 }
