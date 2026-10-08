@@ -98,11 +98,11 @@
     },
     "analysis_method": {
       "legendMapping": {
-        "wgs": "Whole Genome Sequencing (WGS)",
-        "rnaseq": "RNA Sequencing (RNA-Seq)",
-        "wes": "Whole Exome Sequencing (WES)",
-        "epic": "Methylation Array (EPIC)",
-        "proteome": "Proteome (Mass Spectrometry)",
+        "wgs": "Gesamtgenomsequenzierung (WGS)",
+        "rnaseq": "RNA-Sequenzierung (RNA-Seq)",
+        "wes": "Gesamtexomsequenzierung (WES)",
+        "epic": "Methylierungs-Array (EPIC)",
+        "proteome": "Proteom (Massenspektrometrie)",
         "panel": "Genpanel",
         "wes+rnaseq": "WES + RNA-Seq",
         "wgs+rnaseq": "WGS + RNA-Seq"
