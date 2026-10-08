@@ -1,6 +1,11 @@
 <script lang="ts">
   import "./app.css";
-  import type { Catalogue, LensOptions, SpotResult } from "@samply/lens";
+  import type {
+    Catalogue,
+    LensOptions,
+    LensResult,
+    SpotResult,
+  } from "@samply/lens";
   import {
     setOptions,
     setCatalogue,
@@ -20,6 +25,26 @@
   import optionsProd from "./config/options.json";
   import optionsTest from "./config/options-test.json";
   import { v4 as uuidv4 } from "uuid";
+
+  /**
+   * Focus reports the analysis method combinations (e.g. wes+rnaseq) as
+   * separate stratifiers. Merge them into the analysis_method stratifier so
+   * they are shown in the same chart as the single analysis methods.
+   */
+  function mergeAnalysisMethodCombinations(siteResult: LensResult) {
+    const stratifiers = siteResult.stratifiers;
+    for (const key of [
+      "analysis_method_wes_rnaseq",
+      "analysis_method_wgs_rnaseq",
+    ]) {
+      if (stratifiers[key] === undefined) continue;
+      stratifiers.analysis_method = {
+        ...stratifiers.analysis_method,
+        ...stratifiers[key],
+      };
+      delete stratifiers[key];
+    }
+  }
 
   let abortController = new AbortController();
   function sendQuery() {
@@ -44,6 +69,7 @@
       } else if (result.status === "succeeded") {
         const siteResult = JSON.parse(atob(result.body));
         console.log(siteResult);
+        mergeAnalysisMethodCombinations(siteResult);
         setSiteResult(site, siteResult);
       } else {
         removeFailedSite(site);
