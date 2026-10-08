@@ -259,7 +259,6 @@
             dataKey="analysis_method"
             chartType="bar"
             filterRegex="^(?!phosprot$)"
-            yAxisTitle="Anzahl der Patienten"
           ></lens-chart>
           <p class="master-hint">
             <img src="master-logo.png" alt="" />
