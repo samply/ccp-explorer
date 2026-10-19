@@ -19,6 +19,7 @@
   import { negotiate } from "./lib/project-manager";
   import {
     language,
+    languageToggleEnabled,
     setLanguage,
     t,
     translateCatalogue,
@@ -180,18 +181,20 @@
     </div>
     <h1 class="header-h1">DKTK BioDataHub Explorer</h1>
     <div class="logo logo-dkfz">
-      <div class="language-toggle">
-        <button
-          class:active={language === "de"}
-          aria-pressed={language === "de"}
-          on:click={() => setLanguage("de")}>DE</button
-        >
-        <button
-          class:active={language === "en"}
-          aria-pressed={language === "en"}
-          on:click={() => setLanguage("en")}>EN</button
-        >
-      </div>
+      {#if languageToggleEnabled}
+        <div class="language-toggle">
+          <button
+            class:active={language === "de"}
+            aria-pressed={language === "de"}
+            on:click={() => setLanguage("de")}>DE</button
+          >
+          <button
+            class:active={language === "en"}
+            aria-pressed={language === "en"}
+            on:click={() => setLanguage("en")}>EN</button
+          >
+        </div>
+      {/if}
       <img
         src="../Deutsches_Krebsforschungszentrum_Logo.svg"
         alt={t({ de: "Logo des DKFZ", en: "DKFZ logo" })}

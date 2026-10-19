@@ -1,15 +1,20 @@
 import type { Catalogue, LensOptions } from "@samply/lens";
+import { env } from "$env/dynamic/public";
 import translationsEn from "../config/translations-en.json";
 
 export type Language = "de" | "en";
 
 const STORAGE_KEY = "ccp-explorer-language";
 
+/** The language toggle is only available in the test environment for now */
+export const languageToggleEnabled = env.PUBLIC_ENVIRONMENT === "test";
+
 /**
  * The language is taken from the `lang` URL parameter, then from local
  * storage, and defaults to German.
  */
 function detectLanguage(): Language {
+  if (!languageToggleEnabled) return "de";
   const param = new URLSearchParams(window.location.search).get("lang");
   if (param === "de" || param === "en") return param;
   try {
