@@ -17,6 +17,14 @@
     removeFailedSite,
   } from "@samply/lens";
   import { negotiate } from "./lib/project-manager";
+  import {
+    language,
+    languageToggleEnabled,
+    setLanguage,
+    t,
+    translateCatalogue,
+    translateOptions,
+  } from "./lib/language";
   import { onMount } from "svelte";
   import { SvelteMap } from "svelte/reactivity";
   import { env } from "$env/dynamic/public";
@@ -81,6 +89,8 @@
     });
   }
 
+  document.documentElement.lang = language;
+
   window.addEventListener("lens-search-triggered", () => {
     sendQuery();
   });
@@ -98,14 +108,14 @@
     if (env.PUBLIC_SPOT_URL) {
       options.spotUrl = env.PUBLIC_SPOT_URL;
     }
-    setOptions(options);
+    setOptions(translateOptions(options));
 
     // Set the catalogue based on the environment
     let catalogue = catalogueProd as Catalogue;
     if (env.PUBLIC_ENVIRONMENT === "test") {
       catalogue = catalogueTest as Catalogue;
     }
-    setCatalogue(catalogue);
+    setCatalogue(translateCatalogue(catalogue));
 
     // Wait for the search bar to initialize (load query from URL) before sending the initial query.
     // Using setTimeout to ensure the custom element's onMount has completed.
@@ -141,21 +151,19 @@
   const projectManagerButtonTitle = new URLSearchParams(
     window.location.search,
   ).has("project-code")
-    ? "Daten- und Probenanfrage bearbeiten"
-    : "Daten und Proben anfragen";
+    ? t({
+        de: "Daten- und Probenanfrage bearbeiten",
+        en: "Edit data and sample request",
+      })
+    : t({ de: "Daten und Proben anfragen", en: "Request data and samples" });
 
   const genderHeaders: Map<string, string> = new SvelteMap<string, string>()
-    .set("male", "männlich")
-    .set("female", "weiblich")
-    .set("other", "divers")
-    .set("unknown", "unbekannt");
+    .set("male", t({ de: "männlich", en: "male" }))
+    .set("female", t({ de: "weiblich", en: "female" }))
+    .set("other", t({ de: "divers", en: "diverse" }))
+    .set("unknown", t({ de: "unbekannt", en: "unknown" }));
 
   const barChartBackgroundColors: string[] = ["#4dc9f6", "#3da4c7"];
-
-  const vitalStateHeaders: Map<string, string> = new SvelteMap<string, string>()
-    .set("lebend", "alive")
-    .set("verstorben", "deceased")
-    .set("unbekannt", "unknown");
 
   const therapyHeaders: Map<string, string> = new SvelteMap<
     string,
@@ -166,13 +174,30 @@
 <header>
   <div class="header-wrapper">
     <div class="logo">
-      <img src="../dktk.svg" alt="Logo des DKTK" />
+      <img
+        src="../dktk.svg"
+        alt={t({ de: "Logo des DKTK", en: "DKTK logo" })}
+      />
     </div>
     <h1 class="header-h1">DKTK BioDataHub Explorer</h1>
     <div class="logo logo-dkfz">
+      {#if languageToggleEnabled}
+        <div class="language-toggle">
+          <button
+            class:active={language === "de"}
+            aria-pressed={language === "de"}
+            on:click={() => setLanguage("de")}>DE</button
+          >
+          <button
+            class:active={language === "en"}
+            aria-pressed={language === "en"}
+            on:click={() => setLanguage("en")}>EN</button
+          >
+        </div>
+      {/if}
       <img
         src="../Deutsches_Krebsforschungszentrum_Logo.svg"
-        alt="Logo des DKTK"
+        alt={t({ de: "Logo des DKFZ", en: "DKFZ logo" })}
       />
     </div>
   </div>
@@ -180,49 +205,69 @@
 <main class={env.PUBLIC_ENVIRONMENT === "test" ? "env-test" : "env-prod"}>
   <div class="search">
     <div class="search-wrapper">
-      <lens-search-bar noMatchesFoundMessage="keine Ergebnisse gefunden"
+      <lens-search-bar
+        noMatchesFoundMessage={t({
+          de: "keine Ergebnisse gefunden",
+          en: "no results found",
+        })}
       ></lens-search-bar>
       <lens-query-explain-button
-        noQueryMessage="Leere Suchanfrage: Sucht nach allen Ergebnissen."
+        noQueryMessage={t({
+          de: "Leere Suchanfrage: Sucht nach allen Ergebnissen.",
+          en: "Empty query: searches for all results.",
+        })}
       ></lens-query-explain-button>
       <button
         class="save_button"
         on:click={saveQuery}
-        title="Suchanfrage speichern"
-        ><img alt="Suchkriterien Speichern" src="save_24.svg" />
+        title={t({ de: "Suchanfrage speichern", en: "Save query" })}
+        ><img
+          alt={t({ de: "Suchkriterien Speichern", en: "Save search criteria" })}
+          src="save_24.svg"
+        />
       </button>
-      <lens-search-button title="Suchen"></lens-search-button>
+      <lens-search-button title={t({ de: "Suchen", en: "Search" })}
+      ></lens-search-button>
     </div>
   </div>
   <div class="grid">
     <div class="catalogue-wrapper">
       <div class="f-info-box">
-        Weiterführende Informationen: <br />
-        Zur Nutzung
+        {t({ de: "Weiterführende Informationen:", en: "Further information:" })}
+        <br />
+        {t({ de: "Zur Nutzung", en: "Please note the usage notes" })}
         <img
           src="info-circle-svgrepo-com.svg"
           alt="info-icon"
           width="18px"
           height="18px"
         />
-        und
+        {t({ de: "und", en: "and" })}
         <a href="https://hub.dkfz.de/s/iP6A7zJzAQya3iC" target="_blank"
           >Known Issues</a
-        >
-        beachten.
+        >{t({ de: " beachten.", en: "." })}
         <a href="https://hub.dkfz.de/s/c7KmaCxSLQicw3Y" target="_blank">
-          Informationen zu Bioproben/Daten Anfragen</a
+          {t({
+            de: "Informationen zu Bioproben/Daten Anfragen",
+            en: "Information on biosample/data requests",
+          })}</a
         >
       </div>
       <div class="catalogue">
         <div class="catalogue-header">
-          <h2>Suchkriterien</h2>
+          <h2>{t({ de: "Suchkriterien", en: "Search criteria" })}</h2>
           <lens-info-button
-            message={[
-              `Die Suche erfolgt patienten-orientiert. `,
-              `Bei Patienten mit mehreren onkologischen Diagnosen, können sich ausgewählte Suchkriterien nicht nur auf eine Erkrankung beziehen, sondern auch auf Weitere.`,
-              `Innerhalb einer Kategorie werden verschiedene Ausprägungen mit einer „Oder-Verknüpfung“ gesucht; bei der Suche über mehrere Kategorien mit einer „Und-Verknüpfung“.`,
-            ]}
+            message={language === "de"
+              ? [
+                  `Die Suche erfolgt patienten-orientiert. `,
+                  `Bei Patienten mit mehreren onkologischen Diagnosen, können sich ausgewählte Suchkriterien nicht nur auf eine Erkrankung beziehen, sondern auch auf Weitere.`,
+                  `Innerhalb einer Kategorie werden verschiedene Ausprägungen mit einer „Oder-Verknüpfung“ gesucht; bei der Suche über mehrere Kategorien mit einer „Und-Verknüpfung“.`,
+                ]
+              : [
+                  `The search is patient-oriented. `,
+                  `For patients with multiple oncological diagnoses, selected search criteria may refer not only to one disease but also to others.`,
+                  `Within a category, different values are combined with "OR"; across multiple categories, they are combined with "AND".`,
+                ]}
             buttonSize={22}
             alignDialogue="bottom-left"
           ></lens-info-button>
@@ -242,7 +287,7 @@
       </div>
       <div class="chart-wrapper">
         <lens-chart
-          title="Patienten pro Standort"
+          title={t({ de: "Patienten pro Standort", en: "Patients per site" })}
           dataKey="patients"
           perSite={true}
           displayLegends={true}
@@ -255,20 +300,23 @@
       {#if env.PUBLIC_ENVIRONMENT === "test"}
         <div class="chart-wrapper chart-master">
           <lens-chart
-            title="Omics-Daten"
+            title={t({ de: "Omics-Daten", en: "Omics data" })}
             dataKey="analysis_method"
             chartType="bar"
             filterRegex="^(?!phosprot$)"
           ></lens-chart>
           <p class="master-hint">
             <img src="master-logo.png" alt="" />
-            Nur verfügbar für Datensätze aus MASTER.
+            {t({
+              de: "Nur verfügbar für Datensätze aus MASTER.",
+              en: "Only available for data sets from MASTER.",
+            })}
           </p>
         </div>
       {/if}
       <div class="chart-wrapper">
         <lens-chart
-          title="Geschlecht"
+          title={t({ de: "Geschlecht", en: "Gender" })}
           dataKey="gender"
           chartType="pie"
           displayLegends={true}
@@ -277,53 +325,64 @@
       </div>
       <div class="chart-wrapper chart-age-distribution">
         <lens-chart
-          title="Alter bei Erstdiagnose"
+          title={t({
+            de: "Alter bei Erstdiagnose",
+            en: "Age at initial diagnosis",
+          })}
           dataKey="age_at_diagnosis"
           chartType="bar"
           groupRange={10}
           filterRegex="^(([0-9]?[0-9]$)|(1[0-2]0))"
-          xAxisTitle="Alter"
-          yAxisTitle="Anzahl der Primärdiagnosen"
+          xAxisTitle={t({ de: "Alter", en: "Age" })}
+          yAxisTitle={t({
+            de: "Anzahl der Primärdiagnosen",
+            en: "Number of primary diagnoses",
+          })}
           backgroundColor={barChartBackgroundColors}
         ></lens-chart>
       </div>
       <div class="chart-wrapper">
         <lens-chart
-          title="Vitalstatus"
+          title={t({ de: "Vitalstatus", en: "Vital status" })}
           dataKey="75186-7"
           chartType="pie"
           displayLegends={true}
-          headers={vitalStateHeaders}
         ></lens-chart>
       </div>
       <div class="chart-wrapper">
         <lens-chart
-          title="Therapieart"
+          title={t({ de: "Therapieart", en: "Type of therapy" })}
           dataKey="therapy_of_tumor"
           chartType="bar"
           headers={therapyHeaders}
-          xAxisTitle="Art der Therapie"
-          yAxisTitle="Anzahl der Therapieeinträge"
+          xAxisTitle={t({ de: "Art der Therapie", en: "Type of therapy" })}
+          yAxisTitle={t({
+            de: "Anzahl der Therapieeinträge",
+            en: "Number of therapy entries",
+          })}
           backgroundColor={barChartBackgroundColors}
         ></lens-chart>
       </div>
       <div class="chart-wrapper chart-systemische">
         <lens-chart
-          title="Systemische Therapien"
+          title={t({ de: "Systemische Therapien", en: "Systemic therapies" })}
           dataKey="medicationStatements"
           chartType="bar"
-          xAxisTitle="Art der Therapie"
-          yAxisTitle="Anzahl der Therapieeinträge"
+          xAxisTitle={t({ de: "Art der Therapie", en: "Type of therapy" })}
+          yAxisTitle={t({
+            de: "Anzahl der Therapieeinträge",
+            en: "Number of therapy entries",
+          })}
           backgroundColor={barChartBackgroundColors}
         ></lens-chart>
       </div>
       <div class="chart-wrapper">
         <lens-chart
-          title="Proben"
+          title={t({ de: "Proben", en: "Samples" })}
           dataKey="sample_kind"
           chartType="bar"
-          xAxisTitle="Probentypen"
-          yAxisTitle="Probenanzahl"
+          xAxisTitle={t({ de: "Probentypen", en: "Sample types" })}
+          yAxisTitle={t({ de: "Probenanzahl", en: "Number of samples" })}
           filterRegex="^(?!(tissue-other|buffy-coat|peripheral-blood-cells|dried-whole-blood|swab|ascites|stool-faeces|saliva|liquid-other|derivative-other))"
           backgroundColor={barChartBackgroundColors}
         >
@@ -331,7 +390,7 @@
       </div>
       <div class="chart-wrapper chart-diagnosis">
         <lens-chart
-          title="Top 20 Diagnosen"
+          title={t({ de: "Top 20 Diagnosen", en: "Top 20 diagnoses" })}
           dataKey="diagnosis"
           chartType="bar"
           topN={20}
@@ -339,19 +398,28 @@
           groupingLabel=".%"
           filterRegex={"^(C.{2,6}|D[0-4][0-9].{0,4})"}
           xAxisTitle="ICD-10-Codes"
-          yAxisTitle="Anzahl der Diagnosen"
+          yAxisTitle={t({
+            de: "Anzahl der Diagnosen",
+            en: "Number of diagnoses",
+          })}
           backgroundColor={barChartBackgroundColors}
         ></lens-chart>
       </div>
       {#if env.PUBLIC_ENVIRONMENT === "test"}
         <div class="chart-wrapper chart-wrapper-mol">
           <lens-chart
-            title="Top 20 veränderte Gene"
+            title={t({
+              de: "Top 20 veränderte Gene",
+              en: "Top 20 altered genes",
+            })}
             dataKey="MolecularMarkers"
             chartType="bar"
             topN={20}
-            xAxisTitle="Gen"
-            yAxisTitle="Anzahl der Patienten"
+            xAxisTitle={t({ de: "Gen", en: "Gene" })}
+            yAxisTitle={t({
+              de: "Anzahl der Patienten",
+              en: "Number of patients",
+            })}
             backgroundColor={barChartBackgroundColors}
           >
           </lens-chart>
@@ -375,23 +443,25 @@
   >
     BioDataHub (BDH)
   </a>
-  <a class="email" href="mailto:biodatahub@dkfz.de">Kontakt</a>
+  <a class="email" href="mailto:biodatahub@dkfz.de"
+    >{t({ de: "Kontakt", en: "Contact" })}</a
+  >
   <a
     class="user-agreement"
     href="https://hub.dkfz.de/s/MPCg2kK23LH8Yii"
     download="nutzervereinbarung"
-    target="_blank">Nutzungsvereinbarung</a
+    target="_blank">{t({ de: "Nutzungsvereinbarung", en: "User agreement" })}</a
   >
   <a
     class="privacy-policy"
     href="https://hub.dkfz.de/s/5LPccy6fgRSoD65"
     download="datenschutzerklaerung"
-    target="_blank">Datenschutz</a
+    target="_blank">{t({ de: "Datenschutz", en: "Privacy policy" })}</a
   >
   <a
     class="imprint"
     href="https://www.dkfz.de/de/impressum.html"
-    target="_blank">Impressum</a
+    target="_blank">{t({ de: "Impressum", en: "Imprint" })}</a
   >
 </footer>
 
@@ -410,5 +480,29 @@
 
   .header-h1 {
     color: #2b63b8;
+  }
+
+  .logo-dkfz {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-s);
+  }
+
+  .language-toggle {
+    display: flex;
+    gap: 4px;
+  }
+  .language-toggle button {
+    padding: 4px 8px;
+    border: 1px solid #2b63b8;
+    border-radius: 4px;
+    background: white;
+    color: #2b63b8;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .language-toggle button.active {
+    background: #2b63b8;
+    color: white;
   }
 </style>

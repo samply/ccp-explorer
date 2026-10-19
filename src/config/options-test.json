@@ -119,6 +119,11 @@
       ]
     },
     "75186-7": {
+      "legendMapping": {
+        "lebend": "lebend",
+        "verstorben": "verstorben",
+        "unbekannt": "unbekannt"
+      },
       "hintText": [
         "\"verstorben\": ein Todesdatum ist dokumentiert oder das aktuelle Lebensalter ist größer 123 Jahre.",
         "\"lebend\": wird angenommen, wenn kein Todesdatum dokumentiert ist oder das aktuelle Lebensalter nicht 123 Jahre überschritten hat.",
