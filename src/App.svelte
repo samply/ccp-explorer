@@ -304,6 +304,10 @@
             dataKey="analysis_method"
             chartType="bar"
             filterRegex="^(?!phosprot$)"
+            yAxisTitle={t({
+              de: "Tumorproben/Keimbahnkontrollen",
+              en: "Tumor samples/germline controls",
+            })}
           ></lens-chart>
           <p class="master-hint">
             <img src="master-logo.png" alt="" />
