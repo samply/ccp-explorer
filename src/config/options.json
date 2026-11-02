@@ -2,10 +2,6 @@
   "spotUrl": "/prod",
   "language": "de",
   "siteMappings": {
-    "berlin": {
-      "displayName": "Berlin",
-      "collectionId": "lens-berlin"
-    },
     "berlin-test": {
       "displayName": "Berlin",
       "collectionId": "lens-berlin"
