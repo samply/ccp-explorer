@@ -4,7 +4,7 @@
   "siteMappings": {
     "berlin-test": {
       "displayName": "Berlin",
-      "collectionId": "lens-berlin"
+      "collectionId": "lens-berlin-test"
     },
     "bonn": {
       "displayName": "Bonn",
