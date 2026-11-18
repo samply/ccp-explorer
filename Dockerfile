@@ -10,6 +10,10 @@ COPY vite.config.ts svelte.config.js ./
 COPY src ./src
 COPY static ./static
 
+# Optional sub-path (e.g. /lens-mockup); empty = served at the root
+ARG BASE_PATH=""
+ENV BASE_PATH=$BASE_PATH
+
 # Build the SvelteKit project
 RUN npm run build
 

@@ -28,11 +28,33 @@
   import { onMount } from "svelte";
   import { SvelteMap } from "svelte/reactivity";
   import { env } from "$env/dynamic/public";
+  import { base } from "$app/paths";
   import catalogueProd from "./config/catalogue.json";
   import catalogueTest from "./config/catalogue-test.json";
   import optionsProd from "./config/options.json";
   import optionsTest from "./config/options-test.json";
   import { v4 as uuidv4 } from "uuid";
+  import {
+    MOCKUP_OPTIONS,
+    MOCKUP_TITLES,
+    MOCK_CHART_OPTIONS,
+    buildMockupCatalogue,
+    getMockupOption,
+    mockSiteResults,
+    switchMockup,
+    isExtended,
+    MOCK_TEXTS,
+    translateMockupText,
+  } from "./lib/mockup";
+
+  /** Mockup text in the current language. */
+  const mt = (text: string) =>
+    language === "de" ? text : (translateMockupText(text, "en") ?? text);
+
+  /** UI mockup for the molecular search (PUBLIC_MOCKUP / ?mockup=A|B). */
+  const mockup = getMockupOption(env.PUBLIC_MOCKUP);
+  /** Molecular catalogue and charts are shown in test and mockup mode. */
+  const showMolecular = env.PUBLIC_ENVIRONMENT === "test" || mockup !== null;
 
   /**
    * Focus reports the analysis method combinations (e.g. wes+rnaseq) as
@@ -59,6 +81,13 @@
     abortController.abort();
     abortController = new AbortController();
     clearSiteResults();
+
+    if (mockup !== null) {
+      for (const [site, result] of mockSiteResults(getAst(), mockup)) {
+        setSiteResult(site, result);
+      }
+      return;
+    }
 
     /** Helper function to base64 encode a UTF-8 string */
     const base64Encode = (utf8String: string) =>
@@ -102,8 +131,14 @@
   onMount(() => {
     // Set the options based on the environment
     let options: LensOptions = optionsProd as LensOptions;
-    if (env.PUBLIC_ENVIRONMENT === "test") {
+    if (showMolecular) {
       options = optionsTest as LensOptions;
+    }
+    if (mockup !== null) {
+      options = {
+        ...options,
+        chartOptions: { ...options.chartOptions, ...MOCK_CHART_OPTIONS },
+      };
     }
     if (env.PUBLIC_SPOT_URL) {
       options.spotUrl = env.PUBLIC_SPOT_URL;
@@ -112,8 +147,11 @@
 
     // Set the catalogue based on the environment
     let catalogue = catalogueProd as Catalogue;
-    if (env.PUBLIC_ENVIRONMENT === "test") {
+    if (showMolecular) {
       catalogue = catalogueTest as Catalogue;
+    }
+    if (mockup !== null) {
+      catalogue = buildMockupCatalogue(mockup, catalogue);
     }
     setCatalogue(translateCatalogue(catalogue));
 
@@ -164,6 +202,10 @@
     .set("unknown", t({ de: "unbekannt", en: "unknown" }));
 
   const barChartBackgroundColors: string[] = ["#4dc9f6", "#3da4c7"];
+  // mockup: one colour per meaning, same for all tumour-wide markers
+  // (high = accent, intermediate = lighter, low = grey, not determined = light grey)
+  const statusColors2: string[] = ["#166a8f", "#a3abb3", "#e1e4e8"];
+  const statusColors3: string[] = ["#166a8f", "#4dc9f6", "#a3abb3", "#e1e4e8"];
 
   const therapyHeaders: Map<string, string> = new SvelteMap<
     string,
@@ -175,7 +217,7 @@
   <div class="header-wrapper">
     <div class="logo">
       <img
-        src="../dktk.svg"
+        src="{base}/dktk.svg"
         alt={t({ de: "Logo des DKTK", en: "DKTK logo" })}
       />
     </div>
@@ -196,13 +238,27 @@
         </div>
       {/if}
       <img
-        src="../Deutsches_Krebsforschungszentrum_Logo.svg"
+        src="{base}/Deutsches_Krebsforschungszentrum_Logo.svg"
         alt={t({ de: "Logo des DKFZ", en: "DKFZ logo" })}
       />
     </div>
   </div>
 </header>
-<main class={env.PUBLIC_ENVIRONMENT === "test" ? "env-test" : "env-prod"}>
+{#if mockup !== null}
+  <div class="mockup-banner">
+    <strong>{mt(MOCK_TEXTS.banner)}</strong>
+    <span>{mt(MOCK_TEXTS.option)}</span>
+    {#each MOCKUP_OPTIONS as option (option)}
+      <button
+        class:active={mockup === option}
+        title={mt(MOCKUP_TITLES[option])}
+        on:click={() => switchMockup(option)}
+        >{mt(MOCKUP_TITLES[option])}</button
+      >
+    {/each}
+  </div>
+{/if}
+<main class={showMolecular ? "env-test" : "env-prod"}>
   <div class="search">
     <div class="search-wrapper">
       <lens-search-bar
@@ -223,7 +279,7 @@
         title={t({ de: "Suchanfrage speichern", en: "Save query" })}
         ><img
           alt={t({ de: "Suchkriterien Speichern", en: "Save search criteria" })}
-          src="save_24.svg"
+          src="{base}/save_24.svg"
         />
       </button>
       <lens-search-button title={t({ de: "Suchen", en: "Search" })}
@@ -237,7 +293,7 @@
         <br />
         {t({ de: "Zur Nutzung", en: "Please note the usage notes" })}
         <img
-          src="info-circle-svgrepo-com.svg"
+          src="{base}/info-circle-svgrepo-com.svg"
           alt="info-icon"
           width="18px"
           height="18px"
@@ -297,16 +353,18 @@
       <div class="chart-wrapper result-table">
         <lens-result-table></lens-result-table>
       </div>
-      {#if env.PUBLIC_ENVIRONMENT === "test"}
+      {#if showMolecular}
         <div class="chart-wrapper chart-master">
           <lens-chart
-            title={t({ de: "Omics-Daten", en: "Omics data" })}
+            title={mockup !== null
+              ? mt(MOCK_TEXTS.chartOmics)
+              : t({ de: "Omics-Daten", en: "Omics data" })}
             dataKey="analysis_method"
             chartType="bar"
             filterRegex="^(?!phosprot$)"
           ></lens-chart>
           <p class="master-hint">
-            <img src="master-logo.png" alt="" />
+            <img src="{base}/master-logo.png" alt="" />
             {t({
               de: "Nur verfügbar für Datensätze aus MASTER.",
               en: "Only available for data sets from MASTER.",
@@ -405,7 +463,7 @@
           backgroundColor={barChartBackgroundColors}
         ></lens-chart>
       </div>
-      {#if env.PUBLIC_ENVIRONMENT === "test"}
+      {#if showMolecular}
         <div class="chart-wrapper chart-wrapper-mol">
           <lens-chart
             title={t({
@@ -423,6 +481,77 @@
             backgroundColor={barChartBackgroundColors}
           >
           </lens-chart>
+        </div>
+      {/if}
+      {#if mockup !== null}
+        <div class="chart-wrapper chart-mockup chart-wrapper-mol">
+          <lens-chart
+            title={mt(MOCK_TEXTS.chartDataTypes)}
+            dataKey="mock_data_types"
+            chartType="bar"
+            xAxisTitle={mt(MOCK_TEXTS.chartDataTypesX)}
+            yAxisTitle={mt(MOCK_TEXTS.chartPatients)}
+            backgroundColor={barChartBackgroundColors}
+          ></lens-chart>
+        </div>
+        <div class="chart-wrapper chart-mockup">
+          <lens-chart
+            title={mt(MOCK_TEXTS.chartVariantType)}
+            dataKey="mock_variant_type"
+            chartType="pie"
+            displayLegends={true}
+          ></lens-chart>
+        </div>
+        <div class="chart-wrapper chart-mockup">
+          <lens-chart
+            title={mt(MOCK_TEXTS.chartCnvLevel)}
+            dataKey="mock_cnv_level"
+            chartType="pie"
+            displayLegends={true}
+          ></lens-chart>
+        </div>
+        {#if isExtended(mockup)}
+          <div class="chart-wrapper chart-mockup">
+            <lens-chart
+              title={mt(MOCK_TEXTS.chartFunction)}
+              dataKey="mock_variant_function"
+              chartType="pie"
+              displayLegends={true}
+            ></lens-chart>
+          </div>
+        {/if}
+        <div class="chart-wrapper chart-mockup">
+          <lens-chart
+            title={mt(MOCK_TEXTS.chartTmb)}
+            dataKey="mock_tmb_status"
+            chartType="bar"
+            indexAxis="y"
+            xAxisTitle={mt(MOCK_TEXTS.chartPatients)}
+            backgroundColor={statusColors2}
+            hoverBackgroundColor={statusColors2}
+          ></lens-chart>
+        </div>
+        <div class="chart-wrapper chart-mockup">
+          <lens-chart
+            title={mt(MOCK_TEXTS.chartMsi)}
+            dataKey="mock_msi_status"
+            chartType="bar"
+            indexAxis="y"
+            xAxisTitle={mt(MOCK_TEXTS.chartPatients)}
+            backgroundColor={statusColors2}
+            hoverBackgroundColor={statusColors2}
+          ></lens-chart>
+        </div>
+        <div class="chart-wrapper chart-mockup">
+          <lens-chart
+            title={mt(MOCK_TEXTS.chartHrd)}
+            dataKey="mock_hrd_status"
+            chartType="bar"
+            indexAxis="y"
+            xAxisTitle={mt(MOCK_TEXTS.chartPatients)}
+            backgroundColor={statusColors3}
+            hoverBackgroundColor={statusColors3}
+          ></lens-chart>
         </div>
       {/if}
     </div>
@@ -486,6 +615,34 @@
     display: flex;
     align-items: center;
     gap: var(--gap-s);
+  }
+
+  .mockup-banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    /* colors from the DKTK logo: blue #2b63b8, dark blue #23356b */
+    background: #eaf0fa;
+    border-bottom: 2px solid #2b63b8;
+    color: #23356b;
+    font-size: 0.9rem;
+  }
+  .mockup-banner button {
+    padding: 4px 10px;
+    border: 1px solid #2b63b8;
+    border-radius: 4px;
+    background: white;
+    color: #2b63b8;
+    cursor: pointer;
+  }
+  .mockup-banner button:hover {
+    background: #d5e1f5;
+  }
+  .mockup-banner button.active {
+    background: #2b63b8;
+    color: white;
   }
 
   .language-toggle {

@@ -9,6 +9,8 @@ const config = {
 
   kit: {
     adapter: adapter(),
+    // Optional sub-path, e.g. BASE_PATH=/lens-mockup for hosting behind a path-based reverse proxy.
+    paths: { base: process.env.BASE_PATH ?? "" },
   },
 };
 

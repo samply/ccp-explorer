@@ -1,6 +1,7 @@
 import type { Catalogue, LensOptions } from "@samply/lens";
 import { env } from "$env/dynamic/public";
 import translationsEn from "../config/translations-en.json";
+import { translateMockupText } from "./mockup";
 
 export type Language = "de" | "en";
 
@@ -53,7 +54,9 @@ const dictionaries: Record<Language, Record<string, string>> = {
 
 /** Translate a German text to the current language (and back) */
 function translateText(text: string, target: Language = language): string {
-  return dictionaries[target][text] ?? text;
+  return (
+    dictionaries[target][text] ?? translateMockupText(text, target) ?? text
+  );
 }
 
 /** Pick the text for the current language */
